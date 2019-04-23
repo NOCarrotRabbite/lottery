@@ -27,12 +27,12 @@
 				query:query
 			}
 		}
-	}
+	};
 	function spaRouters(){
 		this.routers = {};//保存注册的所有路由
 		this.beforeFun = null;//切换前
 		this.afterFun = null;
-	}
+	};
 	spaRouters.prototype={
 		init:function(){
 			var self = this;
@@ -108,7 +108,7 @@
 		   		self.afterFun && self.afterFun(transition)
 		   		self.routers[transition.path].fn(transition)
 		   }else{
-		   	   console.log("开始异步下载js文件"+file)
+		   	   // console.log("开始异步下载js文件"+file)
 			   var _body= document.getElementsByTagName('body')[0];
 	           var scriptEle= document.createElement('script');
 	           scriptEle.type= 'text/javascript';
@@ -116,7 +116,7 @@
 	           scriptEle.async = true;
 	           SPA_RESOLVE_INIT = null;
 	           scriptEle.onload= function(){
-	               console.log('下载'+file+'完成')
+	               // console.log('下载'+file+'完成')
 	               self.afterFun && self.afterFun(transition)
 	               self.routers[transition.path].fn = SPA_RESOLVE_INIT;
 	               self.routers[transition.path].fn(transition)

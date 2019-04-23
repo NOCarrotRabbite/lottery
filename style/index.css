@@ -1,0 +1,254 @@
+/*  框架样式开始 */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+main {
+    flex-grow: 1;
+    overflow: scroll;
+}
+footer {
+    background-color: #fff;
+    height: 3rem;
+}
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+
+}
+footer ul a {
+    color: #787878;
+}
+.nav {
+    text-align: center;
+    color: #787878;
+}
+.nav .icon {
+    font-size: 1.3rem;
+ }
+.nav p {
+    font-size: 0.7rem;
+}
+
+footer .active {
+    color: #E9594A;
+}
+/* 框架样式结束 */
+
+/* 竞猜大厅样式开始 */
+.lobby {
+    width: 100%;
+    height: 100%;
+    padding: 0.4rem;
+    box-sizing: border-box;
+    background: #f4f4f4;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+}
+.banner,
+.broadcast,
+.rank {
+    background: #fff;
+}
+.banner {
+    height: 10rem;
+    position: relative;
+}
+.banner-img {
+    width: 100%;
+    height: 100%;
+}
+.banner-text {
+    width: 100%;
+    padding: 0.2rem 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    text-indent: 0.4rem;
+    font-size: 0.8rem;
+}
+
+.broadcast {
+    height: 2rem;
+    line-height: 2rem;
+    margin: 0.5rem 0 0.3rem 0;
+    display: flex;
+}
+.icon-logo {
+    padding: 0 0.6rem 0 0.4rem;
+    font-style: normal;
+    display: inline-block;
+}
+.broadcast-text {
+    color: #888;
+    font-size: 0.6rem;
+}
+.menu {
+    height: 10rem;
+}
+.menu-content:nth-child(1) {
+    margin-right: 0.2rem;
+}
+.menu-top,
+.menu-bottom {
+    height: 50%;
+    display: flex;
+}
+.menu-top {
+    margin-bottom: 0.2rem;
+}
+.menu-content {
+    width: 50%;
+    background: #fff;
+    display: flex;
+}
+.menu-content-left {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left-img {
+    width: 3rem;
+    height: 3rem;
+    background: #999;
+    border-radius: 50%;
+}
+.menu-content-right {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.classify {
+    color: #555;
+    font-size: 0.8rem;
+    padding-bottom: 0.2rem;
+}
+.periods {
+    color: #888;
+    font-size: 0.6rem;
+}
+.rank {
+    flex: 1;
+    margin-top: 0.5rem;
+    position: relative;
+}
+.rank-title {
+    font-size: 0.8rem;
+    text-align: center;
+    color: red;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #f4f4f4;
+}
+.rank-content li {
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.6rem;
+    border-bottom: 1px solid #f4f4f4;
+}
+.rank-content span {
+    padding: 0.4rem 0;
+    color: #888;
+}
+.rank-content .color-red {
+    color: red;
+}
+/* 竞猜大厅样式结束 */
+
+/* 充值样式开始 */
+.recharge {
+    width: 100%;
+    height: 100%;
+    padding: 0.4rem;
+    box-sizing: border-box;
+    background: #f4f4f4;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    color: #888;
+    font-size: 0.6rem;
+    overflow: scroll;
+}
+.title {
+    color: #666;
+    padding: 0.6rem;
+}
+.recharge-content-list {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    margin-bottom: 0.2rem;
+}
+.recharge-content-img {
+    width: 20%;
+    height: 100%;
+}
+.control-btn {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2rem;
+}
+.btn {
+    padding: 0.4rem 1rem;
+    color: #fff;
+    background: #e9594a;
+    border-radius: 1rem;
+}
+/* 充值样式结束 */
+
+/* 客服样式开始 */
+.service {
+    width: 100%;
+    height: 100%;
+    padding: 0.4rem;
+    box-sizing: border-box;
+    background: #f4f4f4;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    color: #888;
+    font-size: 0.6rem;
+    overflow: scroll;
+}
+.service-code {
+    background: #fff;
+}
+.service-img {
+    width: 100%;
+    height: 20rem;
+}
+.service-text {
+    text-align: center;
+    padding: 0.4rem 0 0.6rem 0;
+}
+.service-qq {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.service-qq-icon {
+    /* width: 3rem; */
+    padding-right: 0.6rem;
+}
+.btn {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.6rem;
+    color: #fff;
+    background: #e9594a;
+    border-radius: 0.2rem;
+    margin-left: 0.6rem;
+}
+/* 客服样式结束 */
+
