@@ -1,4 +1,5 @@
 SPA_RESOLVE_INIT = function(transition) {
+    $('#footer').show();
     $('#header').html('<h4>在线客服</h4>');
     $('#header').css('justify-content', 'center');
     $('#main').html('\n' +

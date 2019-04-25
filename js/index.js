@@ -14,9 +14,11 @@ spaRouters.map('/activity',function(transition){
 spaRouters.map('/account',function(transition){
     spaRouters.asyncFun('js/route/components/account-main.js',transition)
 });
+spaRouters.map('/game-hall',function(transition){
+    spaRouters.asyncFun('js/route/components/game-hall.js',transition)
+});
 /*spaRouters.map('/detail2',function(transition){
     spaRouters.syncFun(function(transition){
-        document.getElementById("content").innerHTML = '<p style="color:#DD8C6F;">当前同步渲染详情页' + JSON.stringify(transition) +'</p>'
     },transition)
 })*/
 spaRouters.beforeEach(function(transition){
@@ -36,3 +38,25 @@ spaRouters.afterEach(function(transition){
     // 切换之后dosomething
 });
 spaRouters.init();
+
+$(window).resize(function () {
+    setHtmlFontSize();
+});
+$(function () {
+    setHtmlFontSize();
+    //getOtherFontSize();
+});
+// 设置根元素字体大小；num为控制常量
+let setHtmlFontSize = function () {
+    let _width = document.documentElement.clientWidth;
+    let root_size = _width/50;
+    $('html').css('font-size', root_size  + 'px');
+};
+let getOtherFontSize = function () {
+    $('.size-20').css('font-size', ((20 * 50) / 750) + 'rem' );
+    $('.size-24').css('font-size', ((24 * 50) / 750) + 'rem' );
+    $('.size-28').css('font-size', ((28 * 50) / 750) + 'rem' );
+    $('.size-32').css('font-size', ((32 * 50) / 750) + 'rem' );
+    $('.size-36').css('font-size', ((36 * 50) / 750) + 'rem' );
+    $('.size-40').css('font-size', ((40 * 50) / 750) + 'rem' );
+};

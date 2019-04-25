@@ -10,7 +10,8 @@ main {
 }
 footer {
     background-color: #fff;
-    height: 3rem;
+    /*height: 7rem;*/
+    padding: 1rem 0;
 }
 footer ul {
     display: flex;
@@ -26,12 +27,6 @@ footer ul a {
     text-align: center;
     color: #787878;
 }
-.nav .icon {
-    font-size: 1.3rem;
- }
-.nav p {
-    font-size: 0.7rem;
-}
 
 footer .active {
     color: #E9594A;
@@ -42,88 +37,86 @@ footer .active {
 .lobby {
     width: 100%;
     height: 100%;
-    padding: 0.4rem;
+    /*padding: 0.4rem;*/
     box-sizing: border-box;
     background: #f4f4f4;
-    overflow: scroll;
     display: flex;
     flex-direction: column;
 }
-.banner,
 .broadcast,
 .rank {
     background: #fff;
 }
 .banner {
-    height: 10rem;
     position: relative;
+    background-color: #63a35c;
+    padding: 20% 0;
+
 }
-.banner-img {
+/*.banner-img {
     width: 100%;
     height: 100%;
-}
+}*/
 .banner-text {
     width: 100%;
-    padding: 0.2rem 0;
+    padding: 0.7rem 0;
     position: absolute;
     left: 0;
     bottom: 0;
     margin: 0;
     background: rgba(0, 0, 0, 0.4);
     color: #fff;
-    text-indent: 0.4rem;
-    font-size: 0.8rem;
+    text-indent: 1rem;
+    font-size: 1.6rem;
 }
 
 .broadcast {
-    height: 2rem;
-    line-height: 2rem;
-    margin: 0.5rem 0 0.3rem 0;
     display: flex;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    font-size: 1.3333rem;
 }
 .icon-logo {
-    padding: 0 0.6rem 0 0.4rem;
-    font-style: normal;
-    display: inline-block;
+    padding: 0 1rem 0 1rem;
+    color: #E9594A;
+    font-size: 1.866rem;
 }
 .broadcast-text {
-    color: #888;
-    font-size: 0.6rem;
+    color: #777;
 }
 .menu {
-    height: 10rem;
+    /*height: 10rem;*/
 }
 .menu-content:nth-child(1) {
-    margin-right: 0.2rem;
+    margin-right: 0.5rem;
 }
 .menu-top,
 .menu-bottom {
-    height: 50%;
+    /*height: 50%;*/
     display: flex;
-}
-.menu-top {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
+    display: flex;
 }
 .menu-content {
-    width: 50%;
     background: #fff;
+    flex-grow: 1;
     display: flex;
+    padding: 1.5rem 0;
 }
 .menu-content-left {
-    width: 40%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 1.5rem 0 3rem;
 }
 .left-img {
-    width: 3rem;
-    height: 3rem;
-    background: #999;
+    width: 7rem;
+    height: 7rem;
+    background: #E9594A;
     border-radius: 50%;
 }
 .menu-content-right {
-    width: 60%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -131,37 +124,38 @@ footer .active {
 }
 .classify {
     color: #555;
-    font-size: 0.8rem;
-    padding-bottom: 0.2rem;
+    font-weight: 500;
+    color: #000000;
 }
 .periods {
-    color: #888;
-    font-size: 0.6rem;
+    color: #808080;
+    font-size: 1.6rem;
+    padding: 0.5rem 0;
 }
 .rank {
-    flex: 1;
+    flex-grow: 1;
     margin-top: 0.5rem;
-    position: relative;
 }
 .rank-title {
-    font-size: 0.8rem;
     text-align: center;
-    color: red;
-    padding: 0.4rem 0;
-    border-bottom: 1px solid #f4f4f4;
+    color: #E9594A;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ccc;
+    font-weight: 500;
 }
 .rank-content li {
     display: flex;
     justify-content: space-around;
-    font-size: 0.6rem;
-    border-bottom: 1px solid #f4f4f4;
+    font-size: 1.6rem;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
 }
 .rank-content span {
     padding: 0.4rem 0;
     color: #888;
 }
 .rank-content .color-red {
-    color: red;
+    color: #E9594A;
 }
 /* 竞猜大厅样式结束 */
 
@@ -169,7 +163,6 @@ footer .active {
 .recharge {
     width: 100%;
     height: 100%;
-    padding: 0.4rem;
     box-sizing: border-box;
     background: #f4f4f4;
     overflow: scroll;
@@ -177,33 +170,40 @@ footer .active {
     flex-direction: column;
     color: #888;
     font-size: 0.6rem;
-    overflow: scroll;
+    padding: 0 2rem;
 }
 .title {
     color: #666;
-    padding: 0.6rem;
+    padding: 2rem 0;
 }
 .recharge-content-list {
-    height: 3rem;
     display: flex;
     align-items: center;
     background: #fff;
-    margin-bottom: 0.2rem;
+    padding: 2rem;
+    border-bottom: 1px solid #DDDDDD;
 }
 .recharge-content-img {
-    width: 20%;
-    height: 100%;
+    width: 7rem;
+    height: 5rem;
+    background-color: #63a35c;
+}
+.recharge-content-text {
+    font-size: 2.133rem;
+    color: #5F5F5F;
+    padding-left: 2rem;
 }
 .control-btn {
     display: flex;
     justify-content: space-around;
-    padding-top: 2rem;
+    padding-top: 3.5rem;
 }
-.btn {
-    padding: 0.4rem 1rem;
+.control-btn .btn {
+    padding: 1.5rem 3rem;
     color: #fff;
-    background: #e9594a;
-    border-radius: 1rem;
+    font-size: 2.133rem;
+    background: #FE635F;
+    border-radius: 4rem;
 }
 /* 充值样式结束 */
 
@@ -219,7 +219,6 @@ footer .active {
     flex-direction: column;
     color: #888;
     font-size: 0.6rem;
-    overflow: scroll;
 }
 .service-code {
     background: #fff;
@@ -251,4 +250,131 @@ footer .active {
     margin-left: 0.6rem;
 }
 /* 客服样式结束 */
+
+/* 活动页面样式开始 */
+.activity {
+    width: 100%;
+    height: 100%;
+    padding: 0.4rem;
+    box-sizing: border-box;
+    background: #f4f4f4;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    color: #888;
+    font-size: 0.6rem;
+}
+.activity-content {
+    flex: 1;
+    background: #fff;
+}
+.tab {
+    height: 2rem;
+    line-height: 2rem;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #f4f4f4;
+}
+.tab-nav {
+    padding: 0 2rem;
+}
+.active {
+    border-bottom: 2px solid #e9594a;
+}
+.tab-content {
+    display: none;
+}
+.tab-content li {
+    padding: 0.6rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #f4f4f4;
+}
+.on {
+    display: block;
+}
+/* 活动页面样式结束 */
+
+/* 我的账户页面样式开始 */
+.account {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-size: 0.6rem;
+}
+.account-msg {
+    height: 10rem;
+    background: #e9594a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header-img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: #ccc;
+    margin: 2.4rem 0 0.6rem 0;
+}
+.header-username {
+    padding-top: 0.3rem;
+}
+.balance {
+    height: 3.5rem;
+    background: #f77552;
+    display: flex;
+    align-items: center;
+}
+.balance li {
+    width: 50%;
+}
+.balance li p {
+    text-align: center;
+    padding: 0.1rem 0;
+}
+.user-menu {
+    flex: 1;
+    padding: 0 0.4rem 0.4rem 0.4rem;
+    box-sizing: border-box;
+    background: #f4f4f4;
+    color: #888;
+    font-size: 0.8rem;
+}
+.user-menu li {
+    display: flex;
+    justify-content: space-between;
+    background: #ffff;
+    padding: 0.6rem 0.4rem;
+    margin-top: 0.6rem;
+    border-radius: 0.1rem;
+}
+.user-menu li .menu-icon {
+    padding-right: 0.4rem;
+}
+/* 我的账户页面样式结束 */
+
+/* 游戏大厅页面样式开始 */
+.game-hall-content {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 0.5rem;
+    height: 100%;
+
+}
+.pre {
+    margin-bottom: 0.5rem;
+}
+.room {
+    background: url("../assets/images/game-hall-m.png");
+    width: 100%;
+    padding-top: 23%;
+    padding-bottom: 23%;
+    background-size: 100% 100%;
+}
+/* 游戏大厅页面样式结束 */
+
 

@@ -1,17 +1,20 @@
 SPA_RESOLVE_INIT = function(transition) {
-    $('#header').html('\n' +
-        '    <svg class="icon" aria-hidden="true">\n' +
-        '        <use xlink:href="#icon-lvzhou_gengduo_xiangqing"></use>\n' +
-        '    </svg>\n' +
-        '    <h4>竞猜大厅</h4>\n' +
-        '    <svg class="icon" aria-hidden="true">\n' +
-        '        <use xlink:href="#icon-kefu"></use>\n' +
-        '    </svg>');
+    $('#footer').show();
+    $('#header').html('<a href="#/index">\n' +
+        '         <svg class="icon" aria-hidden="true">\n' +
+        '           <use xlink:href="#icon-lvzhou_gengduo_xiangqing"></use>\n' +
+        '         </svg>\n' +
+        '       </a>\n' +
+        '       <span class="size-36">竞猜大厅</span>\n' +
+        '       <a href="#/index">\n' +
+        '         <svg class="icon" aria-hidden="true">\n' +
+        '           <use xlink:href="#icon-kefu"></use>\n' +
+        '         </svg>\n' +
+        '       </a>');
     $('#header').css('justify-content', 'space-between');
     $('#main').html('\n' +
         '    <div class="lobby">\n' +
         '      <div class="banner">\n' +
-        '        <img class="banner-img" src="assets/images/banner.jpeg" alt="banner图" />\n' +
         '        <p class="banner-text">彩金活动</p>\n' +
         '      </div>\n' +
         '      <div class="broadcast">\n' +
@@ -24,86 +27,86 @@ SPA_RESOLVE_INIT = function(transition) {
         '      </div>\n' +
         '      <div class="menu">\n' +
         '        <div class="menu-top">\n' +
-        '          <div class="menu-content">\n' +
-        '            <div class="menu-content-left">\n' +
-        '              <div class="left-img"></div>\n' +
-        '            </div>\n' +
-        '            <div class="menu-content-right">\n' +
-        '              <h4 class="classify">\n' +
-        '                炫彩厅\n' +
-        '              </h4>\n' +
-        '              <p class="periods">全天179期</p>\n' +
-        '            </div>\n' +
-        '          </div>\n' +
-        '          <div class="menu-content">\n' +
-        '            <div class="menu-content-left">\n' +
-        '              <div class="left-img"></div>\n' +
-        '            </div>\n' +
-        '            <div class="menu-content-right">\n' +
-        '              <h4 class="classify">\n' +
-        '                幻彩厅\n' +
-        '              </h4>\n' +
-        '              <p class="periods">全天394期</p>\n' +
-        '            </div>\n' +
-        '          </div>\n' +
+        '        \t<a href="#/game-hall" class="menu-content">\n' +
+        '\t            <div class="menu-content-left">\n' +
+        '\t              <div class="left-img"></div>\n' +
+        '\t            </div>\n' +
+        '\t            <div class="menu-content-right">\n' +
+        '\t              <span class="classify size-28">\n' +
+        '\t                炫彩厅\n' +
+        '\t              </span>\n' +
+        '\t              <p class="periods">全天179期</p>\n' +
+        '\t            </div>\n' +
+        '        \t</a>\n' +
+        '        \t<a href="#" class="menu-content">\n' +
+        '\t            <div class="menu-content-left">\n' +
+        '\t              <div class="left-img"></div>\n' +
+        '\t            </div>\n' +
+        '\t            <div class="menu-content-right">\n' +
+        '\t              <span class="classify size-28">\n' +
+        '\t                幻彩厅\n' +
+        '\t              </span>\n' +
+        '\t              <p class="periods">全天394期</p>\n' +
+        '\t            </div>\n' +
+        '        \t</a>\n' +
         '        </div>\n' +
         '        <div class="menu-bottom">\n' +
-        '          <div class="menu-content">\n' +
-        '            <div class="menu-content-left">\n' +
-        '              <div class="left-img"></div>\n' +
-        '            </div>\n' +
-        '            <div class="menu-content-right">\n' +
-        '              <h4 class="classify">\n' +
-        '                瑞彩厅\n' +
-        '              </h4>\n' +
-        '              <p class="periods">全天480期</p>\n' +
-        '            </div>\n' +
-        '          </div>\n' +
-        '          <div class="menu-content">\n' +
-        '            <div class="menu-content-left">\n' +
-        '              <div class="left-img"></div>\n' +
-        '            </div>\n' +
-        '            <div class="menu-content-right">\n' +
-        '              <h4 class="classify">\n' +
-        '                敬请期待\n' +
-        '              </h4>\n' +
-        '              <p class="periods">全天96期</p>\n' +
-        '            </div>\n' +
-        '          </div>\n' +
+        '        \t<a href="#" class="menu-content">\n' +
+        '\t            <div class="menu-content-left">\n' +
+        '\t              <div class="left-img"></div>\n' +
+        '\t            </div>\n' +
+        '\t            <div class="menu-content-right">\n' +
+        '\t              <span class="classify size-28">\n' +
+        '\t                瑞彩厅\n' +
+        '\t              </span>\n' +
+        '\t              <p class="periods">全天480期</p>\n' +
+        '\t            </div>\n' +
+        '        \t</a>\n' +
+        '        \t<a href="#" class="menu-content">\n' +
+        '\t            <div class="menu-content-left">\n' +
+        '\t              <div class="left-img"></div>\n' +
+        '\t            </div>\n' +
+        '\t            <div class="menu-content-right">\n' +
+        '\t              <span class="classify size-28">\n' +
+        '\t                敬请期待\n' +
+        '\t              </span>\n' +
+        '\t              <p class="periods">全天96期</p>\n' +
+        '\t            </div>\n' +
+        '        \t</a>\n' +
         '        </div>\n' +
         '      </div>\n' +
         '      <div class="rank">\n' +
-        '        <p class="rank-title">-- 最新中奖榜 --</p>\n' +
+        '        <p class="rank-title size-28">-- 最新中奖榜 --</p>\n' +
         '        <ul class="rank-content">\n' +
         '          <li>\n' +
         '            <span>丽丽****</span>\n' +
         '            <span>投注瑞彩厅</span>\n' +
-        '            <span class="color-red">恭喜中10000.00元</span>\n' +
+        '            <span class="color-red">喜中10000.00元</span>\n' +
         '          </li>\n' +
         '          <li>\n' +
         '            <span>丽丽****</span>\n' +
         '            <span>投注瑞彩厅</span>\n' +
-        '            <span class="color-red">恭喜中10000.00元</span>\n' +
+        '            <span class="color-red">喜中10000.00元</span>\n' +
         '          </li>\n' +
         '          <li>\n' +
         '            <span>丽丽****</span>\n' +
         '            <span>投注瑞彩厅</span>\n' +
-        '            <span class="color-red">恭喜中10000.00元</span>\n' +
+        '            <span class="color-red">喜中10000.00元</span>\n' +
         '          </li>\n' +
         '          <li>\n' +
         '            <span>丽丽****</span>\n' +
         '            <span>投注瑞彩厅</span>\n' +
-        '            <span class="color-red">恭喜中10000.00元</span>\n' +
+        '            <span class="color-red">喜中10000.00元</span>\n' +
         '          </li>\n' +
         '          <li>\n' +
         '            <span>丽丽****</span>\n' +
         '            <span>投注瑞彩厅</span>\n' +
-        '            <span class="color-red">恭喜中10000.00元</span>\n' +
+        '            <span class="color-red">喜中10000.00元</span>\n' +
         '          </li>\n' +
         '          <li>\n' +
         '            <span>丽丽****</span>\n' +
         '            <span>投注瑞彩厅</span>\n' +
-        '            <span class="color-red">恭喜中10000.00元</span>\n' +
+        '            <span class="color-red">喜中10000.00元</span>\n' +
         '          </li>\n' +
         '        </ul>\n' +
         '      </div>\n' +

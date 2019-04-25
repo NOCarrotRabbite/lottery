@@ -37,6 +37,9 @@ figcaption {
   font-family: '微软雅黑', sans-serif;
   outline: none;
 }
+a {
+  color: #888;
+}
 input[type='button'],
 input[type='submit'],
 input[type='search'],
@@ -60,6 +63,8 @@ body {
   top: 0;
   overflow: hidden;
   background-color: #F2F3F7;
+  font-size: 1.6rem;
+
 }
 .icon {
   width: 1em;
@@ -72,9 +77,35 @@ header {
     background-color: #E9594A;
     display: flex;
     /*justify-content: space-between;*/
-    padding: 1rem 1rem;
+    align-items: center;
+    padding: 2rem 2rem;
     color: #fff;
 }
 header .icon {
-    font-size: 1.4rem;
+    font-size: 2.4rem;
 }
+header .title {
+  color: #fff;
+}
+header a {
+  color: #fff;
+}
+.size-20 {
+  font-size: 1.3333rem;
+}
+.size-24 {
+  font-size: 1.6rem;
+}
+.size-28 {
+  font-size: 1.866rem;
+}
+.size-32 {
+  font-size: 2.133rem;
+}
+.size-36 {
+  font-size: 2.4rem;
+}
+.size-40 {
+  font-size: 2.667rem;
+}
+

@@ -39,7 +39,7 @@
 			//页面加载匹配路由
 			window.addEventListener('load',function(){
 				self.urlChange()
-			})
+			});
 			//路由切换
 			window.addEventListener('hashchange',function(){
 				self.urlChange()
@@ -105,8 +105,8 @@
 		asyncFun:function(file,transition){
 		   var self = this;
 		   if(self.routers[transition.path].fn){
-		   		self.afterFun && self.afterFun(transition)
-		   		self.routers[transition.path].fn(transition)
+		   		self.afterFun && self.afterFun(transition);
+		   		self.routers[transition.path].fn(transition, 1);  // 是否第一次加载js文件控制标识，1为否
 		   }else{
 		   	   // console.log("开始异步下载js文件"+file)
 			   var _body= document.getElementsByTagName('body')[0];
@@ -117,10 +117,10 @@
 	           SPA_RESOLVE_INIT = null;
 	           scriptEle.onload= function(){
 	               // console.log('下载'+file+'完成')
-	               self.afterFun && self.afterFun(transition)
+	               self.afterFun && self.afterFun(transition);
 	               self.routers[transition.path].fn = SPA_RESOLVE_INIT;
-	               self.routers[transition.path].fn(transition)
-	           }
+	               self.routers[transition.path].fn(transition, 0);  // 是否加载过js文件控制标识，0为第一次加载
+	           };
 	           _body.appendChild(scriptEle);
 		   }
 		},
@@ -130,7 +130,7 @@
 			callback && callback(transition)
 		}
 
-	}
+	};
 	//注册到window全局
 	window.spaRouters = new spaRouters();
-})()
+})();

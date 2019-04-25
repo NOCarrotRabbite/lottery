@@ -1,6 +1,55 @@
 SPA_RESOLVE_INIT = function(transition) {
+    $('#footer').show();
     $('#header').html('<h4>我的账户</h4>');
     $('#header').css('justify-content', 'center');
-    document.getElementById("main").innerHTML = '<p style="color:red;">这是账户页面</p>';
-    // console.log("账户页面回调" + JSON.stringify(transition));
+    $('#main').html('\n' +
+        '    <div class="account">\n' +
+        '      <header class="account-msg">\n' +
+        '        <div class="header-img"></div>\n' +
+        '        <div class="header-account">用户名：WX1234</div>\n' +
+        '        <div class="header-username">昵称：name</div>\n' +
+        '      </header>\n' +
+        '      <ul class="balance">\n' +
+        '        <li>\n' +
+        '          <p>余额</p>\n' +
+        '          <p>0.0元宝</p>\n' +
+        '        </li>\n' +
+        '        <li>\n' +
+        '          <p>今日盈亏</p>\n' +
+        '          <p>0.0</p>\n' +
+        '        </li>\n' +
+        '      </ul>\n' +
+        '      <ul class="user-menu">\n' +
+        '        <a href="#">\n' +
+        '          <li>\n' +
+        '            <span><i class="menu-icon">Icon</i>钱包</span>\n' +
+        '            <span>></span>\n' +
+        '          </li>\n' +
+        '        </a>\n' +
+        '        <a href="#">\n' +
+        '          <li>\n' +
+        '            <span><i class="menu-icon">Icon</i>账变记录</span>\n' +
+        '            <span>></span>\n' +
+        '          </li>\n' +
+        '        </a>\n' +
+        '        <a href="#">\n' +
+        '          <li>\n' +
+        '            <span><i class="menu-icon">Icon</i>账户明细</span>\n' +
+        '            <span>></span>\n' +
+        '          </li>\n' +
+        '        </a>\n' +
+        '        <a href="#">\n' +
+        '          <li>\n' +
+        '            <span><i class="menu-icon">Icon</i>设置</span>\n' +
+        '            <span>></span>\n' +
+        '          </li>\n' +
+        '        </a>\n' +
+        '        <a href="#">\n' +
+        '          <li>\n' +
+        '            <span><i class="menu-icon">Icon</i>关于我们</span>\n' +
+        '            <span>></span>\n' +
+        '          </li>\n' +
+        '        </a>\n' +
+        '      </ul>\n' +
+        '    </div>');
 }
