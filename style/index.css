@@ -236,6 +236,7 @@ footer .active {
 .service-qq {
     font-size: 2.133rem;
     font-weight: 500;
+    color: #565656;
     padding-top: 3rem;
     display: flex;
     justify-content: center;
@@ -248,7 +249,7 @@ footer .active {
 }
 .service-qq .btn {
     font-size: 2.133rem;
-    font-weight: 600;
+    font-weight: 500;
     padding: 0.7rem 2rem;
     color: #fff;
     background: #FE635E;

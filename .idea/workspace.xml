@@ -2,19 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b492952f-9934-49d0-803b-87aa11e996ac" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/demo_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/demo_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/iconfont.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/iconfont.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/iconfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/iconfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/iconfont.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/iconfont.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/iconfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/iconfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/iconfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/iconfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/iconfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/iconfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/iconfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/route/components/account-main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/account-main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/route/components/customer-main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/customer-main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/route/components/index-main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/index-main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/common.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/index.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -61,14 +48,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="2273" />
+          <entry key="css" value="2283" />
           <entry key="html" value="911" />
           <entry key="js" value="2499" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="2273" />
+          <entry key="CSS" value="2283" />
           <entry key="HTML" value="912" />
           <entry key="JavaScript" value="2498" />
         </counts>
@@ -98,8 +85,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/style/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="212" column="24" selection-start-line="212" selection-start-column="24" selection-end-line="212" selection-end-column="24" />
+            <state relative-caret-position="88">
+              <caret line="238" column="19" selection-start-line="238" selection-start-column="19" selection-end-line="238" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -185,7 +172,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="351" />
     <option name="y" value="178" />
     <option name="width" value="1510" />
@@ -289,12 +276,12 @@
       <workItem from="1556156881213" duration="20590000" />
       <workItem from="1556242222890" duration="9502000" />
       <workItem from="1556258011121" duration="611000" />
-      <workItem from="1556262630067" duration="4142000" />
+      <workItem from="1556262630067" duration="4521000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77349000" />
+    <option name="totallyTimeSpent" value="77728000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -464,8 +451,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/style/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="212" column="24" selection-start-line="212" selection-start-column="24" selection-end-line="212" selection-end-column="24" />
+        <state relative-caret-position="88">
+          <caret line="238" column="19" selection-start-line="238" selection-start-column="19" selection-end-line="238" selection-end-column="19" />
         </state>
       </provider>
     </entry>
