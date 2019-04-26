@@ -1,11 +1,11 @@
 SPA_RESOLVE_INIT = function(transition) {
     $('#footer').show();
-    $('#header').html('<h4>在线客服</h4>');
+    $('#header').html('<span class="size-36">在线客服</span>');
     $('#header').css('justify-content', 'center');
     $('#main').html('\n' +
         '    <div class="service">\n' +
         '      <div class="service-code">\n' +
-        '        <img class="service-img" src="assets/images/erweima.jpg" alt="qq" />\n' +
+        '        <div class="service-img"></div>\n' +
         '        <p class="service-text">长按保存微信客服二维码</p>\n' +
         '      </div>\n' +
         '      <div class="service-qq">\n' +

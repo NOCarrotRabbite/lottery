@@ -152,7 +152,7 @@ footer .active {
 }
 .rank-content span {
     padding: 0.4rem 0;
-    color: #888;
+    color: #808080;
 }
 .rank-content .color-red {
     color: #E9594A;
@@ -165,7 +165,6 @@ footer .active {
     height: 100%;
     box-sizing: border-box;
     background: #f4f4f4;
-    overflow: scroll;
     display: flex;
     flex-direction: column;
     color: #888;
@@ -211,10 +210,9 @@ footer .active {
 .service {
     width: 100%;
     height: 100%;
-    padding: 0.4rem;
+    /*padding: 0.4rem;*/
     box-sizing: border-box;
     background: #f4f4f4;
-    overflow: scroll;
     display: flex;
     flex-direction: column;
     color: #888;
@@ -222,32 +220,37 @@ footer .active {
 }
 .service-code {
     background: #fff;
+    text-align: center;
+    padding: 5rem 5rem 0 5rem;
 }
 .service-img {
-    width: 100%;
-    height: 20rem;
+    width: 35rem;
+    height: 35rem;
+    background-color: #63a35c;
+    display: inline-block;
 }
 .service-text {
-    text-align: center;
-    padding: 0.4rem 0 0.6rem 0;
+    font-size: 1.866rem;
+    padding: 3rem 0;
 }
 .service-qq {
-    padding-top: 2rem;
+    font-size: 1.6rem;
+    padding-top: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .service-qq-icon {
     /* width: 3rem; */
-    padding-right: 0.6rem;
+    padding-right: 1rem;
 }
-.btn {
-    font-size: 0.6rem;
-    padding: 0.2rem 0.6rem;
+.service-qq .btn {
+    font-size: 1.6rem;
+    padding: 0.5rem 1rem;
     color: #fff;
-    background: #e9594a;
-    border-radius: 0.2rem;
-    margin-left: 0.6rem;
+    background: #FB665A;
+    border-radius: 0.5rem;
+    margin-left: 1rem;
 }
 /* 客服样式结束 */
 
@@ -255,10 +258,8 @@ footer .active {
 .activity {
     width: 100%;
     height: 100%;
-    padding: 0.4rem;
     box-sizing: border-box;
     background: #f4f4f4;
-    overflow: scroll;
     display: flex;
     flex-direction: column;
     color: #888;
@@ -269,26 +270,32 @@ footer .active {
     background: #fff;
 }
 .tab {
-    height: 2rem;
-    line-height: 2rem;
+    height: 5rem;
+    line-height: 5rem;
     display: flex;
     justify-content: space-around;
-    border-bottom: 1px solid #f4f4f4;
+    border-bottom: 1px solid #EBEBEB;
+    font-size: 1.866rem;
+    font-weight: 500;
 }
 .tab-nav {
-    padding: 0 2rem;
+    padding: 0 3rem;
+    color: #666666;
 }
-.active {
-    border-bottom: 2px solid #e9594a;
+.tab .active {
+    border-bottom: 2px solid #D75244;
+    color: #191919;
 }
 .tab-content {
     display: none;
 }
 .tab-content li {
-    padding: 0.6rem 1rem;
+    font-size: 1.6rem;
+    color: #656565;
+    padding: 1.5rem 1rem;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #f4f4f4;
+    border-bottom: 1px solid #F3F3F3;
 }
 .on {
     display: block;
@@ -302,54 +309,61 @@ footer .active {
     display: flex;
     flex-direction: column;
     color: #fff;
-    font-size: 0.6rem;
+    font-size: 1.6rem;
 }
 .account-msg {
-    height: 10rem;
-    background: #e9594a;
+    background: #E9594A;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 2.133rem;
+    padding: 3rem 0;
 }
 .header-img {
-    width: 3rem;
-    height: 3rem;
+    width: 15rem;
+    height: 15rem;
     border-radius: 50%;
     background: #ccc;
-    margin: 2.4rem 0 0.6rem 0;
+}
+.header-account {
+    padding-top: 1rem;
 }
 .header-username {
-    padding-top: 0.3rem;
+    padding-top: 1rem;
 }
+
 .balance {
-    height: 3.5rem;
     background: #f77552;
     display: flex;
     align-items: center;
 }
 .balance li {
     width: 50%;
+    padding: 1rem 0 1.5rem 0;
+    font-size: 1.866rem;
 }
 .balance li p {
     text-align: center;
-    padding: 0.1rem 0;
+    padding-top: 0.5rem;
 }
 .user-menu {
     flex: 1;
-    padding: 0 0.4rem 0.4rem 0.4rem;
+    padding: 0 1.5rem 1.5rem 1.5rem;
     box-sizing: border-box;
     background: #f4f4f4;
-    color: #888;
-    font-size: 0.8rem;
+    color: #616161;
+    font-size: 2.4rem;
 }
 .user-menu li {
     display: flex;
     justify-content: space-between;
     background: #ffff;
-    padding: 0.6rem 0.4rem;
-    margin-top: 0.6rem;
-    border-radius: 0.1rem;
+    padding: 1.5rem 1.5rem;
+    margin-top: 1.5rem;
+    border-radius: 0.3rem;
 }
+
+
 .user-menu li .menu-icon {
     padding-right: 0.4rem;
 }

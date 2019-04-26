@@ -1,6 +1,6 @@
 SPA_RESOLVE_INIT = function(transition, sigal) {
     $('#footer').show();
-    $('#header').html('<h4>活动中心</h4>');
+    $('#header').html('<span class="size-36">活动中心</span>');
     $('#header').css('justify-content', 'center');
     $('#main').html('\n' +
         '    <div class="activity">\n' +

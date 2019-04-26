@@ -1,6 +1,6 @@
 SPA_RESOLVE_INIT = function(transition) {
     $('#footer').show();
-    $('#header').html('<h4>我的账户</h4>');
+    $('#header').html('<span class="size-36">我的账户</span>');
     $('#header').css('justify-content', 'center');
     $('#main').html('\n' +
         '    <div class="account">\n' +
@@ -12,11 +12,11 @@ SPA_RESOLVE_INIT = function(transition) {
         '      <ul class="balance">\n' +
         '        <li>\n' +
         '          <p>余额</p>\n' +
-        '          <p>0.0元宝</p>\n' +
+        '          <p class="size-32">0.0元宝</p>\n' +
         '        </li>\n' +
         '        <li>\n' +
         '          <p>今日盈亏</p>\n' +
-        '          <p>0.0</p>\n' +
+        '          <p class="size-32">0.0</p>\n' +
         '        </li>\n' +
         '      </ul>\n' +
         '      <ul class="user-menu">\n' +
