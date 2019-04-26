@@ -12,42 +12,87 @@ SPA_RESOLVE_INIT = function(transition) {
         '      <ul class="balance">\n' +
         '        <li>\n' +
         '          <p>余额</p>\n' +
-        '          <p class="size-32">0.0元宝</p>\n' +
+        '          <p>0.0元宝</p>\n' +
         '        </li>\n' +
         '        <li>\n' +
         '          <p>今日盈亏</p>\n' +
-        '          <p class="size-32">0.0</p>\n' +
+        '          <p>0.0</p>\n' +
         '        </li>\n' +
         '      </ul>\n' +
         '      <ul class="user-menu">\n' +
         '        <a href="#">\n' +
         '          <li>\n' +
-        '            <span><i class="menu-icon">Icon</i>钱包</span>\n' +
-        '            <span>></span>\n' +
+        '            <span>\n' +
+        '              <svg class="icon list-icon" aria-hidden="true">\n' +
+        '                <use xlink:href="#icon-qianbao1"></use>\n' +
+        '              </svg>\n' +
+        '              钱包\n' +
+        '            </span>\n' +
+        '            <span>\n' +
+        '              <svg class="icon detail-icon" aria-hidden="true">\n' +
+        '                <use xlink:href="#icon-xiangqing"></use>\n' +
+        '              </svg>\n' +
+        '            </span>\n' +
         '          </li>\n' +
         '        </a>\n' +
         '        <a href="#">\n' +
         '          <li>\n' +
-        '            <span><i class="menu-icon">Icon</i>账变记录</span>\n' +
-        '            <span>></span>\n' +
+        '            <span>\n' +
+        '              <svg class="icon list-icon" aria-hidden="true">\n' +
+        '                <use xlink:href="#icon-_jilu"></use>\n' +
+        '              </svg>\n' +
+        '              帐变记录\n' +
+        '            </span>\n' +
+        '            <span>\n' +
+        '              <svg class="icon detail-icon" aria-hidden="true">\n' +
+        '                <use xlink:href="#icon-xiangqing"></use>\n' +
+        '              </svg>\n' +
+        '            </span>\n' +
         '          </li>\n' +
         '        </a>\n' +
         '        <a href="#">\n' +
         '          <li>\n' +
-        '            <span><i class="menu-icon">Icon</i>账户明细</span>\n' +
-        '            <span>></span>\n' +
+        '            <span>\n' +
+        '              <svg class="icon list-icon" aria-hidden="true">\n' +
+        '                <use xlink:href="#icon-youxi1"></use>\n' +
+        '              </svg>\n' +
+        '              账户明细\n' +
+        '            </span>\n' +
+        '            <span>\n' +
+        '              <svg class="icon detail-icon" aria-hidden="true">\n' +
+        '                <use xlink:href="#icon-xiangqing"></use>\n' +
+        '              </svg>\n' +
+        '            </span>\n' +
         '          </li>\n' +
         '        </a>\n' +
         '        <a href="#">\n' +
         '          <li>\n' +
-        '            <span><i class="menu-icon">Icon</i>设置</span>\n' +
-        '            <span>></span>\n' +
+        '            <span>\n' +
+        '              <svg class="icon list-icon" aria-hidden="true">\n' +
+        '                <use xlink:href="#icon-shezhi"></use>\n' +
+        '              </svg>\n' +
+        '              设置\n' +
+        '            </span>\n' +
+        '            <span>\n' +
+        '              <svg class="icon detail-icon" aria-hidden="true">\n' +
+        '                <use xlink:href="#icon-xiangqing"></use>\n' +
+        '              </svg>\n' +
+        '            </span>\n' +
         '          </li>\n' +
         '        </a>\n' +
         '        <a href="#">\n' +
         '          <li>\n' +
-        '            <span><i class="menu-icon">Icon</i>关于我们</span>\n' +
-        '            <span>></span>\n' +
+        '            <span>\n' +
+        '              <svg class="icon list-icon" aria-hidden="true">\n' +
+        '                <use xlink:href="#icon-weixin"></use>\n' +
+        '              </svg>\n' +
+        '              关于我们\n' +
+        '            </span>\n' +
+        '            <span>\n' +
+        '              <svg class="icon detail-icon" aria-hidden="true">\n' +
+        '                <use xlink:href="#icon-xiangqing"></use>\n' +
+        '              </svg>\n' +
+        '            </span>\n' +
         '          </li>\n' +
         '        </a>\n' +
         '      </ul>\n' +

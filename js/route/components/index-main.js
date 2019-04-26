@@ -19,7 +19,7 @@ SPA_RESOLVE_INIT = function(transition) {
         '      </div>\n' +
         '      <div class="broadcast">\n' +
         '        <svg class="icon icon-logo" aria-hidden="true">\n' +
-        '            <use xlink:href="#icon-gonggao"></use>\n' +
+        '            <use xlink:href="#icon-tongzhi"></use>\n' +
         '        </svg>\n' +
         '        <marquee class="broadcast-text">\n' +
         '          尊敬的游戏玩家您好：因支付通道变更，请您充值前联系在线客服取得充值方式，如您自行充值造成的损失本平台概不负责，祝各位玩家生活愉快，好运常在~~~\n' +
