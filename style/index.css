@@ -49,9 +49,9 @@ footer .active {
 }
 .banner {
     position: relative;
-    background-color: #63a35c;
+    background: url("../assets/images/banner.jpg");
     padding: 20% 0;
-
+    background-size: 100% 100%;
 }
 /*.banner-img {
     width: 100%;
@@ -113,8 +113,23 @@ footer .active {
 .left-img {
     width: 7rem;
     height: 7rem;
-    background: #E9594A;
-    border-radius: 50%;
+
+}
+.xuancai {
+    background: url("../assets/images/home-hall-xuancai.png");
+    background-size: 100% 100%;
+}
+.huancai {
+    background: url("../assets/images/home-hall-huancai.png");
+    background-size: 100% 100%;
+}
+.ruicai {
+    background: url("../assets/images/home-hall-ruicai.png");
+    background-size: 100% 100%;
+}
+.more {
+    background: url("../assets/images/home-hall-more.png.png");
+    background-size: 100% 100%;
 }
 .menu-content-right {
     height: 100%;
@@ -185,7 +200,6 @@ footer .active {
 .recharge-content-img {
     width: 7rem;
     height: 5rem;
-    background-color: #63a35c;
 }
 .recharge-content-text {
     font-size: 2.133rem;
@@ -327,7 +341,8 @@ footer .active {
     width: 15rem;
     height: 15rem;
     border-radius: 50%;
-    background: #ccc;
+    background: url("../assets/images/head-image_M.png");
+    background-size: 100% 100%;
 }
 .header-account {
     padding-top: 1rem;
@@ -380,19 +395,28 @@ footer .active {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 1rem 0.5rem;
-    height: 100%;
-
+    justify-content: flex-start;
+    padding: 2rem 2rem;
+    /*height: 100%;*/
 }
 .pre {
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
 }
 .room {
-    background: url("../assets/images/game-hall-m.png");
     width: 100%;
     padding-top: 23%;
     padding-bottom: 23%;
+}
+.primary {
+    background: url("../assets/images/game-hall-primary.jpg");
+    background-size: 100% 100%;
+}
+.middle {
+    background: url("../assets/images/game-hall-middle.jpg");
+    background-size: 100% 100%;
+}
+.senior {
+    background: url("../assets/images/game-hall-senior.jpg");
     background-size: 100% 100%;
 }
 /* 游戏大厅页面样式结束 */
@@ -579,3 +603,27 @@ footer .active {
     padding: 1rem 1rem;
 }
 /*我的账户-账户记录 结束*/
+
+/* 我的账户-设置 开始 */
+.setting {
+    width: 100%;
+    height: 100%;
+    padding: 0.4rem;
+    box-sizing: border-box;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    color: #888;
+    /* font-size: 0.8rem; */
+}
+.setting-content li {
+    background: #ffff;
+    padding: 0.8rem 0.4rem;
+    margin-bottom: 0.6rem;
+    border-radius: 0.1rem;
+}
+.setting-content li .menu-icon {
+    box-sizing: border-box;
+    padding-right: 0.4rem;
+}
+/*我的账户-设置 结束*/

@@ -13,8 +13,8 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
     $('.back').css('color', '#fff');
     $('#main').html('\n' +
         '    <div class="game-hall-content">\n' +
-        '        <div class="room pre"></div>\n' +
-        '        <div class="room pre"></div>\n' +
-        '        <div class="room"></div>\n' +
+        '        <div class="room pre primary"></div>\n' +
+        '        <div class="room pre middle"></div>\n' +
+        '        <div class="room senior"></div>\n' +
         '    </div>');
 };
