@@ -1,0 +1,64 @@
+SPA_RESOLVE_INIT = function(transition, sigal) {
+    $('#footer').hide();
+    $('#header').html('<a href="#/account">\n' +
+        '         <svg class="icon" aria-hidden="true">\n' +
+        '           <use xlink:href="#icon-fanhui"></use>\n' +
+        '         </svg>\n' +
+        '       </a>\n' +
+        '       <span class="size-36">竞猜大厅</span>\n' +
+        '       <a href="javascript:void(0)" class="filtrate-btn">\n' +
+        '         筛选\n' +
+        '       </a>');
+    $('#header').css('justify-content', 'space-between');
+    $('.back').css('color', '#fff');
+    $('#main').html('\n' +
+        '    <div class="account-details">\n' +
+        '      <div class="screen">\n' +
+        '        <div class="screen-kind size-24">\n' +
+        '          筛选时间：\n' +
+        '          <div class="choice-date">\n' +
+        '            <input type="text" class="date size-20" placeholder="请选择日期" />\n' +
+        '            <span>-</span>\n' +
+        '            <input type="text" class="date size-20" placeholder="请选择日期" />\n' +
+        '          </div>\n' +
+        '        </div>\n' +
+        '        <div class="screen-kind size-24">\n' +
+        '          筛选彩种：\n' +
+        '          <p class="kind">全部彩种</p>\n' +
+        '        </div>\n' +
+        '        <div class="control-btn">\n' +
+        '          <button class="close size-24">关闭</button>\n' +
+        '          <button class="submit size-24">确定</button>\n' +
+        '        </div>\n' +
+        '      </div>\n' +
+        '      <div class="dialog">\n' +
+        '        <div class="mask-layer"></div>\n' +
+        '        <ul class="select-kind size-24">\n' +
+        '          <li>\n' +
+        '            全部彩种<input type="radio" name="kind" value="apple" checked />\n' +
+        '          </li>\n' +
+        '          <li>\n' +
+        '            北京幸运28<input type="radio" name="kind" value="apple" checked />\n' +
+        '          </li>\n' +
+        '          <li>\n' +
+        '            加拿大幸运28<input type="radio" name="kind" value="apple" checked />\n' +
+        '          </li>\n' +
+        '          <li>\n' +
+        '            北京赛车<input type="radio" name="kind" value="apple" checked />\n' +
+        '          </li>\n' +
+        '        </ul>\n' +
+        '      </div>\n' +
+        '    </div>');
+
+    let _body= document.getElementsByTagName('body')[0];
+    let scriptEle= document.createElement('script');
+    scriptEle.type= 'text/javascript';
+    scriptEle.src= 'js/account-details.js';
+    scriptEle.async = true;
+    if(sigal == 0) {
+        _body.appendChild(scriptEle);
+    } else {
+        $("script[src='js/account-details.js']").remove();
+        _body.appendChild(scriptEle);
+    }
+};

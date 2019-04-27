@@ -8,7 +8,7 @@ SPA_RESOLVE_INIT = function(transition) {
         '       <span class="size-36">竞猜大厅</span>\n' +
         '       <a href="#/index">\n' +
         '         <svg class="icon" aria-hidden="true">\n' +
-        '           <use xlink:href="#icon-kefu"></use>\n' +
+        '           <use xlink:href="#icon-zhanghu1"></use>\n' +
         '         </svg>\n' +
         '       </a>');
     $('#header').css('justify-content', 'space-between');

@@ -20,7 +20,7 @@ SPA_RESOLVE_INIT = function(transition) {
         '        </li>\n' +
         '      </ul>\n' +
         '      <ul class="user-menu">\n' +
-        '        <a href="#">\n' +
+        '        <a href="#/my-wallet">\n' +
         '          <li>\n' +
         '            <span>\n' +
         '              <svg class="icon list-icon" aria-hidden="true">\n' +
@@ -35,13 +35,13 @@ SPA_RESOLVE_INIT = function(transition) {
         '            </span>\n' +
         '          </li>\n' +
         '        </a>\n' +
-        '        <a href="#">\n' +
+        '        <a href="#/account-records">\n' +
         '          <li>\n' +
         '            <span>\n' +
         '              <svg class="icon list-icon" aria-hidden="true">\n' +
         '                <use xlink:href="#icon-_jilu"></use>\n' +
         '              </svg>\n' +
-        '              帐变记录\n' +
+        '              账变记录\n' +
         '            </span>\n' +
         '            <span>\n' +
         '              <svg class="icon detail-icon" aria-hidden="true">\n' +
@@ -50,7 +50,7 @@ SPA_RESOLVE_INIT = function(transition) {
         '            </span>\n' +
         '          </li>\n' +
         '        </a>\n' +
-        '        <a href="#">\n' +
+        '        <a href="#/account-details">\n' +
         '          <li>\n' +
         '            <span>\n' +
         '              <svg class="icon list-icon" aria-hidden="true">\n' +

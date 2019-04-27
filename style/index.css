@@ -397,4 +397,185 @@ footer .active {
 }
 /* 游戏大厅页面样式结束 */
 
+/* 我的账户-钱包 样式开始 */
+.wallet {
+    width: 100%;
+    height: 100%;
+    padding: 0.4rem;
+    box-sizing: border-box;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    color: #888;
+    /* font-size: 0.8rem; */
+}
+.wallet-header {
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    background: -webkit-linear-gradient(left, #5fd0fd, #52afec);
+    color: #fff;
+    border-radius: 0.3rem;
+}
+.wallet-header li {
+    padding-left: 2rem;
+}
+.wallet-header li .pad-top {
+    padding-top: 0.4rem;
+}
+.wallet-content li {
+    background: #ffff;
+    padding: 0.6rem 0.4rem;
+    margin-top: 0.6rem;
+    border-radius: 0.1rem;
+}
+.wallet-content li .menu-icon {
+    padding-right: 0.4rem;
+}
+/* 我的账户-钱包 样式结束 */
 
+/*我的账户-账变记录 开始*/
+.account-records {
+    width: 100%;
+    height: 100%;
+    padding: 0.4rem;
+    box-sizing: border-box;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    color: #888;
+    /* font-size: 0.8rem; */
+}
+.account-records ul li {
+    width: 100%;
+    /* font-size: 0; */
+    display: flex;
+    text-align: center;
+    border-bottom: 1px solid #f1f1f1;
+}
+.account-records-border {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+.account-records ul li span {
+    display: inline-block;
+    width: 33%;
+    /* font-size: 0.6rem; */
+    padding: 0.4rem 0;
+}
+.account-records li:nth-child(1) {
+    background: #e9594a;
+    color: #fff;
+}
+.account-records li:nth-child(1) span {
+    padding: 0.5rem 0;
+}
+/*我的账户-账变记录 结束*/
+
+/*我的账户-账户明细 开始*/
+.account-details {
+    width: 100%;
+    height: 100%;
+    padding: 0.4rem;
+    box-sizing: border-box;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    color: #888;
+    /*  font-size: 0.8rem; */
+}
+.account-details .filtrate-btn {
+    background: #ccc;
+    padding: 0.4rem 1rem;
+    border-radius: 0.6rem;
+}
+.account-details .mask-layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -2;
+}
+.account-details .screen {
+    width: 80%;
+    height: 100%;
+    background: #fff;
+    color: #888;
+    /* font-size: 0.8rem; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.4rem;
+    box-sizing: border-box;
+    z-index: -1;
+}
+.account-details .screen-kind {
+    padding-top: 0.6rem;
+}
+.account-details .kind {
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+    padding: 0.2rem 0;
+    text-align: center;
+}
+.account-details .screen .screen-kind p {
+    margin-top: 0.4rem;
+}
+.account-details .control-btn {
+    width: 100%;
+    /* font-size: 0; */
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.account-details .control-btn button {
+    width: 50%;
+    height: 2.6rem;
+}
+.account-details .control-btn button:nth-child(1) {
+    background: #f4f4f4;
+}
+.account-details .control-btn button:nth-child(2) {
+    background: #e9594a;
+    color: #fff;
+}
+.account-details .choice-date {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 0.4rem;
+}
+.account-details .choice-date span {
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+}
+.account-details .choice-date .date {
+    width: 45%;
+    border: 1px solid #ccc;
+    padding: 0.2rem;
+    border-radius: 0.4rem;
+}
+.account-details .select-kind {
+    width: 80%;
+    position: absolute;
+    left: 10%;
+    top: 11rem;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+    margin-top: 1rem;
+    padding: 1rem 1rem 2rem 1rem;
+    box-sizing: border-box;
+    /* display: none; */
+    z-index: -3;
+}
+.account-details .select-kind li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 1rem 1rem;
+}
+/*我的账户-账户记录 结束*/

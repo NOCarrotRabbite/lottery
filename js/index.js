@@ -1,4 +1,5 @@
 let last_path = null;
+/* 框架主页面路由注册开始 */
 spaRouters.map('/index',function(transition){
     spaRouters.asyncFun('js/route/components/index-main.js',transition)
 });
@@ -14,9 +15,29 @@ spaRouters.map('/activity',function(transition){
 spaRouters.map('/account',function(transition){
     spaRouters.asyncFun('js/route/components/account-main.js',transition)
 });
+/* 框架主页面路由注册结束 */
+
+/* 首页子页面路由注册开始 */
 spaRouters.map('/game-hall',function(transition){
     spaRouters.asyncFun('js/route/components/game-hall.js',transition)
 });
+/* 首页子页面路由注册结束 */
+
+/* 我的账户子页面路由注册开始 */
+spaRouters.map('/my-wallet',function(transition){
+    spaRouters.asyncFun('js/route/components/wallet.js',transition)
+});
+spaRouters.map('/account-records',function(transition){
+    spaRouters.asyncFun('js/route/components/account-records.js',transition)
+});
+spaRouters.map('/account-details',function(transition){
+    spaRouters.asyncFun('js/route/components/account-details.js',transition)
+});
+/* 我的账户子页面路由注册结束 */
+
+
+
+
 /*spaRouters.map('/detail2',function(transition){
     spaRouters.syncFun(function(transition){
     },transition)
