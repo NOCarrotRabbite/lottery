@@ -44,7 +44,7 @@ input[type='button'],
 input[type='submit'],
 input[type='search'],
 input[type='reset'] {
-  //ios下移除原生样式
+  /* ios下移除原生样式 */
   -webkit-appearance: none;
 }
 
@@ -62,9 +62,8 @@ body {
   left: 0;
   top: 0;
   overflow: hidden;
-  background-color: #F2F3F7;
+  background-color: #f2f3f7;
   font-size: 1.6rem;
-
 }
 .icon {
   width: 1em;
@@ -74,15 +73,15 @@ body {
   overflow: hidden;
 }
 #header {
-    background-color: #E9594A;
-    display: flex;
-    /*justify-content: space-between;*/
-    align-items: center;
-    padding: 2rem 2rem;
-    color: #fff;
+  background-color: #e9594a;
+  display: flex;
+  /*justify-content: space-between;*/
+  align-items: center;
+  padding: 2rem 2rem;
+  color: #fff;
 }
 #header .icon {
-    font-size: 2.4rem;
+  font-size: 2.4rem;
 }
 #header .title {
   color: #fff;
@@ -251,7 +250,7 @@ body {
 }
 .ic__days .ic__day-empty {
   background: #fff
-  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAMAAAC6sdbXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF7u7u////KNOqmgAAABlJREFUeNpiYGRkZABCCGIA8UAEI4QACDAAAUoAFV5+ydgAAAAASUVORK5CYII=');
+    url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAMAAAC6sdbXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF7u7u////KNOqmgAAABlJREFUeNpiYGRkZABCCGIA8UAEI4QACDAAAUoAFV5+ydgAAAAASUVORK5CYII=');
 }
 .ic__days .ic__day_state_current {
   background: #e9594a;
