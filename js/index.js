@@ -33,6 +33,9 @@ spaRouters.map('/account-records',function(transition){
 spaRouters.map('/account-details',function(transition){
     spaRouters.asyncFun('js/route/components/account-details.js',transition)
 });
+spaRouters.map('/setting',function(transition){
+    spaRouters.asyncFun('js/route/components/setting.js',transition)
+});
 /* 我的账户子页面路由注册结束 */
 
 

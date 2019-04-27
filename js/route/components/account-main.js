@@ -65,7 +65,7 @@ SPA_RESOLVE_INIT = function(transition) {
         '            </span>\n' +
         '          </li>\n' +
         '        </a>\n' +
-        '        <a href="#">\n' +
+        '        <a href="#/setting">\n' +
         '          <li>\n' +
         '            <span>\n' +
         '              <svg class="icon list-icon" aria-hidden="true">\n' +

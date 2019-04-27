@@ -6,7 +6,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         '           <use xlink:href="#icon-fanhui"></use>\n' +
         '         </svg>\n' +
         '       </a>\n' +
-        '       <span class="game-hall-title size-36">钱包</span>');
+        '       <span class="game-hall-title size-36">设置</span>');
     $('#header').css('justify-content', 'flex-start');
     $('.game-hall-title').css('flex-grow', '1');
     $('.game-hall-title').css('text-align', 'center');

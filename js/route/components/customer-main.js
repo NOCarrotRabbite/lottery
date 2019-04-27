@@ -5,7 +5,7 @@ SPA_RESOLVE_INIT = function(transition) {
     $('#main').html('\n' +
         '    <div class="service">\n' +
         '      <div class="service-code">\n' +
-        '        <img class="service-img" src="../images/erweima.jpg" alt="qq" />\n' +
+        '        <div class="service-img"></div>\n' +
         '        <p class="service-text">长按保存微信客服二维码</p>\n' +
         '      </div>\n' +
         '      <div class="service-qq">\n' +
