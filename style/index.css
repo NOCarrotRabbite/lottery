@@ -376,7 +376,7 @@ footer .active {
 .user-menu li {
     display: flex;
     justify-content: space-between;
-    background: #ffff;
+    background: #fff;
     padding: 1.5rem 1.5rem;
     margin-top: 1.5rem;
     border-radius: 0.3rem;
@@ -425,33 +425,47 @@ footer .active {
 .wallet {
     width: 100%;
     height: 100%;
-    padding: 0.4rem;
+    padding: 1.5rem;
     box-sizing: border-box;
     background: #f4f4f4;
     display: flex;
     flex-direction: column;
     color: #888;
-    /* font-size: 0.8rem; */
 }
 .wallet-header {
-    height: 8rem;
+    /* height: 8rem; */
+    padding: 5.6rem 3rem;
     display: flex;
     align-items: center;
-    background: -webkit-linear-gradient(left, #5fd0fd, #52afec);
+    background: -webkit-linear-gradient(left, #5fd0fd, #5bb4f0);
     color: #fff;
-    border-radius: 0.3rem;
+    border-radius: 0.8rem;
+    font-size: 2.133rem;
+}
+.wallet-header .icon {
+    font-size: 10rem;
 }
 .wallet-header li {
-    padding-left: 2rem;
+    padding-left: 3rem;
+}
+.wallet-header .header-icon {
+    padding-left: 0;
 }
 .wallet-header li .pad-top {
-    padding-top: 0.4rem;
+    margin-top: 1.6rem;
 }
 .wallet-content li {
     background: #ffff;
-    padding: 0.6rem 0.4rem;
-    margin-top: 0.6rem;
-    border-radius: 0.1rem;
+    padding: 1.5rem 1.5rem;
+    margin-top: 1.5rem;
+    border-radius: 0.3rem;
+    font-size: 2.133rem;
+    color: #717171;
+}
+.wallet-content .icon {
+    font-size: 3rem;
+    padding-right: 1rem;
+    color: rgb(255, 83, 74);
 }
 .wallet-content li .menu-icon {
     padding-right: 0.4rem;
@@ -462,7 +476,7 @@ footer .active {
 .account-records {
     width: 100%;
     height: 100%;
-    padding: 0.4rem;
+    padding: 1rem;
     box-sizing: border-box;
     background: #fff;
     display: flex;
@@ -475,24 +489,26 @@ footer .active {
     /* font-size: 0; */
     display: flex;
     text-align: center;
-    border-bottom: 1px solid #f1f1f1;
+    border-bottom: 1px solid #ccc;
 }
 .account-records-border {
     border-left: 1px solid #fff;
     border-right: 1px solid #fff;
 }
 .account-records ul li span {
+    font-size: 1.6rem;
     display: inline-block;
     width: 33%;
     /* font-size: 0.6rem; */
-    padding: 0.4rem 0;
+    padding: 1rem 0;
 }
 .account-records li:nth-child(1) {
     background: #e9594a;
     color: #fff;
 }
 .account-records li:nth-child(1) span {
-    padding: 0.5rem 0;
+    padding: 1.2rem 0;
+    font-size: 1.866rem;
 }
 /*我的账户-账变记录 结束*/
 
