@@ -7,7 +7,7 @@ SPA_RESOLVE_INIT = function(transition) {
         '      <header class="account-msg">\n' +
         '        <div class="header-img"></div>\n' +
         '        <div class="header-account">用户名：WX1234</div>\n' +
-        '        <div class="header-username">昵称：name</div>\n' +
+        '        <div class="header-username">昵称：不吃胡萝卜兔子</div>\n' +
         '      </header>\n' +
         '      <ul class="balance">\n' +
         '        <li>\n' +

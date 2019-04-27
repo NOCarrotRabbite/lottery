@@ -29,7 +29,7 @@ SPA_RESOLVE_INIT = function(transition) {
         '        <div class="menu-top">\n' +
         '        \t<a href="#/game-hall" class="menu-content">\n' +
         '\t            <div class="menu-content-left">\n' +
-        '\t              <div class="left-img"></div>\n' +
+        '\t              <div class="left-img xuancai"></div>\n' +
         '\t            </div>\n' +
         '\t            <div class="menu-content-right">\n' +
         '\t              <span class="classify size-28">\n' +
@@ -40,7 +40,7 @@ SPA_RESOLVE_INIT = function(transition) {
         '        \t</a>\n' +
         '        \t<a href="#" class="menu-content">\n' +
         '\t            <div class="menu-content-left">\n' +
-        '\t              <div class="left-img"></div>\n' +
+        '\t              <div class="left-img huancai"></div>\n' +
         '\t            </div>\n' +
         '\t            <div class="menu-content-right">\n' +
         '\t              <span class="classify size-28">\n' +
@@ -53,7 +53,7 @@ SPA_RESOLVE_INIT = function(transition) {
         '        <div class="menu-bottom">\n' +
         '        \t<a href="#" class="menu-content">\n' +
         '\t            <div class="menu-content-left">\n' +
-        '\t              <div class="left-img"></div>\n' +
+        '\t              <div class="left-img ruicai"></div>\n' +
         '\t            </div>\n' +
         '\t            <div class="menu-content-right">\n' +
         '\t              <span class="classify size-28">\n' +
@@ -64,7 +64,7 @@ SPA_RESOLVE_INIT = function(transition) {
         '        \t</a>\n' +
         '        \t<a href="#" class="menu-content">\n' +
         '\t            <div class="menu-content-left">\n' +
-        '\t              <div class="left-img"></div>\n' +
+        '\t              <div class="left-img more"></div>\n' +
         '\t            </div>\n' +
         '\t            <div class="menu-content-right">\n' +
         '\t              <span class="classify size-28">\n' +
