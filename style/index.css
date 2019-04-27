@@ -449,7 +449,7 @@ footer .active {
 .account-records {
   width: 100%;
   height: 100%;
-  padding: 0.4rem;
+  padding: 1rem;
   box-sizing: border-box;
   background: #fff;
   display: flex;
@@ -462,24 +462,26 @@ footer .active {
   /* font-size: 0; */
   display: flex;
   text-align: center;
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid #ccc;
 }
 .account-records-border {
   border-left: 1px solid #fff;
   border-right: 1px solid #fff;
 }
 .account-records ul li span {
+  font-size: 1.6rem;
   display: inline-block;
   width: 33%;
   /* font-size: 0.6rem; */
-  padding: 0.4rem 0;
+  padding: 1rem 0;
 }
 .account-records li:nth-child(1) {
   background: #e9594a;
   color: #fff;
 }
 .account-records li:nth-child(1) span {
-  padding: 0.5rem 0;
+  padding: 1.2rem 0;
+  font-size: 1.866rem;
 }
 /*我的账户-账变记录 结束*/
 
