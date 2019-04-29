@@ -7,10 +7,10 @@ body {
 main {
     flex-grow: 1;
     overflow: scroll;
+    background-color: #f2f3f7;
 }
 footer {
     background-color: #fff;
-    /*height: 7rem;*/
     padding: 1rem 0;
 }
 footer ul {
@@ -397,7 +397,7 @@ footer .active {
     flex-direction: column;
     justify-content: flex-start;
     padding: 2rem 2rem;
-    /*height: 100%;*/
+    background-color: #f2f3f7;
 }
 .pre {
     margin-bottom: 2rem;
@@ -406,6 +406,55 @@ footer .active {
     width: 100%;
     padding-top: 23%;
     padding-bottom: 23%;
+    position: relative;
+    z-index: 998;
+    border-radius: 2rem;
+}
+.room .text {
+    position: absolute;
+    /*right: 0;
+    top: 0;*/
+    z-index: 999;
+}
+.room .first {
+    right: 1rem;
+    top: 1rem;
+    height: 3.5rem;
+    line-height: 1.75rem;
+    padding: 0 1.8rem;
+    border-radius: 2rem;
+    border: 1px solid #fff;
+    background-color: #C70000;
+    color: #FFC341;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.room .second {
+    left: 25rem;
+    font-size: 1.866rem;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    line-height: 2.5rem;
+    letter-spacing: 1px;
+    background-color: rgba(57, 57, 57, 0.5);
+    border-radius: 0.5rem;
+    padding: 0 0.5rem;
+ }
+.hall-tag1 {
+    bottom: 7rem;
+}
+.hall-tag2 {
+    bottom: 4rem;
+}
+.third {
+    right: 1rem;
+    bottom: 1rem;
+    color: #fff;
+    font-size: 1.866rem;
+}
+.third .icon {
+    font-size: 2.667rem;
 }
 .primary {
     background: url("../assets/images/game-hall-primary.jpg");
