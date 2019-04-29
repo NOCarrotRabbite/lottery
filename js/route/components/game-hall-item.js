@@ -1,6 +1,6 @@
 SPA_RESOLVE_INIT = function(transition, sigal) {
     $('#footer').hide();
-    $('#header').html('<a href="#/game-hall" class="back">\n' +
+    $('#header').html('<a href="#/game-hall?type=1" class="back">\n' +
         '         <svg class="icon" aria-hidden="true">\n' +
         '           <use xlink:href="#icon-fanhui1"></use>\n' +
         '         </svg>\n' +
