@@ -15,11 +15,26 @@ spaRouters.map('/activity', function(transition) {
 spaRouters.map('/account', function(transition) {
   spaRouters.asyncFun('js/route/components/account-main.js', transition);
 });
+spaRouters.map('/charge', function(transition) {
+  spaRouters.asyncFun('js/route/components/charge-main.js', transition);
+});
+spaRouters.map('/customer', function(transition) {
+  spaRouters.asyncFun('js/route/components/customer-main.js', transition);
+});
+spaRouters.map('/activity', function(transition) {
+  spaRouters.asyncFun('js/route/components/activity-main.js', transition);
+});
+spaRouters.map('/account', function(transition) {
+  spaRouters.asyncFun('js/route/components/account-main.js', transition);
+});
 /* 框架主页面路由注册结束 */
 
 /* 首页子页面路由注册开始 */
 spaRouters.map('/game-hall', function(transition) {
   spaRouters.asyncFun('js/route/components/game-hall.js', transition);
+});
+spaRouters.map('/game-hall-item', function(transition) {
+  spaRouters.asyncFun('js/route/components/game-hall-item.js', transition);
 });
 /* 首页子页面路由注册结束 */
 
@@ -68,10 +83,8 @@ spaRouters.afterEach(function(transition) {
   // 切换之后dosomething
 });
 spaRouters.init();
-
 $(window).resize(function() {
   setHtmlFontSize();
-  console.log('font-size', $('html').css('font-size'));
 });
 $(function() {
   setHtmlFontSize();

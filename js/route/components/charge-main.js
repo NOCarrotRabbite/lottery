@@ -9,7 +9,7 @@ SPA_RESOLVE_INIT = function(transition) {
         '      \t<!--<div class="recharge-content-img"></div>-->\n' +
         '        <img\n' +
         '          class="recharge-content-img"\n' +
-        '          src="../../assets/images/alipay-icon.png"\n' +
+        '          src="assets/images/alipay-icon.png"\n' +
         '          alt="支付宝"\n' +
         '        />\n' +
         '        <span class="recharge-content-text">支付宝扫码快速到账</span>\n' +
@@ -18,7 +18,7 @@ SPA_RESOLVE_INIT = function(transition) {
         '      \t<!--<div class="recharge-content-img"></div>-->\n' +
         '        <img\n' +
         '          class="recharge-content-img"\n' +
-        '          src="../../assets/images/wechat-icon.png"\n' +
+        '          src="assets/images/wechat-icon.png"\n' +
         '          alt="微信"\n' +
         '        />\n' +
         '        <span class="recharge-content-text">微信扫码快速到账</span>\n' +
@@ -27,7 +27,7 @@ SPA_RESOLVE_INIT = function(transition) {
         '      \t<!--<div class="recharge-content-img"></div>-->\n' +
         '        <img\n' +
         '          class="recharge-content-img"\n' +
-        '          src="../../assets/images/net-bank-icon.png"\n' +
+        '          src="assets/images/net-bank-icon.png"\n' +
         '          alt="银行卡"\n' +
         '        />\n' +
         '        <span class="recharge-content-text">网银充值</span>\n' +

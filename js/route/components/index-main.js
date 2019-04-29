@@ -8,7 +8,7 @@ SPA_RESOLVE_INIT = function(transition) {
         '       <span class="size-36">竞猜大厅</span>\n' +
         '       <a href="#/index">\n' +
         '         <svg class="icon" aria-hidden="true">\n' +
-        '           <use xlink:href="#icon-zhanghu1"></use>\n' +
+        '           <use xlink:href="#icon-yonghu"></use>\n' +
         '         </svg>\n' +
         '       </a>');
     $('#header').css('justify-content', 'space-between');
@@ -27,7 +27,7 @@ SPA_RESOLVE_INIT = function(transition) {
         '      </div>\n' +
         '      <div class="menu">\n' +
         '        <div class="menu-top">\n' +
-        '        \t<a href="#/game-hall" class="menu-content">\n' +
+        '        \t<a href="#/game-hall?type=1" class="menu-content">\n' +
         '\t            <div class="menu-content-left">\n' +
         '\t              <div class="left-img xuancai"></div>\n' +
         '\t            </div>\n' +
@@ -38,7 +38,7 @@ SPA_RESOLVE_INIT = function(transition) {
         '\t              <p class="periods">全天179期</p>\n' +
         '\t            </div>\n' +
         '        \t</a>\n' +
-        '        \t<a href="#" class="menu-content">\n' +
+        '        \t<a href="#/game-hall?type=2" class="menu-content">\n' +
         '\t            <div class="menu-content-left">\n' +
         '\t              <div class="left-img huancai"></div>\n' +
         '\t            </div>\n' +
@@ -51,7 +51,7 @@ SPA_RESOLVE_INIT = function(transition) {
         '        \t</a>\n' +
         '        </div>\n' +
         '        <div class="menu-bottom">\n' +
-        '        \t<a href="#" class="menu-content">\n' +
+        '        \t<a href="#/game-hall?type=3" class="menu-content">\n' +
         '\t            <div class="menu-content-left">\n' +
         '\t              <div class="left-img ruicai"></div>\n' +
         '\t            </div>\n' +
