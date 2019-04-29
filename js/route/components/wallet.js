@@ -1,5 +1,5 @@
 SPA_RESOLVE_INIT = function(transition, sigal) {
-  $('#footer').hide()
+  $('#footer').hide();
   $('#header').html(
     '\n' +
       '       <a href="#/account" class="back">\n' +
@@ -8,11 +8,11 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '         </svg>\n' +
       '       </a>\n' +
       '       <span class="game-hall-title size-36">钱包</span>'
-  )
-  $('#header').css('justify-content', 'flex-start')
-  $('.game-hall-title').css('flex-grow', '1')
-  $('.game-hall-title').css('text-align', 'center')
-  $('.back').css('color', '#fff')
+  );
+  $('#header').css('justify-content', 'flex-start');
+  $('.game-hall-title').css('flex-grow', '1');
+  $('.game-hall-title').css('text-align', 'center');
+  $('.back').css('color', '#fff');
   $('#main').html(
     '\n' +
       '    <div class="wallet">\n' +
@@ -32,14 +32,12 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '        </li>\n' +
       '      </ul>\n' +
       '      <ul class="wallet-content">\n' +
-      '        <a href="#">\n' +
+      '        <a href="#/bank-card">\n' +
       '          <li>\n' +
       '            <span>            \t\n' +
       '\t         <svg class="icon" aria-hidden="true">\n' +
       '\t           <use xlink:href="#icon-yinhangqia"></use>\n' +
-      '\t         </svg>\n' +
-      '            我的银行卡\n' +
-      '        \t</span>\n' +
+      '\t         </svg>我的银行卡</span>\n' +
       '          </li>\n' +
       '        </a>\n' +
       '        <a href="#">\n' +
@@ -76,5 +74,5 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '        </a>\n' +
       '      </ul>\n' +
       '    </div>'
-  )
-}
+  );
+};
