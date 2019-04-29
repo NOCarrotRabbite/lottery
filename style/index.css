@@ -1,645 +1,844 @@
 /*  框架样式开始 */
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 main {
-    flex-grow: 1;
-    overflow: scroll;
+  flex-grow: 1;
+  overflow: scroll;
 }
 footer {
-    background-color: #fff;
-    /*height: 7rem;*/
-    padding: 1rem 0;
+  background-color: #fff;
+  padding: 1rem 0;
 }
 footer ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
-
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
 }
 footer ul a {
-    color: #787878;
+  color: #787878;
 }
 .nav {
-    text-align: center;
-    color: #787878;
+  text-align: center;
+  color: #787878;
 }
 
 footer .active {
-    color: #E9594A;
+  color: #e9594a;
 }
 /* 框架样式结束 */
 
 /* 竞猜大厅样式开始 */
 .lobby {
-    width: 100%;
-    height: 100%;
-    /*padding: 0.4rem;*/
-    box-sizing: border-box;
-    background: #f4f4f4;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  height: 100%;
+  /*padding: 0.4rem;*/
+  box-sizing: border-box;
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
 }
 .broadcast,
 .rank {
-    background: #fff;
+  background: #fff;
 }
 .banner {
-    position: relative;
-    background: url("../assets/images/banner.jpg");
-    padding: 20% 0;
-    background-size: 100% 100%;
+  position: relative;
+  background: url('../assets/images/banner.jpg');
+  padding: 20% 0;
+  background-size: 100% 100%;
 }
 /*.banner-img {
     width: 100%;
     height: 100%;
 }*/
 .banner-text {
-    width: 100%;
-    padding: 0.7rem 0;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    margin: 0;
-    background: rgba(0, 0, 0, 0.4);
-    color: #fff;
-    text-indent: 1rem;
-    font-size: 1.6rem;
+  width: 100%;
+  padding: 0.7rem 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  text-indent: 1rem;
+  font-size: 1.6rem;
 }
 
 .broadcast {
-    display: flex;
-    padding: 1rem 0;
-    margin: 1rem 0;
-    font-size: 1.3333rem;
+  display: flex;
+  padding: 1rem 0;
+  margin: 1rem 0;
+  font-size: 1.3333rem;
 }
 .icon-logo {
-    padding: 0 1rem 0 1rem;
-    color: #E9594A;
-    font-size: 1.866rem;
+  padding: 0 1rem 0 1rem;
+  color: #e9594a;
+  font-size: 1.866rem;
 }
 .broadcast-text {
-    color: #777;
+  color: #777;
 }
 .menu {
-    /*height: 10rem;*/
+  /*height: 10rem;*/
 }
 .menu-content:nth-child(1) {
-    margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 .menu-top,
 .menu-bottom {
-    /*height: 50%;*/
-    display: flex;
-    margin-bottom: 0.5rem;
-    display: flex;
+  /*height: 50%;*/
+  display: flex;
+  margin-bottom: 0.5rem;
+  display: flex;
 }
 .menu-content {
-    background: #fff;
-    flex-grow: 1;
-    display: flex;
-    padding: 1.5rem 0;
+  background: #fff;
+  flex-grow: 1;
+  display: flex;
+  padding: 1.5rem 0;
 }
 .menu-content-left {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1.5rem 0 3rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.5rem 0 3rem;
 }
 .left-img {
-    width: 7rem;
-    height: 7rem;
-
+  width: 7rem;
+  height: 7rem;
 }
 .xuancai {
-    background: url("../assets/images/home-hall-xuancai.png");
-    background-size: 100% 100%;
+  background: url('../assets/images/home-hall-xuancai.png');
+  background-size: 100% 100%;
 }
 .huancai {
-    background: url("../assets/images/home-hall-huancai.png");
-    background-size: 100% 100%;
+  background: url('../assets/images/home-hall-huancai.png');
+  background-size: 100% 100%;
 }
 .ruicai {
-    background: url("../assets/images/home-hall-ruicai.png");
-    background-size: 100% 100%;
+  background: url('../assets/images/home-hall-ruicai.png');
+  background-size: 100% 100%;
 }
 .more {
-    background: url("../assets/images/home-hall-more.png.png");
-    background-size: 100% 100%;
+  background: url('../assets/images/home-hall-more.png.png');
+  background-size: 100% 100%;
 }
 .menu-content-right {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .classify {
-    color: #555;
-    font-weight: 500;
-    color: #000000;
+  color: #555;
+  font-weight: 500;
+  color: #000000;
 }
 .periods {
-    color: #808080;
-    font-size: 1.6rem;
-    padding: 0.5rem 0;
+  color: #808080;
+  font-size: 1.6rem;
+  padding: 0.5rem 0;
 }
 .rank {
-    flex-grow: 1;
-    margin-top: 0.5rem;
+  flex-grow: 1;
+  margin-top: 0.5rem;
 }
 .rank-title {
-    text-align: center;
-    color: #E9594A;
-    padding: 1rem 0;
-    border-bottom: 1px solid #ccc;
-    font-weight: 500;
+  text-align: center;
+  color: #e9594a;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ccc;
+  font-weight: 500;
 }
 .rank-content li {
-    display: flex;
-    justify-content: space-around;
-    font-size: 1.6rem;
-    border-bottom: 1px solid #ddd;
-    padding: 1rem 0;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.6rem;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
 }
 .rank-content span {
-    padding: 0.4rem 0;
-    color: #808080;
+  padding: 0.4rem 0;
+  color: #808080;
 }
 .rank-content .color-red {
-    color: #E9594A;
+  color: #e9594a;
 }
 /* 竞猜大厅样式结束 */
 
 /* 充值样式开始 */
 .recharge {
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    background: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    color: #888;
-    font-size: 0.6rem;
-    padding: 0 2rem;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  color: #888;
+  font-size: 0.6rem;
+  padding: 0 2rem;
 }
 .title {
-    color: #666;
-    padding: 2rem 0;
+  color: #666;
+  padding: 2rem 0;
 }
 .recharge-content-list {
-    display: flex;
-    align-items: center;
-    background: #fff;
-    padding: 2rem;
-    border-bottom: 1px solid #DDDDDD;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 2rem;
+  border-bottom: 1px solid #dddddd;
 }
 .recharge-content-img {
-    width: 7rem;
-    height: 5rem;
+  width: 7rem;
+  height: 5rem;
 }
 .recharge-content-text {
-    font-size: 2.133rem;
-    color: #5F5F5F;
-    padding-left: 2rem;
+  font-size: 2.133rem;
+  color: #5f5f5f;
+  padding-left: 2rem;
 }
 .control-btn {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 3.5rem;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 3.5rem;
 }
 .control-btn .btn {
-    padding: 1.5rem 3rem;
-    color: #fff;
-    font-size: 2.133rem;
-    background: #FE635F;
-    border-radius: 4rem;
+  padding: 1.5rem 3rem;
+  color: #fff;
+  font-size: 2.133rem;
+  background: #fe635f;
+  border-radius: 4rem;
 }
 /* 充值样式结束 */
 
 /* 客服样式开始 */
 .service {
-    width: 100%;
-    height: 100%;
-    padding-bottom: 2rem;
-    box-sizing: border-box;
-    background: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    color: #888;
-    font-size: 0.6rem;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 2rem;
+  box-sizing: border-box;
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  color: #888;
+  font-size: 0.6rem;
 }
 .service-code {
-    background: #fff;
-    text-align: center;
-    padding: 5rem 5rem 0 5rem;
+  background: #fff;
+  text-align: center;
+  padding: 5rem 5rem 0 5rem;
 }
 .service-img {
-    width: 35rem;
-    height: 35rem;
-    background-color: #63a35c;
-    display: inline-block;
+  width: 35rem;
+  height: 35rem;
+  background-color: #63a35c;
+  display: inline-block;
 }
 .service-text {
-    font-size: 1.866rem;
-    padding: 3rem 0;
+  font-size: 1.866rem;
+  padding: 3rem 0;
 }
 .service-qq {
-    font-size: 2.133rem;
-    font-weight: 500;
-    color: #565656;
-    padding-top: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-size: 2.133rem;
+  font-weight: 500;
+  color: #565656;
+  padding-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .service-qq-icon {
-    /* width: 3rem; */
-    padding-right: 2rem;
-    font-size: 5rem;
+  /* width: 3rem; */
+  padding-right: 2rem;
+  font-size: 5rem;
 }
 .service-qq .btn {
-    font-size: 2.133rem;
-    font-weight: 500;
-    padding: 0.7rem 2rem;
-    color: #fff;
-    background: #FE635E;
-    border-radius: 0.7rem;
-    margin-left: 2rem;
+  font-size: 2.133rem;
+  font-weight: 500;
+  padding: 0.7rem 2rem;
+  color: #fff;
+  background: #fe635e;
+  border-radius: 0.7rem;
+  margin-left: 2rem;
 }
 /* 客服样式结束 */
 
 /* 活动页面样式开始 */
 .activity {
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    background: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    color: #888;
-    font-size: 0.6rem;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  color: #888;
+  font-size: 0.6rem;
 }
 .activity-content {
-    flex: 1;
-    background: #fff;
+  flex: 1;
+  background: #fff;
 }
 .tab {
-    height: 5rem;
-    line-height: 5rem;
-    display: flex;
-    justify-content: space-around;
-    border-bottom: 1px solid #EBEBEB;
-    font-size: 1.866rem;
-    font-weight: 500;
+  height: 5rem;
+  line-height: 5rem;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #ebebeb;
+  font-size: 1.866rem;
+  font-weight: 500;
 }
 .tab-nav {
-    padding: 0 3rem;
-    color: #666666;
+  padding: 0 3rem;
+  color: #666666;
 }
 .tab .active {
-    border-bottom: 2px solid #D75244;
-    color: #191919;
+  border-bottom: 2px solid #d75244;
+  color: #191919;
 }
 .tab-content {
-    display: none;
+  display: none;
 }
 .tab-content li {
-    font-size: 1.6rem;
-    color: #656565;
-    padding: 1.5rem 1rem;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #F3F3F3;
+  font-size: 1.6rem;
+  color: #656565;
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #f3f3f3;
 }
 .on {
-    display: block;
+  display: block;
 }
 /* 活动页面样式结束 */
 
 /* 我的账户页面样式开始 */
 .account {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-    font-size: 1.6rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-size: 1.6rem;
 }
 .account-msg {
-    background: #E9594A;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 2.133rem;
-    padding: 3rem 0;
+  background: #e9594a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.133rem;
+  padding: 3rem 0;
 }
 .header-img {
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
-    background: url("../assets/images/head-image_M.png");
-    background-size: 100% 100%;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  background: url('../assets/images/head-image_M.png');
+  background-size: 100% 100%;
 }
 .header-account {
-    padding-top: 1rem;
+  padding-top: 1rem;
 }
 .header-username {
-    padding-top: 1rem;
+  padding-top: 1rem;
 }
 
 .balance {
-    background: #f77552;
-    display: flex;
-    align-items: center;
+  background: #f77552;
+  display: flex;
+  align-items: center;
 }
 .balance li {
-    width: 50%;
-    padding: 1rem 0 1.5rem 0;
-    font-size: 1.866rem;
+  width: 50%;
+  padding: 1rem 0 1.5rem 0;
+  font-size: 1.866rem;
 }
 .balance li p {
-    text-align: center;
-    padding-top: 0.5rem;
+  text-align: center;
+  padding-top: 0.5rem;
 }
 .user-menu {
-    flex: 1;
-    padding: 0 1.5rem 1.5rem 1.5rem;
-    box-sizing: border-box;
-    background: #f4f4f4;
-    color: #616161;
-    font-size: 2.4rem;
+  flex: 1;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  box-sizing: border-box;
+  background: #f4f4f4;
+  color: #616161;
+  font-size: 2.4rem;
 }
 .user-menu li {
-    display: flex;
-    justify-content: space-between;
-    background: #fff;
-    padding: 1.5rem 1.5rem;
-    margin-top: 1.5rem;
-    border-radius: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding: 1.5rem 1.5rem;
+  margin-top: 1.5rem;
+  border-radius: 0.3rem;
 }
 .list-icon {
-    padding-right: 1rem;
-    font-size: 3rem;
+  padding-right: 1rem;
+  font-size: 3rem;
 }
 .detail-icon {
-    color: #C4C4C4;
+  color: #c4c4c4;
 }
 /* 我的账户页面样式结束 */
 
 /* 游戏大厅页面样式开始 */
 .game-hall-content {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 2rem 2rem;
-    /*height: 100%;*/
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem 2rem;
+  /*height: 100%;*/
 }
 .pre {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 .room {
-    width: 100%;
-    padding-top: 23%;
-    padding-bottom: 23%;
+  width: 100%;
+  padding-top: 23%;
+  padding-bottom: 23%;
 }
 .primary {
-    background: url("../assets/images/game-hall-primary.jpg");
-    background-size: 100% 100%;
+  background: url('../assets/images/game-hall-primary.jpg');
+  background-size: 100% 100%;
 }
 .middle {
-    background: url("../assets/images/game-hall-middle.jpg");
-    background-size: 100% 100%;
+  background: url('../assets/images/game-hall-middle.jpg');
+  background-size: 100% 100%;
 }
 .senior {
-    background: url("../assets/images/game-hall-senior.jpg");
-    background-size: 100% 100%;
+  background: url('../assets/images/game-hall-senior.jpg');
+  background-size: 100% 100%;
 }
 /* 游戏大厅页面样式结束 */
 
 /* 我的账户-钱包 样式开始 */
 .wallet {
-    width: 100%;
-    height: 100%;
-    padding: 1.5rem;
-    box-sizing: border-box;
-    background: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    color: #888;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  color: #888;
 }
 .wallet-header {
-    /* height: 8rem; */
-    padding: 5.6rem 3rem;
-    display: flex;
-    align-items: center;
-    background: -webkit-linear-gradient(left, #5fd0fd, #5bb4f0);
-    color: #fff;
-    border-radius: 0.8rem;
-    font-size: 2.133rem;
+  /* height: 8rem; */
+  padding: 5.6rem 3rem;
+  display: flex;
+  align-items: center;
+  background: -webkit-linear-gradient(left, #5fd0fd, #5bb4f0);
+  color: #fff;
+  border-radius: 0.8rem;
+  font-size: 2.133rem;
 }
 .wallet-header .icon {
-    font-size: 10rem;
+  font-size: 10rem;
 }
 .wallet-header li {
-    padding-left: 3rem;
+  padding-left: 3rem;
 }
 .wallet-header .header-icon {
-    padding-left: 0;
+  padding-left: 0;
 }
 .wallet-header li .pad-top {
-    margin-top: 1.6rem;
+  margin-top: 1.6rem;
 }
 .wallet-content li {
-    background: #ffff;
-    padding: 1.5rem 1.5rem;
-    margin-top: 1.5rem;
-    border-radius: 0.3rem;
-    font-size: 2.133rem;
-    color: #717171;
+  background: #fff;
+  padding: 1.5rem 1.5rem;
+  margin-top: 1.5rem;
+  border-radius: 0.3rem;
+  font-size: 2.133rem;
+  color: #717171;
 }
 .wallet-content .icon {
-    font-size: 3rem;
-    padding-right: 1rem;
-    color: rgb(255, 83, 74);
+  font-size: 3rem;
+  padding-right: 1rem;
+  color: rgb(255, 83, 74);
 }
 .wallet-content li .menu-icon {
-    padding-right: 0.4rem;
+  padding-right: 0.4rem;
 }
 /* 我的账户-钱包 样式结束 */
 
 /*我的账户-账变记录 开始*/
 .account-records {
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
-    box-sizing: border-box;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    color: #888;
-    /* font-size: 0.8rem; */
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  color: #888;
+  /* font-size: 0.8rem; */
+  z-index: 1111;
+}
+.account-records ul {
+  flex: 1;
 }
 .account-records ul li {
-    width: 100%;
-    /* font-size: 0; */
-    display: flex;
-    text-align: center;
-    border-bottom: 1px solid #ccc;
+  width: 100%;
+  /* font-size: 0; */
+  display: flex;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
 }
 .account-records-border {
-    border-left: 1px solid #fff;
-    border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
 }
 .account-records ul li span {
-    font-size: 1.6rem;
-    display: inline-block;
-    width: 33%;
-    /* font-size: 0.6rem; */
-    padding: 1rem 0;
+  font-size: 1.6rem;
+  display: inline-block;
+  width: 33%;
+  /* font-size: 0.6rem; */
+  padding: 1rem 0;
 }
 .account-records li:nth-child(1) {
-    background: #e9594a;
-    color: #fff;
+  background: #e9594a;
+  color: #fff;
 }
 .account-records li:nth-child(1) span {
-    padding: 1.2rem 0;
-    font-size: 1.866rem;
+  padding: 1.2rem 0;
+  font-size: 1.866rem;
 }
 /*我的账户-账变记录 结束*/
 
 /*我的账户-账户明细 开始*/
 .account-details {
-    width: 100%;
-    height: 100%;
-    padding: 0.4rem;
-    box-sizing: border-box;
-    background: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    color: #888;
-    /*  font-size: 0.8rem; */
+  width: 100%;
+  height: 100%;
+  padding: 0.4rem;
+  box-sizing: border-box;
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  color: #888;
+  /*  font-size: 0.8rem; */
 }
 .account-details .filtrate-btn {
-    background: #ccc;
-    padding: 0.4rem 1rem;
-    border-radius: 0.6rem;
+  background: #ccc;
+  padding: 0.4rem 1rem;
+  border-radius: 0.6rem;
 }
 .account-details .mask-layer {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -2;
 }
 .account-details .screen {
-    width: 80%;
-    height: 100%;
-    background: #fff;
-    color: #888;
-    /* font-size: 0.8rem; */
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0.4rem;
-    box-sizing: border-box;
-    z-index: -1;
+  width: 80%;
+  height: 100%;
+  background: #fff;
+  color: #888;
+  /* font-size: 0.8rem; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  box-sizing: border-box;
+  z-index: -1;
 }
 .account-details .screen-kind {
-    padding-top: 0.6rem;
+  padding-bottom: 3rem;
+  font-size: 2.133rem;
 }
 .account-details .kind {
-    border: 1px solid #ccc;
-    border-radius: 0.4rem;
-    padding: 0.2rem 0;
-    text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+  padding: 0.2rem 0;
+  text-align: center;
 }
 .account-details .screen .screen-kind p {
-    margin-top: 0.4rem;
+  font-size: 1.6rem;
+  padding: 0.8rem 0;
+  margin-top: 1.5rem;
 }
 .account-details .control-btn {
-    width: 100%;
-    /* font-size: 0; */
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+  width: 100%;
+  /* font-size: 0; */
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 .account-details .control-btn button {
-    width: 50%;
-    height: 2.6rem;
+  width: 50%;
+  padding: 1.5rem;
+  font-size: 2.133rem;
 }
 .account-details .control-btn button:nth-child(1) {
-    background: #f4f4f4;
+  background: #f4f4f4;
 }
 .account-details .control-btn button:nth-child(2) {
-    background: #e9594a;
-    color: #fff;
+  background: #e9594a;
+  color: #fff;
 }
 .account-details .choice-date {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 0.4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 1.5rem;
 }
 .account-details .choice-date span {
-    display: inline-block;
-    width: 10%;
-    text-align: center;
+  display: inline-block;
+  width: 10%;
+  text-align: center;
 }
 .account-details .choice-date .date {
-    width: 45%;
-    border: 1px solid #ccc;
-    padding: 0.2rem;
-    border-radius: 0.4rem;
+  width: 45%;
+  border: 1px solid #ccc;
+  padding: 0.8rem 0 0.8rem 1.2rem;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
 }
 .account-details .select-kind {
-    width: 80%;
-    position: absolute;
-    left: 10%;
-    top: 11rem;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 0.4rem;
-    margin-top: 1rem;
-    padding: 1rem 1rem 2rem 1rem;
-    box-sizing: border-box;
-    /* display: none; */
-    z-index: -3;
+  width: 80%;
+  position: absolute;
+  left: 10%;
+  top: 22rem;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+  margin-top: 1rem;
+  padding: 1rem 1rem 2rem 1rem;
+  box-sizing: border-box;
+  /* display: none; */
+  z-index: -3;
 }
 .account-details .select-kind li {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #ccc;
-    padding: 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 1rem;
 }
 /*我的账户-账户记录 结束*/
 
 /* 我的账户-设置 开始 */
 .setting {
-    width: 100%;
-    height: 100%;
-    padding: 0.4rem;
-    box-sizing: border-box;
-    background: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    color: #888;
-    /* font-size: 0.8rem; */
+  width: 100%;
+  height: 100%;
+  padding: 0rem 1.5rem 1.5rem 1.5rem;
+  box-sizing: border-box;
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  color: #888;
+  /* font-size: 0.8rem; */
 }
 .setting-content li {
-    background: #ffff;
-    padding: 0.8rem 0.4rem;
-    margin-bottom: 0.6rem;
-    border-radius: 0.1rem;
+  background: #fff;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border-radius: 0.3rem;
+  font-size: 2.133rem;
+}
+.setting-content li .icon {
+  padding-right: 1rem;
+  font-size: 3rem;
+  color: rgb(255, 83, 74);
 }
 .setting-content li .menu-icon {
-    box-sizing: border-box;
-    padding-right: 0.4rem;
+  box-sizing: border-box;
+  padding-right: 0.4rem;
 }
 /*我的账户-设置 结束*/
+/* 我的账户-关于我们 开始 */
+.about-us {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  color: #888;
+  /* font-size: 0.8rem; */
+  background: #f4f4f4;
+}
+.about-us-header {
+  background: -webkit-linear-gradient(left, #63d5ff, #55acec, #54adec);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  padding: 3rem;
+  font-size: 2.133rem;
+}
+.about-us-header .header-img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 0.6rem;
+  background: #ccc;
+}
+.about-us-header .header-versions {
+  background: #fff;
+  color: #5fd0fd;
+  margin-top: 0.5rem;
+  padding: 0.4rem 1rem;
+  border-radius: 0.6rem;
+  font-size: 1.6rem;
+}
+.about-us-content {
+  box-sizing: border-box;
+  color: #888;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+.about-us-content li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  margin-bottom: 1rem;
+  font-size: 1.866rem;
+}
+.about-us-content li .menu-icon {
+  padding-right: 0.4rem;
+}
+.about-us-content .icon {
+  font-size: 4rem;
+  padding-right: 1rem;
+}
+.about-us-content li .color-red {
+  font-size: 1.6rem;
+  color: red;
+}
+.about-us-content li > span {
+  display: flex;
+  align-items: center;
+}
+.about-us-content li .about-us-copy {
+  padding: 0.2rem 0.6rem;
+  background: #e9594a;
+  font-size: 1.6rem;
+  border-radius: 0.6rem;
+  color: #fff;
+}
+.about-us .about-us-code {
+  flex: 1;
+  margin: 0 1.5rem 1.5rem 1.5rem;
+  /*  background: #fff; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-us .about-us-code .code {
+  width: 30rem;
+  height: 30rem;
+  background: #fff;
+}
+.about-us .about-us-code .code-img {
+  width: 100%;
+  height: 100%;
+}
+.about-us .about-us-code .code-text {
+  text-align: center;
+  padding: 0.6rem 0;
+  font-size: 1.866rem;
+}
+/* 我的账户-关于我们 结束 */
+/* 我的账户-钱包-绑定银行卡 开始 */
+.bank-card {
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+  box-sizing: border-box;
+  background: #f4f4f4;
+  color: #888;
+  /* font-size: 0.8rem; */
+  /* display: flex;
+    flex-direction: column; */
+}
+.bank-card-form {
+  padding: 0.8rem 0;
+}
+.bank-card-form li {
+  display: flex;
+  align-items: center;
+  /* padding: 0.6rem 0; */
+  margin-bottom: 2rem;
+}
+.bank-card-form span {
+  font-size: 1.866rem;
+  padding-right: 2rem;
+}
+.bank-card-form input {
+  font-size: 1.6rem;
+  flex: 1;
+  padding: 1.2rem 3rem 1.2rem 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.8rem;
+  color: #888;
+  position: relative;
+}
+.bank-card-form .close-icon {
+  position: absolute;
+  right: 5rem;
+}
+.bank-card-submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.bank-card-submit button {
+  width: 100%;
+  font-size: 2.133rem;
+  padding: 1rem;
+  background: #e9594a;
+  border-radius: 2rem;
+  color: #fff;
+  margin-top: 6rem;
+}
+.bank-card .dialog {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  display: none;
+}
+.bank-card .dialog .obscuration {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.bank-card .dialog .select-bank {
+  width: 80%;
+  position: absolute;
+  border-radius: 0.6rem;
+  left: 50%;
+  top: 10%;
+  margin-left: -40%;
+  background: #fff;
+  z-index: 2;
+  padding: 1rem 1rem 2rem 1rem;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+.bank-card .dialog .select-bank li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #ccc;
+}
+/* 我的账户-钱包-绑定银行卡 结束 */
