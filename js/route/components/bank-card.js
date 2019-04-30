@@ -1,7 +1,7 @@
 SPA_RESOLVE_INIT = function(transition, sigal) {
   $('#footer').hide();
   $('#header').html(
-    '<a href="#/account">\n' +
+    '<a href="#/my-wallet">\n' +
       '         <svg class="icon" aria-hidden="true">\n' +
       '           <use xlink:href="#icon-fanhui"></use>\n' +
       '         </svg>\n' +
@@ -19,7 +19,9 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '<li>\n' +
       '  <span>真实姓名</span>\n' +
       ' <input type="text" />\n' +
-      '  <i class="close-icon">X</i>\n' +
+      '  <svg class="icon detail-icon" aria-hidden="true">\n' +
+      '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
+      '              </svg>\n' +
       ' </li>\n' +
       ' <li>\n' +
       '<span>银行名称</span>\n' +
@@ -28,12 +30,16 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       ' <li>\n' +
       '<span>卡号账号</span>\n' +
       ' <input type="text" />\n' +
-      '  <i class="close-icon">X</i>\n' +
+      '  <svg class="icon detail-icon" aria-hidden="true">\n' +
+      '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
+      '              </svg>\n' +
       '  </li>\n' +
       ' <li>\n' +
       ' <span>提现密码</span>\n' +
       ' <input type="text" />\n' +
-      ' <i class="close-icon">X</i>\n' +
+      '  <svg class="icon detail-icon" aria-hidden="true">\n' +
+      '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
+      '              </svg>\n' +
       '  </li>\n' +
       '<li class="bank-card-submit">\n' +
       '<button>确 定</button>\n' +

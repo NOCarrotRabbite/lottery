@@ -828,15 +828,16 @@ footer .active {
 .bank-card-form input {
   font-size: 1.6rem;
   flex: 1;
-  padding: 1.2rem 3rem 1.2rem 1.2rem;
+  padding: 1.2rem 4rem 1.2rem 1.2rem;
   border: 1px solid #ccc;
   border-radius: 0.8rem;
   color: #888;
-  position: relative;
 }
-.bank-card-form .close-icon {
+.bank-card-form .icon {
+  font-size: 2.667rem;
+  color: #e9594a;
   position: absolute;
-  right: 5rem;
+  right: 4rem;
 }
 .bank-card-submit {
   display: flex;
@@ -848,9 +849,9 @@ footer .active {
   font-size: 2.133rem;
   padding: 1rem;
   background: #e9594a;
-  border-radius: 2rem;
+  border-radius: 4rem;
   color: #fff;
-  margin-top: 6rem;
+  margin-top: 3rem;
 }
 .bank-card .dialog {
   width: 100%;
@@ -879,9 +880,10 @@ footer .active {
   margin-left: -40%;
   background: #fff;
   z-index: 2;
-  padding: 1rem 1rem 2rem 1rem;
+  padding: 2rem 2rem 3rem 2rem;
   box-sizing: border-box;
   overflow: scroll;
+  font-size: 1.866rem;
 }
 .bank-card .dialog .select-bank li {
   display: flex;
@@ -891,3 +893,434 @@ footer .active {
   border-bottom: 1px solid #ccc;
 }
 /* 我的账户-钱包-绑定银行卡 结束 */
+
+/* 我的账户-钱包-提现 开始 */
+.withdraw-deposit {
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+  box-sizing: border-box;
+  background: #f4f4f4;
+  color: #888;
+  /* font-size: 0.8rem; */
+}
+.withdraw-deposit-form li {
+  display: flex;
+  align-items: center;
+  /* padding: 0.6rem 0; */
+  margin-bottom: 2rem;
+}
+.withdraw-deposit-form span {
+  font-size: 1.866rem;
+  padding-right: 2rem;
+}
+.withdraw-deposit-form input {
+  font-size: 1.6rem;
+  flex: 1;
+  padding: 1.2rem 4rem 1.2rem 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.8rem;
+  color: #888;
+}
+.withdraw-deposit-form .close-icon {
+  position: absolute;
+  right: 2rem;
+}
+.withdraw-deposit-submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.withdraw-deposit-form button {
+  width: 100%;
+  font-size: 2.133rem;
+  padding: 1rem;
+  background: #e9594a;
+  border-radius: 4rem;
+  color: #fff;
+  margin-top: 3rem;
+}
+.withdraw-deposit-form .color-red {
+  color: red;
+  font-size: 1.6rem;
+}
+.withdraw-deposit-form .icon {
+  font-size: 2.667rem;
+  color: #e9594a;
+  position: absolute;
+  right: 4rem;
+}
+/* 我的账户-钱包-提现 结束 */
+
+/* 我的钱包-钱包-充值明细 开始 */
+.recharge-record {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  color: #888;
+  /* font-size: 0.8rem; */
+  z-index: 1111;
+}
+.recharge-record ul {
+  flex: 1;
+}
+.recharge-record ul li {
+  width: 100%;
+  /* font-size: 0; */
+  display: flex;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+.recharge-record-border {
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+.recharge-record ul li span {
+  font-size: 1.6rem;
+  display: inline-block;
+  width: 33%;
+  /* font-size: 0.6rem; */
+  padding: 1rem 0;
+}
+.recharge-record li:nth-child(1) {
+  background: #e9594a;
+  color: #fff;
+}
+.recharge-record li:nth-child(1) span {
+  padding: 1.2rem 0;
+  font-size: 1.866rem;
+}
+/* 我的钱包-钱包-充值明细 结束 */
+
+/* 我的钱包-钱包-提现明细 开始 */
+.withdraw-deposit-record {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  color: #888;
+  /* font-size: 0.8rem; */
+  z-index: 1111;
+}
+.withdraw-deposit-record ul {
+  flex: 1;
+}
+.withdraw-deposit-record ul li {
+  width: 100%;
+  /* font-size: 0; */
+  display: flex;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+.withdraw-deposit-record-border {
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+.withdraw-deposit-record ul li span {
+  font-size: 1.6rem;
+  display: inline-block;
+  width: 33%;
+  /* font-size: 0.6rem; */
+  padding: 1rem 0;
+}
+.withdraw-deposit-record li:nth-child(1) {
+  background: #e9594a;
+  color: #fff;
+}
+.withdraw-deposit-record li:nth-child(1) span {
+  padding: 1.2rem 0;
+  font-size: 1.866rem;
+}
+/* 我的钱包-钱包-提现明细 结束 */
+
+/* 我的账户-设置-修改登录密码 开始 */
+.set-password {
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+  box-sizing: border-box;
+  background: #f4f4f4;
+  color: #888;
+  /* font-size: 0.8rem; */
+  /* display: flex;
+    flex-direction: column; */
+}
+.set-password-form {
+  padding: 0.8rem 0;
+}
+.set-password-form li {
+  display: flex;
+  align-items: center;
+  /* padding: 0.6rem 0; */
+  margin-bottom: 2rem;
+}
+.set-password-form span {
+  font-size: 1.866rem;
+  padding-right: 2rem;
+}
+.set-password-form input {
+  font-size: 1.6rem;
+  flex: 1;
+  padding: 1.2rem 4rem 1.2rem 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.8rem;
+  color: #888;
+}
+.set-password-form .icon {
+  font-size: 2.667rem;
+  color: #e9594a;
+  position: absolute;
+  right: 4rem;
+}
+.set-password-submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.set-password button {
+  width: 100%;
+  font-size: 2.133rem;
+  padding: 1rem;
+  background: #e9594a;
+  border-radius: 4rem;
+  color: #fff;
+  margin-top: 3rem;
+}
+/* 我的账户-设置-修改登录密码 结束 */
+
+/* 我的账户-设置-修改提现密码 开始 */
+.set-withdraw-deposit-pwd {
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+  box-sizing: border-box;
+  background: #f4f4f4;
+  color: #888;
+  /* font-size: 0.8rem; */
+  /* display: flex;
+    flex-direction: column; */
+}
+.set-withdraw-deposit-pwd-form {
+  padding: 0.8rem 0;
+}
+.set-withdraw-deposit-pwd-form li {
+  display: flex;
+  align-items: center;
+  /* padding: 0.6rem 0; */
+  margin-bottom: 2rem;
+}
+.set-withdraw-deposit-pwd-form span {
+  font-size: 1.866rem;
+  padding-right: 2rem;
+}
+.set-withdraw-deposit-pwd-form input {
+  font-size: 1.6rem;
+  flex: 1;
+  padding: 1.2rem 4rem 1.2rem 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.8rem;
+  color: #888;
+}
+.set-withdraw-deposit-pwd-form .icon {
+  font-size: 2.667rem;
+  color: #e9594a;
+  position: absolute;
+  right: 4rem;
+}
+.set-withdraw-deposit-pwd-submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.set-withdraw-deposit-pwd button {
+  width: 100%;
+  font-size: 2.133rem;
+  padding: 1rem;
+  background: #e9594a;
+  border-radius: 4rem;
+  color: #fff;
+  margin-top: 3rem;
+}
+/* 我的账户-设置-修改提现密码 结束 */
+
+/* 我的账户-设置-手机绑定 开始 */
+.mobile-bind {
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+  box-sizing: border-box;
+  background: #f4f4f4;
+  color: #888;
+  /* font-size: 0.8rem; */
+  /* display: flex;
+  flex-direction: column; */
+}
+.mobile-bind li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.mobile-bind li .get-code {
+  font-size: 1.6rem;
+  flex: 1;
+  padding: 1.2rem 1rem;
+  background: #999;
+  color: #fff;
+  margin-left: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.8rem;
+}
+.mobile-bind .code {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.mobile-bind .icon {
+  font-size: 2.667rem;
+  padding-right: 1rem;
+  color: rgb(255, 83, 74);
+}
+.mobile-bind span {
+  font-size: 1.866rem;
+  padding-right: 0.8rem;
+}
+.mobile-bind input {
+  font-size: 1.6rem;
+  flex: 1;
+  padding: 1.2rem 4rem 1.2rem 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.8rem;
+  color: #888;
+}
+.mobile-bind .close-icon {
+  position: absolute;
+  right: 3rem;
+}
+.mobile-bind .close-icon2 {
+  position: absolute;
+  right: 0rem;
+}
+.mobile-bind-submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.mobile-bind-submit button {
+  width: 100%;
+  font-size: 2.133rem;
+  padding: 1rem;
+  background: #e9594a;
+  border-radius: 4rem;
+  color: #fff;
+  margin-top: 3rem;
+}
+/* 我的账户-设置-手机绑定 结束 */
+
+/*首页-活动详情页面  开始*/
+.activity-particulars {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  color: #888;
+  /* font-size: 0.6rem; */
+}
+.activity-particulars .header-title {
+  padding: 1rem;
+}
+.activity-particulars .header-title strong {
+  font-size: 1.866rem;
+  color: #333;
+}
+.activity-particulars .header-title p {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ccc;
+}
+.activity-particulars-content {
+  flex: 1;
+  padding: 0 1rem 1rem 1rem;
+}
+.activity-particulars-content p {
+  font-size: 1.6rem;
+  color: #5694cc;
+  padding-top: 1rem;
+}
+/* 首页-活动详情页面 结束 */
+
+/* 活动中心-我的消息 开始 */
+.my-message {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  color: #888;
+  /* font-size: 0.6rem; */
+}
+.my-message .header-title {
+  padding: 1rem;
+}
+.my-message .header-title strong {
+  font-size: 1.866rem;
+  color: #333;
+}
+.my-message .header-title p {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ccc;
+}
+.my-message-content {
+  flex: 1;
+  padding: 0 1rem 1rem 1rem;
+}
+.my-message-content p {
+  font-size: 1.6rem;
+  color: #5694cc;
+  padding-top: 1rem;
+}
+/* 活动中心-我的消息 结束 */
+
+/* 活动中心-公告详情 开始 */
+.notice-particulars {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  color: #888;
+  /* font-size: 0.6rem; */
+}
+.notice-particulars .header-title {
+  padding: 1rem;
+}
+.notice-particulars .header-title strong {
+  font-size: 1.866rem;
+  color: #333;
+}
+.notice-particulars .header-title p {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ccc;
+}
+.notice-particulars-content {
+  flex: 1;
+  padding: 0 1rem 1rem 1rem;
+}
+.notice-particulars-content p {
+  font-size: 1.6rem;
+  color: #5694cc;
+  padding-top: 1rem;
+}
+/* 活动中心-公告详情 结束 */
