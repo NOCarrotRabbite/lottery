@@ -36,7 +36,25 @@ spaRouters.map('/game-hall', function(transition) {
 spaRouters.map('/game-hall-item', function(transition) {
   spaRouters.asyncFun('js/route/components/game-hall-item.js', transition);
 });
+//活动详情
+spaRouters.map('/activity-particulars', function(transition) {
+  spaRouters.asyncFun(
+    'js/route/components/activity-particulars.js',
+    transition
+  );
+});
 /* 首页子页面路由注册结束 */
+
+/* 活动中心子页面路由开始 */
+//我的消息
+spaRouters.map('/my-message', function(transition) {
+  spaRouters.asyncFun('js/route/components/my-message.js', transition);
+});
+//公告详情
+spaRouters.map('/notice-particulars', function(transition) {
+  spaRouters.asyncFun('js/route/components/notice-particulars.js', transition);
+});
+/* 活动中心子页面路由结束 */
 
 /* 我的账户子页面路由注册开始 */
 spaRouters.map('/my-wallet', function(transition) {
@@ -57,10 +75,44 @@ spaRouters.map('/about-us', function(transition) {
 /* 我的账户子页面路由注册结束 */
 
 /* 钱包子页面路由注册开始 */
+//绑定银行卡
 spaRouters.map('/bank-card', function(transition) {
   spaRouters.asyncFun('js/route/components/bank-card.js', transition);
 });
+//提现
+spaRouters.map('/withdraw-deposit', function(transition) {
+  spaRouters.asyncFun('js/route/components/withdraw-deposit.js', transition);
+});
+//充值记录
+spaRouters.map('/recharge-record', function(transition) {
+  spaRouters.asyncFun('js/route/components/recharge-record.js', transition);
+});
+//提现记录
+spaRouters.map('/withdraw-deposit-record', function(transition) {
+  spaRouters.asyncFun(
+    'js/route/components/withdraw-deposit-record.js',
+    transition
+  );
+});
 /* 钱包子页面路由注册结束 */
+
+/* 设置-子页面路由注册开始 */
+//修改登录密码
+spaRouters.map('/set-password', function(transition) {
+  spaRouters.asyncFun('js/route/components/set-password.js', transition);
+});
+//修改提现密码
+spaRouters.map('/set-withdraw-deposit-pwd', function(transition) {
+  spaRouters.asyncFun(
+    'js/route/components/set-withdraw-deposit-pwd.js',
+    transition
+  );
+});
+//绑定手机
+spaRouters.map('/mobile-bind', function(transition) {
+  spaRouters.asyncFun('js/route/components/mobile-bind.js', transition);
+});
+/* 设置-子页面路由注册结束 */
 
 /*spaRouters.map('/detail2',function(transition){
     spaRouters.syncFun(function(transition){

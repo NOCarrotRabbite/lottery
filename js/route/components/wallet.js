@@ -40,7 +40,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '\t         </svg>我的银行卡</span>\n' +
       '          </li>\n' +
       '        </a>\n' +
-      '        <a href="#">\n' +
+      '        <a href="#/charge">\n' +
       '          <li>\n' +
       '            <span>      \t\n' +
       '\t         <svg class="icon" aria-hidden="true">\n' +
@@ -48,7 +48,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '\t         </svg>充值</span>\n' +
       '          </li>\n' +
       '        </a>\n' +
-      '        <a href="#">\n' +
+      '        <a href="#/withdraw-deposit">\n' +
       '          <li>\n' +
       '            <span>      \t\n' +
       '\t         <svg class="icon" aria-hidden="true">\n' +
@@ -56,7 +56,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '\t         </svg>提现</span>\n' +
       '          </li>\n' +
       '        </a>\n' +
-      '        <a href="#">\n' +
+      '        <a href="#/recharge-record">\n' +
       '          <li>\n' +
       '            <span>      \t\n' +
       '\t         <svg class="icon" aria-hidden="true">\n' +
@@ -64,7 +64,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '\t         </svg>充值记录</span>\n' +
       '          </li>\n' +
       '        </a>\n' +
-      '        <a href="#">\n' +
+      '        <a href="#/withdraw-deposit-record">\n' +
       '          <li>\n' +
       '            <span>      \t\n' +
       '\t         <svg class="icon" aria-hidden="true">\n' +
