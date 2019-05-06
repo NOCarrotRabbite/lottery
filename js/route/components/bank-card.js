@@ -14,8 +14,8 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
   $('.back').css('color', '#fff');
   $('#main').html(
     '\n' +
-      '<div class="bank-card size-24">\n' +
-      '<ul class="bank-card-form">\n' +
+      '<div class="bank-card public-set">\n' +
+      '<ul class="bank-card-form public-set-form">\n' +
       '<li>\n' +
       '  <span>真实姓名</span>\n' +
       ' <input type="text" />\n' +
@@ -41,7 +41,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '              </svg>\n' +
       '  </li>\n' +
-      '<li class="bank-card-submit">\n' +
+      '<li class="bank-card-submit public-set-submit">\n' +
       '<button>确 定</button>\n' +
       ' </li>\n' +
       ' </ul>\n' +

@@ -7,7 +7,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '           <use xlink:href="#icon-fanhui"></use>\n' +
       '         </svg>\n' +
       '       </a>\n' +
-      '       <span class="game-hall-title size-36">充值记录</span>'
+      '       <span class="game-hall-title size-36">提现记录</span>'
   );
   $('#header').css('justify-content', 'flex-start');
   $('.game-hall-title').css('flex-grow', '1');
@@ -15,11 +15,11 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
   $('.back').css('color', '#fff');
   $('#main').html(
     '\n' +
-      '<div class="withdraw-deposit-record size-24">\n' +
+      '<div class="withdraw-deposit-record public-records">\n' +
       '<ul>\n' +
       '<li class="size-28">\n' +
       ' <span>提现时间</span>\n' +
-      '<span class="withdraw-deposit-record-border">提现金额</span>\n' +
+      '<span class="public-records-border">提现金额</span>\n' +
       '<span>提现状态</span>\n' +
       ' </li>\n' +
       '<li>\n' +

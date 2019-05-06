@@ -14,8 +14,8 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
   $('.back').css('color', '#fff');
   $('#main').html(
     '\n' +
-      '<div class="mobile-bind  size-24">\n' +
-      '<ul class="mobile-bind-form">\n' +
+      '<div class="mobile-bind">\n' +
+      '<ul class="mobile-bind-form public-set-form">\n' +
       ' <li>\n' +
       ' <span>手机号码</span>\n' +
       ' <input type="password" />\n' +

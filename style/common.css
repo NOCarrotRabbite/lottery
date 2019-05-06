@@ -276,3 +276,132 @@ body {
   border: 1px solid #e9594a;
   border-radius: 0.2rem;
 }
+
+/* 活动详情+公告详情+我的消息 公共样式 开始*/
+.public-details {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  color: #888;
+  /* font-size: 0.6rem; */
+}
+.public-details .header-title {
+  padding: 1rem;
+}
+.public-details .header-title strong {
+  font-size: 1.866rem;
+  color: #333;
+}
+.public-details .header-title p {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ccc;
+}
+.public-details-content {
+  flex: 1;
+  padding: 0 1rem 1rem 1rem;
+}
+.public-details-content p {
+  font-size: 1.6rem;
+  color: #5694cc;
+  padding-top: 1rem;
+}
+/* 活动详情+公告详情+我的消息 公共样式 结束*/
+
+/* 账变记录+充值记录+提现记录  公共样式 开始 */
+.public-records {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  color: #888;
+  /* font-size: 0.8rem; */
+  z-index: 1111;
+}
+.public-records ul {
+  flex: 1;
+}
+.public-records ul li {
+  width: 100%;
+  /* font-size: 0; */
+  display: flex;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+.public-records-border {
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+.public-records ul li span {
+  font-size: 1.6rem;
+  display: inline-block;
+  width: 33%;
+  /* font-size: 0.6rem; */
+  padding: 1rem 0;
+}
+.public-records li:nth-child(1) {
+  background: #e9594a;
+  color: #fff;
+}
+.public-records li:nth-child(1) span {
+  padding: 1.2rem 0;
+  font-size: 1.866rem;
+}
+/* 账变记录+充值记录+提现记录  公共样式 结束 */
+
+/* 绑定银行卡+修改密码+提现密码 公共样式 开始 */
+.public-set {
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+  box-sizing: border-box;
+  background: #f4f4f4;
+  color: #888;
+}
+.public-set-form {
+  padding: 0.8rem 0;
+}
+.public-set-form li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.public-set-form span {
+  font-size: 1.866rem;
+  padding-right: 2rem;
+}
+.public-set-form input {
+  font-size: 1.6rem;
+  flex: 1;
+  padding: 1.2rem 4rem 1.2rem 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.8rem;
+  color: #888;
+}
+.public-set-form .icon {
+  font-size: 2.667rem;
+  color: #e9594a;
+  position: absolute;
+  right: 4rem;
+}
+.public-set-submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.public-set button {
+  width: 100%;
+  font-size: 2.133rem;
+  padding: 1rem;
+  background: #e9594a;
+  border-radius: 4rem;
+  color: #fff;
+  margin-top: 3rem;
+}
+/* 绑定银行卡+修改密码+提现密码 公共样式 结束 */

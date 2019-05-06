@@ -1,4 +1,12 @@
 let last_path = null;
+/* 登录+注册 页面路由注册开始 */
+spaRouters.map('/login', function(transition) {
+  spaRouters.asyncFun('js/route/components/login.js', transition);
+});
+spaRouters.map('/register', function(transition) {
+  spaRouters.asyncFun('js/route/components/register.js', transition);
+});
+/* 登录+注册 页面路由注册结束 */
 /* 框架主页面路由注册开始 */
 spaRouters.map('/index', function(transition) {
   spaRouters.asyncFun('js/route/components/index-main.js', transition);
@@ -44,6 +52,15 @@ spaRouters.map('/activity-particulars', function(transition) {
   );
 });
 /* 首页子页面路由注册结束 */
+
+/* 充值子页面路由注册开始 */
+spaRouters.map('/payment', function(transition) {
+  spaRouters.asyncFun('js/route/components/payment.js', transition);
+});
+spaRouters.map('/bank-recharge', function(transition) {
+  spaRouters.asyncFun('js/route/components/bank-recharge.js', transition);
+});
+/* 充值子页面路由注册结束 */
 
 /* 活动中心子页面路由开始 */
 //我的消息

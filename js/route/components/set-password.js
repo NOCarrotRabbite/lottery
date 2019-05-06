@@ -14,8 +14,8 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
   $('.back').css('color', '#fff');
   $('#main').html(
     '\n' +
-      '<div class="set-password">\n' +
-      '<ul class="set-password-form">\n' +
+      '<div class="set-password public-set">\n' +
+      '<ul class="set-password-form public-set-form">\n' +
       '<li>\n' +
       '  <span>旧登录密码</span>\n' +
       ' <input type="text" />\n' +
@@ -37,7 +37,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '              </svg>\n' +
       '  </li>\n' +
-      '<li class="set-password-submit">\n' +
+      '<li class="set-password-submit public-set-submit">\n' +
       '<button>确 定</button>\n' +
       ' </li>\n' +
       ' </ul>\n' +

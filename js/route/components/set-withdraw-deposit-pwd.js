@@ -14,8 +14,8 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
   $('.back').css('color', '#fff');
   $('#main').html(
     '\n' +
-      '<div class="set-withdraw-deposit-pwd">\n' +
-      '<ul class="set-withdraw-deposit-pwd-form">\n' +
+      '<div class="set-withdraw-deposit-pwd public-set">\n' +
+      '<ul class="set-withdraw-deposit-pwd-form public-set-form">\n' +
       '<li>\n' +
       '  <span>旧提现密码</span>\n' +
       ' <input type="text" />\n' +
@@ -37,7 +37,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '              </svg>\n' +
       '  </li>\n' +
-      '<li class="set-withdraw-deposit-pwd-submit">\n' +
+      '<li class="set-withdraw-deposit-pwd-submit public-set-submit">\n' +
       '<button>确 定</button>\n' +
       ' </li>\n' +
       ' </ul>\n' +
