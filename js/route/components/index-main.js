@@ -1,4 +1,5 @@
 SPA_RESOLVE_INIT = function(transition, sigal) {
+  $('#header').show();
   $('#footer').show();
   $('#header').html(
     '<a href="#/index">\n' +
