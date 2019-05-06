@@ -1058,3 +1058,111 @@ footer .active {
   color: #888;
 }
 /* 充值-网银充值 结束 */
+
+/* 登录 开始*/
+.login {
+  width: 100%;
+  height: 100%;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  background: #e9594a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 1.866rem;
+}
+.login-form {
+  width: 100%;
+  padding: 3rem;
+}
+.login-form li {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.login-form .title {
+  font-size: 2.133rem;
+  justify-content: center;
+  font-weight: bold;
+}
+.login-form li .icon {
+  position: absolute;
+  color: #e9594a;
+  right: 2rem;
+}
+.login-form li input {
+  flex: 1;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.6rem;
+  font-size: 1.6rem;
+}
+.login-form .login-submit {
+  width: 100%;
+  font-size: 2.133rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 4rem;
+  color: #e9594a;
+  margin-top: 3rem;
+}
+.login-form .register-href {
+  display: flex;
+  justify-content: center;
+}
+.login-form .register-href a {
+  color: #fff;
+  border-bottom: 3px solid #fff;
+  margin: 0 2rem;
+}
+/* 登录 结束*/
+/* 注册 开始 */
+.register {
+  width: 100%;
+  height: 100%;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  background: #e9594a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 1.866rem;
+}
+.register-form {
+  width: 100%;
+  padding: 3rem;
+}
+.register-form li {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.register-form .title {
+  font-size: 2.133rem;
+  justify-content: center;
+  font-weight: bold;
+}
+.register-form li .icon {
+  position: absolute;
+  color: #e9594a;
+  right: 2rem;
+}
+.register-form li input {
+  flex: 1;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.6rem;
+  font-size: 1.6rem;
+}
+.register-form .register-submit {
+  width: 100%;
+  font-size: 2.133rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 4rem;
+  color: #e9594a;
+  margin-top: 3rem;
+}
+/* 注册 结束 */
