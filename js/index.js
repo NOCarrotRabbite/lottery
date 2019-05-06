@@ -157,19 +157,11 @@ $(window).resize(function() {
 });
 $(function() {
   setHtmlFontSize();
-  //getOtherFontSize();
+  window.location.hash = "#/login";
 });
 // 设置根元素字体大小；num为控制常量
 let setHtmlFontSize = function() {
   let _width = document.documentElement.clientWidth;
   let root_size = _width / 50;
   $('html').css('font-size', root_size + 'px');
-};
-let getOtherFontSize = function() {
-  $('.size-20').css('font-size', (20 * 50) / 750 + 'rem');
-  $('.size-24').css('font-size', (24 * 50) / 750 + 'rem');
-  $('.size-28').css('font-size', (28 * 50) / 750 + 'rem');
-  $('.size-32').css('font-size', (32 * 50) / 750 + 'rem');
-  $('.size-36').css('font-size', (36 * 50) / 750 + 'rem');
-  $('.size-40').css('font-size', (40 * 50) / 750 + 'rem');
 };

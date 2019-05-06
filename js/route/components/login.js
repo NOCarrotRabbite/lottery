@@ -1,26 +1,6 @@
 SPA_RESOLVE_INIT = function(transition, sigal) {
-  /* $('#footer').hide();
-  let type = transition.query.code;
-  let title = '';
-  if (type == 1) {
-    title = '支付宝';
-  } else {
-    title = '微信';
-  }
-  $('#header').html(
-    '<a href="#/charge">\n' +
-      '         <svg class="icon" aria-hidden="true">\n' +
-      '           <use xlink:href="#icon-fanhui"></use>\n' +
-      '         </svg>\n' +
-      '       </a>\n' +
-      '       <span class="size-36 game-hall-title">' +
-      title +
-      '登录</span>'
-  );
-  $('#header').css('justify-content', 'flex-start');
-  $('.game-hall-title').css('flex-grow', '1');
-  $('.game-hall-title').css('text-align', 'center');
-  $('.back').css('color', '#fff'); */
+  $('#header').hide();
+  $('#footer').hide();
   $('#main').html(
     '\n' +
       '<div class="login">\n' +

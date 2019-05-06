@@ -13,75 +13,447 @@
     <link rel="stylesheet" type="text/css" href="style/index.css" />
     <title>竞猜大厅</title>
     <style>
-      .game-hall-content {
+      html { font-size: 15px; }
+      .game-hall-item {
+        height: 100%;
+        display: flex;
+        flex-direction: column;     
+        font-size: 1.6rem;
+      }
+      .item-info {
+        display: flex;
+        text-align: center;
+        padding: 1rem 0;
+        background-color: #FAFAFA;
+
+      }
+      .info-balance, .info-time {
+        width: 50%;
+      }
+      .info-balance strong, .info-time strong {
+        display: inline-block;
+        color: #E54E4C;
+        font-size: 2.667rem;
+        padding-top: 1rem;
+        letter-spacing: 0.2rem;
+      } 
+      .info-balance .black, .info-time .black {
+        font-size: 2.133rem;
+        color: #000000;
+        font-weight: 500;
+      }
+      .info-time {
+        border-right: 1px solid #D0D0D0;
+      }
+      .info-time p {
+        color: #939393;
+        letter-spacing: 0.1rem;
+        font-size: 1.866rem;
+      }
+
+      /* 中奖记录样式开始 */
+      .item-result {
+        display: flex;
+        padding: 2rem 2rem;
+        background-color: #fff;
+        justify-content: space-between;
+        font-size: 2.133rem;
+        font-weight: 500;
+      }
+      .result-records {
+        padding: 2rem 2rem;
+        font-size: 2.133rem;
+        font-weight: 500;
+        background-color: #fff;
+      }
+      .result-records > .result-text {
+        padding: 1rem 0;
+      }
+      .result-text > .num {
+        text-align: center;
+        display: inline-block;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 1.5rem;
+        color: #fff;
+        background-color: #5C95F3;
+      }
+      .result-text > .sigle-double {
+        background-color: #F5584E;
+      }
+      .result-text > .res {
+        background-color: #007F00;
+      }
+      .records-box {  
+        position: absolute;
+        border: 3px solid #F9CC9D;
+        background: #fff;
+      }
+      .records-box::after {
+        position:absolute;
+        top: -12px;
+        right: 20px;
+        padding: 8px;
+        border:inherit;
+        border-left: none;
+        border-top: none;
+        content:"";
+        background: inherit;
+        -webkit-transform: rotate(225deg);
+        -moz-transform: rotate(225deg);
+        transform: rotate(225deg); 
+      } 
+      /* 中奖记录样式结束 */
+
+      /* 注信息样式开始 */
+      .item-gamer-bet {
+        background-color: #FAFAFA;
+        flex-grow: 1;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        padding: 1rem 0.5rem;
-        height: 100%;
+        align-items: center;
+        text-align: center;
+        padding: 1rem 2rem;
         overflow: scroll;
       }
-      .pre {
-        margin-bottom: 0.5rem;
+      .item-gamer-bet > .enter-tip {
+        width: 25rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        background-color: #CDCED2;
+        color: #8D8D8D;
       }
-      .room {
-        background: url('assets/images/game-hall-m.png');
+      .message-box {
+        padding-top: 2rem;
         width: 100%;
-        padding-top: 23%;
-        padding-bottom: 23%;
-        background-size: 100% 100%;
-        position: relative;
-        z-index: 998;
       }
-      .room .text {
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: 999;
+      .message-box>p {
+        width: 18rem;
+        padding: 0.5rem 0;
+        border-radius: 2rem;
+        background-color: #CDCED2;
+        color: #fff;
+        margin: 0 auto;
+      }
+
+      .message-box > .message, .message-box > .self-message {
+        display: flex;
+        padding: 1rem 0;
+      }
+      .message-box > .self-message {
+        flex-direction: row-reverse;
+      }
+
+      .message > .head-image, .self-message > .head-image{
+        width: 7rem;
+        height: 7rem;
+        border-radius: 3.5rem;
+        background-color: #C7E2FF;
+      }
+      .message-content-box {
+        flex-grow: 1;
+        padding: 0 0rem 0 2rem;
+      }
+      .self-message .message-content-box {
+        padding: 0 2rem 0 0rem;
+      }
+      .message-content-box > .name {
+        text-align: left;
+        color: #999999;
+        padding-bottom: 1rem;
+      }
+      .self-message .name {
+        text-align: right;
+      }
+
+      .message-content-box > .message-content {
+        flex-grow: 1;
+        background-color: #FE635E;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        color: #fff;
+      }
+      .self-message .message-content {
+        background-color: #F9CC9D;
+      }
+      .message-content > .item01, .message-content > .item02 {
+        display: flex;
+        justify-content: space-between;
+      }
+      .message-content > .item01 {
+        padding-bottom: 1rem;
+        font-size: 2.133rem;
+      }
+      .message-content > .item02 {
+        padding-top: 1rem;
+        font-size: 1.866rem;
+      }
+      .item-gamer-bet .close {
+        padding: 1rem 1rem;
+        color: #363636;
+        background-color: #CDCED2;
+        border-radius: 1rem;
+        margin: 1rem 0;
+        text-align: left;
+        line-height: 3rem;
+      }
+      /* 投注信息样式结束 */
+
+      .item-bet-btn {
+        display: flex;
+        justify-content: space-between;
+        background-color: #F7F1F8;
+        padding: 1rem;
+        align-items: center;
+        border-top: 1px solid #D6D6D6;
+      }
+      .item-bet-btn button {
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        background-color: #FE635E;
+        color: #fff;
+        font-size: 1.866rem;
+        line-height: 2rem;
+      }
+      .item-bet-btn input {
+        flex-grow: 1;
+        margin: 0 1rem;
+        border: 2px solid #D4D4D4;
+        border-radius: 7px;
+        height: 4rem;
+        font-size: 1.6rem
       }
     </style>
   </head>
   <body>
-    <div class="game-hall-content">
-      <a href="#">
-        <div class="room pre primary">
-          <button class="text first">赔率说明</button>
-          <p class="text second hall-tag1">底注： <strong>1</strong></p>
-          <p class="text second hall-tag2">准入： <strong>0</strong></p>
-          <span class="text third">
+    <div class="game-hall-item">
+      <ul class="item-info">
+        <li class="info-time">
+          <p>距离<span class="black">949163</span>期截止</p>
+          <strong>04分20秒</strong>
+        </li>
+        <li class="info-balance">
+          <p class="black">
+            余额
             <svg class="icon" aria-hidden="true">
               <use xlink:href="#icon-zhanghu1"></use>
             </svg>
-            <strong>9739</strong>
-          </span>
+          </p>
+          <strong>0.0元宝</strong>
+        </li>
+      </ul>
+      <ul class="item-result">
+        <li class="result-text">
+          <span>第 949161 期 </span>
+          <span class="num">0</span>
+          <span>+</span>
+          <span class="num">0</span>
+          <span>+</span>
+          <span class="num">9</span>
+          <span>=</span>
+          <span class="num res">9</span>
+          <span class="num big-small">小</span>
+          <span class="num sigle-double">单</span>
+        </li>
+        <li class="resulst-icon" id="resulst-icon">          
+         <!-- <svg class="icon" aria-hidden="true">
+           <use xlink:href="#icon-zhanghu1"></use>
+         </svg> -->
+         <span>></span>
+        </li>
+        </a>
+      </ul>
+      <div class="item-gamer-bet">
+        <div class="enter-tip">
+          *** 游戏房间加入成功 ***
         </div>
-      </a>
-      <a href="#">
-        <div class="room pre middle">
-          <button class="text first">赔率说明</button>
-          <p class="text second hall-tag1">底注： <strong>100</strong></p>
-          <p class="text second hall-tag2">准入： <strong>50000</strong></p>
-          <span class="text third">
-            <svg class="icon" aria-hidden="true">
-              <use xlink:href="#icon-zhanghu1"></use>
-            </svg>
-            <strong>9739</strong>
-          </span>
+        <div class="message-box">
+          <p>2019-04-30 11:49</p>
+          <div class="message">
+            <div class="head-image"></div>
+            <div class="message-content-box">
+              <p class="name">不吃胡萝卜兔子</p>
+              <ul class="message-content">
+                <li class="item01">
+                  <span>
+                    <svg class="icon" aria-hidden="true">
+                      <use xlink:href="#icon-zhanghu1"></use>
+                    </svg>
+                    <span>949364期</span>
+                  </span>
+                  <span>总计： <span>90</span></span>
+                </li>
+                <li class="item02">
+                  <span>投注： <span>17</span></span>
+                  <span>金额： <span>90</span></span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </a>
-      <a href="#">
-        <div class="room senior">
-          <button class="text first">赔率说明</button>
-          <p class="text second hall-tag1">底注： <strong>300</strong></p>
-          <p class="text second hall-tag2">准入： <strong>100000</strong></p>
-          <span class="text third">
-            <svg class="icon" aria-hidden="true">
-              <use xlink:href="#icon-zhanghu1"></use>
-            </svg>
-            <strong>9739</strong>
-          </span>
+        <div class="message-box">
+          <p>2019-04-30 11:49</p>
+          <div class="self-message">
+            <div class="head-image"></div>
+            <div class="message-content-box">
+              <p class="name">不吃西红柿兔子</p>
+              <ul class="message-content">
+                <li class="item01">
+                  <span>
+                    <svg class="icon" aria-hidden="true">
+                      <use xlink:href="#icon-zhanghu1"></use>
+                    </svg>
+                    <span>949364期</span>
+                  </span>
+                  <span>总计： <span>90</span></span>
+                </li>
+                <li class="item02">
+                  <span>投注： <span>17</span></span>
+                  <span>金额： <span>90</span></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>   
+        <div class="message-box">
+          <p>2019-04-30 11:49</p>
+          <div class="message">
+            <div class="head-image"></div>
+            <div class="message-content-box">
+              <p class="name">不吃猪油兔子</p>
+              <ul class="message-content">
+                <li class="item01">
+                  <span>
+                    <svg class="icon" aria-hidden="true">
+                      <use xlink:href="#icon-zhanghu1"></use>
+                    </svg>
+                    <span>949364期</span>
+                  </span>
+                  <span>总计： <span>90</span></span>
+                </li>
+                <li class="item02">
+                  <span>投注： <span>17</span></span>
+                  <span>金额： <span>90</span></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div> 
+        <div class="message-box">
+          <p>2019-04-30 11:49</p>
+          <div class="message">
+            <div class="head-image"></div>
+            <div class="message-content-box">
+              <p class="name">不吃猪油兔子</p>
+              <ul class="message-content">
+                <li class="item01">
+                  <span>
+                    <svg class="icon" aria-hidden="true">
+                      <use xlink:href="#icon-zhanghu1"></use>
+                    </svg>
+                    <span>949364期</span>
+                  </span>
+                  <span>总计： <span>90</span></span>
+                </li>
+                <li class="item02">
+                  <span>投注： <span>17</span></span>
+                  <span>金额： <span>90</span></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>      
+        <div class="message-box">
+          <p>2019-04-30 11:49</p>
+          <div class="message">
+            <div class="head-image"></div>
+            <div class="message-content-box">
+              <p class="name">不吃猪油兔子</p>
+              <ul class="message-content">
+                <li class="item01">
+                  <span>
+                    <svg class="icon" aria-hidden="true">
+                      <use xlink:href="#icon-zhanghu1"></use>
+                    </svg>
+                    <span>949364期</span>
+                  </span>
+                  <span>总计： <span>90</span></span>
+                </li>
+                <li class="item02">
+                  <span>投注： <span>17</span></span>
+                  <span>金额： <span>90</span></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>          
+        <p class="close">
+          【949364】 期已封盘，下注结果以系统开奖为标准，如有异议，请及时联系客服
+        </p>
+        <div class="records-box" id="records-box">
+          <ul class="result-records">
+            <li class="result-text">
+              <span>第 949161 期 </span>
+              <span class="num">0</span>
+              <span>+</span>
+              <span class="num">0</span>
+              <span>+</span>
+              <span class="num">9</span>
+              <span>=</span>
+              <span class="num res">9</span>
+              <span class="num big-small">小</span>
+              <span class="num sigle-double">单</span>
+            </li>
+            <li class="result-text">
+              <span>第 949161 期 </span>
+              <span class="num">0</span>
+              <span>+</span>
+              <span class="num">0</span>
+              <span>+</span>
+              <span class="num">9</span>
+              <span>=</span>
+              <span class="num res">9</span>
+              <span class="num big-small">小</span>
+              <span class="num sigle-double">单</span>
+            </li>
+            <li class="result-text">
+              <span>第 949161 期 </span>
+              <span class="num">0</span>
+              <span>+</span>
+              <span class="num">0</span>
+              <span>+</span>
+              <span class="num">9</span>
+              <span>=</span>
+              <span class="num res">9</span>
+              <span class="num big-small">小</span>
+              <span class="num sigle-double">单</span>
+            </li>
+          </ul>
         </div>
-      </a>
+      </div>
+      <div class="item-bet-btn">
+        <button>投注</button>
+        <input type="text" />
+        <!-- <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-zhanghu1"></use>
+        </svg> -->
+        <span style="height: 4rem; width: 4rem; border-radius: 2rem; border: 1px solid #7F8386"></span>
+      </div>
+      <div class="bet-box">
+        <header class="bet-content"></header>
+        <main class="bet-content"></main>
+
+
+      </div>
     </div>
+    <script type="text/javascript">
+      document.getElementById('resulst-icon').onclick = function() {
+        if(document.getElementById('records-box').style.display != 'none') {
+          document.getElementById('records-box').style.display = 'none';
+        } else {
+          document.getElementById('records-box').style.display = 'block';
+        }
+      };
+    </script>
   </body>
 </html>
