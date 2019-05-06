@@ -15,11 +15,11 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
   $('.back').css('color', '#fff')
   $('#main').html(
     '\n' +
-      '    <div class="account-records">\n' +
+      '    <div class="account-records public-records">\n' +
       '      <ul>\n' +
       '        <li class="size-28">\n' +
       '          <span>时间</span>\n' +
-      '          <span class="account-records-border">变动金额</span>\n' +
+      '          <span class="public-records-border">变动金额</span>\n' +
       '          <span>变动记录</span>\n' +
       '        </li>\n' +
       '        <li>\n' +

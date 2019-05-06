@@ -15,11 +15,11 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
   $('.back').css('color', '#fff');
   $('#main').html(
     '\n' +
-      '<div class="recharge-record size-24">\n' +
+      '<div class="recharge-record public-records">\n' +
       ' <ul>\n' +
       ' <li class="size-28">\n' +
       '<span>充值时间</span>\n' +
-      ' <span class="recharge-record-border">充值金额</span>\n' +
+      ' <span class="public-records-border">充值金额</span>\n' +
       ' <span>充值状态</span>\n' +
       '</li>\n' +
       '<li>\n' +

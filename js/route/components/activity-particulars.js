@@ -14,12 +14,12 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
   $('.back').css('color', '#fff');
   $('#main').html(
     '\n' +
-      '<div class="activity-particulars">\n' +
+      '<div class="activity-particulars public-details">\n' +
       '<header class="header-title">\n' +
       '<strong>彩金活动</strong>\n' +
       ' <p class="date">2019-02-22 00:31:25</p>\n' +
       ' </header>\n' +
-      '<div class="activity-particulars-content">\n' +
+      '<div class="activity-particulars-content public-details-content">\n' +
       ' <p>为感谢广大新老客户长期以来对</p>\n' +
       ' <p>"XXX竞猜平台"的支持</p>\n' +
       ' <p>平台特推出新年大礼包!</p>\n' +

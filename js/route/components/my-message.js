@@ -14,12 +14,12 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
   $('.back').css('color', '#fff');
   $('#main').html(
     '\n' +
-      '<div class="my-message">\n' +
+      '<div class="my-message public-details">\n' +
       '<div class="header-title">\n' +
       '<strong>我的消息1</strong>\n' +
       '<p class="size-24">2019-02-22 00:31:25</p>\n' +
       ' </div>\n' +
-      '<div class="my-message-content">\n' +
+      '<div class="my-message-content public-details-content">\n' +
       '<p>我的消息111111111111</p>\n' +
       '</div>\n' +
       '</div>'

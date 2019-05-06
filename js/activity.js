@@ -17,4 +17,7 @@
   $('.award>li').on('click', event => {
     window.location.href = '#/notice-particulars';
   });
+  $('.banner').on('click', function() {
+    window.location.href = '#/activity-particulars';
+  });
 })();
