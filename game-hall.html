@@ -223,6 +223,87 @@
         height: 4rem;
         font-size: 1.6rem
       }
+
+      /* 投注主体样式开始 */
+      .bet-hidden {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 9998;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: none;
+      }
+      .bet-box {
+        box-sizing: border-box;
+        position: absolute;
+        left: 1rem;
+        right: 1rem;
+        bottom: 1rem;
+        z-index: 9999;
+        background-color: #FD625D;        
+        color: #fff;
+        padding: 1rem 2rem;
+        font-size: 2.133rem;
+        border-radius: 0.5rem 0.5rem 0 0;
+      }
+      .bet-content {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0;
+
+      }
+      .bet-type {
+        font-size: 2.667rem;
+      }
+      .bet-tip {
+        justify-content: center !important;
+      }
+      .main-value {
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 0;
+      }
+      .odds-desc, .min-bet, .double-bet {
+        padding: 1rem 2rem;
+        font-size: 2.133rem;
+        border-radius: 0.5rem;
+      }
+      .odds-desc {
+        border: 1px solid #fff;
+        background-color: transparent;
+        color: #fff;
+      }
+      .min-bet, .double-bet {
+        background-color: #FDA2A1;
+      }
+      .withdrawal, .betting {
+        padding: 1rem 2rem;
+        font-size: 2.133rem;
+        border-radius: 0.5rem;
+        background-color: #FEF78D;
+        color: #F66850;
+      }
+      .bet-amount-box {
+        display: flex;
+        align-items: center;
+
+      }
+      .bet-amount {
+        padding: 1rem 0;
+        font-size: 2.133rem;
+        width: 15rem;
+      }
+      .bet-sum-box {
+        justify-content: flex-end;
+      }
+      .bet-sum {
+        padding-left: 2rem;
+        letter-spacing: 0.2rem;
+      }
+      .bet-footer {
+        margin-top: 1rem;
+      }
+      /* 投注主体样式结束 */
     </style>
   </head>
   <body>
@@ -432,28 +513,91 @@
         </div>
       </div>
       <div class="item-bet-btn">
-        <button>投注</button>
+        <button id="bet-toggle">投注</button>
         <input type="text" />
         <!-- <svg class="icon" aria-hidden="true">
           <use xlink:href="#icon-zhanghu1"></use>
         </svg> -->
         <span style="height: 4rem; width: 4rem; border-radius: 2rem; border: 1px solid #7F8386"></span>
       </div>
-      <div class="bet-box">
-        <header class="bet-content"></header>
-        <main class="bet-content"></main>
-
-
+      <div class="bet-hidden bet-tip">
+        <div class="bet-box">
+          <header class="bet-content bet-type">          
+           <svg class="icon" aria-hidden="true">
+             <use xlink:href="#icon-zuojiantou"></use>
+           </svg>
+           <span>                    
+             <svg class="icon" aria-hidden="true">
+               <use xlink:href="#icon-bangzhu"></use>
+             </svg>
+             大小单双
+           </span>         
+           <svg class="icon" aria-hidden="true">
+             <use xlink:href="#icon-sanjiaoright"></use>
+           </svg>
+          </header>
+          <div class="bet-content bet-tip">
+            中奖和值： <span>[0,1,2,3,4]</span>
+          </div>
+          <main>
+            <ul class="main-value">
+              <li><p>大</p><p>2.00</p></li>
+              <li><p>小</p><p>2.00</p></li>
+              <li><p>单</p><p>2.00</p></li>
+              <li><p>双</p><p>2.00</p></li>
+              <li><p>极大</p><p>15.00</p></li>
+            </ul>
+            <ul class="main-value">
+              <li><p>大单</p><p>3.90</p></li>
+              <li><p>小单</p><p>3.90</p></li>
+              <li><p>大双</p><p>3.90</p></li>
+              <li><p>小双</p><p>3.90</p></li>
+              <li><p>极小</p><p>15.00</p></li>
+            </ul>
+          </main>
+          <div class="bet-content bet-console">
+            <button class="odds-desc">赔率说明</button>
+            <span>
+              <button class="min-bet">最小投注</button>
+              <button class="double-bet">双倍投注</button>
+            </span>
+          </div>
+          <div class="bet-content bet-sum-box">
+            <label class="bet-sum">共投：<span>0</span>注</label>
+            <label class="bet-sum">总计：<span>0</span></label>
+          </div>
+          <div class="bet-content bet-footer">
+            <button class="withdrawal">撤单</button>
+            <span class="bet-amount-box">
+              <label>投注金额：</label>
+              <input type="text" name="bet-money" class="bet-amount">
+            </span>
+            <button class="betting">投注</button>
+          </div>
+        </div>
       </div>
     </div>
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
     <script type="text/javascript">
-      document.getElementById('resulst-icon').onclick = function() {
-        if(document.getElementById('records-box').style.display != 'none') {
-          document.getElementById('records-box').style.display = 'none';
-        } else {
-          document.getElementById('records-box').style.display = 'block';
-        }
-      };
+      $(function() {
+        document.getElementById('resulst-icon').onclick = function() {
+          if(document.getElementById('records-box').style.display != 'none') {
+            document.getElementById('records-box').style.display = 'none';
+          } else {
+            document.getElementById('records-box').style.display = 'block';
+          }
+        };
+        $('#bet-toggle').on('click', function () {
+          $('.bet-hidden').toggle();
+        });        
+        $('.bet-hidden').on('click', function () {
+          $('.bet-hidden').toggle();
+        });
+        $('.bet-hidden .bet-box').on('click', function(e) {
+          e.stopPropagation();
+        })
+
+      });
     </script>
   </body>
 </html>

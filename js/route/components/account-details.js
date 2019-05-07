@@ -1,3 +1,4 @@
+
 SPA_RESOLVE_INIT = function(transition, sigal) {
   $('#footer').hide();
   $('#header').html(

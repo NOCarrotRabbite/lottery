@@ -56,15 +56,5 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '      </div>\n' +
       '    </div>'
   );
-  let _body = document.getElementsByTagName('body')[0];
-  let scriptEle = document.createElement('script');
-  scriptEle.type = 'text/javascript';
-  scriptEle.src = 'js/activity.js';
-  scriptEle.async = true;
-  if (sigal == 0) {
-    _body.appendChild(scriptEle);
-  } else {
-    $("script[src='js/activity.js']").remove();
-    _body.appendChild(scriptEle);
-  }
+  $.addPageScript('js/activity.js', sigal);
 };
