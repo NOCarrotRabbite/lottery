@@ -157,7 +157,7 @@ $(window).resize(function() {
 });
 $(function() {
   setHtmlFontSize();
-  window.location.hash = "#/login";
+  /*window.location.hash = "#/login";*/
 });
 // 设置根元素字体大小；num为控制常量
 let setHtmlFontSize = function() {
