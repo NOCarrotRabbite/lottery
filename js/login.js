@@ -13,9 +13,10 @@
     };
     getAjax(param).then(
       function(data) {
-        if (data.status == true) {
+        window.location.href = '#/index';
+        /* if (data.status == true) {
           window.location.href = '#/index';
-        }
+        } */
         console.log('data', data);
       },
       function(error) {
