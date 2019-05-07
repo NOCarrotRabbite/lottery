@@ -1058,3 +1058,296 @@ footer .active {
   color: #888;
 }
 /* 充值-网银充值 结束 */
+
+/* 游戏小厅 开始 */
+.game-hall-item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+}
+.item-info {
+  display: flex;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #FAFAFA;
+
+}
+.info-balance, .info-time {
+  width: 50%;
+}
+.info-balance strong, .info-time strong {
+  display: inline-block;
+  color: #E54E4C;
+  font-size: 2.667rem;
+  padding-top: 1rem;
+  letter-spacing: 0.2rem;
+}
+.info-balance .black, .info-time .black {
+  font-size: 2.133rem;
+  color: #000000;
+  font-weight: 500;
+}
+.info-time {
+  border-right: 1px solid #D0D0D0;
+}
+.info-time p {
+  color: #939393;
+  letter-spacing: 0.1rem;
+  font-size: 1.866rem;
+}
+
+/* 中奖记录样式开始 */
+.item-result {
+  display: flex;
+  padding: 2rem 2rem;
+  background-color: #fff;
+  justify-content: space-between;
+  font-size: 2.133rem;
+  font-weight: 500;
+}
+.result-records {
+  padding: 2rem 2rem;
+  font-size: 2.133rem;
+  font-weight: 500;
+  background-color: #fff;
+}
+.result-records > .result-text {
+  padding: 1rem 0;
+}
+.result-text > .num {
+  text-align: center;
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  color: #fff;
+  background-color: #5C95F3;
+}
+.result-text > .sigle-double {
+  background-color: #F5584E;
+}
+.result-text > .res {
+  background-color: #007F00;
+}
+.records-box {
+  position: absolute;
+  border: 3px solid #F9CC9D;
+  background: #fff;
+}
+.records-box::after {
+  position:absolute;
+  top: -12px;
+  right: 20px;
+  padding: 8px;
+  border:inherit;
+  border-left: none;
+  border-top: none;
+  content:"";
+  background: inherit;
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+/* 中奖记录样式结束 */
+
+/* 注信息样式开始 */
+.item-gamer-bet {
+  background-color: #FAFAFA;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 2rem;
+  overflow: scroll;
+}
+.item-gamer-bet > .enter-tip {
+  width: 25rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #CDCED2;
+  color: #8D8D8D;
+}
+.message-box {
+  padding-top: 2rem;
+  width: 100%;
+}
+.message-box>p {
+  width: 18rem;
+  padding: 0.5rem 0;
+  border-radius: 2rem;
+  background-color: #CDCED2;
+  color: #fff;
+  margin: 0 auto;
+}
+
+.message-box > .message, .message-box > .self-message {
+  display: flex;
+  padding: 1rem 0;
+}
+.message-box > .self-message {
+  flex-direction: row-reverse;
+}
+
+.message > .head-image, .self-message > .head-image{
+  width: 7rem;
+  height: 7rem;
+  border-radius: 3.5rem;
+  background-color: #C7E2FF;
+}
+.message-content-box {
+  flex-grow: 1;
+  padding: 0 0rem 0 2rem;
+}
+.self-message .message-content-box {
+  padding: 0 2rem 0 0rem;
+}
+.message-content-box > .name {
+  text-align: left;
+  color: #999999;
+  padding-bottom: 1rem;
+}
+.self-message .name {
+  text-align: right;
+}
+
+.message-content-box > .message-content {
+  flex-grow: 1;
+  background-color: #FE635E;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  color: #fff;
+}
+.self-message .message-content {
+  background-color: #F9CC9D;
+}
+.message-content > .item01, .message-content > .item02 {
+  display: flex;
+  justify-content: space-between;
+}
+.message-content > .item01 {
+  padding-bottom: 1rem;
+  font-size: 2.133rem;
+}
+.message-content > .item02 {
+  padding-top: 1rem;
+  font-size: 1.866rem;
+}
+.item-gamer-bet .close {
+  padding: 1rem 1rem;
+  color: #363636;
+  background-color: #CDCED2;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  text-align: left;
+  line-height: 3rem;
+}
+/* 投注信息样式结束 */
+
+.item-bet-btn {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F7F1F8;
+  padding: 1rem;
+  align-items: center;
+  border-top: 1px solid #D6D6D6;
+}
+.item-bet-btn button {
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  background-color: #FE635E;
+  color: #fff;
+  font-size: 1.866rem;
+  line-height: 2rem;
+}
+.item-bet-btn input {
+  flex-grow: 1;
+  margin: 0 1rem;
+  border: 2px solid #D4D4D4;
+  border-radius: 7px;
+  height: 4rem;
+  font-size: 1.6rem
+}
+
+/* 投注主体样式开始 */
+.bet-hidden {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 9998;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+.bet-box {
+  box-sizing: border-box;
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 9999;
+  background-color: #FD625D;
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 2.133rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.bet-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+
+}
+.bet-type {
+  font-size: 2.667rem;
+}
+.bet-tip {
+  justify-content: center !important;
+}
+.main-value {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+.odds-desc, .min-bet, .double-bet {
+  padding: 1rem 2rem;
+  font-size: 2.133rem;
+  border-radius: 0.5rem;
+}
+.odds-desc {
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+}
+.min-bet, .double-bet {
+  background-color: #FDA2A1;
+}
+.withdrawal, .betting {
+  padding: 1rem 2rem;
+  font-size: 2.133rem;
+  border-radius: 0.5rem;
+  background-color: #FEF78D;
+  color: #F66850;
+}
+.bet-amount-box {
+  display: flex;
+  align-items: center;
+
+}
+.bet-amount {
+  padding: 1rem 0;
+  font-size: 2.133rem;
+  width: 15rem;
+}
+.bet-sum-box {
+  justify-content: flex-end;
+}
+.bet-sum {
+  padding-left: 2rem;
+  letter-spacing: 0.2rem;
+}
+.bet-footer {
+  margin-top: 1rem;
+}
+/* 投注主体样式结束 */
+/* 游戏小厅 结束 */
