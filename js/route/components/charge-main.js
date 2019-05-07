@@ -36,15 +36,5 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '      </div>\n' +
       '    </div>'
   );
-  let _body = document.getElementsByTagName('body')[0];
-  let scriptEle = document.createElement('script');
-  scriptEle.type = 'text/javascript';
-  scriptEle.src = 'js/charge.js';
-  scriptEle.async = true;
-  if (sigal == 0) {
-    _body.appendChild(scriptEle);
-  } else {
-    $("script[src='js/charge.js']").remove();
-    _body.appendChild(scriptEle);
-  }
+  $.addPageScript('js/bank-charge.js', sigal);
 };

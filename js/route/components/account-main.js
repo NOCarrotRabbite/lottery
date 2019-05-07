@@ -99,4 +99,5 @@ SPA_RESOLVE_INIT = function(transition) {
       '      </ul>\n' +
       '    </div>'
   )
+  $.addPageScript('js/account-main.js', sigal);
 }

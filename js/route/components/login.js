@@ -8,11 +8,15 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '<li class="title">登 录</li>\n' +
       '<li>\n' +
       '<input type="text" class="user" placeholder="请输入用户账号" />\n' +
-      '<span class="icon">X</span>\n' +
+      '  <svg class="icon detail-icon" aria-hidden="true">\n' +
+      '     <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
+      '  </svg>\n' +
       '</li>\n' +
       '<li>\n' +
       '<input type="password" class="password" placeholder="请输入用户密码" />\n' +
-      '<span class="icon">X</span>\n' +
+      '  <svg class="icon detail-icon" aria-hidden="true">\n' +
+      '      <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
+      '  </svg>\n' +
       '</li>\n' +
       '<li><button class="login-submit public-member-submit">登 录</button></li>\n' +
       '<li class="register-href">\n' +
@@ -22,15 +26,5 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '</ul>\n' +
       '</div>'
   );
-  let _body = document.getElementsByTagName('body')[0];
-  let scriptEle = document.createElement('script');
-  scriptEle.type = 'text/javascript';
-  scriptEle.src = 'js/login.js';
-  scriptEle.async = true;
-  if (sigal == 0) {
-    _body.appendChild(scriptEle);
-  } else {
-    $("script[src='js/login.js']").remove();
-    _body.appendChild(scriptEle);
-  }
+  $.addPageScript('js/login.js', sigal);
 };

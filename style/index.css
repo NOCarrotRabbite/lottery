@@ -977,9 +977,9 @@ footer .active {
   flex: 1;
   font-size: 1.6rem;
   flex: 1;
-  padding: 1.2rem 4rem 1.2rem 1.2rem;
-  border: 1px solid #e9594a;
-  border-radius: 0.8rem;
+  padding: 1rem 4rem 1rem 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.6rem;
   color: #888;
 }
 .payment-form .payment-submit {
@@ -1077,30 +1077,37 @@ footer .active {
   display: flex;
   text-align: center;
   padding: 1rem 0;
+<<<<<<< HEAD
   background-color: #FAFAFA;
   width: 100%;
   position: relative;
   min-height: 8rem;
   align-items: center;
 
+=======
+  background-color: #fafafa;
+>>>>>>> b27a8b5e4f504f6fc7a7011cb8122ce773ebd771
 }
-.info-balance, .info-time {
+.info-balance,
+.info-time {
   width: 50%;
 }
-.info-balance strong, .info-time strong {
+.info-balance strong,
+.info-time strong {
   display: inline-block;
-  color: #E54E4C;
+  color: #e54e4c;
   font-size: 2.667rem;
   padding-top: 1rem;
   letter-spacing: 0.2rem;
 }
-.info-balance .black, .info-time .black {
+.info-balance .black,
+.info-time .black {
   font-size: 2.133rem;
   color: #000000;
   font-weight: 500;
 }
 .info-time {
-  border-right: 1px solid #D0D0D0;
+  border-right: 1px solid #d0d0d0;
 }
 .info-time p {
   color: #939393;
@@ -1135,29 +1142,29 @@ footer .active {
   height: 3rem;
   border-radius: 1.5rem;
   color: #fff;
-  background-color: #5C95F3;
+  background-color: #5c95f3;
 }
 .result-text > .sigle-double {
-  background-color: #F5584E;
+  background-color: #f5584e;
 }
 .result-text > .res {
-  background-color: #007F00;
+  background-color: #007f00;
 }
 .records-box {
   position: absolute;
-  border: 3px solid #F9CC9D;
+  border: 3px solid #f9cc9d;
   background: #fff;
   display: none;
 }
 .records-box::after {
-  position:absolute;
+  position: absolute;
   top: -12px;
   right: 20px;
   padding: 8px;
-  border:inherit;
+  border: inherit;
   border-left: none;
   border-top: none;
-  content:"";
+  content: '';
   background: inherit;
   -webkit-transform: rotate(225deg);
   -moz-transform: rotate(225deg);
@@ -1167,7 +1174,7 @@ footer .active {
 
 /* 注信息样式开始 */
 .item-gamer-bet {
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -1180,23 +1187,24 @@ footer .active {
   width: 25rem;
   padding: 1rem;
   border-radius: 1rem;
-  background-color: #CDCED2;
-  color: #8D8D8D;
+  background-color: #cdced2;
+  color: #8d8d8d;
 }
 .message-box {
   padding-top: 2rem;
   width: 100%;
 }
-.message-box>p {
+.message-box > p {
   width: 18rem;
   padding: 0.5rem 0;
   border-radius: 2rem;
-  background-color: #CDCED2;
+  background-color: #cdced2;
   color: #fff;
   margin: 0 auto;
 }
 
-.message-box > .message, .message-box > .self-message {
+.message-box > .message,
+.message-box > .self-message {
   display: flex;
   padding: 1rem 0;
 }
@@ -1204,11 +1212,12 @@ footer .active {
   flex-direction: row-reverse;
 }
 
-.message > .head-image, .self-message > .head-image{
+.message > .head-image,
+.self-message > .head-image {
   width: 7rem;
   height: 7rem;
   border-radius: 3.5rem;
-  background-color: #C7E2FF;
+  background-color: #c7e2ff;
 }
 .message-content-box {
   flex-grow: 1;
@@ -1228,15 +1237,16 @@ footer .active {
 
 .message-content-box > .message-content {
   flex-grow: 1;
-  background-color: #FE635E;
+  background-color: #fe635e;
   padding: 1rem 2rem;
   border-radius: 1rem;
   color: #fff;
 }
 .self-message .message-content {
-  background-color: #F9CC9D;
+  background-color: #f9cc9d;
 }
-.message-content > .item01, .message-content > .item02 {
+.message-content > .item01,
+.message-content > .item02 {
   display: flex;
   justify-content: space-between;
 }
@@ -1251,7 +1261,7 @@ footer .active {
 .item-gamer-bet .close {
   padding: 1rem 1rem;
   color: #363636;
-  background-color: #CDCED2;
+  background-color: #cdced2;
   border-radius: 1rem;
   margin: 1rem 0;
   text-align: left;
@@ -1262,18 +1272,22 @@ footer .active {
 .item-bet-btn {
   display: flex;
   justify-content: space-between;
-  background-color: #F7F1F8;
+  background-color: #f7f1f8;
   padding: 1rem;
   align-items: center;
+<<<<<<< HEAD
   border-top: 1px solid #D6D6D6;
   width: 100%;
   box-sizing: border-box;
   min-height: 6.333rem;
+=======
+  border-top: 1px solid #d6d6d6;
+>>>>>>> b27a8b5e4f504f6fc7a7011cb8122ce773ebd771
 }
 .item-bet-btn button {
   padding: 1rem 2rem;
   border-radius: 2rem;
-  background-color: #FE635E;
+  background-color: #fe635e;
   color: #fff;
   font-size: 1.866rem;
   line-height: 2rem;
@@ -1281,10 +1295,15 @@ footer .active {
 .item-bet-btn input {
   flex-grow: 1;
   margin: 0 1rem;
+<<<<<<< HEAD
   border: 1px solid #D4D4D4;
   border-radius: 3px;
+=======
+  border: 2px solid #d4d4d4;
+  border-radius: 7px;
+>>>>>>> b27a8b5e4f504f6fc7a7011cb8122ce773ebd771
   height: 4rem;
-  font-size: 1.6rem
+  font-size: 1.6rem;
 }
 
 /* 投注主体样式开始 */
@@ -1303,7 +1322,7 @@ footer .active {
   right: 1rem;
   bottom: 1rem;
   z-index: 9999;
-  background-color: #FD625D;
+  background-color: #fd625d;
   color: #fff;
   padding: 1rem 2rem;
   font-size: 2.133rem;
@@ -1313,7 +1332,6 @@ footer .active {
   display: flex;
   justify-content: space-between;
   padding: 1rem 0;
-
 }
 .bet-type {
   font-size: 2.667rem;
@@ -1326,7 +1344,9 @@ footer .active {
   justify-content: space-between;
   padding: 2rem 0;
 }
-.odds-desc, .min-bet, .double-bet {
+.odds-desc,
+.min-bet,
+.double-bet {
   padding: 1rem 2rem;
   font-size: 2.133rem;
   border-radius: 0.5rem;
@@ -1336,20 +1356,20 @@ footer .active {
   background-color: transparent;
   color: #fff;
 }
-.min-bet, .double-bet {
-  background-color: #FDA2A1;
+.min-bet,
+.double-bet {
+  background-color: #fda2a1;
 }
 .withdrawal, .betting {
   padding: 1rem 1rem;
   font-size: 2.133rem;
   border-radius: 0.5rem;
-  background-color: #FEF78D;
-  color: #F66850;
+  background-color: #fef78d;
+  color: #f66850;
 }
 .bet-amount-box {
   display: flex;
   align-items: center;
-
 }
 .bet-amount {
   padding: 1rem 0;

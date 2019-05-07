@@ -39,4 +39,5 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       ' </ul>\n' +
       '</div>\n'
   );
+  $.addPageScript('js/mobile-bind.js', sigal);
 };

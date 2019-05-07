@@ -1,4 +1,3 @@
-
 SPA_RESOLVE_INIT = function(transition, sigal) {
   $('#footer').hide();
   $('#header').html(
@@ -55,7 +54,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '    </div>'
   );
 
-  let _body = document.getElementsByTagName('body')[0];
+  /* let _body = document.getElementsByTagName('body')[0];
   let scriptEle = document.createElement('script');
   scriptEle.type = 'text/javascript';
   scriptEle.src = 'js/account-details.js';
@@ -65,5 +64,6 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
   } else {
     $("script[src='js/account-details.js']").remove();
     _body.appendChild(scriptEle);
-  }
+  } */
+  $.addPageScript('js/account-details.js', sigal);
 };

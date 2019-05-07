@@ -2,9 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b492952f-9934-49d0-803b-87aa11e996ac" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game-hall.html" beforeDir="false" afterPath="$PROJECT_DIR$/game-hall.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/about-us.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/account-main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/account-records.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/activity-particulars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bank-recharge.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/customer-main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/game-hall.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/mobile-bind.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/my-message.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/notice-particulars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/payment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/set-password.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/set-withdraw-deposit-pwd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/setting.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/wallet.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/withdraw-deposit-record.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/withdraw-deposit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/about-us.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/about-us.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/account-details.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/account-details.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/account-main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/account-main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/account-records.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/account-records.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/activity-particulars.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/activity-particulars.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/bank-card.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/bank-card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/bank-recharge.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/bank-recharge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/charge-main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/charge-main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/customer-main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/customer-main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/game-hall.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/game-hall.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/index-main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/index-main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/mobile-bind.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/mobile-bind.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/my-message.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/my-message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/notice-particulars.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/notice-particulars.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/payment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/recharge-record.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/recharge-record.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/set-password.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/set-password.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/set-withdraw-deposit-pwd.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/set-withdraw-deposit-pwd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/setting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/wallet.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/wallet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/withdraw-deposit-record.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/withdraw-deposit-record.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/withdraw-deposit.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/withdraw-deposit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/common.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/index.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -33,7 +74,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="63" />
+          <entry key="css" value="64" />
           <entry key="html" value="25" />
           <entry key="js" value="160" />
           <entry key="json" value="3" />
@@ -43,7 +84,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="63" />
+          <entry key="CSS" value="64" />
           <entry key="HTML" value="25" />
           <entry key="JSON" value="3" />
           <entry key="JavaScript" value="160" />
@@ -53,7 +94,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="4121" />
+          <entry key="css" value="4124" />
           <entry key="html" value="933" />
           <entry key="js" value="4089" />
           <entry key="json" value="2" />
@@ -61,7 +102,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="4121" />
+          <entry key="CSS" value="4124" />
           <entry key="HTML" value="937" />
           <entry key="JSON" value="2" />
           <entry key="JavaScript" value="4085" />
@@ -72,49 +113,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/route/components/game-hall-item.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="45" column="50" lean-forward="true" selection-start-line="45" selection-start-column="50" selection-end-line="45" selection-end-column="50" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/style/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="1345" column="28" lean-forward="true" selection-start-line="1345" selection-start-column="28" selection-end-line="1345" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/style/common.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="643">
-              <caret line="80" column="14" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="592">
-              <caret line="66" column="39" lean-forward="true" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1458">
-              <caret line="153" column="18" lean-forward="true" selection-start-line="153" selection-start-column="18" selection-end-line="153" selection-end-column="18" />
+            <state relative-caret-position="358">
+              <caret line="1363" column="21" selection-start-line="1363" selection-start-column="21" selection-end-line="1363" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -317,15 +319,15 @@
       <workItem from="1556525914836" duration="1245000" />
       <workItem from="1556588734908" duration="7101000" />
       <workItem from="1557108789999" duration="7508000" />
-      <workItem from="1557193435151" duration="20891000" />
+      <workItem from="1557193435151" duration="21349000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168035000" />
+    <option name="totallyTimeSpent" value="168493000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15104167" />
@@ -557,13 +559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="1345" column="28" lean-forward="true" selection-start-line="1345" selection-start-column="28" selection-end-line="1345" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/route/components/game-hall-item.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -571,6 +566,13 @@
           <folding>
             <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="1363" column="21" selection-start-line="1363" selection-start-column="21" selection-end-line="1363" selection-end-column="21" />
         </state>
       </provider>
     </entry>
