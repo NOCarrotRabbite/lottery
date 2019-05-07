@@ -292,4 +292,5 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         '        </div>\n' +
         '      </div>\n' +
         '    </div>');
+    $.addPageScript('js/game-hall-item.js', sigal);
 };
