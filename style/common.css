@@ -405,3 +405,61 @@ body {
   margin-top: 3rem;
 }
 /* 绑定银行卡+修改密码+提现密码 公共样式 结束 */
+/* 登录+注册 公共样式 开始 */
+.public-member {
+  width: 100%;
+  height: 100%;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  background: #e9594a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 1.866rem;
+}
+.public-member-form {
+  width: 100%;
+  padding: 3rem;
+}
+.public-member-form li {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.public-member-form .title {
+  font-size: 2.133rem;
+  justify-content: center;
+  font-weight: bold;
+  color: #fff;
+}
+.public-member-form li .icon {
+  position: absolute;
+  color: #e9594a;
+  right: 2rem;
+}
+.public-member-form li input {
+  flex: 1;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  font-size: 1.6rem;
+}
+.public-member-form .public-member-submit {
+  width: 100%;
+  font-size: 2.133rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 4rem;
+  color: #e9594a;
+  margin-top: 3rem;
+}
+.public-member-form .register-href {
+  display: flex;
+  justify-content: center;
+}
+.public-member-form .register-href a {
+  color: #fff;
+  border-bottom: 3px solid #fff;
+  margin: 0 2rem;
+}
+/* 登录+注册 公共样式 结束 */
