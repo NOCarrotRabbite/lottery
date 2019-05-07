@@ -1066,12 +1066,22 @@ footer .active {
   display: flex;
   flex-direction: column;
   font-size: 1.6rem;
+  position: absolute;
 }
-.item-info {
+/*.game-hall-item .top {
+    position: absolute;
+    top: 0;
+    width: 100%;
+ }*/
+.game-hall-item .item-info {
   display: flex;
   text-align: center;
   padding: 1rem 0;
-  background-color: #fafafa;
+  background-color: #FAFAFA;
+  width: 100%;
+  position: relative;
+  min-height: 8rem;
+  align-items: center;
 }
 .info-balance,
 .info-time {
@@ -1101,13 +1111,15 @@ footer .active {
 }
 
 /* 中奖记录样式开始 */
-.item-result {
+.game-hall-item .item-result {
   display: flex;
   padding: 2rem 2rem;
   background-color: #fff;
   justify-content: space-between;
   font-size: 2.133rem;
   font-weight: 500;
+  min-height: 3rem;
+  align-items: center;
 }
 .result-records {
   padding: 2rem 2rem;
@@ -1258,7 +1270,10 @@ footer .active {
   background-color: #f7f1f8;
   padding: 1rem;
   align-items: center;
-  border-top: 1px solid #d6d6d6;
+  border-top: 1px solid #D6D6D6;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 6.333rem;
 }
 .item-bet-btn button {
   padding: 1rem 2rem;
@@ -1271,8 +1286,8 @@ footer .active {
 .item-bet-btn input {
   flex-grow: 1;
   margin: 0 1rem;
-  border: 2px solid #d4d4d4;
-  border-radius: 7px;
+  border: 1px solid #D4D4D4;
+  border-radius: 3px;
   height: 4rem;
   font-size: 1.6rem;
 }
@@ -1331,9 +1346,8 @@ footer .active {
 .double-bet {
   background-color: #fda2a1;
 }
-.withdrawal,
-.betting {
-  padding: 1rem 2rem;
+.withdrawal, .betting {
+  padding: 1rem 1rem;
   font-size: 2.133rem;
   border-radius: 0.5rem;
   background-color: #fef78d;
@@ -1347,6 +1361,7 @@ footer .active {
   padding: 1rem 0;
   font-size: 2.133rem;
   width: 15rem;
+  border-radius: 3px;
 }
 .bet-sum-box {
   justify-content: flex-end;
