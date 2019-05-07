@@ -1077,16 +1077,11 @@ footer .active {
   display: flex;
   text-align: center;
   padding: 1rem 0;
-<<<<<<< HEAD
   background-color: #FAFAFA;
   width: 100%;
   position: relative;
   min-height: 8rem;
   align-items: center;
-
-=======
-  background-color: #fafafa;
->>>>>>> b27a8b5e4f504f6fc7a7011cb8122ce773ebd771
 }
 .info-balance,
 .info-time {
@@ -1275,14 +1270,10 @@ footer .active {
   background-color: #f7f1f8;
   padding: 1rem;
   align-items: center;
-<<<<<<< HEAD
   border-top: 1px solid #D6D6D6;
   width: 100%;
   box-sizing: border-box;
   min-height: 6.333rem;
-=======
-  border-top: 1px solid #d6d6d6;
->>>>>>> b27a8b5e4f504f6fc7a7011cb8122ce773ebd771
 }
 .item-bet-btn button {
   padding: 1rem 2rem;
@@ -1295,13 +1286,8 @@ footer .active {
 .item-bet-btn input {
   flex-grow: 1;
   margin: 0 1rem;
-<<<<<<< HEAD
   border: 1px solid #D4D4D4;
   border-radius: 3px;
-=======
-  border: 2px solid #d4d4d4;
-  border-radius: 7px;
->>>>>>> b27a8b5e4f504f6fc7a7011cb8122ce773ebd771
   height: 4rem;
   font-size: 1.6rem;
 }
