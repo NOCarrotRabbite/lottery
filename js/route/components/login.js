@@ -22,7 +22,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '</ul>\n' +
       '</div>'
   );
-  let _body = document.getElementsByTagName('body')[0];
+  /* let _body = document.getElementsByTagName('body')[0];
   let scriptEle = document.createElement('script');
   scriptEle.type = 'text/javascript';
   scriptEle.src = 'js/login.js';
@@ -32,5 +32,6 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
   } else {
     $("script[src='js/login.js']").remove();
     _body.appendChild(scriptEle);
-  }
+  } */
+  $.addPageScript('js/login.js', sigal);
 };
