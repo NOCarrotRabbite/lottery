@@ -389,6 +389,7 @@ body {
   color: #e9594a;
   position: absolute;
   right: 4rem;
+  display: none;
 }
 .public-set-submit {
   display: flex;
@@ -438,6 +439,7 @@ body {
   color: #e9594a;
   right: 2rem;
   font-size: 2.667rem;
+  display: none;
 }
 .public-member-form li input {
   flex: 1;

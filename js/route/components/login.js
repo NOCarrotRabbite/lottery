@@ -7,13 +7,13 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '<ul class="login-form public-member-form">\n' +
       '<li class="title">登 录</li>\n' +
       '<li>\n' +
-      '<input type="text" class="user" placeholder="请输入用户账号" />\n' +
+      '<input type="text"  class="user" placeholder="请输入用户账号" />\n' +
       '  <svg class="icon detail-icon" aria-hidden="true">\n' +
       '     <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '  </svg>\n' +
       '</li>\n' +
       '<li>\n' +
-      '<input type="password" class="password" placeholder="请输入用户密码" />\n' +
+      '<input type="password"  class="password" placeholder="请输入用户密码" />\n' +
       '  <svg class="icon detail-icon" aria-hidden="true">\n' +
       '      <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '  </svg>\n' +

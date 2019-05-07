@@ -20,5 +20,7 @@
           console.log('11111', error.status);
         }); */
     });
+    $.inputClear($('.user'), $('.user').next());
+    $.inputClear($('.password'), $('.password').next());
   });
 })();

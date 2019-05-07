@@ -18,21 +18,21 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '<ul class="set-password-form public-set-form">\n' +
       '<li>\n' +
       '  <span>旧登录密码</span>\n' +
-      ' <input type="text" />\n' +
+      ' <input type="text" class="old-pwd" />\n' +
       '  <svg class="icon detail-icon" aria-hidden="true">\n' +
       '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '              </svg>\n' +
       ' </li>\n' +
       ' <li>\n' +
       '<span>新登录密码</span>\n' +
-      ' <input type="text" />\n' +
+      ' <input type="text" class="new-pwd" />\n' +
       '  <svg class="icon detail-icon" aria-hidden="true">\n' +
       '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '              </svg>\n' +
       '  </li>\n' +
       ' <li>\n' +
       ' <span>重复新密码</span>\n' +
-      ' <input type="text" />\n' +
+      ' <input type="text" class="repetition-pwd" />\n' +
       '  <svg class="icon detail-icon" aria-hidden="true">\n' +
       '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '              </svg>\n' +

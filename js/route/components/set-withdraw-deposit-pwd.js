@@ -18,21 +18,21 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '<ul class="set-withdraw-deposit-pwd-form public-set-form">\n' +
       '<li>\n' +
       '  <span>旧提现密码</span>\n' +
-      ' <input type="text" />\n' +
+      ' <input type="text" class="old-pwd" />\n' +
       '  <svg class="icon detail-icon" aria-hidden="true">\n' +
       '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '              </svg>\n' +
       ' </li>\n' +
       ' <li>\n' +
       '<span>新提现密码</span>\n' +
-      ' <input type="text" />\n' +
+      ' <input type="text" class="new-pwd" />\n' +
       '  <svg class="icon detail-icon" aria-hidden="true">\n' +
       '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '              </svg>\n' +
       '  </li>\n' +
       ' <li>\n' +
       ' <span>重复新密码</span>\n' +
-      ' <input type="text" />\n' +
+      ' <input type="text" class="repetition-pwd" />\n' +
       '  <svg class="icon detail-icon" aria-hidden="true">\n' +
       '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '              </svg>\n' +
