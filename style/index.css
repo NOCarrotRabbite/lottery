@@ -1134,6 +1134,7 @@ footer .active {
   position: absolute;
   border: 3px solid #F9CC9D;
   background: #fff;
+  display: none;
 }
 .records-box::after {
   position:absolute;
