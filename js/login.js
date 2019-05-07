@@ -6,22 +6,17 @@
       user_num: user_num,
       password: password
     };
-    let param = {
-      url: API.LOGIN_API,
-      type: 'POST',
-      data: data
-    };
-    getAjax(param).then(
-      function(data) {
+    $.jsonAjax(API.LOGIN_API, 'POST', data)
+      .then(function(data) {
         window.location.href = '#/index';
         /* if (data.status == true) {
           window.location.href = '#/index';
         } */
         console.log('data', data);
-      },
-      function(error) {
+      })
+      .catch(function(error) {
         console.log('11111', error.status);
-      }
-    );
+      });
   });
 })();
+
