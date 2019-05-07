@@ -1,30 +1,8 @@
 SPA_RESOLVE_INIT = function(transition, sigal) {
-  /* $('#footer').hide();
-  let type = transition.query.code;
-  let title = '';
-  if (type == 1) {
-    title = '支付宝';
-  } else {
-    title = '微信';
-  }
-  $('#header').html(
-    '<a href="#/charge">\n' +
-      '         <svg class="icon" aria-hidden="true">\n' +
-      '           <use xlink:href="#icon-fanhui"></use>\n' +
-      '         </svg>\n' +
-      '       </a>\n' +
-      '       <span class="size-36 game-hall-title">' +
-      title +
-      '登录</span>'
-  );
-  $('#header').css('justify-content', 'flex-start');
-  $('.game-hall-title').css('flex-grow', '1');
-  $('.game-hall-title').css('text-align', 'center');
-  $('.back').css('color', '#fff'); */
   $('#main').html(
     '\n' +
-      '<div class="register">\n' +
-      '<ul class="register-form">\n' +
+      '<div class="register public-member">\n' +
+      '<ul class="register-form public-member-form">\n' +
       '<li class="title">注 册</li>\n' +
       '<li>\n' +
       '<input type="text" placeholder="请输入用户昵称" />\n' +
@@ -38,7 +16,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '<input type="text" placeholder="请输入用户密码" />\n' +
       '<span class="icon">X</span>\n' +
       '</li>\n' +
-      '<li><button class="register-submit">注册</button></li>\n' +
+      '<li><button class="register-submit public-member-submit">注册</button></li>\n' +
       '</ul>\n' +
       '</div>'
   );

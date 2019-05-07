@@ -431,6 +431,7 @@ body {
   font-size: 2.133rem;
   justify-content: center;
   font-weight: bold;
+  color: #fff;
 }
 .public-member-form li .icon {
   position: absolute;
@@ -440,7 +441,6 @@ body {
 .public-member-form li input {
   flex: 1;
   padding: 1rem;
-  border: 1px solid #ccc;
   border-radius: 0.6rem;
   font-size: 1.6rem;
 }
