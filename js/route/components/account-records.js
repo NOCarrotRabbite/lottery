@@ -1,5 +1,5 @@
 SPA_RESOLVE_INIT = function(transition, sigal) {
-  $('#footer').hide()
+  $('#footer').hide();
   $('#header').html(
     '\n' +
       '       <a href="#/account" class="back">\n' +
@@ -8,11 +8,11 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '         </svg>\n' +
       '       </a>\n' +
       '       <span class="game-hall-title size-36">账变记录</span>'
-  )
-  $('#header').css('justify-content', 'flex-start')
-  $('.game-hall-title').css('flex-grow', '1')
-  $('.game-hall-title').css('text-align', 'center')
-  $('.back').css('color', '#fff')
+  );
+  $('#header').css('justify-content', 'flex-start');
+  $('.game-hall-title').css('flex-grow', '1');
+  $('.game-hall-title').css('text-align', 'center');
+  $('.back').css('color', '#fff');
   $('#main').html(
     '\n' +
       '    <div class="account-records public-records">\n' +
@@ -44,5 +44,6 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '        </li>\n' +
       '      </ul>\n' +
       '    </div>'
-  )
-}
+  );
+  $.addPageScript('js/account-records.js', sigal);
+};

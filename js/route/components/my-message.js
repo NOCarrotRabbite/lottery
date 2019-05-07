@@ -24,4 +24,5 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '</div>\n' +
       '</div>'
   );
+  $.addPageScript('js/my-message.js', sigal);
 };

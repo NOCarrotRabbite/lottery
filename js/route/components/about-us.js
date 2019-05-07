@@ -55,4 +55,5 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '  </div>\n' +
       '</div>'
   );
+  $.addPageScript('js/about-us.js', sigal);
 };

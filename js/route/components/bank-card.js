@@ -76,15 +76,5 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '</div>\n' +
       ' </div>\n'
   );
-  let _body = document.getElementsByTagName('body')[0];
-  let scriptEle = document.createElement('script');
-  scriptEle.type = 'text/javascript';
-  scriptEle.src = 'js/bank-card.js';
-  scriptEle.async = true;
-  if (sigal == 0) {
-    _body.appendChild(scriptEle);
-  } else {
-    $("script[src='js/bank-card.js']").remove();
-    _body.appendChild(scriptEle);
-  }
+  $.addPageScript('js/bank-card.js', sigal);
 };

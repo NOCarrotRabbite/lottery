@@ -43,4 +43,5 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       ' </ul>\n' +
       ' </div>\n'
   );
+  $.addPageScript('js/set-withdraw-deposit-pwd.js', sigal);
 };

@@ -437,6 +437,7 @@ body {
   position: absolute;
   color: #e9594a;
   right: 2rem;
+  font-size: 2.667rem;
 }
 .public-member-form li input {
   flex: 1;

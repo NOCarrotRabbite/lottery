@@ -75,4 +75,5 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '      </ul>\n' +
       '    </div>'
   );
+  $.addPageScript('js/wallet.js', sigal);
 };
