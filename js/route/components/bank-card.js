@@ -49,28 +49,52 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '<div class="obscuration"></div>\n' +
       '<ul class="select-bank size-24">\n' +
       ' <li>\n' +
-      '中国银行<input type="radio" name="kind" value="apple" checked />\n' +
+      '中国银行\n' +
+      '<div class="radio-style">\n' +
+      '<input type="radio" name="kind" value="apple" checked /><label for="item2" ></label>\n' +
+      ' </div>\n' +
       ' </li>\n' +
       ' <li>\n' +
-      '中国工商银行<input type="radio" name="kind" value="apple" checked />\n' +
+      '中国工商银行\n' +
+      '<div class="radio-style">\n' +
+      '<input type="radio" name="kind" value="apple" checked /><label for="item2" ></label>\n' +
+      ' </div>\n' +
       '  </li>\n' +
       '<li>\n' +
-      ' 中国农业银行<input type="radio" name="kind" value="apple" checked />\n' +
+      ' 中国农业银行\n' +
+      '<div class="radio-style">\n' +
+      '<input type="radio" name="kind" value="apple" checked /><label for="item2" ></label>\n' +
+      ' </div>\n' +
       ' </li>\n' +
       '<li>\n' +
-      '  中国建设银行<input type="radio" name="kind" value="apple" checked />\n' +
+      '  中国建设银行\n' +
+      '<div class="radio-style">\n' +
+      '<input type="radio" name="kind" value="apple" checked /><label for="item2" ></label>\n' +
+      ' </div>\n' +
       ' </li>\n' +
       '  <li>\n' +
-      '中国建设银行<input type="radio" name="kind" value="apple" checked />\n' +
+      '中国建设银行\n' +
+      '<div class="radio-style">\n' +
+      '<input type="radio" name="kind" value="apple" checked /><label for="item2" ></label>\n' +
+      ' </div>\n' +
       '</li>\n' +
       ' <li>\n' +
-      '中国建设银行<input type="radio" name="kind" value="apple" checked />\n' +
+      '中国建设银行\n' +
+      '<div class="radio-style">\n' +
+      '<input type="radio" name="kind" value="apple" checked /><label for="item2" ></label>\n' +
+      ' </div>\n' +
       ' </li>\n' +
       ' <li>\n' +
-      ' 中国建设银行<input type="radio" name="kind" value="apple" checked />\n' +
+      ' 中国建设银行\n' +
+      '<div class="radio-style">\n' +
+      '<input type="radio" name="kind" value="apple" checked /><label for="item2" ></label>\n' +
+      ' </div>\n' +
       '</li>\n' +
       ' <li>\n' +
-      ' 中国建设银行<input type="radio" name="kind" value="apple" checked />\n' +
+      ' 中国建设银行\n' +
+      '<div class="radio-style">\n' +
+      '<input type="radio" name="kind" value="apple" checked /><label for="item2" ></label>\n' +
+      ' </div>\n' +
       '  </li>\n' +
       '</ul>\n' +
       '</div>\n' +
