@@ -35,6 +35,19 @@
     select_kind.style.zIndex = '999';
     mask_layer.style.zIndex = '998';
   });
+  //确认选中的彩种
+  $('.select-kind li').on('click', function() {
+    let value = $(this)
+      .text()
+      .replace(/\s+/g, '');
+    $('.select-kind li .radio-bg').removeClass('active');
+    $(this)
+      .find('.radio-bg')
+      .addClass('active');
+    $('.kind').text(value);
+    mask_layer.style.zIndex = '1';
+    select_kind.style.zIndex = -3;
+  });
   //取消筛选
   $('.close').on('click', () => {
     mask_layer.style.zIndex = -2;
@@ -1367,7 +1380,6 @@
           html = '<div class="ic__container">';
           html += '<div class="ic__header">';
           html += '<div class="ic__prev"><div></div></div>';
-          html += '<div class="ic__next"><div></div></div>';
 
           // head month
           html += '<div class="ic__month"><select class="ic__month-select">';
@@ -1388,12 +1400,16 @@
                 '</option>';
             }
           }
-          html += '</select></div>';
+          html +=
+            '</select><svg class="icon icon-left detail-icon" aria-hidden="true">\n' +
+            '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
+            '              </svg></div>';
 
           // head year
           html += '<div class="ic__year"><select class="ic__year-select">';
           for (i = fromYear; i <= toYear; i++) {
             if (i === parseInt(timeNowLocal.format('YYYY'))) {
+              console.log('iiiiiiii', i);
               html +=
                 '<option value="' +
                 i +
@@ -1404,8 +1420,11 @@
               html += '<option value="' + i + '">' + i + '</option>';
             }
           }
-          html += '</select></div>';
-
+          html +=
+            '</select><svg class="icon icon-right detail-icon" aria-hidden="true">\n' +
+            '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
+            '              </svg></div>';
+          html += '<div class="ic__next"><div></div></div>';
           html += '</div>';
 
           if (settings.sundayFirst) {
@@ -1753,7 +1772,7 @@
           w = parseInt($input.outerWidth(true));
           //$popup.css('left', x + w + 10 + 'px').css('top', y - 10 + 'px')
           //设置日期选择框的位置
-          $popup.css('left', 50 + '%').css('top', 12 + 'rem');
+          $popup.css('left', 50 + '%').css('top', 20 + 'rem');
           currentDate = $input.prop('value');
           if (
             currentDate &&

@@ -18,25 +18,25 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '<ul class="bank-card-form public-set-form">\n' +
       '<li>\n' +
       '  <span>真实姓名</span>\n' +
-      ' <input type="text" class="name" />\n' +
+      ' <input type="text" placeholder="请输入姓名" class="name" />\n' +
       '  <svg class="icon detail-icon" aria-hidden="true">\n' +
       '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '              </svg>\n' +
       ' </li>\n' +
       ' <li>\n' +
       '<span>银行名称</span>\n' +
-      ' <input type="text" class="bank" />\n' +
+      ' <input type="text" placeholder="请选择银行" class="bank" />\n' +
       ' </li>\n' +
       ' <li>\n' +
       '<span>卡号账号</span>\n' +
-      ' <input type="text" class="card-num" />\n' +
+      ' <input type="text" placeholder="请输入卡号" class="card-num" />\n' +
       '  <svg class="icon detail-icon" aria-hidden="true">\n' +
       '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '              </svg>\n' +
       '  </li>\n' +
       ' <li>\n' +
       ' <span>提现密码</span>\n' +
-      ' <input type="text" class="password" />\n' +
+      ' <input type="text" placeholder="请输入提现密码" class="password" />\n' +
       '  <svg class="icon detail-icon" aria-hidden="true">\n' +
       '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '              </svg>\n' +
@@ -50,51 +50,35 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '<ul class="select-bank size-24">\n' +
       ' <li>\n' +
       '中国银行\n' +
-      '<div class="radio-style">\n' +
-      '<input type="radio" name="kind" value="apple" checked /><label for="item2" ></label>\n' +
-      ' </div>\n' +
+      '<div class="radio-bg"></div>\n' +
       ' </li>\n' +
       ' <li>\n' +
       '中国工商银行\n' +
-      '<div class="radio-style">\n' +
-      '<input type="radio" name="kind" value="apple" checked /><label for="item2" ></label>\n' +
-      ' </div>\n' +
+      '<div class="radio-bg"></div>\n' +
       '  </li>\n' +
       '<li>\n' +
       ' 中国农业银行\n' +
-      '<div class="radio-style">\n' +
-      '<input type="radio" name="kind" value="apple" checked /><label for="item2" ></label>\n' +
-      ' </div>\n' +
+      '<div class="radio-bg"></div>\n' +
       ' </li>\n' +
       '<li>\n' +
       '  中国建设银行\n' +
-      '<div class="radio-style">\n' +
-      '<input type="radio" name="kind" value="apple" checked /><label for="item2" ></label>\n' +
-      ' </div>\n' +
+      '<div class="radio-bg"></div>\n' +
       ' </li>\n' +
       '  <li>\n' +
       '中国建设银行\n' +
-      '<div class="radio-style">\n' +
-      '<input type="radio" name="kind" value="apple" checked /><label for="item2" ></label>\n' +
-      ' </div>\n' +
+      '<div class="radio-bg"></div>\n' +
       '</li>\n' +
       ' <li>\n' +
       '中国建设银行\n' +
-      '<div class="radio-style">\n' +
-      '<input type="radio" name="kind" value="apple" checked /><label for="item2" ></label>\n' +
-      ' </div>\n' +
+      '<div class="radio-bg"></div>\n' +
       ' </li>\n' +
       ' <li>\n' +
       ' 中国建设银行\n' +
-      '<div class="radio-style">\n' +
-      '<input type="radio" name="kind" value="apple" checked /><label for="item2" ></label>\n' +
-      ' </div>\n' +
+      '<div class="radio-bg"></div>\n' +
       '</li>\n' +
       ' <li>\n' +
       ' 中国建设银行\n' +
-      '<div class="radio-style">\n' +
-      '<input type="radio" name="kind" value="apple" checked /><label for="item2" ></label>\n' +
-      ' </div>\n' +
+      '<div class="radio-bg"></div>\n' +
       '  </li>\n' +
       '</ul>\n' +
       '</div>\n' +

@@ -619,12 +619,23 @@ footer .active {
   padding: 1rem 1rem 2rem 1rem;
   box-sizing: border-box;
   z-index: -3;
+  font-size: 1.866rem;
 }
 .account-details .select-kind li {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #ccc;
   padding: 1rem 1rem;
+}
+.account-details .radio-bg {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 1px solid #d8d7d7;
+  background: #f1f1f1;
+}
+.account-details .active {
+  background: #e9594a;
 }
 /*我的账户-账户记录 结束*/
 
@@ -791,32 +802,15 @@ footer .active {
   padding: 1rem 1rem;
   border-bottom: 1px solid #ccc;
 }
-.bank-card .dialog input[type='radio'] {
-  opacity: 0;
-}
-.bank-card .dialog label {
-  position: absolute;
+.bank-card .dialog .radio-bg {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
-  border: 1px solid #999;
+  border: 1px solid #d8d7d7;
+  background: #f1f1f1;
 }
-.bank-card .dialog input:checked + label {
-  background-color: #e9594a;
-}
-.bank-card .dialog .radio-style {
-  width: 1.5rem;
-  height: 1.5rem;
-  /* display: flex;
-  justify-content: center; */
-}
-.bank-card .dialog input:checked + label::after {
-  position: absolute;
-  content: '';
-  border-top: none;
-  border-left: none;
-  transform: rotate(45deg);
-  /* border: 1px solid #ccc; */
+.bank-card .dialog .active {
+  background: #e9594a;
 }
 /* 我的账户-钱包-绑定银行卡 结束 */
 

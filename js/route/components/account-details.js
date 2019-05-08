@@ -38,32 +38,20 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '        <div class="mask-layer"></div>\n' +
       '        <ul class="select-kind">\n' +
       '          <li>\n' +
-      '            全部彩种<input type="radio" name="kind" value="apple" checked />\n' +
+      '            全部彩种<div class="radio-bg active"></div>\n' +
       '          </li>\n' +
       '          <li>\n' +
-      '            北京幸运28<input type="radio" name="kind" value="apple" checked />\n' +
+      '            北京幸运28<div class="radio-bg"></div>\n' +
       '          </li>\n' +
       '          <li>\n' +
-      '            加拿大幸运28<input type="radio" name="kind" value="apple" checked />\n' +
+      '            加拿大幸运28<div class="radio-bg"></div>\n' +
       '          </li>\n' +
       '          <li>\n' +
-      '            北京赛车<input type="radio" name="kind" value="apple" checked />\n' +
+      '            北京赛车<div class="radio-bg"></div>\n' +
       '          </li>\n' +
       '        </ul>\n' +
       '      </div>\n' +
       '    </div>'
   );
-
-  /* let _body = document.getElementsByTagName('body')[0];
-  let scriptEle = document.createElement('script');
-  scriptEle.type = 'text/javascript';
-  scriptEle.src = 'js/account-details.js';
-  scriptEle.async = true;
-  if (sigal == 0) {
-    _body.appendChild(scriptEle);
-  } else {
-    $("script[src='js/account-details.js']").remove();
-    _body.appendChild(scriptEle);
-  } */
   $.addPageScript('js/account-details.js', sigal);
 };
