@@ -131,7 +131,7 @@ body {
   position: absolute;
   top: -9999px;
   left: -9999px;
-  margin-left: -16rem;
+  margin-left: -19rem;
   border-radius: 0.3rem;
   background: transparent;
   z-index: 9999;
@@ -164,6 +164,7 @@ body {
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .ic__prev:hover,
 .ic__next:hover {
@@ -215,7 +216,7 @@ body {
 }
 .ic__header .icon-left {
   position: absolute;
-  left: 41.5%;
+  left: 42.5%;
 }
 .ic__header .icon-right {
   position: absolute;
@@ -235,7 +236,7 @@ body {
 .ic__days td {
   vertical-align: top;
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 50%;
   color: #757575;
   font-size: 2.133rem;
