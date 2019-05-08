@@ -24,6 +24,7 @@
     if (mask_layer.style.zIndex == '998') {
       mask_layer.style.zIndex = '1';
       select_kind.style.zIndex = -3;
+      screen.style.zIndex = -1;
     } else {
       screen.style.zIndex = -1;
       mask_layer.style.zIndex = -2;
@@ -1402,7 +1403,7 @@
           }
           html +=
             '</select><svg class="icon icon-left detail-icon" aria-hidden="true">\n' +
-            '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
+            '                <use xlink:href="#icon-jiantou-copy-copy"></use>\n' +
             '              </svg></div>';
 
           // head year
@@ -1422,7 +1423,7 @@
           }
           html +=
             '</select><svg class="icon icon-right detail-icon" aria-hidden="true">\n' +
-            '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
+            '                <use xlink:href="#icon-jiantou-copy-copy"></use>\n' +
             '              </svg></div>';
           html += '<div class="ic__next"><div></div></div>';
           html += '</div>';
@@ -1602,6 +1603,7 @@
               }
 
               // trigger callback function
+              console.log('settings.onClick', settings.onClick);
               if (typeof settings.onClick === 'function') {
                 if (settings.format) {
                   if (settings.format === 'moment') {
