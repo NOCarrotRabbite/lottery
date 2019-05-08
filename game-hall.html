@@ -17,19 +17,23 @@
       .game-hall-item {
         height: 100%;
         display: flex;
-        flex-direction: column;     
+        flex-direction: column;
         font-size: 1.6rem;
+        position: absolute;
       }
-      .game-hall-item .top {
+      /*.game-hall-item .top {
         position: absolute;
         top: 0;
-      }
-      .item-info {
+      }*/
+      .game-hall-item .item-info {
         display: flex;
         text-align: center;
         padding: 1rem 0;
         background-color: #FAFAFA;
-
+        width: 100%;
+        position: relative;
+        min-height: 8rem;
+        align-items: center;
       }
       .info-balance, .info-time {
         width: 50%;
@@ -63,6 +67,8 @@
         justify-content: space-between;
         font-size: 2.133rem;
         font-weight: 500;
+        min-height: 3rem;
+        align-items: center;
       }
       .result-records {
         padding: 2rem 2rem;
@@ -92,6 +98,7 @@
         position: absolute;
         border: 3px solid #F9CC9D;
         background: #fff;
+        display: none;
       }
       .records-box::after {
         position:absolute;
@@ -210,6 +217,9 @@
         padding: 1rem;
         align-items: center;
         border-top: 1px solid #D6D6D6;
+        width: 100%;
+        box-sizing: border-box;
+        min-height: 6.333rem;
       }
       .item-bet-btn button {
         padding: 1rem 2rem;
@@ -222,10 +232,14 @@
       .item-bet-btn input {
         flex-grow: 1;
         margin: 0 1rem;
-        border: 2px solid #D4D4D4;
-        border-radius: 7px;
+        border: 1px solid #D4D4D4;
+        border-radius: 3px;
         height: 4rem;
         font-size: 1.6rem
+      }
+      .item-bet-btn .icon {
+        font-size: 4rem;
+        color: #7F8286;
       }
 
       /* 投注主体样式开始 */
@@ -243,12 +257,22 @@
         left: 1rem;
         right: 1rem;
         bottom: 1rem;
-        z-index: 9999;
-        background-color: #FD625D;        
+        z-index: 9999;        
         color: #fff;
         padding: 1rem 2rem;
         font-size: 2.133rem;
         border-radius: 0.5rem 0.5rem 0 0;
+      }
+      .bet-first {
+        background-color: #FD625D;        
+      }
+      .bet-second {
+        background-color: #76CB45;
+        display: none;       
+      }
+      .bet-third {
+        background-color: #55ADEC;
+        display: none;
       }
       .bet-content {
         display: flex;
@@ -262,10 +286,40 @@
       .bet-tip {
         justify-content: center !important;
       }
+      .main-value-box {
+        max-height: 20rem;
+        overflow: scroll;
+        text-align: center;
+        letter-spacing: 0.1rem;
+      }
       .main-value {
         display: flex;
         justify-content: space-between;
         padding: 2rem 0;
+      }
+      .main-value-last {
+        justify-content: flex-start;        
+      }
+      .main-value-last li {
+        margin-right: 6.9rem;
+
+      }
+      .main-value .double, .main-value .along, .main-value .leopard {
+        /*padding: 1rem;*/
+        width: 4rem;
+        height: 4rem;
+        line-height: 4rem;
+        border-radius: 50%;
+        margin: 0 auto;
+      }
+      .main-value .double {
+        background-color: #39E6FA;        
+      }
+      .main-value .along {
+        background-color: #FF06D0;        
+      }
+      .main-value .leopard {
+        background-color: #FBC307;        
       }
       .odds-desc, .min-bet, .double-bet {
         padding: 1rem 2rem;
@@ -277,11 +331,17 @@
         background-color: transparent;
         color: #fff;
       }
-      .min-bet, .double-bet {
+      .min-bet-first, .double-bet-first {
         background-color: #FDA2A1;
       }
+      .min-bet-second, .double-bet-second {
+        background-color: #AFE091;
+      }
+      .min-bet-third, .double-bet-third {
+        background-color: #9BCFF3;
+      }
       .withdrawal, .betting {
-        padding: 1rem 2rem;
+        padding: 1rem 1rem;
         font-size: 2.133rem;
         border-radius: 0.5rem;
         background-color: #FEF78D;
@@ -296,6 +356,7 @@
         padding: 1rem 0;
         font-size: 2.133rem;
         width: 15rem;
+        border-radius: 3px;
       }
       .bet-sum-box {
         justify-content: flex-end;
@@ -321,7 +382,7 @@
           <p class="black">
             余额
             <svg class="icon" aria-hidden="true">
-              <use xlink:href="#icon-zhanghu1"></use>
+              <use xlink:href="#icon-shuaxin"></use>
             </svg>
           </p>
           <strong>0.0元宝</strong>
@@ -341,10 +402,9 @@
           <span class="num sigle-double">单</span>
         </li>
         <li class="resulst-icon" id="resulst-icon">          
-         <!-- <svg class="icon" aria-hidden="true">
-           <use xlink:href="#icon-zhanghu1"></use>
-         </svg> -->
-         <span>></span>
+         <svg class="icon" aria-hidden="true">
+           <use xlink:href="#icon-xiala"></use>
+         </svg>
         </li>
         </a>
       </ul>
@@ -519,31 +579,35 @@
       <div class="item-bet-btn">
         <button id="bet-toggle">投注</button>
         <input type="text" />
-        <!-- <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-zhanghu1"></use>
-        </svg> -->
-        <span style="height: 4rem; width: 4rem; border-radius: 2rem; border: 1px solid #7F8386"></span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-smiling"></use>
+        </svg>
+        <!-- <span style="height: 4rem; width: 4rem; border-radius: 2rem; border: 1px solid #7F8386"></span> -->
       </div>
       <div class="bet-hidden bet-tip">
-        <div class="bet-box">
-          <header class="bet-content bet-type">          
-           <svg class="icon" aria-hidden="true">
-             <use xlink:href="#icon-zuojiantou"></use>
-           </svg>
+        <div class="bet-box bet-first" id="bet-first">
+          <header class="bet-content bet-type">
+            <span class="back-last">         
+             <svg class="icon" aria-hidden="true">
+               <use xlink:href="#icon-zuojiantou"></use>
+             </svg>
+            </span>
            <span>                    
              <svg class="icon" aria-hidden="true">
-               <use xlink:href="#icon-bangzhu"></use>
+               <use xlink:href="#icon-bingtu"></use>
              </svg>
              大小单双
-           </span>         
-           <svg class="icon" aria-hidden="true">
-             <use xlink:href="#icon-sanjiaoright"></use>
-           </svg>
+           </span> 
+           <span class="go-next">       
+             <svg class="icon" aria-hidden="true">
+               <use xlink:href="#icon-sanjiaoright"></use>
+             </svg>
+           </span> 
           </header>
           <div class="bet-content bet-tip">
             中奖和值： <span>[0,1,2,3,4]</span>
           </div>
-          <main>
+          <main class="main-value-box">
             <ul class="main-value">
               <li><p>大</p><p>2.00</p></li>
               <li><p>小</p><p>2.00</p></li>
@@ -562,8 +626,141 @@
           <div class="bet-content bet-console">
             <button class="odds-desc">赔率说明</button>
             <span>
-              <button class="min-bet">最小投注</button>
-              <button class="double-bet">双倍投注</button>
+              <button class="min-bet min-bet-first">最小投注</button>
+              <button class="double-bet double-bet-first">双倍投注</button>
+            </span>
+          </div>
+          <div class="bet-content bet-sum-box">
+            <label class="bet-sum">共投：<span>0</span>注</label>
+            <label class="bet-sum">总计：<span>0</span></label>
+          </div>
+          <div class="bet-content bet-footer">
+            <button class="withdrawal">撤单</button>
+            <span class="bet-amount-box">
+              <label>投注金额：</label>
+              <input type="text" name="bet-money" class="bet-amount">
+            </span>
+            <button class="betting">投注</button>
+          </div>
+        </div>
+        <div class="bet-box bet-second" id="bet-second">
+          <header class="bet-content bet-type">
+            <span class="back-last">         
+             <svg class="icon" aria-hidden="true">
+               <use xlink:href="#icon-zuojiantou"></use>
+             </svg>
+            </span>
+           <span>                    
+             <svg class="icon" aria-hidden="true">
+               <use xlink:href="#icon-bangzhu"></use>
+             </svg>
+             猜数字
+           </span> 
+           <span class="go-next">       
+             <svg class="icon" aria-hidden="true">
+               <use xlink:href="#icon-sanjiaoright"></use>
+             </svg>
+           </span> 
+          </header>
+          <div class="bet-content bet-tip">
+            中奖和值： <span>[0,1,2,3,4]</span>
+          </div>
+          <main class="main-value-box">
+            <ul class="main-value">
+              <li><p>00</p><p>300</p></li>
+              <li><p>01</p><p>100</p></li>
+              <li><p>02</p><p>50</p></li>
+              <li><p>03</p><p>30</p></li>
+              <li><p>04</p><p>20</p></li>
+            </ul>
+            <ul class="main-value">
+              <li><p>05</p><p>18</p></li>
+              <li><p>06</p><p>16</p></li>
+              <li><p>07</p><p>15</p></li>
+              <li><p>08</p><p>14</p></li>
+              <li><p>09</p><p>13</p></li>
+            </ul>
+            <ul class="main-value">
+              <li><p>10</p><p>12</p></li>
+              <li><p>11</p><p>12</p></li>
+              <li><p>12</p><p>11</p></li>
+              <li><p>13</p><p>11</p></li>
+              <li><p>14</p><p>11</p></li>
+            </ul>
+            <ul class="main-value">
+              <li><p>15</p><p>11</p></li>
+              <li><p>16</p><p>12</p></li>
+              <li><p>17</p><p>12</p></li>
+              <li><p>18</p><p>13</p></li>
+              <li><p>19</p><p>14</p></li>
+            </ul>
+            <ul class="main-value">
+              <li><p>20</p><p>15</p></li>
+              <li><p>21</p><p>16</p></li>
+              <li><p>22</p><p>18</p></li>
+              <li><p>23</p><p>20</p></li>
+              <li><p>24</p><p>30</p></li>
+            </ul>
+            <ul class="main-value main-value-last">
+              <li><p>25</p><p>50</p></li>
+              <li class="right"><p>26</p><p>100</p></li>
+              <li class="right"><p>27</p><p>300</p></li>
+            </ul>
+          </main>
+          <div class="bet-content bet-console">
+            <button class="odds-desc">赔率说明</button>
+            <span>
+              <button class="min-bet min-bet-second">最小投注</button>
+              <button class="double-bet double-bet-second">双倍投注</button>
+            </span>
+          </div>
+          <div class="bet-content bet-sum-box">
+            <label class="bet-sum">共投：<span>0</span>注</label>
+            <label class="bet-sum">总计：<span>0</span></label>
+          </div>
+          <div class="bet-content bet-footer">
+            <button class="withdrawal">撤单</button>
+            <span class="bet-amount-box">
+              <label>投注金额：</label>
+              <input type="text" name="bet-money" class="bet-amount">
+            </span>
+            <button class="betting">投注</button>
+          </div>
+        </div>
+        <div class="bet-box bet-third" id="bet-third">
+          <header class="bet-content bet-type">
+            <span class="back-last">         
+             <svg class="icon" aria-hidden="true">
+               <use xlink:href="#icon-zuojiantou"></use>
+             </svg>
+            </span>
+           <span>                    
+             <svg class="icon" aria-hidden="true">
+               <use xlink:href="#icon-jiangzhangxunzhang"></use>
+             </svg>
+             特殊玩法
+           </span> 
+           <span class="go-next">       
+             <svg class="icon" aria-hidden="true">
+               <use xlink:href="#icon-sanjiaoright"></use>
+             </svg>
+           </span> 
+          </header>
+          <div class="bet-content bet-tip">
+          中奖和值： <span>[0,1,2,3,4]</span>
+          </div>
+          <main class="main-value-box">
+            <ul class="main-value">
+              <li><p class="double">对</p><p>3.00</p></li>
+              <li><p class="along">顺</p><p>15.00</p></li>
+              <li><p class="leopard">豹</p><p>50.00</p></li>
+            </ul>
+          </main>
+          <div class="bet-content bet-console">
+            <button class="odds-desc">赔率说明</button>
+            <span>
+              <button class="min-bet min-bet-third">最小投注</button>
+              <button class="double-bet double-bet-third">双倍投注</button>
             </span>
           </div>
           <div class="bet-content bet-sum-box">
@@ -600,6 +797,36 @@
         $('.bet-hidden .bet-box').on('click', function(e) {
           e.stopPropagation();
         })
+
+        let toggleGameType = function(type) {
+          let i = 1;
+          let type_map = new Map();
+          type_map.set(1, '#bet-first');
+          type_map.set(2, '#bet-second');
+          type_map.set(3, '#bet-third');
+          for(let j in type_map) {
+            if(i = key) {
+              $("'" + type_map[key] + "'").show();
+            } else {
+              $("'" + type_map[key] + "'").hide();
+            }
+          }
+
+          if(type == 1) {
+            if(i > 1) {
+               i--;
+            } else {
+              i = 3
+            }
+          }
+          if(type == 2) {            
+            if(i < 3) {
+              i++;
+            } else {
+              i = 1;
+            }
+          }
+        }
 
       });
     </script>
