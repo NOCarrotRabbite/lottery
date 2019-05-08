@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b492952f-9934-49d0-803b-87aa11e996ac" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/index.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -17,15 +18,15 @@
     <session id="1775091596">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="16" />
+          <entry key="project.closed" value="17" />
           <entry key="project.open.time.0" value="6" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.3" value="3" />
           <entry key="project.open.time.4" value="3" />
-          <entry key="project.open.time.5" value="2" />
+          <entry key="project.open.time.5" value="3" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -50,7 +51,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="4130" />
+          <entry key="css" value="4132" />
           <entry key="html" value="933" />
           <entry key="js" value="4089" />
           <entry key="json" value="2" />
@@ -58,7 +59,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="4130" />
+          <entry key="CSS" value="4132" />
           <entry key="HTML" value="937" />
           <entry key="JSON" value="2" />
           <entry key="JavaScript" value="4085" />
@@ -71,8 +72,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/style/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="1078" column="18" selection-start-line="1078" selection-start-column="18" selection-end-line="1078" selection-end-column="18" />
+            <state relative-caret-position="759">
+              <caret line="256" column="1" selection-start-line="256" selection-start-column="1" selection-end-line="256" selection-end-column="1" />
+              <folding>
+                <element signature="e#233#325#0" />
+                <element signature="e#425#446#0" />
+                <element signature="e#483#632#0" />
+                <element signature="e#651#674#0" />
+                <element signature="e#683#806#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -182,6 +190,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -216,7 +225,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -275,16 +283,16 @@
       <workItem from="1556525914836" duration="1245000" />
       <workItem from="1556588734908" duration="7101000" />
       <workItem from="1557108789999" duration="7508000" />
-      <workItem from="1557193435151" duration="21466000" />
+      <workItem from="1557193435151" duration="23267000" />
+      <workItem from="1557278503705" duration="615000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168610000" />
+    <option name="totallyTimeSpent" value="171026000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15104167" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -519,16 +527,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="45" column="50" lean-forward="true" selection-start-line="45" selection-start-column="50" selection-end-line="45" selection-end-column="50" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="1078" column="18" selection-start-line="1078" selection-start-column="18" selection-end-line="1078" selection-end-column="18" />
+        <state relative-caret-position="759">
+          <caret line="256" column="1" selection-start-line="256" selection-start-column="1" selection-end-line="256" selection-end-column="1" />
+          <folding>
+            <element signature="e#233#325#0" />
+            <element signature="e#425#446#0" />
+            <element signature="e#483#632#0" />
+            <element signature="e#651#674#0" />
+            <element signature="e#683#806#0" />
+          </folding>
         </state>
       </provider>
     </entry>
