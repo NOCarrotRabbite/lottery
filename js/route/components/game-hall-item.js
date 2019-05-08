@@ -21,8 +21,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
     $('#header').css('justify-content', 'space-between');
     $('#header .zhuanghu-icon').css('padding-right', '2rem');
     $('.hall-title').css('margin-right', '-6rem');
-    $('#main').html('\n' +
-        '    <div class="game-hall-item">\n' +
+    $('#main').html('<div class="game-hall-item">\n' +
         '      <ul class="item-info">\n' +
         '        <li class="info-time">\n' +
         '          <p>距离<span class="black">949163</span>期截止</p>\n' +
@@ -32,7 +31,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         '          <p class="black">\n' +
         '            余额\n' +
         '            <svg class="icon" aria-hidden="true">\n' +
-        '              <use xlink:href="#icon-zhanghu1"></use>\n' +
+        '              <use xlink:href="#icon-shuaxin"></use>\n' +
         '            </svg>\n' +
         '          </p>\n' +
         '          <strong>0.0元宝</strong>\n' +
@@ -52,10 +51,9 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         '          <span class="num sigle-double">单</span>\n' +
         '        </li>\n' +
         '        <li class="resulst-icon" id="resulst-icon">          \n' +
-        '         <!-- <svg class="icon" aria-hidden="true">\n' +
-        '           <use xlink:href="#icon-zhanghu1"></use>\n' +
-        '         </svg> -->\n' +
-        '         <span>></span>\n' +
+        '         <svg class="icon" aria-hidden="true">\n' +
+        '           <use xlink:href="#icon-xiala"></use>\n' +
+        '         </svg>\n' +
         '        </li>\n' +
         '        </a>\n' +
         '      </ul>\n' +
@@ -230,31 +228,35 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         '      <div class="item-bet-btn">\n' +
         '        <button id="bet-toggle">投注</button>\n' +
         '        <input type="text" />\n' +
-        '        <!-- <svg class="icon" aria-hidden="true">\n' +
-        '          <use xlink:href="#icon-zhanghu1"></use>\n' +
-        '        </svg> -->\n' +
-        '        <span style="height: 4rem; width: 4rem; border-radius: 2rem; border: 1px solid #7F8386"></span>\n' +
+        '        <svg class="icon" aria-hidden="true">\n' +
+        '          <use xlink:href="#icon-smiling"></use>\n' +
+        '        </svg>\n' +
+        '        <!-- <span style="height: 4rem; width: 4rem; border-radius: 2rem; border: 1px solid #7F8386"></span> -->\n' +
         '      </div>\n' +
         '      <div class="bet-hidden bet-tip">\n' +
-        '        <div class="bet-box">\n' +
-        '          <header class="bet-content bet-type">          \n' +
-        '           <svg class="icon" aria-hidden="true">\n' +
-        '             <use xlink:href="#icon-zuojiantou"></use>\n' +
-        '           </svg>\n' +
+        '        <div class="bet-box bet-first" id="bet-first">\n' +
+        '          <header class="bet-content bet-type">\n' +
+        '            <span class="back-last">         \n' +
+        '             <svg class="icon" aria-hidden="true">\n' +
+        '               <use xlink:href="#icon-zuojiantou"></use>\n' +
+        '             </svg>\n' +
+        '            </span>\n' +
         '           <span>                    \n' +
         '             <svg class="icon" aria-hidden="true">\n' +
-        '               <use xlink:href="#icon-bangzhu"></use>\n' +
+        '               <use xlink:href="#icon-bingtu"></use>\n' +
         '             </svg>\n' +
         '             大小单双\n' +
-        '           </span>         \n' +
-        '           <svg class="icon" aria-hidden="true">\n' +
-        '             <use xlink:href="#icon-sanjiaoright"></use>\n' +
-        '           </svg>\n' +
+        '           </span> \n' +
+        '           <span class="go-next">       \n' +
+        '             <svg class="icon" aria-hidden="true">\n' +
+        '               <use xlink:href="#icon-sanjiaoright"></use>\n' +
+        '             </svg>\n' +
+        '           </span> \n' +
         '          </header>\n' +
         '          <div class="bet-content bet-tip">\n' +
         '            中奖和值： <span>[0,1,2,3,4]</span>\n' +
         '          </div>\n' +
-        '          <main>\n' +
+        '          <main class="main-value-box">\n' +
         '            <ul class="main-value">\n' +
         '              <li><p>大</p><p>2.00</p></li>\n' +
         '              <li><p>小</p><p>2.00</p></li>\n' +
@@ -273,8 +275,141 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         '          <div class="bet-content bet-console">\n' +
         '            <button class="odds-desc">赔率说明</button>\n' +
         '            <span>\n' +
-        '              <button class="min-bet">最小投注</button>\n' +
-        '              <button class="double-bet">双倍投注</button>\n' +
+        '              <button class="min-bet min-bet-first">最小投注</button>\n' +
+        '              <button class="double-bet double-bet-first">双倍投注</button>\n' +
+        '            </span>\n' +
+        '          </div>\n' +
+        '          <div class="bet-content bet-sum-box">\n' +
+        '            <label class="bet-sum">共投：<span>0</span>注</label>\n' +
+        '            <label class="bet-sum">总计：<span>0</span></label>\n' +
+        '          </div>\n' +
+        '          <div class="bet-content bet-footer">\n' +
+        '            <button class="withdrawal">撤单</button>\n' +
+        '            <span class="bet-amount-box">\n' +
+        '              <label>投注金额：</label>\n' +
+        '              <input type="text" name="bet-money" class="bet-amount">\n' +
+        '            </span>\n' +
+        '            <button class="betting">投注</button>\n' +
+        '          </div>\n' +
+        '        </div>\n' +
+        '        <div class="bet-box bet-second" id="bet-second">\n' +
+        '          <header class="bet-content bet-type">\n' +
+        '            <span class="back-last">         \n' +
+        '             <svg class="icon" aria-hidden="true">\n' +
+        '               <use xlink:href="#icon-zuojiantou"></use>\n' +
+        '             </svg>\n' +
+        '            </span>\n' +
+        '           <span>                    \n' +
+        '             <svg class="icon" aria-hidden="true">\n' +
+        '               <use xlink:href="#icon-bangzhu"></use>\n' +
+        '             </svg>\n' +
+        '             猜数字\n' +
+        '           </span> \n' +
+        '           <span class="go-next">       \n' +
+        '             <svg class="icon" aria-hidden="true">\n' +
+        '               <use xlink:href="#icon-sanjiaoright"></use>\n' +
+        '             </svg>\n' +
+        '           </span> \n' +
+        '          </header>\n' +
+        '          <div class="bet-content bet-tip">\n' +
+        '            中奖和值： <span>[0,1,2,3,4]</span>\n' +
+        '          </div>\n' +
+        '          <main class="main-value-box">\n' +
+        '            <ul class="main-value">\n' +
+        '              <li><p>00</p><p>300</p></li>\n' +
+        '              <li><p>01</p><p>100</p></li>\n' +
+        '              <li><p>02</p><p>50</p></li>\n' +
+        '              <li><p>03</p><p>30</p></li>\n' +
+        '              <li><p>04</p><p>20</p></li>\n' +
+        '            </ul>\n' +
+        '            <ul class="main-value">\n' +
+        '              <li><p>05</p><p>18</p></li>\n' +
+        '              <li><p>06</p><p>16</p></li>\n' +
+        '              <li><p>07</p><p>15</p></li>\n' +
+        '              <li><p>08</p><p>14</p></li>\n' +
+        '              <li><p>09</p><p>13</p></li>\n' +
+        '            </ul>\n' +
+        '            <ul class="main-value">\n' +
+        '              <li><p>10</p><p>12</p></li>\n' +
+        '              <li><p>11</p><p>12</p></li>\n' +
+        '              <li><p>12</p><p>11</p></li>\n' +
+        '              <li><p>13</p><p>11</p></li>\n' +
+        '              <li><p>14</p><p>11</p></li>\n' +
+        '            </ul>\n' +
+        '            <ul class="main-value">\n' +
+        '              <li><p>15</p><p>11</p></li>\n' +
+        '              <li><p>16</p><p>12</p></li>\n' +
+        '              <li><p>17</p><p>12</p></li>\n' +
+        '              <li><p>18</p><p>13</p></li>\n' +
+        '              <li><p>19</p><p>14</p></li>\n' +
+        '            </ul>\n' +
+        '            <ul class="main-value">\n' +
+        '              <li><p>20</p><p>15</p></li>\n' +
+        '              <li><p>21</p><p>16</p></li>\n' +
+        '              <li><p>22</p><p>18</p></li>\n' +
+        '              <li><p>23</p><p>20</p></li>\n' +
+        '              <li><p>24</p><p>30</p></li>\n' +
+        '            </ul>\n' +
+        '            <ul class="main-value main-value-last">\n' +
+        '              <li><p>25</p><p>50</p></li>\n' +
+        '              <li class="right"><p>26</p><p>100</p></li>\n' +
+        '              <li class="right"><p>27</p><p>300</p></li>\n' +
+        '            </ul>\n' +
+        '          </main>\n' +
+        '          <div class="bet-content bet-console">\n' +
+        '            <button class="odds-desc">赔率说明</button>\n' +
+        '            <span>\n' +
+        '              <button class="min-bet min-bet-second">最小投注</button>\n' +
+        '              <button class="double-bet double-bet-second">双倍投注</button>\n' +
+        '            </span>\n' +
+        '          </div>\n' +
+        '          <div class="bet-content bet-sum-box">\n' +
+        '            <label class="bet-sum">共投：<span>0</span>注</label>\n' +
+        '            <label class="bet-sum">总计：<span>0</span></label>\n' +
+        '          </div>\n' +
+        '          <div class="bet-content bet-footer">\n' +
+        '            <button class="withdrawal">撤单</button>\n' +
+        '            <span class="bet-amount-box">\n' +
+        '              <label>投注金额：</label>\n' +
+        '              <input type="text" name="bet-money" class="bet-amount">\n' +
+        '            </span>\n' +
+        '            <button class="betting">投注</button>\n' +
+        '          </div>\n' +
+        '        </div>\n' +
+        '        <div class="bet-box bet-third" id="bet-third">\n' +
+        '          <header class="bet-content bet-type">\n' +
+        '            <span class="back-last">         \n' +
+        '             <svg class="icon" aria-hidden="true">\n' +
+        '               <use xlink:href="#icon-zuojiantou"></use>\n' +
+        '             </svg>\n' +
+        '            </span>\n' +
+        '           <span>                    \n' +
+        '             <svg class="icon" aria-hidden="true">\n' +
+        '               <use xlink:href="#icon-jiangzhangxunzhang"></use>\n' +
+        '             </svg>\n' +
+        '             特殊玩法\n' +
+        '           </span> \n' +
+        '           <span class="go-next">       \n' +
+        '             <svg class="icon" aria-hidden="true">\n' +
+        '               <use xlink:href="#icon-sanjiaoright"></use>\n' +
+        '             </svg>\n' +
+        '           </span> \n' +
+        '          </header>\n' +
+        '          <div class="bet-content bet-tip">\n' +
+        '          中奖和值： <span>[0,1,2,3,4]</span>\n' +
+        '          </div>\n' +
+        '          <main class="main-value-box">\n' +
+        '            <ul class="main-value">\n' +
+        '              <li><p class="double">对</p><p>3.00</p></li>\n' +
+        '              <li><p class="along">顺</p><p>15.00</p></li>\n' +
+        '              <li><p class="leopard">豹</p><p>50.00</p></li>\n' +
+        '            </ul>\n' +
+        '          </main>\n' +
+        '          <div class="bet-content bet-console">\n' +
+        '            <button class="odds-desc">赔率说明</button>\n' +
+        '            <span>\n' +
+        '              <button class="min-bet min-bet-third">最小投注</button>\n' +
+        '              <button class="double-bet double-bet-third">双倍投注</button>\n' +
         '            </span>\n' +
         '          </div>\n' +
         '          <div class="bet-content bet-sum-box">\n' +

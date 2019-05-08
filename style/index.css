@@ -1087,10 +1087,9 @@ footer .active {
   position: absolute;
 }
 /*.game-hall-item .top {
-    position: absolute;
-    top: 0;
-    width: 100%;
- }*/
+  position: absolute;
+  top: 0;
+}*/
 .game-hall-item .item-info {
   display: flex;
   text-align: center;
@@ -1101,26 +1100,23 @@ footer .active {
   min-height: 8rem;
   align-items: center;
 }
-.info-balance,
-.info-time {
+.info-balance, .info-time {
   width: 50%;
 }
-.info-balance strong,
-.info-time strong {
+.info-balance strong, .info-time strong {
   display: inline-block;
-  color: #e54e4c;
+  color: #E54E4C;
   font-size: 2.667rem;
   padding-top: 1rem;
   letter-spacing: 0.2rem;
 }
-.info-balance .black,
-.info-time .black {
+.info-balance .black, .info-time .black {
   font-size: 2.133rem;
   color: #000000;
   font-weight: 500;
 }
 .info-time {
-  border-right: 1px solid #d0d0d0;
+  border-right: 1px solid #D0D0D0;
 }
 .info-time p {
   color: #939393;
@@ -1129,7 +1125,7 @@ footer .active {
 }
 
 /* 中奖记录样式开始 */
-.game-hall-item .item-result {
+.item-result {
   display: flex;
   padding: 2rem 2rem;
   background-color: #fff;
@@ -1155,29 +1151,29 @@ footer .active {
   height: 3rem;
   border-radius: 1.5rem;
   color: #fff;
-  background-color: #5c95f3;
+  background-color: #5C95F3;
 }
 .result-text > .sigle-double {
-  background-color: #f5584e;
+  background-color: #F5584E;
 }
 .result-text > .res {
-  background-color: #007f00;
+  background-color: #007F00;
 }
 .records-box {
   position: absolute;
-  border: 3px solid #f9cc9d;
+  border: 3px solid #F9CC9D;
   background: #fff;
   display: none;
 }
 .records-box::after {
-  position: absolute;
+  position:absolute;
   top: -12px;
   right: 20px;
   padding: 8px;
-  border: inherit;
+  border:inherit;
   border-left: none;
   border-top: none;
-  content: '';
+  content:"";
   background: inherit;
   -webkit-transform: rotate(225deg);
   -moz-transform: rotate(225deg);
@@ -1187,7 +1183,7 @@ footer .active {
 
 /* 注信息样式开始 */
 .item-gamer-bet {
-  background-color: #fafafa;
+  background-color: #FAFAFA;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -1200,24 +1196,23 @@ footer .active {
   width: 25rem;
   padding: 1rem;
   border-radius: 1rem;
-  background-color: #cdced2;
-  color: #8d8d8d;
+  background-color: #CDCED2;
+  color: #8D8D8D;
 }
 .message-box {
   padding-top: 2rem;
   width: 100%;
 }
-.message-box > p {
+.message-box>p {
   width: 18rem;
   padding: 0.5rem 0;
   border-radius: 2rem;
-  background-color: #cdced2;
+  background-color: #CDCED2;
   color: #fff;
   margin: 0 auto;
 }
 
-.message-box > .message,
-.message-box > .self-message {
+.message-box > .message, .message-box > .self-message {
   display: flex;
   padding: 1rem 0;
 }
@@ -1225,12 +1220,11 @@ footer .active {
   flex-direction: row-reverse;
 }
 
-.message > .head-image,
-.self-message > .head-image {
+.message > .head-image, .self-message > .head-image{
   width: 7rem;
   height: 7rem;
   border-radius: 3.5rem;
-  background-color: #c7e2ff;
+  background-color: #C7E2FF;
 }
 .message-content-box {
   flex-grow: 1;
@@ -1250,16 +1244,15 @@ footer .active {
 
 .message-content-box > .message-content {
   flex-grow: 1;
-  background-color: #fe635e;
+  background-color: #FE635E;
   padding: 1rem 2rem;
   border-radius: 1rem;
   color: #fff;
 }
 .self-message .message-content {
-  background-color: #f9cc9d;
+  background-color: #F9CC9D;
 }
-.message-content > .item01,
-.message-content > .item02 {
+.message-content > .item01, .message-content > .item02 {
   display: flex;
   justify-content: space-between;
 }
@@ -1274,7 +1267,7 @@ footer .active {
 .item-gamer-bet .close {
   padding: 1rem 1rem;
   color: #363636;
-  background-color: #cdced2;
+  background-color: #CDCED2;
   border-radius: 1rem;
   margin: 1rem 0;
   text-align: left;
@@ -1285,7 +1278,7 @@ footer .active {
 .item-bet-btn {
   display: flex;
   justify-content: space-between;
-  background-color: #f7f1f8;
+  background-color: #F7F1F8;
   padding: 1rem;
   align-items: center;
   border-top: 1px solid #d6d6d6;
@@ -1296,7 +1289,7 @@ footer .active {
 .item-bet-btn button {
   padding: 1rem 2rem;
   border-radius: 2rem;
-  background-color: #fe635e;
+  background-color: #FE635E;
   color: #fff;
   font-size: 1.866rem;
   line-height: 2rem;
@@ -1307,9 +1300,12 @@ footer .active {
   border: 1px solid #d4d4d4;
   border-radius: 3px;
   height: 4rem;
-  font-size: 1.6rem;
+  font-size: 1.6rem
 }
-
+.item-bet-btn .icon {
+    font-size: 4rem;
+    color: #7F8286;
+}
 /* 投注主体样式开始 */
 .bet-hidden {
   width: 100%;
@@ -1326,16 +1322,27 @@ footer .active {
   right: 1rem;
   bottom: 1rem;
   z-index: 9999;
-  background-color: #fd625d;
   color: #fff;
   padding: 1rem 2rem;
   font-size: 2.133rem;
   border-radius: 0.5rem 0.5rem 0 0;
 }
+.bet-first {
+  background-color: #FD625D;
+}
+.bet-second {
+  background-color: #76CB45;
+  display: none;
+}
+.bet-third {
+  background-color: #55ADEC;
+  display: none;
+}
 .bet-content {
   display: flex;
   justify-content: space-between;
   padding: 1rem 0;
+
 }
 .bet-type {
   font-size: 2.667rem;
@@ -1343,14 +1350,42 @@ footer .active {
 .bet-tip {
   justify-content: center !important;
 }
+.main-value-box {
+  max-height: 20rem;
+  overflow: scroll;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
 .main-value {
   display: flex;
   justify-content: space-between;
   padding: 2rem 0;
 }
-.odds-desc,
-.min-bet,
-.double-bet {
+.main-value-last {
+  justify-content: flex-start;
+}
+.main-value-last li {
+  margin-right: 6.9rem;
+
+}
+.main-value .double, .main-value .along, .main-value .leopard {
+  /*padding: 1rem;*/
+  width: 4rem;
+  height: 4rem;
+  line-height: 4rem;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.main-value .double {
+  background-color: #39E6FA;
+}
+.main-value .along {
+  background-color: #FF06D0;
+}
+.main-value .leopard {
+  background-color: #FBC307;
+}
+.odds-desc, .min-bet, .double-bet {
   padding: 1rem 2rem;
   font-size: 2.133rem;
   border-radius: 0.5rem;
@@ -1360,21 +1395,27 @@ footer .active {
   background-color: transparent;
   color: #fff;
 }
-.min-bet,
-.double-bet {
-  background-color: #fda2a1;
+.min-bet-first, .double-bet-first {
+  background-color: #FDA2A1;
+}
+.min-bet-second, .double-bet-second {
+  background-color: #AFE091;
+}
+.min-bet-third, .double-bet-third {
+  background-color: #9BCFF3;
 }
 .withdrawal,
 .betting {
   padding: 1rem 1rem;
   font-size: 2.133rem;
   border-radius: 0.5rem;
-  background-color: #fef78d;
-  color: #f66850;
+  background-color: #FEF78D;
+  color: #F66850;
 }
 .bet-amount-box {
   display: flex;
   align-items: center;
+
 }
 .bet-amount {
   padding: 1rem 0;
