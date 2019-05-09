@@ -1086,10 +1086,6 @@ footer .active {
   font-size: 1.6rem;
   position: absolute;
 }
-/*.game-hall-item .top {
-  position: absolute;
-  top: 0;
-}*/
 .game-hall-item .item-info {
   display: flex;
   text-align: center;
@@ -1097,7 +1093,7 @@ footer .active {
   background-color: #fafafa;
   width: 100%;
   position: relative;
-  min-height: 8rem;
+  min-height: 6rem;
   align-items: center;
 }
 .info-balance,
@@ -1108,13 +1104,14 @@ footer .active {
 .info-time strong {
   display: inline-block;
   color: #e54e4c;
-  font-size: 2.667rem;
-  padding-top: 1rem;
+  font-size: 2.4rem;
+  /*padding-top: 0.5rem;*/
   letter-spacing: 0.2rem;
+  font-weight: 500;
 }
 .info-balance .black,
 .info-time .black {
-  font-size: 2.133rem;
+  font-size: 1.866rem;
   color: #000000;
   font-weight: 500;
 }
@@ -1130,12 +1127,12 @@ footer .active {
 /* 中奖记录样式开始 */
 .item-result {
   display: flex;
-  padding: 2rem 2rem;
+  padding: 1.5rem 2rem;
   background-color: #fff;
   justify-content: space-between;
-  font-size: 2.133rem;
+  font-size: 1.866rem;
   font-weight: 500;
-  min-height: 3rem;
+  min-height: 2rem;
   align-items: center;
 }
 .result-records {
@@ -1184,7 +1181,7 @@ footer .active {
 }
 /* 中奖记录样式结束 */
 
-/* 注信息样式开始 */
+/* 投注信息样式开始 */
 .item-gamer-bet {
   background-color: #fafafa;
   flex-grow: 1;
@@ -1192,7 +1189,7 @@ footer .active {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
   overflow: scroll;
 }
 .item-gamer-bet > .enter-tip {
@@ -1203,7 +1200,7 @@ footer .active {
   color: #8d8d8d;
 }
 .message-box {
-  padding-top: 2rem;
+  padding-top: 1rem;
   width: 100%;
 }
 .message-box > p {
@@ -1226,9 +1223,9 @@ footer .active {
 
 .message > .head-image,
 .self-message > .head-image {
-  width: 7rem;
-  height: 7rem;
-  border-radius: 3.5rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 2.5rem;
   background-color: #c7e2ff;
 }
 .message-content-box {
@@ -1250,8 +1247,8 @@ footer .active {
 .message-content-box > .message-content {
   flex-grow: 1;
   background-color: #fe635e;
-  padding: 1rem 2rem;
-  border-radius: 1rem;
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
   color: #fff;
 }
 .self-message .message-content {
@@ -1263,21 +1260,22 @@ footer .active {
   justify-content: space-between;
 }
 .message-content > .item01 {
-  padding-bottom: 1rem;
-  font-size: 2.133rem;
-}
-.message-content > .item02 {
-  padding-top: 1rem;
+  padding-bottom: 0.5rem;
   font-size: 1.866rem;
 }
-.item-gamer-bet .close {
+.message-content > .item02 {
+  padding-top: 0.5rem;
+  font-size: 1.6rem;
+}
+.item-gamer-bet > .close {
   padding: 1rem 1rem;
-  color: #363636;
   background-color: #cdced2;
   border-radius: 1rem;
   margin: 1rem 0;
   text-align: left;
-  line-height: 3rem;
+  color: #363636 !important;
+  line-height: 3rem !important;
+  font-size: 1.6rem;
 }
 /* 投注信息样式结束 */
 
@@ -1330,7 +1328,7 @@ footer .active {
   z-index: 9999;
   color: #fff;
   padding: 1rem 2rem;
-  font-size: 2.133rem;
+  font-size: 1.866rem;
   border-radius: 0.5rem 0.5rem 0 0;
 }
 .bet-first {
@@ -1347,13 +1345,16 @@ footer .active {
 .bet-content {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 0;
+  padding: 1rem 0 0 0;
 }
 .bet-type {
-  font-size: 2.667rem;
+  font-size: 2.133rem;
+  /*line-height: 4rem;*/
 }
 .bet-tip {
   justify-content: center !important;
+  font-size: 1.6rem;
+  margin-top: 1rem;
 }
 .main-value-box {
   max-height: 20rem;
@@ -1394,8 +1395,8 @@ footer .active {
 .odds-desc,
 .min-bet,
 .double-bet {
-  padding: 1rem 2rem;
-  font-size: 2.133rem;
+  padding: 1rem 1rem;
+  font-size: 1.866rem;
   border-radius: 0.5rem;
 }
 .odds-desc {
@@ -1417,8 +1418,8 @@ footer .active {
 }
 .withdrawal,
 .betting {
-  padding: 1rem 1rem;
-  font-size: 2.133rem;
+  padding: 1rem 2rem;
+  font-size: 1.866rem;
   border-radius: 0.5rem;
   background-color: #fef78d;
   color: #f66850;
@@ -1429,7 +1430,7 @@ footer .active {
 }
 .bet-amount {
   padding: 1rem 0;
-  font-size: 2.133rem;
+  font-size: 1.866rem;
   width: 15rem;
   border-radius: 3px;
 }

@@ -1,16 +1,4 @@
-﻿/*
-*author:https://github.com/kliuj
-**使用方法
-*		1：注册路由 : spaRouters.map('/name',function(transition){
-						//异步加载js
-						spaRouters.asyncFun('name.js',transition)
-						//或者同步执行回调
-						spaRouters.syncFun(function(transition){},transition)
-					})
-		2：初始化      spaRouters.init()
-		3：跳转  href = '#/name'
-*/
-(function() {
+﻿(function() {
 	var util = {
 		//获取路由的路径和详细参数
 		getParamsUrl:function(){

@@ -55,7 +55,6 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         '           <use xlink:href="#icon-xiala"></use>\n' +
         '         </svg>\n' +
         '        </li>\n' +
-        '        </a>\n' +
         '      </ul>\n' +
         '      <div class="item-gamer-bet">\n' +
         '        <div class="enter-tip">\n' +
@@ -233,7 +232,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         '        </svg>\n' +
         '        <!-- <span style="height: 4rem; width: 4rem; border-radius: 2rem; border: 1px solid #7F8386"></span> -->\n' +
         '      </div>\n' +
-        '      <div class="bet-hidden bet-tip">\n' +
+        '      <div class="bet-hidden">\n' +
         '        <div class="bet-box bet-first" id="bet-first">\n' +
         '          <header class="bet-content bet-type">\n' +
         '            <span class="back-last">         \n' +
@@ -254,22 +253,22 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         '           </span> \n' +
         '          </header>\n' +
         '          <div class="bet-content bet-tip">\n' +
-        '            中奖和值： <span>[0,1,2,3,4]</span>\n' +
+        '            中奖和值： <span id="type-one-tip">[0,1,2,3,4]</span>\n' +
         '          </div>\n' +
         '          <main class="main-value-box">\n' +
         '            <ul class="main-value">\n' +
-        '              <li><p>大</p><p>2.00</p></li>\n' +
-        '              <li><p>小</p><p>2.00</p></li>\n' +
-        '              <li><p>单</p><p>2.00</p></li>\n' +
-        '              <li><p>双</p><p>2.00</p></li>\n' +
-        '              <li><p>极大</p><p>15.00</p></li>\n' +
+        '              <li class="type-one"><p>大</p><p>2.00</p></li>\n' +
+        '              <li class="type-one"><p>小</p><p>2.00</p></li>\n' +
+        '              <li class="type-one"><p>单</p><p>2.00</p></li>\n' +
+        '              <li class="type-one"><p>双</p><p>2.00</p></li>\n' +
+        '              <li class="type-one"><p>极大</p><p>15.00</p></li>\n' +
         '            </ul>\n' +
         '            <ul class="main-value">\n' +
-        '              <li><p>大单</p><p>3.90</p></li>\n' +
-        '              <li><p>小单</p><p>3.90</p></li>\n' +
-        '              <li><p>大双</p><p>3.90</p></li>\n' +
-        '              <li><p>小双</p><p>3.90</p></li>\n' +
-        '              <li><p>极小</p><p>15.00</p></li>\n' +
+        '              <li class="type-one"><p>大单</p><p>3.90</p></li>\n' +
+        '              <li class="type-one"><p>小单</p><p>3.90</p></li>\n' +
+        '              <li class="type-one"><p>大双</p><p>3.90</p></li>\n' +
+        '              <li class="type-one"><p>小双</p><p>3.90</p></li>\n' +
+        '              <li class="type-one"><p>极小</p><p>15.00</p></li>\n' +
         '            </ul>\n' +
         '          </main>\n' +
         '          <div class="bet-content bet-console">\n' +
