@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b492952f-9934-49d0-803b-87aa11e996ac" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game-hall.html" beforeDir="false" afterPath="$PROJECT_DIR$/game-hall.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/game-hall-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/game-hall-item.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/route/components/game-hall-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/game-hall-item.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/route/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/index.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -76,8 +71,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/game-hall-item.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="51" column="69" lean-forward="true" selection-start-line="51" selection-start-column="69" selection-end-line="51" selection-end-column="69" />
+            <state relative-caret-position="821">
+              <caret line="78" column="22" lean-forward="true" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -309,12 +304,12 @@
       <workItem from="1557108789999" duration="7508000" />
       <workItem from="1557193435151" duration="23267000" />
       <workItem from="1557278503705" duration="9552000" />
-      <workItem from="1557367664145" duration="9337000" />
+      <workItem from="1557367664145" duration="9539000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189300000" />
+    <option name="totallyTimeSpent" value="189502000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -580,8 +575,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/game-hall-item.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="51" column="69" lean-forward="true" selection-start-line="51" selection-start-column="69" selection-end-line="51" selection-end-column="69" />
+        <state relative-caret-position="821">
+          <caret line="78" column="22" lean-forward="true" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
         </state>
       </provider>
     </entry>

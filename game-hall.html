@@ -833,77 +833,43 @@
             let key = $(this).find("p:first-child").text();
             $('#type-one-tip').text('[ ' + type_one_map[key] + ' ]');
         });
-        // type-one 中奖值过滤函数
-        let filterData = function(item) {
-            switch(this.toString()) {
-                case '大':
-                    return item > 13;
-                    break;
-                case '小':
-                    return item < 14;
-                    break;
-                case '单':
-                    return item % 2 == 1;
-                    break;
-                case '双':
-                    return item % 2 == 0;
-                    break;
-                case '极大':
-                    return item > 24;
-                    break;
-                case '大单':
-                    return item % 2 == 1 && item > 13;
-                    break;
-                case '小单':
-                    return item % 2 == 1 && item < 14;
-                    break;
-                case '大双':
-                    return item % 2 == 0 && item > 13;
-                    break;
-                case '小双':
-                    return item % 2 == 0 && item < 14;
-                    break;
-                case '极小':
-                    return item < 3;
-                    break;
-            }
-        }
       });
 
-      let filterData = function(item) {
+      // type-one 中奖值过滤函数
+    let filterData = function(item) {
         switch(this.toString()) {
-          case '大': 
-            return item > 13;
-          break;
-          case '小': 
-            return item < 14;
-          break;
-          case '单': 
-            return item % 2 == 1;
-          break;
-          case '双': 
-            return item % 2 == 0;
-          break;
-          case '极大':           
-            return item > 24;
-          break;
-          case '大单': 
-            return item % 2 == 1 && item > 13;
-          break;
-          case '小单': 
-            return item % 2 == 1 && item < 14;
-          break;
-          case '大双': 
-            return item % 2 == 0 && item > 13;
-          break;
-          case '小双': 
-            return item % 2 == 0 && item < 14;
-          break;
-          case '极小':
-            return item < 3;
-          break;
+            case '大':
+                return item > 13;
+                break;
+            case '小':
+                return item < 14;
+                break;
+            case '单':
+                return item % 2 == 1;
+                break;
+            case '双':
+                return item % 2 == 0;
+                break;
+            case '极大':
+                return item > 24;
+                break;
+            case '大单':
+                return item % 2 == 1 && item > 13;
+                break;
+            case '小单':
+                return item % 2 == 1 && item < 14;
+                break;
+            case '大双':
+                return item % 2 == 0 && item > 13;
+                break;
+            case '小双':
+                return item % 2 == 0 && item < 14;
+                break;
+            case '极小':
+                return item < 3;
+                break;
         }
-      }
+    }
     </script>
   </body>
 </html>
