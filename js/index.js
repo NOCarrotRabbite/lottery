@@ -51,6 +51,10 @@ spaRouters.map('/activity-particulars', function(transition) {
     transition
   );
 });
+//个人中心
+spaRouters.map('/personal-center', function(transition) {
+  spaRouters.asyncFun('js/route/components/personal-center.js', transition);
+});
 /* 首页子页面路由注册结束 */
 
 /* 充值子页面路由注册开始 */
@@ -147,6 +151,10 @@ spaRouters.afterEach(function(transition) {
   $('#' + to_path).addClass('active');
   if (last_path != to_path) {
     $('#' + last_path).removeClass('active');
+  }
+  //浏览器或手机返回时删除日期选择器的html
+  if (to_path != 'account-details') {
+    $('.ic__datepicker').hide();
   }
   last_path = to_path;
   // 切换之后dosomething

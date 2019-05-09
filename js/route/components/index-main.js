@@ -2,13 +2,13 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
   $('#header').show();
   $('#footer').show();
   $('#header').html(
-    '<a href="#/index">\n' +
+    '<a href="#/personal-center">\n' +
       '         <svg class="icon" aria-hidden="true">\n' +
       '           <use xlink:href="#icon-lvzhou_gengduo_xiangqing"></use>\n' +
       '         </svg>\n' +
       '       </a>\n' +
       '       <span class="size-36">竞猜大厅</span>\n' +
-      '       <a href="#/index">\n' +
+      '       <a href="#/customer">\n' +
       '         <svg class="icon" aria-hidden="true">\n' +
       '           <use xlink:href="#icon-yonghu"></use>\n' +
       '         </svg>\n' +

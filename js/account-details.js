@@ -1,70 +1,3 @@
-(function() {
-  let mask_layer = document.querySelector('.mask-layer');
-  let screen = document.querySelector('.screen');
-  let select_kind = document.querySelector('.select-kind');
-  $(function() {
-    //选择筛选时间
-    $('.date').on('click', function() {
-      mask_layer.style.zIndex = '998';
-    });
-    $('.date').each(function() {
-      $(this).ionDatePicker({
-        lang: 'zh-cn',
-        format: 'YYYY-MM-DD'
-      });
-    });
-  });
-  //点击筛选按钮显示模态框
-  $('.filtrate-btn').on('click', () => {
-    mask_layer.style.zIndex = 1;
-    screen.style.zIndex = 2;
-  });
-  //点击蒙层隐藏对应内容
-  $('.mask-layer').on('click', () => {
-    if (mask_layer.style.zIndex == '998') {
-      mask_layer.style.zIndex = '1';
-      select_kind.style.zIndex = -3;
-      screen.style.zIndex = -1;
-    } else {
-      screen.style.zIndex = -1;
-      mask_layer.style.zIndex = -2;
-      select_kind.style.zIndex = -3;
-    }
-  });
-  //选择彩种
-  $('.kind').on('click', () => {
-    select_kind.style.zIndex = '999';
-    mask_layer.style.zIndex = '998';
-  });
-  //确认选中的彩种
-  $('.select-kind li').on('click', function() {
-    let value = $(this)
-      .text()
-      .replace(/\s+/g, '');
-    $('.select-kind li .radio-bg').removeClass('active');
-    $(this)
-      .find('.radio-bg')
-      .addClass('active');
-    $('.kind').text(value);
-    mask_layer.style.zIndex = '1';
-    select_kind.style.zIndex = -3;
-  });
-  //取消筛选
-  $('.close').on('click', () => {
-    mask_layer.style.zIndex = -2;
-    screen.style.zIndex = -1;
-    select_kind.style.zIndex = -3;
-  });
-  //确定筛选
-  $('.submit').on('click', () => {
-    mask_layer.style.zIndex = -2;
-    screen.style.zIndex = -1;
-    select_kind.style.zIndex = -3;
-  });
-})();
-
-/* moment.min.js */
-
 !function(t) {
   function e(t, e) {
     return function(n) {
@@ -1374,7 +1307,6 @@
 
         var prepareCalendar = function() {
           timeForWork = moment(timeNowLocal);
-
           weekFirstDay = parseInt(timeForWork.startOf('month').format('d'));
           weekLastDay = parseInt(timeForWork.endOf('month').format('d'));
           monthLastDay = parseInt(timeForWork.endOf('month').format('D'));
@@ -1410,7 +1342,6 @@
           html += '<div class="ic__year"><select class="ic__year-select">';
           for (i = fromYear; i <= toYear; i++) {
             if (i === parseInt(timeNowLocal.format('YYYY'))) {
-              console.log('iiiiiiii', i);
               html +=
                 '<option value="' +
                 i +
@@ -1542,7 +1473,6 @@
           }
 
           html += '</div>';
-
           placeCalendar();
         };
 
@@ -1596,6 +1526,7 @@
               var toDay = $(this).text();
               timeNowLocal.date(parseInt(toDay));
               timeSelected = moment(timeNowLocal);
+              //日期格式化
               if (settings.format.indexOf('L') >= 0) {
                 settings.startDate = timeSelected.format('YYYY-MM-DD');
               } else {
@@ -1603,7 +1534,6 @@
               }
 
               // trigger callback function
-              console.log('settings.onClick', settings.onClick);
               if (typeof settings.onClick === 'function') {
                 if (settings.format) {
                   if (settings.format === 'moment') {
@@ -1622,7 +1552,6 @@
                   settings.onClick.call(this, timeSelected.format());
                 }
               }
-
               removeHTML();
             });
           }
@@ -1812,3 +1741,68 @@
     }
   };
 })(jQuery);
+
+(function() {
+  let mask_layer = document.querySelector('.mask-layer');
+  let screen = document.querySelector('.screen');
+  let select_kind = document.querySelector('.select-kind');
+  $(function() {
+    //选择筛选时间
+    $('.date').on('click', function() {
+      mask_layer.style.zIndex = '998';
+      $('.ic__datepicker').show();
+    });
+    $('.date').each(function() {
+      $(this).ionDatePicker({
+        lang: 'zh-cn',
+        format: 'YYYY-MM-DD'
+      });
+    });
+  });
+  //点击筛选按钮显示模态框
+  $('.filtrate-btn').on('click', () => {
+    mask_layer.style.zIndex = 1;
+    screen.style.zIndex = 2;
+  });
+  //点击蒙层隐藏对应内容
+  $('.mask-layer').on('click', () => {
+    if (mask_layer.style.zIndex == '998') {
+      mask_layer.style.zIndex = '1';
+      select_kind.style.zIndex = -3;
+    } else {
+      screen.style.zIndex = -1;
+      mask_layer.style.zIndex = -2;
+      select_kind.style.zIndex = -3;
+    }
+  });
+  //选择彩种
+  $('.kind').on('click', () => {
+    select_kind.style.zIndex = '999';
+    mask_layer.style.zIndex = '998';
+  });
+  //确认选中的彩种
+  $('.select-kind li').on('click', function() {
+    let value = $(this)
+      .text()
+      .replace(/\s+/g, '');
+    $('.select-kind li .radio-bg').removeClass('active');
+    $(this)
+      .find('.radio-bg')
+      .addClass('active');
+    $('.kind').text(value);
+    mask_layer.style.zIndex = '1';
+    select_kind.style.zIndex = -3;
+  });
+  //取消筛选
+  $('.close').on('click', () => {
+    mask_layer.style.zIndex = -2;
+    screen.style.zIndex = -1;
+    select_kind.style.zIndex = -3;
+  });
+  //确定筛选
+  $('.submit').on('click', () => {
+    mask_layer.style.zIndex = -2;
+    screen.style.zIndex = -1;
+    select_kind.style.zIndex = -3;
+  });
+})();

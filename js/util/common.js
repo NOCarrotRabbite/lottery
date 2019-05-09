@@ -41,5 +41,16 @@ $.extend({
       className.val('');
       classIcon.hide();
     });
+  },
+  copy: function(btn, text, msg) {
+    btn.on('click', function() {
+      text.select(); // 选择对象
+      document.execCommand('Copy'); // 执行浏览器复制命令
+      $('.message-box').text(msg);
+      $('.message-box').show(400);
+      setTimeout(function() {
+        $('.message-box').hide(400);
+      }, 2000);
+    });
   }
 });
