@@ -46,10 +46,10 @@ $.extend({
     btn.on('click', function() {
       text.select(); // 选择对象
       document.execCommand('Copy'); // 执行浏览器复制命令
-      $('.message-box').text(msg);
-      $('.message-box').show(400);
+      $('.msg-box').text(msg);
+      $('.msg-box').show(400);
       setTimeout(function() {
-        $('.message-box').hide(400);
+        $('.msg-box').hide(400);
       }, 2000);
     });
   }
