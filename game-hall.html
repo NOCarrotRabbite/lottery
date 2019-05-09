@@ -15,359 +15,360 @@
     <style>
       html { font-size: 15px; }
       .game-hall-item {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        font-size: 1.6rem;
-        position: absolute;
-      }
-      /*.game-hall-item .top {
-        position: absolute;
-        top: 0;
-      }*/
-      .game-hall-item .item-info {
-        display: flex;
-        text-align: center;
-        padding: 1rem 0;
-        background-color: #FAFAFA;
-        width: 100%;
-        position: relative;
-        min-height: 8rem;
-        align-items: center;
-      }
-      .info-balance, .info-time {
-        width: 50%;
-      }
-      .info-balance strong, .info-time strong {
-        display: inline-block;
-        color: #E54E4C;
-        font-size: 2.667rem;
-        padding-top: 1rem;
-        letter-spacing: 0.2rem;
-      } 
-      .info-balance .black, .info-time .black {
-        font-size: 2.133rem;
-        color: #000000;
-        font-weight: 500;
-      }
-      .info-time {
-        border-right: 1px solid #D0D0D0;
-      }
-      .info-time p {
-        color: #939393;
-        letter-spacing: 0.1rem;
-        font-size: 1.866rem;
-      }
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+  position: absolute;
+}
+.game-hall-item .item-info {
+  display: flex;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #fafafa;
+  width: 100%;
+  position: relative;
+  min-height: 6rem;
+  align-items: center;
+}
+.info-balance, .info-time {
+  width: 50%;
+}
+.info-balance strong, .info-time strong {
+  display: inline-block;
+  color: #E54E4C;
+  font-size: 2.4rem;
+  /*padding-top: 0.5rem;*/
+  letter-spacing: 0.2rem;
+  font-weight: 500;
+}
+.info-balance .black, .info-time .black {
+  font-size: 1.866rem;
+  color: #000000;
+  font-weight: 500;
+}
+.info-time {
+  border-right: 1px solid #D0D0D0;
+}
+.info-time p {
+  color: #939393;
+  letter-spacing: 0.1rem;
+  font-size: 1.866rem;
+}
 
-      /* 中奖记录样式开始 */
-      .item-result {
-        display: flex;
-        padding: 2rem 2rem;
-        background-color: #fff;
-        justify-content: space-between;
-        font-size: 2.133rem;
-        font-weight: 500;
-        min-height: 3rem;
-        align-items: center;
-      }
-      .result-records {
-        padding: 2rem 2rem;
-        font-size: 2.133rem;
-        font-weight: 500;
-        background-color: #fff;
-      }
-      .result-records > .result-text {
-        padding: 1rem 0;
-      }
-      .result-text > .num {
-        text-align: center;
-        display: inline-block;
-        width: 3rem;
-        height: 3rem;
-        border-radius: 1.5rem;
-        color: #fff;
-        background-color: #5C95F3;
-      }
-      .result-text > .sigle-double {
-        background-color: #F5584E;
-      }
-      .result-text > .res {
-        background-color: #007F00;
-      }
-      .records-box {  
-        position: absolute;
-        border: 3px solid #F9CC9D;
-        background: #fff;
-        display: none;
-      }
-      .records-box::after {
-        position:absolute;
-        top: -12px;
-        right: 20px;
-        padding: 8px;
-        border:inherit;
-        border-left: none;
-        border-top: none;
-        content:"";
-        background: inherit;
-        -webkit-transform: rotate(225deg);
-        -moz-transform: rotate(225deg);
-        transform: rotate(225deg); 
-      } 
-      /* 中奖记录样式结束 */
+/* 中奖记录样式开始 */
+.item-result {
+  display: flex;
+  padding: 1.5rem 2rem;
+  background-color: #fff;
+  justify-content: space-between;
+  font-size: 1.866rem;
+  font-weight: 500;
+  min-height: 2rem;
+  align-items: center;
+}
+.result-records {
+  padding: 2rem 2rem;
+  font-size: 2.133rem;
+  font-weight: 500;
+  background-color: #fff;
+}
+.result-records > .result-text {
+  padding: 1rem 0;
+}
+.result-text > .num {
+  text-align: center;
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  color: #fff;
+  background-color: #5C95F3;
+}
+.result-text > .sigle-double {
+  background-color: #F5584E;
+}
+.result-text > .res {
+  background-color: #007F00;
+}
+.records-box {
+  position: absolute;
+  border: 3px solid #F9CC9D;
+  background: #fff;
+  display: none;
+}
+.records-box::after {
+  position:absolute;
+  top: -12px;
+  right: 20px;
+  padding: 8px;
+  border:inherit;
+  border-left: none;
+  border-top: none;
+  content:"";
+  background: inherit;
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+/* 中奖记录样式结束 */
 
-      /* 注信息样式开始 */
-      .item-gamer-bet {
-        background-color: #FAFAFA;
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 1rem 2rem;
-        overflow: scroll;
-      }
-      .item-gamer-bet > .enter-tip {
-        width: 25rem;
-        padding: 1rem;
-        border-radius: 1rem;
-        background-color: #CDCED2;
-        color: #8D8D8D;
-      }
-      .message-box {
-        padding-top: 2rem;
-        width: 100%;
-      }
-      .message-box>p {
-        width: 18rem;
-        padding: 0.5rem 0;
-        border-radius: 2rem;
-        background-color: #CDCED2;
-        color: #fff;
-        margin: 0 auto;
-      }
+/* 投注信息样式开始 */
+.item-gamer-bet {
+  background-color: #FAFAFA;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 3rem;
+  overflow: scroll;
+}
+.item-gamer-bet > .enter-tip {
+  width: 25rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #CDCED2;
+  color: #8D8D8D;
+}
+.message-box {
+  padding-top: 1rem;
+  width: 100%;
+}
+.message-box>p {
+  width: 18rem;
+  padding: 0.5rem 0;
+  border-radius: 2rem;
+  background-color: #CDCED2;
+  color: #fff;
+  margin: 0 auto;
+}
 
-      .message-box > .message, .message-box > .self-message {
-        display: flex;
-        padding: 1rem 0;
-      }
-      .message-box > .self-message {
-        flex-direction: row-reverse;
-      }
+.message-box > .message, .message-box > .self-message {
+  display: flex;
+  padding: 1rem 0;
+}
+.message-box > .self-message {
+  flex-direction: row-reverse;
+}
 
-      .message > .head-image, .self-message > .head-image{
-        width: 7rem;
-        height: 7rem;
-        border-radius: 3.5rem;
-        background-color: #C7E2FF;
-      }
-      .message-content-box {
-        flex-grow: 1;
-        padding: 0 0rem 0 2rem;
-      }
-      .self-message .message-content-box {
-        padding: 0 2rem 0 0rem;
-      }
-      .message-content-box > .name {
-        text-align: left;
-        color: #999999;
-        padding-bottom: 1rem;
-      }
-      .self-message .name {
-        text-align: right;
-      }
+.message > .head-image, .self-message > .head-image{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 2.5rem;
+  background-color: #C7E2FF;
+}
+.message-content-box {
+  flex-grow: 1;
+  padding: 0 0rem 0 2rem;
+}
+.self-message .message-content-box {
+  padding: 0 2rem 0 0rem;
+}
+.message-content-box > .name {
+  text-align: left;
+  color: #999999;
+  padding-bottom: 1rem;
+}
+.self-message .name {
+  text-align: right;
+}
 
-      .message-content-box > .message-content {
-        flex-grow: 1;
-        background-color: #FE635E;
-        padding: 1rem 2rem;
-        border-radius: 1rem;
-        color: #fff;
-      }
-      .self-message .message-content {
-        background-color: #F9CC9D;
-      }
-      .message-content > .item01, .message-content > .item02 {
-        display: flex;
-        justify-content: space-between;
-      }
-      .message-content > .item01 {
-        padding-bottom: 1rem;
-        font-size: 2.133rem;
-      }
-      .message-content > .item02 {
-        padding-top: 1rem;
-        font-size: 1.866rem;
-      }
-      .item-gamer-bet .close {
-        padding: 1rem 1rem;
-        color: #363636;
-        background-color: #CDCED2;
-        border-radius: 1rem;
-        margin: 1rem 0;
-        text-align: left;
-        line-height: 3rem;
-      }
-      /* 投注信息样式结束 */
+.message-content-box > .message-content {
+  flex-grow: 1;
+  background-color: #FE635E;
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+  color: #fff;
+}
+.self-message .message-content {
+  background-color: #F9CC9D;
+}
+.message-content > .item01, .message-content > .item02 {
+  display: flex;
+  justify-content: space-between;
+}
+.message-content > .item01 {
+  padding-bottom: 0.5rem;
+  font-size: 1.866rem;
+}
+.message-content > .item02 {
+  padding-top: 0.5rem;
+    font-size: 1.6rem;
+}
+.item-gamer-bet > .close {
+  padding: 1rem 1rem;
+  background-color: #CDCED2;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  text-align: left;
+  color: #363636 !important;
+  line-height: 3rem !important;
+  font-size: 1.6rem ;
+}
+/* 投注信息样式结束 */
 
-      .item-bet-btn {
-        display: flex;
-        justify-content: space-between;
-        background-color: #F7F1F8;
-        padding: 1rem;
-        align-items: center;
-        border-top: 1px solid #D6D6D6;
-        width: 100%;
-        box-sizing: border-box;
-        min-height: 6.333rem;
-      }
-      .item-bet-btn button {
-        padding: 1rem 2rem;
-        border-radius: 2rem;
-        background-color: #FE635E;
-        color: #fff;
-        font-size: 1.866rem;
-        line-height: 2rem;
-      }
-      .item-bet-btn input {
-        flex-grow: 1;
-        margin: 0 1rem;
-        border: 1px solid #D4D4D4;
-        border-radius: 3px;
-        height: 4rem;
-        font-size: 1.6rem
-      }
-      .item-bet-btn .icon {
-        font-size: 4rem;
-        color: #7F8286;
-      }
+.item-bet-btn {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F7F1F8;
+  padding: 1rem;
+  align-items: center;
+  border-top: 1px solid #d6d6d6;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 6.333rem;
+}
+.item-bet-btn button {
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  background-color: #FE635E;
+  color: #fff;
+  font-size: 1.866rem;
+  line-height: 2rem;
+}
+.item-bet-btn input {
+  flex-grow: 1;
+  margin: 0 1rem;
+  border: 1px solid #d4d4d4;
+  border-radius: 3px;
+  height: 4rem;
+  font-size: 1.6rem
+}
+.item-bet-btn .icon {
+    font-size: 4rem;
+    color: #7F8286;
+}
+/* 投注主体样式开始 */
+.bet-hidden {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 9998;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+.bet-box {
+  box-sizing: border-box;
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 9999;
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 1.866rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.bet-first {
+  background-color: #FD625D;
+}
+.bet-second {
+  background-color: #76CB45;
+  display: none;
+}
+.bet-third {
+  background-color: #55ADEC;
+  display: none;
+}
+.bet-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0 0 0;
 
-      /* 投注主体样式开始 */
-      .bet-hidden {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 9998;
-        background-color: rgba(0, 0, 0, 0.4);
-        display: none;
-      }
-      .bet-box {
-        box-sizing: border-box;
-        position: absolute;
-        left: 1rem;
-        right: 1rem;
-        bottom: 1rem;
-        z-index: 9999;        
-        color: #fff;
-        padding: 1rem 2rem;
-        font-size: 2.133rem;
-        border-radius: 0.5rem 0.5rem 0 0;
-      }
-      .bet-first {
-        background-color: #FD625D;        
-      }
-      .bet-second {
-        background-color: #76CB45;
-        display: none;       
-      }
-      .bet-third {
-        background-color: #55ADEC;
-        display: none;
-      }
-      .bet-content {
-        display: flex;
-        justify-content: space-between;
-        padding: 1rem 0;
+}
+.bet-type {
+  font-size: 2.133rem;
+  /*line-height: 4rem;*/
+}
+.bet-tip {
+  justify-content: center !important;
+  font-size: 1.6rem;
+  margin-top: 1rem;
+}
+.main-value-box {
+  max-height: 20rem;
+  overflow: scroll;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+.main-value {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+.main-value-last {
+  justify-content: flex-start;
+}
+.main-value-last li {
+  margin-right: 6.9rem;
 
-      }
-      .bet-type {
-        font-size: 2.667rem;
-      }
-      .bet-tip {
-        justify-content: center !important;
-      }
-      .main-value-box {
-        max-height: 20rem;
-        overflow: scroll;
-        text-align: center;
-        letter-spacing: 0.1rem;
-      }
-      .main-value {
-        display: flex;
-        justify-content: space-between;
-        padding: 2rem 0;
-      }
-      .main-value-last {
-        justify-content: flex-start;        
-      }
-      .main-value-last li {
-        margin-right: 6.9rem;
+}
+.main-value .double, .main-value .along, .main-value .leopard {
+  /*padding: 1rem;*/
+  width: 4rem;
+  height: 4rem;
+  line-height: 4rem;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.main-value .double {
+  background-color: #39E6FA;
+}
+.main-value .along {
+  background-color: #FF06D0;
+}
+.main-value .leopard {
+  background-color: #FBC307;
+}
+.odds-desc, .min-bet, .double-bet {
+  padding: 1rem 1rem;
+  font-size: 1.866rem;
+  border-radius: 0.5rem;
+}
+.odds-desc {
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+}
+.min-bet-first, .double-bet-first {
+  background-color: #FDA2A1;
+}
+.min-bet-second, .double-bet-second {
+  background-color: #AFE091;
+}
+.min-bet-third, .double-bet-third {
+  background-color: #9BCFF3;
+}
+.withdrawal,
+.betting {
+  padding: 1rem 2rem;
+  font-size: 1.866rem;
+  border-radius: 0.5rem;
+  background-color: #FEF78D;
+  color: #F66850;
+}
+.bet-amount-box {
+  display: flex;
+  align-items: center;
 
-      }
-      .main-value .double, .main-value .along, .main-value .leopard {
-        /*padding: 1rem;*/
-        width: 4rem;
-        height: 4rem;
-        line-height: 4rem;
-        border-radius: 50%;
-        margin: 0 auto;
-      }
-      .main-value .double {
-        background-color: #39E6FA;        
-      }
-      .main-value .along {
-        background-color: #FF06D0;        
-      }
-      .main-value .leopard {
-        background-color: #FBC307;        
-      }
-      .odds-desc, .min-bet, .double-bet {
-        padding: 1rem 2rem;
-        font-size: 2.133rem;
-        border-radius: 0.5rem;
-      }
-      .odds-desc {
-        border: 1px solid #fff;
-        background-color: transparent;
-        color: #fff;
-      }
-      .min-bet-first, .double-bet-first {
-        background-color: #FDA2A1;
-      }
-      .min-bet-second, .double-bet-second {
-        background-color: #AFE091;
-      }
-      .min-bet-third, .double-bet-third {
-        background-color: #9BCFF3;
-      }
-      .withdrawal, .betting {
-        padding: 1rem 1rem;
-        font-size: 2.133rem;
-        border-radius: 0.5rem;
-        background-color: #FEF78D;
-        color: #F66850;
-      }
-      .bet-amount-box {
-        display: flex;
-        align-items: center;
-
-      }
-      .bet-amount {
-        padding: 1rem 0;
-        font-size: 2.133rem;
-        width: 15rem;
-        border-radius: 3px;
-      }
-      .bet-sum-box {
-        justify-content: flex-end;
-      }
-      .bet-sum {
-        padding-left: 2rem;
-        letter-spacing: 0.2rem;
-      }
-      .bet-footer {
-        margin-top: 1rem;
-      }
+}
+.bet-amount {
+  padding: 1rem 0;
+  font-size: 1.866rem;
+  width: 15rem;
+  border-radius: 3px;
+}
+.bet-sum-box {
+  justify-content: flex-end;
+}
+.bet-sum {
+  padding-left: 2rem;
+  letter-spacing: 0.2rem;
+}
+.bet-footer {
+  margin-top: 1rem;
+}
       /* 投注主体样式结束 */
     </style>
   </head>
@@ -406,7 +407,6 @@
            <use xlink:href="#icon-xiala"></use>
          </svg>
         </li>
-        </a>
       </ul>
       <div class="item-gamer-bet">
         <div class="enter-tip">
@@ -584,7 +584,7 @@
         </svg>
         <!-- <span style="height: 4rem; width: 4rem; border-radius: 2rem; border: 1px solid #7F8386"></span> -->
       </div>
-      <div class="bet-hidden bet-tip">
+      <div class="bet-hidden">
         <div class="bet-box bet-first" id="bet-first">
           <header class="bet-content bet-type">
             <span class="back-last">         
@@ -605,22 +605,22 @@
            </span> 
           </header>
           <div class="bet-content bet-tip">
-            中奖和值： <span>[0,1,2,3,4]</span>
+            中奖和值： <span class="type-one-tip">[0,1,2,3,4]</span>
           </div>
           <main class="main-value-box">
             <ul class="main-value">
-              <li><p>大</p><p>2.00</p></li>
-              <li><p>小</p><p>2.00</p></li>
-              <li><p>单</p><p>2.00</p></li>
-              <li><p>双</p><p>2.00</p></li>
-              <li><p>极大</p><p>15.00</p></li>
+              <li class="type-one"><p>大</p><p>2.00</p></li>
+              <li class="type-one"><p>小</p><p>2.00</p></li>
+              <li class="type-one"><p>单</p><p>2.00</p></li>
+              <li class="type-one"><p>双</p><p>2.00</p></li>
+              <li class="type-one"><p>极大</p><p>15.00</p></li>
             </ul>
             <ul class="main-value">
-              <li><p>大单</p><p>3.90</p></li>
-              <li><p>小单</p><p>3.90</p></li>
-              <li><p>大双</p><p>3.90</p></li>
-              <li><p>小双</p><p>3.90</p></li>
-              <li><p>极小</p><p>15.00</p></li>
+              <li class="type-one"><p>大单</p><p>3.90</p></li>
+              <li class="type-one"><p>小单</p><p>3.90</p></li>
+              <li class="type-one"><p>大双</p><p>3.90</p></li>
+              <li class="type-one"><p>小双</p><p>3.90</p></li>
+              <li class="type-one"><p>极小</p><p>15.00</p></li>
             </ul>
           </main>
           <div class="bet-content bet-console">
@@ -788,7 +788,7 @@
             document.getElementById('records-box').style.display = 'block';
           }
         };
-        $('#bet-toggle').on('click', function () {
+        /*$('#bet-toggle').on('click', function () {
           $('.bet-hidden').toggle();
         });        
         $('.bet-hidden').on('click', function () {
@@ -798,37 +798,112 @@
           e.stopPropagation();
         })
 
-        let toggleGameType = function(type) {
-          let i = 1;
-          let type_map = new Map();
-          type_map.set(1, '#bet-first');
-          type_map.set(2, '#bet-second');
-          type_map.set(3, '#bet-third');
-          for(let j in type_map) {
-            if(i = key) {
-              $("'" + type_map[key] + "'").show();
-            } else {
-              $("'" + type_map[key] + "'").hide();
+        let i = 1;
+        let type_map = { 1: '#bet-first', 2: '#bet-second', 3: '#bet-third' };
+        $('.back-last').on('click', function () {
+            if(i > 1) { i--; } else { i = 3; }
+            for(let j in type_map) {
+                if(j == i) {
+                    $(type_map[j]).show();
+                } else {
+                    $(type_map[j]).hide();
+                }
             }
-          }
+        });
+        $('.go-next').on('click', function () {
+            if(i < 3) { i++; } else { i = 1; }
+            for(let j in type_map) {
+                if(j == i) {
+                    $(type_map[j]).show();
+                } else {
+                    $(type_map[j]).hide();
+                }
+            }
+        });*/
 
-          if(type == 1) {
-            if(i > 1) {
-               i--;
-            } else {
-              i = 3
+        // 定义投注类型为tpey-one时的中奖和值数组
+        let type_one = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27];
+        // 根据具体投注值过滤出相应的数值
+        let type_one_map = { '大': type_one.filter(filterData, '大'), '小': type_one.filter(filterData, '小'), '单': type_one.filter(filterData, '单'),
+            '双': type_one.filter(filterData, '双'), '极大': type_one.filter(filterData, '极大'), '大单': type_one.filter(filterData, '大单'),
+            '小单': type_one.filter(filterData, '小单'), '大双': type_one.filter(filterData, '大双'), '小双': type_one.filter(filterData, '小双'), '极小': type_one.filter(filterData,
+            '极小') };
+        // 点击具体type-one投注值显示对应的中奖值
+        $('.type-one').on('click', function() {
+            let key = $(this).find("p:first-child").text();
+            $('#type-one-tip').text('[ ' + type_one_map[key] + ' ]');
+        });
+        // type-one 中奖值过滤函数
+        let filterData = function(item) {
+            switch(this.toString()) {
+                case '大':
+                    return item > 13;
+                    break;
+                case '小':
+                    return item < 14;
+                    break;
+                case '单':
+                    return item % 2 == 1;
+                    break;
+                case '双':
+                    return item % 2 == 0;
+                    break;
+                case '极大':
+                    return item > 24;
+                    break;
+                case '大单':
+                    return item % 2 == 1 && item > 13;
+                    break;
+                case '小单':
+                    return item % 2 == 1 && item < 14;
+                    break;
+                case '大双':
+                    return item % 2 == 0 && item > 13;
+                    break;
+                case '小双':
+                    return item % 2 == 0 && item < 14;
+                    break;
+                case '极小':
+                    return item < 3;
+                    break;
             }
-          }
-          if(type == 2) {            
-            if(i < 3) {
-              i++;
-            } else {
-              i = 1;
-            }
-          }
         }
-
       });
+
+      let filterData = function(item) {
+        switch(this.toString()) {
+          case '大': 
+            return item > 13;
+          break;
+          case '小': 
+            return item < 14;
+          break;
+          case '单': 
+            return item % 2 == 1;
+          break;
+          case '双': 
+            return item % 2 == 0;
+          break;
+          case '极大':           
+            return item > 24;
+          break;
+          case '大单': 
+            return item % 2 == 1 && item > 13;
+          break;
+          case '小单': 
+            return item % 2 == 1 && item < 14;
+          break;
+          case '大双': 
+            return item % 2 == 0 && item > 13;
+          break;
+          case '小双': 
+            return item % 2 == 0 && item < 14;
+          break;
+          case '极小':
+            return item < 3;
+          break;
+        }
+      }
     </script>
   </body>
 </html>
