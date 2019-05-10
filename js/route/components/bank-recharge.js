@@ -19,12 +19,12 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '<li class="color-red">银行付款信息</li>\n' +
       '<li>开户银行：请联系财务索取卡号</li>\n' +
       ' <li>\n' +
-      '<span>银行卡号：<span>000</span></span>\n' +
-      '<span class="copy-btn">复制</span>\n' +
+      '<span>银行卡号：<span class="bank-code">000</span></span>\n' +
+      '<span class="copy-btn bank-copy">复制</span>\n' +
       ' </li>\n' +
       '<li>\n' +
-      '<span>收款人：<span>财务003</span></span>\n' +
-      '<span class="copy-btn">复制</span>\n' +
+      '<span>收款人：<span class="service-name">财务001</span></span>\n' +
+      '<span class="copy-btn service-copy">复制</span>\n' +
       ' </li>\n' +
       '</ul>\n' +
       ' <ul class="bank-recharge-form">\n' +

@@ -31,7 +31,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '<ul class="payment-form">\n' +
       '<li>\n' +
       '<span>用户名称</span>\n' +
-      ' <span class="color-red">WX3523</span>\n' +
+      ' <span class="color-red">WX123</span>\n' +
       '<span class="btn">复制</span>\n' +
       '</li>\n' +
       ' <li>\n' +
