@@ -15,10 +15,10 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
   $('#main').html(
     '\n' +
       '<div class="mobile-bind">\n' +
-      '<ul class="mobile-bind-form public-set-form">\n' +
+      '<ul class="mobile-bind-form">\n' +
       ' <li>\n' +
       ' <span>手机号码</span>\n' +
-      ' <input type="password" />\n' +
+      ' <input type="text" class="mobile-num" />\n' +
       '  <svg class="icon close-icon" aria-hidden="true">\n' +
       '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '              </svg>\n' +
@@ -26,7 +26,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '<li>\n' +
       '<span>验证码&emsp;</span>\n' +
       '<div class="code">\n' +
-      '<input type="password" />\n' +
+      '<input type="password" class="mobile-code"/>\n' +
       '  <svg class="icon  close-icon2" aria-hidden="true">\n' +
       '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '              </svg>\n' +

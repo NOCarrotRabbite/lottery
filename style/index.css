@@ -906,6 +906,7 @@ footer .active {
   font-size: 2.667rem;
   padding-right: 1rem;
   color: rgb(255, 83, 74);
+  display: none;
 }
 .mobile-bind span {
   font-size: 1.866rem;
@@ -918,6 +919,9 @@ footer .active {
   border: 1px solid #ccc;
   border-radius: 0.8rem;
   color: #888;
+}
+.mobile-bind .mobile-code {
+  width: 19rem;
 }
 .mobile-bind .close-icon {
   position: absolute;
@@ -1541,6 +1545,6 @@ footer .active {
   text-align: center;
   color: #fff;
   display: none;
-  z-index: 99999999;
+  z-index: 999999999;
 }
 /* 全局提示框 */

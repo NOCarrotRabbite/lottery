@@ -1,13 +1,17 @@
 (function() {
-  $('.transfer-btn').on('click', () => {
+  $('.transfer-btn').on('click', function() {
     window.location.href = '#/recharge-record';
   });
-  $('.service-btn').on('click', () => {
+  $('.service-btn').on('click', function() {
     window.location.href = '#/customer';
   });
-  $('.alipay').on('click', () => {});
-  $('.we-chat').on('click', () => {});
-  $('.internetbank').on('click', () => {
+  $('.alipay').on('click', function() {
+    /*  window.location.href = '#/customer'; */
+  });
+  $('.we-chat').on('click', function() {
+    /*  window.location.href = '#/customer'; */
+  });
+  $('.internetbank').on('click', function() {
     /*  window.location.href = '#/customer'; */
   });
 })();

@@ -10,17 +10,16 @@
         user_num: user_num,
         password: password
       };
-      window.location.href = '#/login';
-      /* $.jsonAjax(API.REG_USER_API, 'POST', data)
+      $.jsonAjax(API.REG_USER_API, 'POST', data)
         .then(function(data) {
           if (data.status == true) {
-            window.location.href = '#/index';
+            window.location.href = '#/login';
           }
           console.log('data', data);
         })
         .catch(function(error) {
           console.log('11111', error.status);
-        }); */
+        });
     });
     $.inputClear($('.name'), $('.name').next());
     $.inputClear($('.user'), $('.user').next());

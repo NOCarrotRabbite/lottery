@@ -3,7 +3,7 @@
     $('.bank').on('click', function() {
       $('.dialog').show();
     });
-    $('.obscuration').on('click', () => {
+    $('.obscuration').on('click', function() {
       $('.dialog').hide();
     });
     $('.select-bank li').on('click', function() {
@@ -17,5 +17,8 @@
       $('.bank').val(value);
       $('.dialog').hide();
     });
+    $.inputClear($('.name'), $('.name').next());
+    $.inputClear($('.card-num'), $('.card-num').next());
+    $.inputClear($('.password'), $('.password').next());
   });
 })();
