@@ -42,10 +42,16 @@ $.extend({
       classIcon.hide();
     });
   },
+  //复制
   copy: function(btn, text, msg) {
     btn.on('click', function() {
-      text.select(); // 选择对象
-      document.execCommand('Copy'); // 执行浏览器复制命令
+      let str = text.text(); //获取复制的文本
+      var save = function(e) {
+        e.clipboardData.setData('text/plain', str); //(复制的格式，复制的内容)
+        e.preventDefault(); //阻止默认行为
+      };
+      document.addEventListener('copy', save);
+      document.execCommand('Copy');
       $('.msg-box').text(msg);
       $('.msg-box').show(400);
       setTimeout(function() {
