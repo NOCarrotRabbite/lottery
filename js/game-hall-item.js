@@ -1,11 +1,12 @@
 (function () {
     $(function () {
         document.getElementById('resulst-icon').onclick = function() {
-            if(document.getElementById('records-box').style.display != 'none') {
+            $('#records-box').toggle();
+            /*if(document.getElementById('records-box').style.display != 'none') {
                 document.getElementById('records-box').style.display = 'none';
             } else {
                 document.getElementById('records-box').style.display = 'block';
-            }
+            }*/
         };
         $('#bet-toggle').on('click', function () {
             $('.bet-hidden').toggle();
@@ -49,8 +50,16 @@
         // 点击具体type-one投注值显示对应的中奖值
         $('.type-one').on('click', function() {
             let key = $(this).find("p:first-child").text();
-            $('#type-one-tip').text('[ ' + type_one_map[key] + ' ]');
+
+            if ($(this).attr('class').indexOf('active') >= 0) {
+                $(this).removeClass('active');
+            } else {
+                $(this).addClass('active');
+            }
+            $('#type-one-tip').text('中奖和值： [ ' + type_one_map[key] + ' ]');
+            getBetNumber();
         });
+        getBetNumber();
     });
 
     // type-one 中奖值过滤函数
@@ -87,5 +96,11 @@
                 return item < 3;
                 break;
         }
-    }
+    };
+
+    // 获取页面投注数,赋值给共投注文本
+    let getBetNumber = function () {
+        let num = $('.main-value .active').length;
+        $('.bet-sum .bet-num').text(num);
+    };
 })();

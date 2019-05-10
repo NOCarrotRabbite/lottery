@@ -1354,7 +1354,7 @@ footer .active {
 .bet-tip {
   justify-content: center !important;
   font-size: 1.6rem;
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
 .main-value-box {
   max-height: 20rem;
@@ -1365,7 +1365,14 @@ footer .active {
 .main-value {
   display: flex;
   justify-content: space-between;
-  padding: 2rem 0;
+  padding: 1rem 0;
+  height: 7.5rem;
+}
+.main-value .type-one {
+    padding: 1rem 0.5rem;
+}
+.main-value .active {
+  border: 2px solid #fff;
 }
 .main-value-last {
   justify-content: flex-start;
@@ -1429,7 +1436,7 @@ footer .active {
   align-items: center;
 }
 .bet-amount {
-  padding: 1rem 0;
+  padding: 1rem 0.5rem;
   font-size: 1.866rem;
   width: 15rem;
   border-radius: 3px;
