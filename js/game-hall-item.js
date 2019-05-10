@@ -2,11 +2,6 @@
     $(function () {
         document.getElementById('resulst-icon').onclick = function() {
             $('#records-box').toggle();
-            /*if(document.getElementById('records-box').style.display != 'none') {
-                document.getElementById('records-box').style.display = 'none';
-            } else {
-                document.getElementById('records-box').style.display = 'block';
-            }*/
         };
         $('#bet-toggle').on('click', function () {
             $('.bet-hidden').toggle();
@@ -17,7 +12,7 @@
         $('.bet-hidden .bet-box').on('click', function(e) {
             e.stopPropagation();
         });
-
+        // 卡片切换
         let i = 1;
         let type_map = { 1: '#bet-first', 2: '#bet-second', 3: '#bet-third' };
         $('.back-last').on('click', function () {
@@ -59,9 +54,51 @@
             $('#type-one-tip').text('中奖和值： [ ' + type_one_map[key] + ' ]');
             getBetNumber();
         });
+        // 初始化投注数
         getBetNumber();
-    });
+        // 投注金额，选中注数，总计连动
+        let index_array = new Array();
+        $('.bet-amount').each(function (index) {
+            index_array.push(index);
+            $(this).bind('input', function () {
+                let value = $(this).val();
+                let num = $('.main-value .active').length;
+                if(value) {
+                    $('.bet-price').text(num * value);
+                } else {
+                    $('.bet-price').text('0');
+                }
+                for (let i in index_array) {
+                    if (index_array[i] != index) {
+                        let j = index_array[i];
+                        $('.bet-amount')[j].value = value;
+                    }
+                }
+            });
+        });
+        // 最小投注按钮点击事件
+        $('.min-bet').on('click', function () {
+            $('.bet-amount').each(function () {
+                $(this).val(5);
+            });
+            let num = $('.main-value .active').length;
+            $('.bet-price').text(num * $('.bet-amount')[0].value);
 
+        });
+        // 双倍投注按钮点击事件
+        $('.double-bet').on('click', function () {
+            if($('.bet-amount')[0].value) {
+                let base = $('.bet-amount')[0].value;
+                $('.bet-amount').each(function () {
+                    $(this).val(base * 2);
+                });
+                let num = $('.main-value .active').length;
+                $('.bet-price').text(num * base * 2);
+                return true;
+            }
+            alert('投注金额不可为空');
+        });
+    });
     // type-one 中奖值过滤函数
     let filterData = function(item) {
         switch(this.toString()) {
@@ -97,10 +134,14 @@
                 break;
         }
     };
-
     // 获取页面投注数,赋值给共投注文本
     let getBetNumber = function () {
         let num = $('.main-value .active').length;
         $('.bet-sum .bet-num').text(num);
+        if($('.bet-amount')[0].value) {
+            $('.bet-price').text(num * $('.bet-amount')[0].value);
+        } else {
+            $('.bet-price').text('0');
+        }
     };
 })();

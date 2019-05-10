@@ -29,7 +29,7 @@ $.extend({
     }
   },
   inputClear: function(className, classIcon) {
-    className.on('input', () => {
+    className.on('input', function () {
       let value = className.val();
       if (value) {
         classIcon.show();
@@ -37,7 +37,7 @@ $.extend({
         classIcon.hide();
       }
     });
-    classIcon.on('click', () => {
+    classIcon.on('click', function (){
       className.val('');
       classIcon.hide();
     });
