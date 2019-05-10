@@ -1369,7 +1369,7 @@ footer .active {
   height: 7.5rem;
 }
 .main-value .type-one {
-    padding: 1rem 0.5rem;
+  padding: 1rem 0.5rem;
 }
 .main-value .active {
   border: 2px solid #fff;
@@ -1541,5 +1541,6 @@ footer .active {
   text-align: center;
   color: #fff;
   display: none;
+  z-index: 99999999;
 }
 /* 全局提示框 */
