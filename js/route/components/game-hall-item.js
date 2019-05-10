@@ -279,7 +279,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         '          </div>\n' +
         '          <div class="bet-content bet-sum-box">\n' +
         '            <label class="bet-sum">共投：<span class="bet-num">0</span>注</label>\n' +
-        '            <label class="bet-sum">总计：<span>0</span></label>\n' +
+        '            <label class="bet-sum">总计：<span class="bet-price">0</span></label>\n' +
         '          </div>\n' +
         '          <div class="bet-content bet-footer">\n' +
         '            <button class="withdrawal">撤单</button>\n' +
@@ -362,8 +362,8 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         '            </span>\n' +
         '          </div>\n' +
         '          <div class="bet-content bet-sum-box">\n' +
-        '            <label class="bet-sum">共投：<span>0</span>注</label>\n' +
-        '            <label class="bet-sum">总计：<span>0</span></label>\n' +
+        '            <label class="bet-sum">共投：<span class="bet-num">0</span>注</label>\n' +
+        '            <label class="bet-sum">总计：<span class="bet-price">0</span></label>\n' +
         '          </div>\n' +
         '          <div class="bet-content bet-footer">\n' +
         '            <button class="withdrawal">撤单</button>\n' +
@@ -411,8 +411,8 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         '            </span>\n' +
         '          </div>\n' +
         '          <div class="bet-content bet-sum-box">\n' +
-        '            <label class="bet-sum">共投：<span>0</span>注</label>\n' +
-        '            <label class="bet-sum">总计：<span>0</span></label>\n' +
+        '            <label class="bet-sum">共投：<span class="bet-num">0</span>注</label>\n' +
+        '            <label class="bet-sum">总计：<span class="bet-price">0</span></label>\n' +
         '          </div>\n' +
         '          <div class="bet-content bet-footer">\n' +
         '            <button class="withdrawal">撤单</button>\n' +
