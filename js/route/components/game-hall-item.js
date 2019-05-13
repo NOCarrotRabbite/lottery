@@ -309,49 +309,48 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         '             </svg>\n' +
         '           </span> \n' +
         '          </header>\n' +
-        '          <div class="bet-content bet-tip">\n' +
-        '            中奖和值： <span>[0,1,2,3,4]</span>\n' +
+        '          <div class="bet-content bet-tip" id="type-two-tip">\n' +
         '          </div>\n' +
         '          <main class="main-value-box">\n' +
         '            <ul class="main-value">\n' +
-        '              <li><p>00</p><p>300</p></li>\n' +
-        '              <li><p>01</p><p>100</p></li>\n' +
-        '              <li><p>02</p><p>50</p></li>\n' +
-        '              <li><p>03</p><p>30</p></li>\n' +
-        '              <li><p>04</p><p>20</p></li>\n' +
+        '              <li class="type-two"><p>00</p><p>300</p></li>\n' +
+        '              <li class="type-two"><p>01</p><p>100</p></li>\n' +
+        '              <li class="type-two"><p>02</p><p>50</p></li>\n' +
+        '              <li class="type-two"><p>03</p><p>30</p></li>\n' +
+        '              <li class="type-two"><p>04</p><p>20</p></li>\n' +
         '            </ul>\n' +
         '            <ul class="main-value">\n' +
-        '              <li><p>05</p><p>18</p></li>\n' +
-        '              <li><p>06</p><p>16</p></li>\n' +
-        '              <li><p>07</p><p>15</p></li>\n' +
-        '              <li><p>08</p><p>14</p></li>\n' +
-        '              <li><p>09</p><p>13</p></li>\n' +
+        '              <li class="type-two"><p>05</p><p>18</p></li>\n' +
+        '              <li class="type-two"><p>06</p><p>16</p></li>\n' +
+        '              <li class="type-two"><p>07</p><p>15</p></li>\n' +
+        '              <li class="type-two"><p>08</p><p>14</p></li>\n' +
+        '              <li class="type-two"><p>09</p><p>13</p></li>\n' +
         '            </ul>\n' +
         '            <ul class="main-value">\n' +
-        '              <li><p>10</p><p>12</p></li>\n' +
-        '              <li><p>11</p><p>12</p></li>\n' +
-        '              <li><p>12</p><p>11</p></li>\n' +
-        '              <li><p>13</p><p>11</p></li>\n' +
-        '              <li><p>14</p><p>11</p></li>\n' +
+        '              <li class="type-two"><p>10</p><p>12</p></li>\n' +
+        '              <li class="type-two"><p>11</p><p>12</p></li>\n' +
+        '              <li class="type-two"><p>12</p><p>11</p></li>\n' +
+        '              <li class="type-two"><p>13</p><p>11</p></li>\n' +
+        '              <li class="type-two"><p>14</p><p>11</p></li>\n' +
         '            </ul>\n' +
         '            <ul class="main-value">\n' +
-        '              <li><p>15</p><p>11</p></li>\n' +
-        '              <li><p>16</p><p>12</p></li>\n' +
-        '              <li><p>17</p><p>12</p></li>\n' +
-        '              <li><p>18</p><p>13</p></li>\n' +
-        '              <li><p>19</p><p>14</p></li>\n' +
+        '              <li class="type-two"><p>15</p><p>11</p></li>\n' +
+        '              <li class="type-two"><p>16</p><p>12</p></li>\n' +
+        '              <li class="type-two"><p>17</p><p>12</p></li>\n' +
+        '              <li class="type-two"><p>18</p><p>13</p></li>\n' +
+        '              <li class="type-two"><p>19</p><p>14</p></li>\n' +
         '            </ul>\n' +
         '            <ul class="main-value">\n' +
-        '              <li><p>20</p><p>15</p></li>\n' +
-        '              <li><p>21</p><p>16</p></li>\n' +
-        '              <li><p>22</p><p>18</p></li>\n' +
-        '              <li><p>23</p><p>20</p></li>\n' +
-        '              <li><p>24</p><p>30</p></li>\n' +
+        '              <li class="type-two"><p>20</p><p>15</p></li>\n' +
+        '              <li class="type-two"><p>21</p><p>16</p></li>\n' +
+        '              <li class="type-two"><p>22</p><p>18</p></li>\n' +
+        '              <li class="type-two"><p>23</p><p>20</p></li>\n' +
+        '              <li class="type-two"><p>24</p><p>30</p></li>\n' +
         '            </ul>\n' +
         '            <ul class="main-value main-value-last">\n' +
-        '              <li><p>25</p><p>50</p></li>\n' +
-        '              <li class="right"><p>26</p><p>100</p></li>\n' +
-        '              <li class="right"><p>27</p><p>300</p></li>\n' +
+        '              <li class="type-two"><p>25</p><p>50</p></li>\n' +
+        '              <li class="type-two right"><p>26</p><p>100</p></li>\n' +
+        '              <li class="type-two right"><p>27</p><p>300</p></li>\n' +
         '            </ul>\n' +
         '          </main>\n' +
         '          <div class="bet-content bet-console">\n' +
@@ -393,14 +392,13 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         '             </svg>\n' +
         '           </span> \n' +
         '          </header>\n' +
-        '          <div class="bet-content bet-tip">\n' +
-        '          中奖和值： <span>[0,1,2,3,4]</span>\n' +
+        '          <div class="bet-content bet-tip" id="type-three-tip">\n' +
         '          </div>\n' +
         '          <main class="main-value-box">\n' +
-        '            <ul class="main-value">\n' +
-        '              <li><p class="double">对</p><p>3.00</p></li>\n' +
-        '              <li><p class="along">顺</p><p>15.00</p></li>\n' +
-        '              <li><p class="leopard">豹</p><p>50.00</p></li>\n' +
+        '            <ul class="main-value main-value-three">\n' +
+        '              <li class="type-three"><p class="double">对</p><p>3.00</p></li>\n' +
+        '              <li class="type-three"><p class="along">顺</p><p>15.00</p></li>\n' +
+        '              <li class="type-three"><p class="leopard">豹</p><p>50.00</p></li>\n' +
         '            </ul>\n' +
         '          </main>\n' +
         '          <div class="bet-content bet-console">\n' +
