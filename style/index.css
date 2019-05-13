@@ -1372,7 +1372,10 @@ footer .active {
   padding: 1rem 0;
   height: 7.5rem;
 }
-.main-value .type-one {
+.main-value-three {
+  height: 9rem;
+}
+.main-value .type-one, .main-value .type-two, .main-value .type-three {
   padding: 1rem 0.5rem;
 }
 .main-value .active {
