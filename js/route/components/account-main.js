@@ -1,4 +1,4 @@
-SPA_RESOLVE_INIT = function(transition) {
+SPA_RESOLVE_INIT = function(transition, sigal) {
   $('#footer').show()
   $('#header').html('<span class="size-36">我的账户</span>')
   $('#header').css('justify-content', 'center')
