@@ -1,7 +1,7 @@
-SPA_RESOLVE_INIT = function(transition) {
-  $('#footer').show()
-  $('#header').html('<span class="size-36">我的账户</span>')
-  $('#header').css('justify-content', 'center')
+SPA_RESOLVE_INIT = function(transition, sigal) {
+  $('#footer').show();
+  $('#header').html('<span class="size-36">我的账户</span>');
+  $('#header').css('justify-content', 'center');
   $('#main').html(
     '\n' +
       '    <div class="account">\n' +
@@ -98,6 +98,6 @@ SPA_RESOLVE_INIT = function(transition) {
       '        </a>\n' +
       '      </ul>\n' +
       '    </div>'
-  )
+  );
   $.addPageScript('js/account-main.js', sigal);
-}
+};
