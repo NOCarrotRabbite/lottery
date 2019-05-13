@@ -18,7 +18,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '<ul class="mobile-bind-form">\n' +
       ' <li>\n' +
       ' <span>手机号码</span>\n' +
-      ' <input type="text" class="mobile-num" />\n' +
+      ' <input type="text" class="mobile-num" placeholder="请输入手机号码" />\n' +
       '  <svg class="icon close-icon" aria-hidden="true">\n' +
       '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '              </svg>\n' +
@@ -26,7 +26,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '<li>\n' +
       '<span>验证码&emsp;</span>\n' +
       '<div class="code">\n' +
-      '<input type="password" class="mobile-code"/>\n' +
+      '<input type="password" class="mobile-code" placeholder="请输入验证码" />\n' +
       '  <svg class="icon  close-icon2" aria-hidden="true">\n' +
       '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '              </svg>\n' +
@@ -34,7 +34,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '<button class="get-code">获取验证码</button>\n' +
       '</li>\n' +
       '<li class="mobile-bind-submit">\n' +
-      '<button>确认绑定</button>\n' +
+      '<button class="form-submit">确认绑定</button>\n' +
       '</li>\n' +
       ' </ul>\n' +
       '</div>\n'

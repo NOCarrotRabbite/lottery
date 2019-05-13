@@ -22,7 +22,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '<img src="" alt="" class="header-img" />\n' +
       '<p>林</p>\n' +
       '<div class="personal-center-header-btn">\n' +
-      ' <a href="#/charge">充值</a> <a href="#/withdraw-deposit">提现</a>\n' +
+      ' <a href="#/charge?code=1">充值</a> <a href="#/withdraw-deposit">提现</a>\n' +
       '</div>\n' +
       ' </div>\n' +
       '<ul class="personal-center-content">\n' +

@@ -3,7 +3,7 @@
     window.location.href = '#/recharge-record';
   });
   $('.service-btn').on('click', function() {
-    window.location.href = '#/customer';
+    window.location.href = '#/customer?code=1';
   });
   $('.alipay').on('click', function() {
     /*  window.location.href = '#/customer'; */

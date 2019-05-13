@@ -18,27 +18,27 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '<ul class="set-withdraw-deposit-pwd-form public-set-form">\n' +
       '<li>\n' +
       '  <span>旧提现密码</span>\n' +
-      ' <input type="text" class="old-pwd" />\n' +
+      ' <input type="text" class="old-pwd" placeholder="请输入旧提现密码" />\n' +
       '  <svg class="icon detail-icon" aria-hidden="true">\n' +
       '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '              </svg>\n' +
       ' </li>\n' +
       ' <li>\n' +
       '<span>新提现密码</span>\n' +
-      ' <input type="text" class="new-pwd" />\n' +
+      ' <input type="text" class="new-pwd" placeholder="请输入新提现密码" />\n' +
       '  <svg class="icon detail-icon" aria-hidden="true">\n' +
       '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '              </svg>\n' +
       '  </li>\n' +
       ' <li>\n' +
       ' <span>重复新密码</span>\n' +
-      ' <input type="text" class="repetition-pwd" />\n' +
+      ' <input type="text" class="repetition-pwd" placeholder="请再次输入密码" />\n' +
       '  <svg class="icon detail-icon" aria-hidden="true">\n' +
       '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '              </svg>\n' +
       '  </li>\n' +
       '<li class="set-withdraw-deposit-pwd-submit public-set-submit">\n' +
-      '<button>确 定</button>\n' +
+      '<button class="form-submit">确 定</button>\n' +
       ' </li>\n' +
       ' </ul>\n' +
       ' </div>\n'

@@ -16,13 +16,40 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
   $('#main').html(
     '\n' +
       '    <div class="account-details">\n' +
+      '      <ul class="account-details-list">\n' +
+      '        <li class="size-28">\n' +
+      '          <span>时间</span>\n' +
+      '          <span class="public-records-border">金额</span>\n' +
+      '          <span>彩种</span>\n' +
+      '        </li>\n' +
+      '        <li>\n' +
+      '          <span>2019-04-24 14:01</span>\n' +
+      '          <span>1000.00</span>\n' +
+      '          <span>北京幸运28</span>\n' +
+      '        </li>\n' +
+      '        <li>\n' +
+      '          <span>2019-04-24 14:01</span>\n' +
+      '          <span>1000.00</span>\n' +
+      '          <span>北京幸运28</span>\n' +
+      '        </li>\n' +
+      '        <li>\n' +
+      '          <span>2019-04-24 14:01</span>\n' +
+      '          <span>1000.00</span>\n' +
+      '          <span>北京幸运28</span>\n' +
+      '        </li>\n' +
+      '        <li>\n' +
+      '          <span>2019-04-24 14:01</span>\n' +
+      '          <span>1000.00</span>\n' +
+      '          <span>北京幸运28</span>\n' +
+      '        </li>\n' +
+      '      </ul>\n' +
       '      <div class="screen">\n' +
       '        <div class="screen-kind">\n' +
       '          筛选时间：\n' +
       '          <div class="choice-date">\n' +
-      '            <input type="text" class="date" placeholder="请选择日期" />\n' +
+      '            <input type="text" class="date begin-date" placeholder="请选择日期" />\n' +
       '            <span>-</span>\n' +
-      '            <input type="text" class="date" placeholder="请选择日期" />\n' +
+      '            <input type="text" class="date end-date" placeholder="请选择日期" />\n' +
       '          </div>\n' +
       '        </div>\n' +
       '        <div class="screen-kind">\n' +

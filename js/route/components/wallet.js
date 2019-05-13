@@ -2,7 +2,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
   $('#footer').hide();
   $('#header').html(
     '\n' +
-      '       <a href="#/account" class="back">\n' +
+      '       <a href="javascript:window.history.go(-1)" class="back">\n' +
       '         <svg class="icon" aria-hidden="true">\n' +
       '           <use xlink:href="#icon-fanhui"></use>\n' +
       '         </svg>\n' +
@@ -40,7 +40,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '\t         </svg>我的银行卡</span>\n' +
       '          </li>\n' +
       '        </a>\n' +
-      '        <a href="#/charge">\n' +
+      '        <a href="#/charge?code=1">\n' +
       '          <li>\n' +
       '            <span>      \t\n' +
       '\t         <svg class="icon" aria-hidden="true">\n' +

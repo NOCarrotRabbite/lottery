@@ -2,7 +2,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
   $('#footer').hide();
   $('#header').html(
     '\n' +
-      '       <a href="#/my-wallet" class="back">\n' +
+      '       <a href="javascript:window.history.go(-1)" class="back">\n' +
       '         <svg class="icon" aria-hidden="true">\n' +
       '           <use xlink:href="#icon-fanhui"></use>\n' +
       '         </svg>\n' +
@@ -19,15 +19,15 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       ' <ul class="withdraw-deposit-form">\n' +
       ' <li>\n' +
       '<span>真实姓名</span>\n' +
-      '<span class="color-red">林玲</span>\n' +
+      '<span class="color-red name">林玲</span>\n' +
       ' </li>\n' +
       '<li>\n' +
       ' <span>银行名称</span>\n' +
-      '<span class="color-red">中国农业银行</span>\n' +
+      '<span class="color-red  bank">中国农业银行</span>\n' +
       ' </li>\n' +
       ' <li>\n' +
       '<span>卡号账号</span>\n' +
-      '<span class="color-red">123456789123456</span>\n' +
+      '<span class="color-red num">123456789123456</span>\n' +
       ' </li>\n' +
       ' <li>\n' +
       ' <span>提现金额</span>\n' +
@@ -44,7 +44,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '              </svg>\n' +
       ' </li>\n' +
       '<li class="withdraw-deposit-submit">\n' +
-      '<button>提 交</button>\n' +
+      '<button class="form-submit">提 交</button>\n' +
       '</li>\n' +
       '</ul>\n' +
       ' </div>'

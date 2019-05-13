@@ -29,7 +29,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '</ul>\n' +
       ' <ul class="bank-recharge-form">\n' +
       '<li>请输入充值金额（元）</li>\n' +
-      '<li><input type="text" /></li>\n' +
+      '<li><input type="text" class="money" /></li>\n' +
       '<li class="hint">网银充值说明：</li>\n' +
       '<li class="hint">\n' +
       ' 1.在首页点击客服选项卡，添加本站财务客服索取具体支付方式。\n' +

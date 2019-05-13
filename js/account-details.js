@@ -1,3 +1,88 @@
+(function() {
+  $(function() {
+    //请求页面数据
+    function queryData() {
+      let data = {
+        beginDate: $('.begin-date').val(),
+        endDate: $('.end-date').val(),
+        kind: $('.kind').text()
+      };
+      /*  $.jsonAjax(API.REG_USER_API, 'POST', data)
+      .then(function(data) {
+        if (data.status == true) {
+          window.location.href = '#/login';
+        }
+      })
+      .catch(function(error) {
+        console.log(error.status);
+      }); */
+    }
+    queryData();
+    let mask_layer = document.querySelector('.mask-layer');
+    let screen = document.querySelector('.screen');
+    let select_kind = document.querySelector('.select-kind');
+    $(function() {
+      //选择筛选时间
+      $('.date').on('click', function() {
+        mask_layer.style.zIndex = '998';
+        $('.ic__datepicker').show();
+      });
+      $('.date').each(function() {
+        $(this).ionDatePicker({
+          lang: 'zh-cn',
+          format: 'YYYY-MM-DD'
+        });
+      });
+    });
+    //点击筛选按钮显示模态框
+    $('.filtrate-btn').on('click', () => {
+      mask_layer.style.zIndex = 1;
+      screen.style.zIndex = 2;
+    });
+    //点击蒙层隐藏对应内容
+    $('.mask-layer').on('click', () => {
+      if (mask_layer.style.zIndex == '998') {
+        mask_layer.style.zIndex = '1';
+        select_kind.style.zIndex = -3;
+      } else {
+        screen.style.zIndex = -1;
+        mask_layer.style.zIndex = -2;
+        select_kind.style.zIndex = -3;
+      }
+    });
+    //选择彩种
+    $('.kind').on('click', () => {
+      select_kind.style.zIndex = '999';
+      mask_layer.style.zIndex = '998';
+    });
+    //确认选中的彩种
+    $('.select-kind li').on('click', function() {
+      let value = $(this)
+        .text()
+        .replace(/\s+/g, '');
+      $('.select-kind li .radio-bg').removeClass('active');
+      $(this)
+        .find('.radio-bg')
+        .addClass('active');
+      $('.kind').text(value);
+      mask_layer.style.zIndex = '1';
+      select_kind.style.zIndex = -3;
+    });
+    //取消筛选
+    $('.close').on('click', () => {
+      mask_layer.style.zIndex = -2;
+      screen.style.zIndex = -1;
+      select_kind.style.zIndex = -3;
+    });
+    //确定筛选
+    $('.submit').on('click', () => {
+      queryData();
+      mask_layer.style.zIndex = -2;
+      screen.style.zIndex = -1;
+      select_kind.style.zIndex = -3;
+    });
+  });
+})();
 !function(t) {
   function e(t, e) {
     return function(n) {
@@ -1741,68 +1826,3 @@
     }
   };
 })(jQuery);
-
-(function() {
-  let mask_layer = document.querySelector('.mask-layer');
-  let screen = document.querySelector('.screen');
-  let select_kind = document.querySelector('.select-kind');
-  $(function() {
-    //选择筛选时间
-    $('.date').on('click', function() {
-      mask_layer.style.zIndex = '998';
-      $('.ic__datepicker').show();
-    });
-    $('.date').each(function() {
-      $(this).ionDatePicker({
-        lang: 'zh-cn',
-        format: 'YYYY-MM-DD'
-      });
-    });
-  });
-  //点击筛选按钮显示模态框
-  $('.filtrate-btn').on('click', () => {
-    mask_layer.style.zIndex = 1;
-    screen.style.zIndex = 2;
-  });
-  //点击蒙层隐藏对应内容
-  $('.mask-layer').on('click', () => {
-    if (mask_layer.style.zIndex == '998') {
-      mask_layer.style.zIndex = '1';
-      select_kind.style.zIndex = -3;
-    } else {
-      screen.style.zIndex = -1;
-      mask_layer.style.zIndex = -2;
-      select_kind.style.zIndex = -3;
-    }
-  });
-  //选择彩种
-  $('.kind').on('click', () => {
-    select_kind.style.zIndex = '999';
-    mask_layer.style.zIndex = '998';
-  });
-  //确认选中的彩种
-  $('.select-kind li').on('click', function() {
-    let value = $(this)
-      .text()
-      .replace(/\s+/g, '');
-    $('.select-kind li .radio-bg').removeClass('active');
-    $(this)
-      .find('.radio-bg')
-      .addClass('active');
-    $('.kind').text(value);
-    mask_layer.style.zIndex = '1';
-    select_kind.style.zIndex = -3;
-  });
-  //取消筛选
-  $('.close').on('click', () => {
-    mask_layer.style.zIndex = -2;
-    screen.style.zIndex = -1;
-    select_kind.style.zIndex = -3;
-  });
-  //确定筛选
-  $('.submit').on('click', () => {
-    mask_layer.style.zIndex = -2;
-    screen.style.zIndex = -1;
-    select_kind.style.zIndex = -3;
-  });
-})();

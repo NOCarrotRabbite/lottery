@@ -29,7 +29,7 @@ $.extend({
     }
   },
   inputClear: function(className, classIcon) {
-    className.on('input', function () {
+    className.on('input', function() {
       let value = className.val();
       if (value) {
         classIcon.show();
@@ -37,7 +37,7 @@ $.extend({
         classIcon.hide();
       }
     });
-    classIcon.on('click', function (){
+    classIcon.on('click', function() {
       className.val('');
       classIcon.hide();
     });
@@ -52,11 +52,15 @@ $.extend({
       };
       document.addEventListener('copy', save);
       document.execCommand('Copy');
-      $('.msg-box').text(msg);
-      $('.msg-box').show(400);
-      setTimeout(function() {
-        $('.msg-box').hide(400);
-      }, 2000);
+      $.messageBox(msg);
     });
+  },
+  //提示框
+  messageBox: function(msg) {
+    $('.msg-box').text(msg);
+    $('.msg-box').show(500);
+    setTimeout(function() {
+      $('.msg-box').hide(500);
+    }, 1600);
   }
 });

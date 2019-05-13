@@ -26,27 +26,27 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '  <svg class="icon" aria-hidden="true">\n' +
       '<use xlink:href="#icon-liulanqi"></use>\n' +
       '</svg>平台官网：\n' +
-      '<span class="color-red">http:www.douyin898</span>\n' +
+      '<span class="color-red url-text">http:www.douyin898</span>\n' +
       '</span>\n' +
-      ' <span class="about-us-copy">复制</span>\n' +
+      ' <span class="about-us-copy copy-url">复制</span>\n' +
       '   </li>\n' +
       '  <li>\n' +
       '  <span>\n' +
       ' <svg class="icon" aria-hidden="true">\n' +
       '<use xlink:href="#icon-kefu4"></use>\n' +
       '</svg>客服 QQ：\n' +
-      ' <span class="color-red">123456</span>\n' +
+      ' <span class="color-red qq-num">123456</span>\n' +
       '</span>\n' +
-      ' <span class="about-us-copy">复制</span>\n' +
+      ' <span class="about-us-copy qq-copy">复制</span>\n' +
       ' </li>\n' +
       '<li>\n' +
       '<span>\n' +
       '<svg class="icon" aria-hidden="true">\n' +
       '<use xlink:href="#icon-weixin"></use>\n' +
       '</svg>客服微信：\n' +
-      '<span class="color-red">WX123456</span>\n' +
+      '<span class="color-red we-chat-num">WX123456</span>\n' +
       ' </span>\n' +
-      '<span class="about-us-copy">复制</span>\n' +
+      '<span class="about-us-copy we-chat-copy">复制</span>\n' +
       ' </li>\n' +
       '</ul>\n' +
       '<div class="about-us-code">\n' +

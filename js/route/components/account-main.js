@@ -13,11 +13,11 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '      <ul class="balance">\n' +
       '        <li>\n' +
       '          <p>余额</p>\n' +
-      '          <p>0.0元宝</p>\n' +
+      '          <p>0.0 元宝</p>\n' +
       '        </li>\n' +
       '        <li>\n' +
       '          <p>今日盈亏</p>\n' +
-      '          <p>0.0</p>\n' +
+      '          <p>0.0 元宝</p>\n' +
       '        </li>\n' +
       '      </ul>\n' +
       '      <ul class="user-menu">\n' +

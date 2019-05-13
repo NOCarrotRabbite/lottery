@@ -519,13 +519,41 @@ footer .active {
 .account-details {
   width: 100%;
   height: 100%;
-  padding: 0.4rem;
+  padding: 1rem;
   box-sizing: border-box;
   background: #f4f4f4;
   display: flex;
   flex-direction: column;
   color: #888;
   /*  font-size: 0.8rem; */
+}
+.account-details-list {
+  flex: 1;
+}
+.account-details-list li {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+.account-details-list .public-records-border {
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+.account-details-list li span {
+  font-size: 1.6rem;
+  display: inline-block;
+  width: 33%;
+  /* font-size: 0.6rem; */
+  padding: 1rem 0;
+}
+.account-details-list li:nth-child(1) {
+  background: #e9594a;
+  color: #fff;
+}
+.account-details-list li:nth-child(1) span {
+  padding: 1.2rem 0;
+  font-size: 1.866rem;
 }
 .account-details .filtrate-btn {
   background: #ccc;
@@ -890,7 +918,7 @@ footer .active {
 .mobile-bind li .get-code {
   font-size: 1.6rem;
   flex: 1;
-  padding: 1.2rem 1rem;
+  padding: 1.2rem 0;
   background: #999;
   color: #fff;
   margin-left: 1rem;
