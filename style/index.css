@@ -1,14 +1,17 @@
 /*  框架样式开始 */
 body {
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 main {
   flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
   overflow: scroll;
   position: relative;
-  background-color: #fff;
+  /*background-color: #fff;*/
 }
 footer {
   background-color: #fff;
