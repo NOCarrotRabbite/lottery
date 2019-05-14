@@ -31,14 +31,14 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       ' </li>\n' +
       ' <li>\n' +
       ' <span>提现金额</span>\n' +
-      ' <input type="text" class="money" />\n' +
+      ' <input type="text" class="money" placeholder="请输入提现金额" />\n' +
       '  <svg class="icon detail-icon" aria-hidden="true">\n' +
       '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '              </svg>\n' +
       ' </li>\n' +
       ' <li>\n' +
       '<span>提现密码</span>\n' +
-      '<input type="text" class="password" />\n' +
+      '<input type="text" class="password" placeholder="请输入提现密码" />\n' +
       '  <svg class="icon detail-icon" aria-hidden="true">\n' +
       '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '              </svg>\n' +
