@@ -15,7 +15,7 @@
           console.log('data', data);
         })
         .catch(function(error) {
-          console.log('11111', error.status);
+          console.log(error.status);
         });
     });
     $.inputClear($('.user'), $('.user').next());
