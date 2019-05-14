@@ -5,8 +5,8 @@ body {
   justify-content: space-between;
 }
 main {
-  flex: 1;
-  /*  flex-grow: 1; */
+  /* flex: 1; */
+  flex-grow: 1 !important;
   overflow: scroll;
   position: relative;
 }
