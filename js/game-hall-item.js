@@ -1,5 +1,12 @@
 (function () {
     $(function () {
+        let param = { "hall_id": "1"};
+        // 进入投注小厅加载相关数据
+        $.jsonAjax(API.REG_USER_API, 'POST', param).then(function (data) {
+            console.log(data);
+        }).catch(function (error) {
+
+        });
         document.getElementById('resulst-icon').onclick = function() {
             $('#records-box').toggle();
         };
