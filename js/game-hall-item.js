@@ -35,6 +35,7 @@
                 }
             }
         });
+
         // 左右滑动进行卡片的切换
         let slider = {
             // 判断设备是否支持touch事件
@@ -211,10 +212,60 @@
             }
             alert('投注金额不可为空');
         });
-        
+
         // 投注按钮点击事件
         $('.bet-footer .betting').on('click', function () {
-            
+            $('.bet-hidden').toggle();
+            let now = new Date();
+            /*let _html_bet = '<div class="message-box">\n' +
+                '          <p>' + now + '</p>\n' +
+                '          <div class="message">\n' +
+                '            <div class="head-image"></div>\n' +
+                '            <div class="message-content-box">\n' +
+                '              <p class="name">不吃胡萝卜兔子</p>\n' +
+                '              <ul class="message-content">\n' +
+                '                <li class="item01">\n' +
+                '                  <span>\n' +
+                '                    <svg class="icon" aria-hidden="true">\n' +
+                '                      <use xlink:href="#icon-zhanghu1"></use>\n' +
+                '                    </svg>\n' +
+                '                    <span>949364期</span>\n' +
+                '                  </span>\n' +
+                '                  <span>总计： <span>' + $('#bet-price').text() + '</span></span>\n' +
+                '                </li>\n' +
+                '                <li class="item02">\n' +
+                '                  <span>投注： <span>' + $('#bet-num').text() + '</span></span>\n' +
+                '                  <span>金额： <span>' + $('#bet-price').text() + '</span></span>\n' +
+                '                </li>\n' +
+                '              </ul>\n' +
+                '            </div>\n' +
+                '          </div>\n' +
+                '        </div>\n';*/
+            let _html_bet = '<div class="message-box">\n' +
+                '          <p>' + $.dateFtt('yyyy-MM-dd hh:mm:ss', now) + '</p>\n' +
+                '          <div class="self-message">\n' +
+                '            <div class="head-image"></div>\n' +
+                '            <div class="message-content-box">\n' +
+                '              <p class="name">不吃西红柿兔子</p>\n' +
+                '              <ul class="message-content">\n' +
+                '                <li class="item01">\n' +
+                '                  <span>\n' +
+                '                    <svg class="icon" aria-hidden="true">\n' +
+                '                      <use xlink:href="#icon-zhanghu1"></use>\n' +
+                '                    </svg>\n' +
+                '                    <span>949364期</span>\n' +
+                '                  </span>\n' +
+                '                  <span>总计： <span>' + $('#bet-price').text() + '</span></span>\n' +
+                '                </li>\n' +
+                '                <li class="item02">\n' +
+                '                  <span>投注： <span>' + $('#bet-num').text() + '</span></span>\n' +
+                '                  <span>金额： <span>' + $('#bet-price').text() + '</span></span>\n' +
+                '                </li>\n' +
+                '              </ul>\n' +
+                '            </div>\n' +
+                '          </div>\n' +
+                '        </div>   \n';
+            $('#item-gamer-bet').append(_html_bet);
         });
     });
     // type-one 中奖值过滤函数

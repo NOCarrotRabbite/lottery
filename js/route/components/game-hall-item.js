@@ -56,133 +56,13 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         '         </svg>\n' +
         '        </li>\n' +
         '      </ul>\n' +
-        '      <div class="item-gamer-bet">\n' +
+        '      <div class="item-gamer-bet" id="item-gamer-bet">\n' +
         '        <div class="enter-tip">\n' +
         '          *** 游戏房间加入成功 ***\n' +
         '        </div>\n' +
-        '        <div class="message-box">\n' +
-        '          <p>2019-04-30 11:49</p>\n' +
-        '          <div class="message">\n' +
-        '            <div class="head-image"></div>\n' +
-        '            <div class="message-content-box">\n' +
-        '              <p class="name">不吃胡萝卜兔子</p>\n' +
-        '              <ul class="message-content">\n' +
-        '                <li class="item01">\n' +
-        '                  <span>\n' +
-        '                    <svg class="icon" aria-hidden="true">\n' +
-        '                      <use xlink:href="#icon-zhanghu1"></use>\n' +
-        '                    </svg>\n' +
-        '                    <span>949364期</span>\n' +
-        '                  </span>\n' +
-        '                  <span>总计： <span>90</span></span>\n' +
-        '                </li>\n' +
-        '                <li class="item02">\n' +
-        '                  <span>投注： <span>17</span></span>\n' +
-        '                  <span>金额： <span>90</span></span>\n' +
-        '                </li>\n' +
-        '              </ul>\n' +
-        '            </div>\n' +
-        '          </div>\n' +
-        '        </div>\n' +
-        '        <div class="message-box">\n' +
-        '          <p>2019-04-30 11:49</p>\n' +
-        '          <div class="self-message">\n' +
-        '            <div class="head-image"></div>\n' +
-        '            <div class="message-content-box">\n' +
-        '              <p class="name">不吃西红柿兔子</p>\n' +
-        '              <ul class="message-content">\n' +
-        '                <li class="item01">\n' +
-        '                  <span>\n' +
-        '                    <svg class="icon" aria-hidden="true">\n' +
-        '                      <use xlink:href="#icon-zhanghu1"></use>\n' +
-        '                    </svg>\n' +
-        '                    <span>949364期</span>\n' +
-        '                  </span>\n' +
-        '                  <span>总计： <span>90</span></span>\n' +
-        '                </li>\n' +
-        '                <li class="item02">\n' +
-        '                  <span>投注： <span>17</span></span>\n' +
-        '                  <span>金额： <span>90</span></span>\n' +
-        '                </li>\n' +
-        '              </ul>\n' +
-        '            </div>\n' +
-        '          </div>\n' +
-        '        </div>   \n' +
-        '        <div class="message-box">\n' +
-        '          <p>2019-04-30 11:49</p>\n' +
-        '          <div class="message">\n' +
-        '            <div class="head-image"></div>\n' +
-        '            <div class="message-content-box">\n' +
-        '              <p class="name">不吃猪油兔子</p>\n' +
-        '              <ul class="message-content">\n' +
-        '                <li class="item01">\n' +
-        '                  <span>\n' +
-        '                    <svg class="icon" aria-hidden="true">\n' +
-        '                      <use xlink:href="#icon-zhanghu1"></use>\n' +
-        '                    </svg>\n' +
-        '                    <span>949364期</span>\n' +
-        '                  </span>\n' +
-        '                  <span>总计： <span>90</span></span>\n' +
-        '                </li>\n' +
-        '                <li class="item02">\n' +
-        '                  <span>投注： <span>17</span></span>\n' +
-        '                  <span>金额： <span>90</span></span>\n' +
-        '                </li>\n' +
-        '              </ul>\n' +
-        '            </div>\n' +
-        '          </div>\n' +
-        '        </div> \n' +
-        '        <div class="message-box">\n' +
-        '          <p>2019-04-30 11:49</p>\n' +
-        '          <div class="message">\n' +
-        '            <div class="head-image"></div>\n' +
-        '            <div class="message-content-box">\n' +
-        '              <p class="name">不吃猪油兔子</p>\n' +
-        '              <ul class="message-content">\n' +
-        '                <li class="item01">\n' +
-        '                  <span>\n' +
-        '                    <svg class="icon" aria-hidden="true">\n' +
-        '                      <use xlink:href="#icon-zhanghu1"></use>\n' +
-        '                    </svg>\n' +
-        '                    <span>949364期</span>\n' +
-        '                  </span>\n' +
-        '                  <span>总计： <span>90</span></span>\n' +
-        '                </li>\n' +
-        '                <li class="item02">\n' +
-        '                  <span>投注： <span>17</span></span>\n' +
-        '                  <span>金额： <span>90</span></span>\n' +
-        '                </li>\n' +
-        '              </ul>\n' +
-        '            </div>\n' +
-        '          </div>\n' +
-        '        </div>      \n' +
-        '        <div class="message-box">\n' +
-        '          <p>2019-04-30 11:49</p>\n' +
-        '          <div class="message">\n' +
-        '            <div class="head-image"></div>\n' +
-        '            <div class="message-content-box">\n' +
-        '              <p class="name">不吃猪油兔子</p>\n' +
-        '              <ul class="message-content">\n' +
-        '                <li class="item01">\n' +
-        '                  <span>\n' +
-        '                    <svg class="icon" aria-hidden="true">\n' +
-        '                      <use xlink:href="#icon-zhanghu1"></use>\n' +
-        '                    </svg>\n' +
-        '                    <span>949364期</span>\n' +
-        '                  </span>\n' +
-        '                  <span>总计： <span>90</span></span>\n' +
-        '                </li>\n' +
-        '                <li class="item02">\n' +
-        '                  <span>投注： <span>17</span></span>\n' +
-        '                  <span>金额： <span>90</span></span>\n' +
-        '                </li>\n' +
-        '              </ul>\n' +
-        '            </div>\n' +
-        '          </div>\n' +
-        '        </div>          \n' +
-        '        <p class="close">\n' +
+        /*'        <p class="close">\n' +
         '          【949364】 期已封盘，下注结果以系统开奖为标准，如有异议，请及时联系客服\n' +
-        '        </p>\n' +
+        '        </p>\n' +*/
         '        <div class="records-box" id="records-box">\n' +
         '          <ul class="result-records">\n' +
         '            <li class="result-text">\n' +
@@ -278,8 +158,8 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         '            </span>\n' +
         '          </div>\n' +
         '          <div class="bet-content bet-sum-box">\n' +
-        '            <label class="bet-sum">共投：<span class="bet-num">0</span>注</label>\n' +
-        '            <label class="bet-sum">总计：<span class="bet-price">0</span></label>\n' +
+        '            <label class="bet-sum">共投：<span class="bet-num" id="bet-num">0</span>注</label>\n' +
+        '            <label class="bet-sum">总计：<span class="bet-price" id="bet-price">0</span></label>\n' +
         '          </div>\n' +
         '          <div class="bet-content bet-footer">\n' +
         '            <button class="withdrawal">撤单</button>\n' +
