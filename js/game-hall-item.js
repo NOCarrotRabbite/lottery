@@ -211,6 +211,11 @@
             }
             alert('投注金额不可为空');
         });
+        
+        // 投注按钮点击事件
+        $('.bet-footer .betting').on('click', function () {
+            
+        });
     });
     // type-one 中奖值过滤函数
     let filterData = function(item) {
