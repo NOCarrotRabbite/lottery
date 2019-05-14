@@ -267,7 +267,7 @@ body {
   flex: 1;
   padding: 2rem;
   box-sizing: border-box;
-  background: #fff;
+  background: #fff !important;
   display: flex;
   flex-direction: column;
   color: #888;
@@ -286,6 +286,7 @@ body {
 }
 .public-details-content {
   flex: 1;
+  background-color: #fff;
   padding: 0 1rem 1rem 1rem;
 }
 .public-details-content p {

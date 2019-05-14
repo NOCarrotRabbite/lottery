@@ -1,27 +1,27 @@
 /*  框架样式开始 */
 body {
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-main {
+#main {
   flex-grow: 1;
   overflow: scroll;
   position: relative;
   display: flex;
-  /* background-color: #fff; */
 }
-footer {
+#footer {
   background-color: #fff;
   padding: 1rem 0;
 }
-footer ul {
+#footer ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 100%;
 }
-footer ul a {
+#footer ul a {
   color: #787878;
 }
 .nav {

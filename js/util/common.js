@@ -6,9 +6,9 @@ $.extend({
         type: type,
         data: param || '',
         dataType: 'json',
-        /*  beforeSend: function (xhr) {
+        /*beforeSend: function (xhr) {
             xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
-        }, */
+        },*/
         success: function(data) {
           resolve(data);
         },
