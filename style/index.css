@@ -5,10 +5,10 @@ body {
   justify-content: space-between;
 }
 main {
-  flex: 1;
-  /*  flex-grow: 1; */
+  flex-grow: 1;
   overflow: scroll;
   position: relative;
+  background-color: #fff;
 }
 footer {
   background-color: #fff;
