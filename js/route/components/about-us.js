@@ -50,7 +50,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       ' </li>\n' +
       '</ul>\n' +
       '<div class="about-us-code">\n' +
-      '<div class="code"><img class="code-img" src="../images/erweima.jpg" alt="qq" /></div>\n' +
+      '<div class="code"><img class="code-img" src="" alt="qq" /></div>\n' +
       '<p class="code-text">长按保存二维码</p>\n' +
       '  </div>\n' +
       '</div>'

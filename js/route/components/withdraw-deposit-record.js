@@ -2,7 +2,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
   $('#footer').hide();
   $('#header').html(
     '\n' +
-      '       <a href="#/my-wallet" class="back">\n' +
+      '       <a href="javascript:window.history.go(-1)" class="back">\n' +
       '         <svg class="icon" aria-hidden="true">\n' +
       '           <use xlink:href="#icon-fanhui"></use>\n' +
       '         </svg>\n' +
