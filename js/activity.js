@@ -11,9 +11,13 @@
           console.log(error.status);
         }); */
     //tab切换
+    let url = window.location.href;
+    let code = url.substr(url.length - 1);
     let tab_nav = document.querySelectorAll('.tab-nav');
     let tab_content = document.querySelectorAll('.tab-content');
-    let index = 0;
+    let index = code;
+    tab_nav[code].classList.add('active');
+    tab_content[code].classList.add('on');
     for (let i = 0; i < tab_nav.length; i++) {
       tab_nav[i].onclick = function() {
         tab_nav[index].classList.remove('active');
