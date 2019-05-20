@@ -10,9 +10,17 @@
       $.jsonAjax(API.LOGIN_API, 'POST', data)
         .then(function(data) {
           if (data.status == true) {
+            //用户彩金
+            localStorage.setItem('gold', data.data.gold);
+            //昵称
+            localStorage.setItem('nickname', data.data.nickname);
+            //用户余额
+            localStorage.setItem('money', data.data.money);
+            //头像地址
+            localStorage.setItem('url', data.data.url);
+
             window.location.href = '#/index';
           }
-          console.log('data', data);
         })
         .catch(function(error) {
           console.log(error.status);

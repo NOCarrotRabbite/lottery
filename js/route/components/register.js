@@ -1,4 +1,5 @@
 SPA_RESOLVE_INIT = function(transition, sigal) {
+  $('#footer').hide();
   $('#main').html(
     '\n' +
       '<div class="register public-member">\n' +
