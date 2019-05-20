@@ -17,7 +17,9 @@
             //用户余额
             localStorage.setItem('money', data.data.money);
             //头像地址
-            localStorage.setItem('url', data.data.url);
+            localStorage.setItem('headerImg', data.data.url);
+            //电话
+            localStorage.setItem('tel', data.data.user_num);
 
             window.location.href = '#/index';
           }
