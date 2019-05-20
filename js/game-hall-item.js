@@ -1,12 +1,43 @@
 (function () {
+    let interval_id;    // 倒计时定时器id
+    let countdown_time = {};    // 倒计时展示时间
     $(function () {
-        let param = { "hall_id": "1"};
+        let param = { "hall_id": "1", "small_id": "1" };
         // 进入投注小厅加载相关数据
-        $.jsonAjax(API.REG_USER_API, 'POST', param).then(function (data) {
-            console.log(data);
-        }).catch(function (error) {
+        $.jsonAjax(API.GAME_HALL_ITEM_AIP, 'POST', param).then(function (data) {
+            // 初始化期数
+            $('#issue').text(data.new_data[0].iss_number);
+            // 初始化封盘倒计时
+            /*let start_time = new Date(data.new_data[0].start_time);*/
+            let start_time = new Date('2019-05-20 17:30:00');
+            // 计算开盘时间和当前时间的差值
+            let diff = getTimeDiff(start_time, new Date());
+            if (diff.days > 0 || diff.hours > 0 || diff.mins > 5) { // 开盘时间超过五分钟则封盘
+                $('#countdown').text('已封盘');
+            } else {
+                // 计算5分钟的秒数
+                let five_secs = 5 * 60;
+                // 计算diff的秒数
+                let diff_secs_total = diff.mins * 60 + diff.secs;
+                // 计算五分钟和diff的秒数差
+                let secs_diff = five_secs - diff_secs_total;
+                // 计算剩余分钟数
+                countdown_time.mins = Math.floor(secs_diff / 60);
+                // 计算除去分钟数后剩余秒数
+                countdown_time.secs = secs_diff % 60;
+                // 初始化倒计时剩余时间
+                $('#countdown').text(countdown_time.mins + '分钟' + countdown_time.secs + '秒');
+                // 设置定时器，实现倒计时功能
+                interval_id = setInterval(function () {
+                    countdown();
+                }, 1000);
+            }
 
+        }).catch(function (error) {
+            console.log(error);
         });
+
+        // 投注蒙层的显示与隐藏
         document.getElementById('resulst-icon').onclick = function() {
             $('#records-box').toggle();
         };
@@ -19,6 +50,7 @@
         $('.bet-hidden .bet-box').on('click', function(e) {
             e.stopPropagation();
         });
+
         // 点击左右箭头进行卡片的切换
         let i = 1;
         let type_map = { 1: '#bet-first', 2: '#bet-second', 3: '#bet-third' };
@@ -48,7 +80,6 @@
             // 判断设备是否支持touch事件
             touch: ('ontouchstart' in window || window.DocumentTouch && document instanceof DocumentTouch),
             slider: $('.bet-box'),
-
             // 事件
             events: {
                 index: 0,
@@ -120,7 +151,6 @@
                     }
                 }
             },
-
             // 初始化
             init: function () {
                 let self = this;    // this指slider对象
@@ -319,5 +349,42 @@
         } else {
             $('.bet-price').text('0');
         }
+    };
+
+    // 获取两个时间的时间差
+    let getTimeDiff = function (time1, time2) {
+        let start_time = time1.getTime();
+        let now_time = time2.getTime();
+        // 两个时间之间的秒数差总和
+        diff_total = now_time - start_time;
+        // 计算相差天数
+        let day = Math.floor(diff_total / (24 * 3600 * 1000));
+        // 计算小时数
+        let leave1 = diff_total % (24 * 3600 * 1000); // 计算天数后剩余的毫秒数
+        let hours = Math.floor(leave1 / (3600 * 1000));
+        // 获取整分
+        let leave2 = leave1 % (3600 * 1000); // 计算小时数后剩余的毫秒数
+        let minute = Math.floor(leave2 / (60 * 1000));
+        // 获取剩余秒数
+        let leave3 = leave2 % (60 * 1000); // 计算分钟数后剩余的毫秒数
+        let second = leave3 / 1000;
+        return { days: day, hours: hours,  mins: minute, secs: Math.floor(second)};
+    };
+
+    // 封盘倒计时函数
+    let countdown = function () {
+        if(countdown_time.secs > 0) {
+            countdown_time.secs --;
+        }
+        if(countdown_time.secs == 0 && countdown_time.mins > 0) {
+            countdown_time.mins--;
+            countdown_time.secs = 60;
+        }
+        if(countdown_time.mins == 0 && countdown_time.secs == 0) {
+            $('#countdown').text('已封盘');
+            clearInterval(interval_id);
+            return;
+        }
+        $('#countdown').text(countdown_time.mins + '分钟' + countdown_time.secs + '秒');
     };
 })();

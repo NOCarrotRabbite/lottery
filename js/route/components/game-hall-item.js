@@ -24,8 +24,8 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
     $('#main').html('<div class="game-hall-item">\n' +
         '      <ul class="item-info">\n' +
         '        <li class="info-time">\n' +
-        '          <p>距离<span class="black">949163</span>期截止</p>\n' +
-        '          <strong>04分20秒</strong>\n' +
+        '          <p>距离<span class="black" id="issue">949163</span>期截止</p>\n' +
+        '          <strong id="countdown"></strong>\n' +
         '        </li>\n' +
         '        <li class="info-balance">\n' +
         '          <p class="black">\n' +
