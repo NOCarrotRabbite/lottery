@@ -10,10 +10,10 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '      </div>\n' +
       '      <div class="activity-content">\n' +
       '        <div class="tab">\n' +
-      '          <span class="tab-nav active">通知公告</span>\n' +
+      '          <span class="tab-nav">通知公告</span>\n' +
       '          <span class="tab-nav">我的消息</span>\n' +
       '        </div>\n' +
-      '        <ul class="tab-content award on">\n' +
+      '        <ul class="tab-content award">\n' +
       '            <li>\n' +
       '              <span>\n' +
       '                全网返奖率最高1\n' +

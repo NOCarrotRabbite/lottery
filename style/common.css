@@ -392,8 +392,9 @@ body {
 /* 绑定银行卡+修改密码+提现密码 公共样式 结束 */
 /* 登录+注册 公共样式 开始 */
 .public-member {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
+  flex: 1;
   padding: 0 1.5rem;
   box-sizing: border-box;
   background: #e9594a;

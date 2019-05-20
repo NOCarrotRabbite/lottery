@@ -1,14 +1,13 @@
 (function() {
   $(function() {
     $('.register-submit').on('click', () => {
-      console.log('!!!!!!!!');
       let nick_name = $('.name').val();
       let user_num = $('.user').val();
       let password = $('.password').val();
       let data = {
         nick_name: nick_name,
         user_num: user_num,
-        password: password
+        user_password: password
       };
       $.jsonAjax(API.REG_USER_API, 'POST', data)
         .then(function(data) {

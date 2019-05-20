@@ -36,7 +36,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '</li>\n' +
       ' <li>\n' +
       '<span>充值金额</span>\n' +
-      '<input class="money" type="text" />\n' +
+      '<input class="money" type="text" placeholder="请输入充值金额" />\n' +
       '</li>\n' +
       ' <li class="hint">\n' +
       ' <span>充值步骤：</span>\n' +
