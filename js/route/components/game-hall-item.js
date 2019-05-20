@@ -34,7 +34,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         '              <use xlink:href="#icon-shuaxin"></use>\n' +
         '            </svg>\n' +
         '          </p>\n' +
-        '          <strong>0.0元宝</strong>\n' +
+        '          <strong id="balance"></strong>\n' +
         '        </li>\n' +
         '      </ul>\n' +
         '      <ul class="item-result">\n' +

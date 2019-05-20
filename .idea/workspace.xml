@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b492952f-9934-49d0-803b-87aa11e996ac" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/game-hall-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/game-hall-item.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/route/components/game-hall-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/game-hall-item.js" afterDir="false" />
     </list>
@@ -54,7 +53,7 @@
         <counts>
           <entry key="css" value="4591" />
           <entry key="html" value="935" />
-          <entry key="js" value="11295" />
+          <entry key="js" value="11394" />
           <entry key="json" value="2" />
         </counts>
       </usages-collector>
@@ -63,7 +62,7 @@
           <entry key="CSS" value="4591" />
           <entry key="HTML" value="939" />
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="11291" />
+          <entry key="JavaScript" value="11390" />
         </counts>
       </usages-collector>
     </session>
@@ -73,8 +72,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/game-hall-item.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="373" column="14" selection-start-line="373" selection-start-column="14" selection-end-line="373" selection-end-column="14" />
+            <state relative-caret-position="108">
+              <caret line="16" column="77" selection-start-line="16" selection-start-column="77" selection-end-line="16" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -91,8 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/route/components/game-hall-item.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+            <state relative-caret-position="871">
+              <caret line="36" column="38" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -108,7 +107,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.bet-type</find>
       <find>item-bet</find>
       <find>bet-box</find>
       <find>odds-desc</find>
@@ -138,6 +136,7 @@
       <find>.public-details-content</find>
       <find>bet-sum</find>
       <find>diff</find>
+      <find>black</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -302,12 +301,12 @@
       <workItem from="1557828162668" duration="1682000" />
       <workItem from="1557969798162" duration="4433000" />
       <workItem from="1557988234818" duration="48000" />
-      <workItem from="1558316573154" duration="16067000" />
+      <workItem from="1558316573154" duration="17400000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="264923000" />
+    <option name="totallyTimeSpent" value="266256000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -581,15 +580,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/route/components/game-hall-item.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+        <state relative-caret-position="871">
+          <caret line="36" column="38" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/game-hall-item.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="373" column="14" selection-start-line="373" selection-start-column="14" selection-end-line="373" selection-end-column="14" />
+        <state relative-caret-position="108">
+          <caret line="16" column="77" selection-start-line="16" selection-start-column="77" selection-end-line="16" selection-end-column="77" />
         </state>
       </provider>
     </entry>

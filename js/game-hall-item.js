@@ -7,6 +7,8 @@
         $.jsonAjax(API.GAME_HALL_ITEM_AIP, 'POST', param).then(function (data) {
             // 初始化期数
             $('#issue').text(data.new_data[0].iss_number);
+            // 初始化余额
+            $('#balance').text((Number(localStorage.getItem('money')) + Number(localStorage.getItem('gold'))).toFixed(2));
             // 初始化封盘倒计时
             /*let start_time = new Date(data.new_data[0].start_time);*/
             let start_time = new Date('2019-05-20 17:30:00');
