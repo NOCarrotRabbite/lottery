@@ -1,11 +1,24 @@
 SPA_RESOLVE_INIT = function(transition, sigal) {
+    let back_type, title;
+    if (transition.query.hall_type == 1) {
+        back_type = 1;
+        title = '炫彩厅';
+    }
+    if (transition.query.hall_type == 2) {
+        back_type = 2;
+        title = '幻彩厅';
+    }
+    if (transition.query.hall_type == 3) {
+        back_type = 3;
+        title = '瑞彩厅';
+    }
     $('#footer').hide();
-    $('#header').html('<a href="#/game-hall?type=1" class="back">\n' +
+    $('#header').html('<a href="#/game-hall?type=' + back_type + '" class="back">\n' +
         '         <svg class="icon" aria-hidden="true">\n' +
         '           <use xlink:href="#icon-fanhui1"></use>\n' +
         '         </svg>\n' +
         '       </a>\n' +
-        '       <span class="hall-title size-36">炫彩厅</span>\n' +
+        '       <span class="hall-title size-36">' + title + '</span>\n' +
         '       <span>\n' +
         '       <a href="#/index" class="zhuanghu-icon">\n' +
         '         <svg class="icon" aria-hidden="true">\n' +
@@ -24,7 +37,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
     $('#main').html('<div class="game-hall-item">\n' +
         '      <ul class="item-info">\n' +
         '        <li class="info-time">\n' +
-        '          <p>距离<span class="black" id="issue">949163</span>期截止</p>\n' +
+        '          <p id="open-info">暂无数据</p>\n' +
         '          <strong id="countdown"></strong>\n' +
         '        </li>\n' +
         '        <li class="info-balance">\n' +
@@ -37,24 +50,8 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         '          <strong id="balance"></strong>\n' +
         '        </li>\n' +
         '      </ul>\n' +
-        '      <ul class="item-result">\n' +
-        '        <li class="result-text">\n' +
-        '          <span>第 949161 期 </span>\n' +
-        '          <span class="num">0</span>\n' +
-        '          <span>+</span>\n' +
-        '          <span class="num">0</span>\n' +
-        '          <span>+</span>\n' +
-        '          <span class="num">9</span>\n' +
-        '          <span>=</span>\n' +
-        '          <span class="num res">9</span>\n' +
-        '          <span class="num big-small">小</span>\n' +
-        '          <span class="num sigle-double">单</span>\n' +
-        '        </li>\n' +
-        '        <li class="resulst-icon" id="resulst-icon">          \n' +
-        '         <svg class="icon" aria-hidden="true">\n' +
-        '           <use xlink:href="#icon-xiala"></use>\n' +
-        '         </svg>\n' +
-        '        </li>\n' +
+        '      <ul class="item-result" id="item-result">\n' +
+        '      暂无数据\n'+
         '      </ul>\n' +
         '      <div class="item-gamer-bet" id="item-gamer-bet">\n' +
         '        <div class="enter-tip">\n' +
@@ -64,43 +61,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         '          【949364】 期已封盘，下注结果以系统开奖为标准，如有异议，请及时联系客服\n' +
         '        </p>\n' +*/
         '        <div class="records-box" id="records-box">\n' +
-        '          <ul class="result-records">\n' +
-        '            <li class="result-text">\n' +
-        '              <span>第 949161 期 </span>\n' +
-        '              <span class="num">0</span>\n' +
-        '              <span>+</span>\n' +
-        '              <span class="num">0</span>\n' +
-        '              <span>+</span>\n' +
-        '              <span class="num">9</span>\n' +
-        '              <span>=</span>\n' +
-        '              <span class="num res">9</span>\n' +
-        '              <span class="num big-small">小</span>\n' +
-        '              <span class="num sigle-double">单</span>\n' +
-        '            </li>\n' +
-        '            <li class="result-text">\n' +
-        '              <span>第 949161 期 </span>\n' +
-        '              <span class="num">0</span>\n' +
-        '              <span>+</span>\n' +
-        '              <span class="num">0</span>\n' +
-        '              <span>+</span>\n' +
-        '              <span class="num">9</span>\n' +
-        '              <span>=</span>\n' +
-        '              <span class="num res">9</span>\n' +
-        '              <span class="num big-small">小</span>\n' +
-        '              <span class="num sigle-double">单</span>\n' +
-        '            </li>\n' +
-        '            <li class="result-text">\n' +
-        '              <span>第 949161 期 </span>\n' +
-        '              <span class="num">0</span>\n' +
-        '              <span>+</span>\n' +
-        '              <span class="num">0</span>\n' +
-        '              <span>+</span>\n' +
-        '              <span class="num">9</span>\n' +
-        '              <span>=</span>\n' +
-        '              <span class="num res">9</span>\n' +
-        '              <span class="num big-small">小</span>\n' +
-        '              <span class="num sigle-double">单</span>\n' +
-        '            </li>\n' +
+        '          <ul class="result-records" id="result-records">\n' +
         '          </ul>\n' +
         '        </div>\n' +
         '      </div>\n' +
@@ -302,6 +263,9 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         '          </div>\n' +
         '        </div>\n' +
         '      </div>\n' +
+        '      <input type="hidden" id="param"/>\n'+
         '    </div>');
+    $('#param').attr('hall-type', transition.query.hall_type);
+    $('#param').attr('item-type', transition.query.item_type);
     $.addPageScript('js/game-hall-item.js', sigal);
 };
