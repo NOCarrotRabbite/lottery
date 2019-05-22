@@ -1,5 +1,5 @@
 (function () {
-    let interval_id;    // 倒计时定时器id
+    let interval_id = 0;    // 倒计时定时器id
     let countdown_time = {};    // 倒计时展示时间
     let issue;     // 开盘期数
     $(function () {
@@ -276,14 +276,14 @@
         // 保存投注
         $('.betting').on('click', function () {
             let save_bet_data = [];
+            let child_data = { "user_num": localStorage.getItem('tel'), "bet_hall_id": $('#param').attr('hall-type'),
+                "bet_small_id": $('#param').attr('item-type'), "bet_time": $.dateFtt('yyyy-MM-dd hh:mm:ss', new Date()), "bet_money": $('.bet-amount')[0].value, "bet_iss": issue, "bet_type": save_bet_data };
 
             $('.active').each(function () {
                 let bet_value = $(this).children(':first').text();
-                let child_data = { "user_num": localStorage.getItem('tel'), "bet_hall_id": $('#param').attr('hall-type'),
-                    "bet_small_id": $('#param').attr('item-type'), "bet_time": $.dateFtt('yyyy-MM-dd hh:mm:ss', new Date()), "bet_money": $('.bet-amount')[0].value, "bet_iss": issue, "bet_type": bet_value };
-                save_bet_data.push(child_data);
+                child_data.bet_type.push(bet_value);
             });
-            $.jsonAjax(API.SAVE_BET_AIP, 'POST', JSON.stringify(save_bet_data)).then(function (data) {
+            $.jsonAjax(API.SAVE_BET_AIP, 'POST', JSON.stringify(child_data)).then(function (data) {
                 console.log(data);
             }).catch(function (error) {
 
@@ -357,7 +357,7 @@
     };
 
     // 封盘倒计时函数
-    let countdown = function () {
+    let countdown = function (flag) {
         if(countdown_time.secs > 0) {
             countdown_time.secs --;
         }
@@ -369,7 +369,7 @@
             clearInterval(interval_id);
             $('#countdown').text('已封盘');
             // 封盘后延时请求下一次数据
-            if (issue == 2) { // 最后一期则不再请求下一期数据
+            if (flag == 0) { // 最后一期则不再请求下一期数据
                 $('#open-info').html('今日');
                 return;
             }
@@ -382,6 +382,14 @@
 
     // 开盘初始化函数
     let opening = function () {
+        if(('onhashchange' in window) && ((typeof document.documentMode === "undefined") || document.documentMode ==  8)) {
+            window.onhashchange = function() {
+                clearInterval(interval_id);
+                interval_id = null;
+            };
+        } else {
+            clearInterval(interval_id);
+        }
         let hall_type = $('#param').attr('hall-type');
         let item_type = $('#param').attr('item-type');
         let query_param = { "hall_id": hall_type, "small_id": item_type };
@@ -389,7 +397,6 @@
         $.jsonAjax(API.GAME_HALL_ITEM_AIP, 'POST', query_param).then(function (data) {
             // 初始化期数
             issue = data.new_data[0].iss_number;
-            /*$('#issue').text(data.new_data[0].iss_number);*/
 
             // 初始化余额
             $('#balance').text((Number(localStorage.getItem('money')) + Number(localStorage.getItem('gold'))).toFixed(2) + '元宝');
@@ -438,13 +445,13 @@
             // 计算diff的秒数
             let diff_secs_total = diff.mins * 60 + diff.secs;
             if (start_time < new Date()) {  // 已经开盘
-                if (diff.days > 0 || diff.hours > 0 || diff.mins >= data.new_data[0].continue_time) { // 开盘时间超过五分钟则封盘
-                    $('#open-info').html('第<span class="black" id="issue">' + issue + '</span>期');
+                if (diff.days > 0 || diff.hours > 0 || diff.mins >= data.new_data[0].continue_time) { // 开盘时间距离现在超过持续时间则封盘
                     $('#countdown').text('已封盘');
-                    /*if (issue == 2) { // 最后一期则不再请求下一期数据
+                    if (data.new_data[0].period_flag == 0) { // 最后一期则不再请求下一期数据
                         $('#open-info').html('今日');
                         return;
-                    }*/
+                    }
+                    $('#open-info').html('第<span class="black" id="issue">' + issue + '</span>期');
                     // 封盘后延时请求下一次数据
                     setTimeout(opening, 1000);
                 } else {
@@ -461,7 +468,7 @@
                    /* $('#countdown').text(countdown_time.mins + '分钟' + countdown_time.secs + '秒');*/
                     // 设置定时器，实现倒计时功能
                     interval_id = setInterval(function () {
-                        countdown();
+                        countdown(data.new_data[0].period_flag);
                     }, 1000);
                 }
             } else {    // 还未开盘
@@ -478,7 +485,7 @@
                     // 计算除去分钟数后剩余秒数
                     countdown_time.secs = continue_sec % 60;
                     interval_id = setInterval(function () {
-                        countdown();
+                        countdown(data.new_data[0].period_flag);
                     }, 1000);
                 }, diff_secs_total * 1000);
             }
