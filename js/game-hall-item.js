@@ -283,7 +283,7 @@
                 let bet_value = $(this).children(':first').text();
                 child_data.bet_type.push(bet_value);
             });
-            $.jsonAjax(API.SAVE_BET_AIP, 'POST', JSON.stringify(child_data)).then(function (data) {
+            $.jsonAjax(API.SAVE_BET_AIP, 'POST', child_data).then(function (data) {
                 console.log(data);
             }).catch(function (error) {
 
@@ -455,7 +455,6 @@
                     // 封盘后延时请求下一次数据
                     setTimeout(opening, 1000);
                 } else {
-                    $('#open-info').html('距离<span class="black" id="issue">' + issue + '</span>期截止');
                     // 计算开盘持续时间的秒数
                     let five_secs = data.new_data[0].continue_time * 60;
                     // 计算开盘持续时间和diff的秒数差
@@ -464,8 +463,10 @@
                     countdown_time.mins = Math.floor(secs_diff / 60);
                     // 计算除去分钟数后剩余秒数
                     countdown_time.secs = secs_diff % 60;
+                    // 初始化倒计时描述
+                    $('#open-info').html('距离<span class="black" id="issue">' + issue + '</span>期截止');
                     // 初始化倒计时剩余时间
-                   /* $('#countdown').text(countdown_time.mins + '分钟' + countdown_time.secs + '秒');*/
+                   $('#countdown').text(countdown_time.mins + '分钟' + countdown_time.secs + '秒');
                     // 设置定时器，实现倒计时功能
                     interval_id = setInterval(function () {
                         countdown(data.new_data[0].period_flag);
@@ -484,6 +485,8 @@
                     countdown_time.mins = Math.floor(continue_sec / 60);
                     // 计算除去分钟数后剩余秒数
                     countdown_time.secs = continue_sec % 60;
+                    // 初始化倒计时剩余时间
+                    $('#countdown').text(countdown_time.mins + '分钟' + countdown_time.secs + '秒');
                     interval_id = setInterval(function () {
                         countdown(data.new_data[0].period_flag);
                     }, 1000);

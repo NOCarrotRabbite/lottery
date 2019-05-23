@@ -38,7 +38,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         '      <ul class="item-info">\n' +
         '        <li class="info-time">\n' +
         '          <p id="open-info">暂无数据</p>\n' +
-        '          <strong id="countdown"></strong>\n' +
+        '          <strong id="countdown">暂无数据</strong>\n' +
         '        </li>\n' +
         '        <li class="info-balance">\n' +
         '          <p class="black">\n' +
