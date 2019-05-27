@@ -1266,7 +1266,9 @@ footer .active {
   width: 5rem;
   height: 5rem;
   border-radius: 2.5rem;
-  background-color: #c7e2ff;
+  /*background-color: #c7e2ff;*/
+  background-image: url("../assets/images/head-image_M.png");
+  background-size: 100%;
 }
 .message-content-box {
   flex-grow: 1;
@@ -1286,13 +1288,13 @@ footer .active {
 
 .message-content-box > .message-content {
   flex-grow: 1;
-  background-color: #fe635e;
+  background-color: #f9cc9d;
   padding: 1rem 3rem;
   border-radius: 0.5rem;
   color: #fff;
 }
 .self-message .message-content {
-  background-color: #f9cc9d;
+  background-color: #fe635e;
 }
 .message-content > .item01,
 .message-content > .item02 {

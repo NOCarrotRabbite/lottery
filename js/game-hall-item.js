@@ -539,6 +539,8 @@
                             '        </div>\n';
                     }
                     $('#item-gamer-bet').append(_html_bet_msg);
+                    let ele = document.getElementById('item-gamer-bet');
+                    ele.scrollTop = ele.scrollHeight;
                 }
             }
         }).catch(function (error) {
