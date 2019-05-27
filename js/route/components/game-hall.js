@@ -28,7 +28,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
   $('#main').html(
     '\n' +
       '    <div class="game-hall-content">\n' +
-      '      <a href="#/game-hall-item">\n' +
+      '      <a href="#/game-hall-item?hall_type=' + type + '&item_type=' + 1 + '">\n' +
       '        <div class="room pre primary">\n' +
       '          <button class="text first">赔率说明</button>\n' +
       '          <p class="text second hall-tag1">底注： <strong>1</strong></p>\n' +
@@ -41,7 +41,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '          </span>\n' +
       '        </div>\n' +
       '      </a>\n' +
-      '      <a href="#/game-hall-item">\n' +
+      '      <a href="#/game-hall-item?hall_type=' + type + '&item_type=' + 2 + '">\n' +
       '        <div class="room pre middle">\n' +
       '          <button class="text first">赔率说明</button>\n' +
       '          <p class="text second hall-tag1">底注： <strong>100</strong></p>\n' +
@@ -54,7 +54,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '          </span>\n' +
       '        </div>\n' +
       '      </a>\n' +
-      '      <a href="#/game-hall-item">\n' +
+      '      <a href="#/game-hall-item?hall_type=' + type + '&item_type=' + 3 + '">\n' +
       '        <div class="room senior">\n' +
       '          <button class="text first">赔率说明</button>\n' +
       '          <p class="text second hall-tag1">底注： <strong>300</strong></p>\n' +
