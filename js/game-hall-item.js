@@ -1,10 +1,13 @@
 (function () {
     let interval_id = 0;    // 倒计时定时器id
+    let fresh_interval = 0; // 更新投注消息定时器Id
     let countdown_time = {};    // 倒计时展示时间
     let issue;     // 开盘期数
     $(function () {
         opening();
-        freshBetMes();
+        fresh_interval = setInterval(function () {
+            freshBetMes();
+        }, 3000);
         // 动态添加元素中奖记录的显示与隐藏
         $('#item-result').on('click', '#resulst-icon', function () {
             $('#records-box').toggle();
@@ -222,37 +225,13 @@
         // 投注按钮点击事件
         $('.bet-footer .betting').on('click', function () {
             $('.bet-hidden').toggle();
-            let now = new Date();
-            /*let _html_bet = '<div class="message-box">\n' +
-                '          <p>' + now + '</p>\n' +
-                '          <div class="message">\n' +
-                '            <div class="head-image"></div>\n' +
-                '            <div class="message-content-box">\n' +
-                '              <p class="name">不吃胡萝卜兔子</p>\n' +
-                '              <ul class="message-content">\n' +
-                '                <li class="item01">\n' +
-                '                  <span>\n' +
-                '                    <svg class="icon" aria-hidden="true">\n' +
-                '                      <use xlink:href="#icon-zhanghu1"></use>\n' +
-                '                    </svg>\n' +
-                '                    <span>949364期</span>\n' +
-                '                  </span>\n' +
-                '                  <span>总计： <span>' + $('#bet-price').text() + '</span></span>\n' +
-                '                </li>\n' +
-                '                <li class="item02">\n' +
-                '                  <span>投注： <span>' + $('#bet-num').text() + '</span></span>\n' +
-                '                  <span>金额： <span>' + $('#bet-price').text() + '</span></span>\n' +
-                '                </li>\n' +
-                '              </ul>\n' +
-                '            </div>\n' +
-                '          </div>\n' +
-                '        </div>\n';*/
+            /*let now = new Date();
             let _html_bet = '<div class="message-box">\n' +
                 '          <p>' + $.dateFtt('yyyy-MM-dd hh:mm:ss', now) + '</p>\n' +
                 '          <div class="self-message">\n' +
                 '            <div class="head-image"></div>\n' +
                 '            <div class="message-content-box">\n' +
-                '              <p class="name">不吃西红柿兔子</p>\n' +
+                '              <p class="name">' + localStorage.getItem('nickname') + '</p>\n' +
                 '              <ul class="message-content">\n' +
                 '                <li class="item01">\n' +
                 '                  <span>\n' +
@@ -271,7 +250,7 @@
                 '            </div>\n' +
                 '          </div>\n' +
                 '        </div>   \n';
-            $('#item-gamer-bet').append(_html_bet);
+            $('#item-gamer-bet').append(_html_bet);*/
         });
 
         // 保存投注
@@ -386,7 +365,10 @@
         if(('onhashchange' in window) && ((typeof document.documentMode === "undefined") || document.documentMode ==  8)) {
             window.onhashchange = function() {
                 clearInterval(interval_id);
+                clearInterval(fresh_interval);
                 interval_id = null;
+                fresh_interval = null;
+
             };
         } else {
             clearInterval(interval_id);
@@ -501,8 +483,64 @@
     // 小厅投注消息更新
     let freshBetMes = function () {
         let param = { "hall_id": $('#param').attr('hall-type'), "small_id": $('#param').attr('item-type'), "time": $.dateFtt('yyyy-MM-dd hh:mm:ss', new Date()) };
-        $.jsonAjax(API.REFRESH_BET_MSG_API, 'POST', param).then(function(data){
-            console.log(data);
+        $.jsonAjax(API.REFRESH_BET_MSG_API, 'POST', param).then(function(res){
+            if(res.status == true) {
+                let _html_bet_msg = '';
+                for(let i in res.data) {
+                    if (res.data[i].user_num == localStorage.getItem('tel')) {
+                        _html_bet_msg = '<div class="message-box">\n' +
+                            '          <p>' + $.dateFtt('yyyy-MM-dd hh:mm:ss', new Date()) + '</p>\n' +
+                            '          <div class="self-message">\n' +
+                            '            <div class="head-image"></div>\n' +
+                            '            <div class="message-content-box">\n' +
+                            '              <p class="name">' + res.data[i].nick_name + '</p>\n' +
+                            '              <ul class="message-content">\n' +
+                            '                <li class="item01">\n' +
+                            '                  <span>\n' +
+                            '                    <svg class="icon" aria-hidden="true">\n' +
+                            '                      <use xlink:href="#icon-zhanghu1"></use>\n' +
+                            '                    </svg>\n' +
+                            '                    <span>' + res.data[i].bet_iss + '期</span>\n' +
+                            '                  </span>\n' +
+                            '                  <span>总计： <span>' + res.data[i].bet_money + '</span></span>\n' +
+                            '                </li>\n' +
+                            '                <li class="item02">\n' +
+                            '                  <span>投注： <span>' + res.data[i].bet_type + '</span></span>\n' +
+                            '                  <span>金额： <span>' + res.data[i].bet_money + '</span></span>\n' +
+                            '                </li>\n' +
+                            '              </ul>\n' +
+                            '            </div>\n' +
+                            '          </div>\n' +
+                            '        </div>   \n';
+                    } else {
+                         _html_bet_msg = '<div class="message-box">\n' +
+                            '          <p>' + $.dateFtt('yyyy-MM-dd hh:mm:ss', new Date()) + '</p>\n' +
+                            '          <div class="message">\n' +
+                            '            <div class="head-image"></div>\n' +
+                            '            <div class="message-content-box">\n' +
+                            '              <p class="name">' + res.data[i].nick_name + '</p>\n' +
+                            '              <ul class="message-content">\n' +
+                            '                <li class="item01">\n' +
+                            '                  <span>\n' +
+                            '                    <svg class="icon" aria-hidden="true">\n' +
+                            '                      <use xlink:href="#icon-zhanghu1"></use>\n' +
+                            '                    </svg>\n' +
+                            '                    <span>' + res.data[i].bet_iss + '期</span>\n' +
+                            '                  </span>\n' +
+                            '                  <span>总计： <span>' + res.data[i].bet_money + '</span></span>\n' +
+                            '                </li>\n' +
+                            '                <li class="item02">\n' +
+                            '                  <span>投注： <span>' + res.data[i].bet_type + '</span></span>\n' +
+                            '                  <span>金额： <span>' + res.data[i].bet_money + '</span></span>\n' +
+                            '                </li>\n' +
+                            '              </ul>\n' +
+                            '            </div>\n' +
+                            '          </div>\n' +
+                            '        </div>\n';
+                    }
+                    $('#item-gamer-bet').append(_html_bet_msg);
+                }
+            }
         }).catch(function (error) {
             console.log(error);
         });
