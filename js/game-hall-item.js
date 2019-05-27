@@ -4,6 +4,7 @@
     let issue;     // 开盘期数
     $(function () {
         opening();
+        freshBetMes();
         // 动态添加元素中奖记录的显示与隐藏
         $('#item-result').on('click', '#resulst-icon', function () {
             $('#records-box').toggle();
@@ -283,7 +284,7 @@
                 let bet_value = $(this).children(':first').text();
                 child_data.bet_type.push(bet_value);
             });
-            $.jsonAjax(API.SAVE_BET_AIP, 'POST', child_data).then(function (data) {
+            $.jsonAjax(API.SAVE_BET_API, 'POST', child_data).then(function (data) {
                 console.log(data);
             }).catch(function (error) {
 
@@ -495,5 +496,15 @@
         }).catch(function (error) {
             console.log(error);
         });
-    }
+    };
+
+    // 小厅投注消息更新
+    let freshBetMes = function () {
+        let param = { "hall_id": $('#param').attr('hall-type'), "small_id": $('#param').attr('item-type'), "time": $.dateFtt('yyyy-MM-dd hh:mm:ss', new Date()) };
+        $.jsonAjax(API.REFRESH_BET_MSG_API, 'POST', param).then(function(data){
+            console.log(data);
+        }).catch(function (error) {
+            console.log(error);
+        });
+    };
 })();
