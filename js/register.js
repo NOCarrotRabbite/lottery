@@ -10,11 +10,10 @@
         user_password: password
       };
       $.jsonAjax(API.REG_USER_API, 'POST', data)
-        .then(function(data) {
-          if (data.status == true) {
+        .then(function(res) {
+          if (res.status == true) {
             window.location.href = '#/login';
           }
-          console.log('data', data);
         })
         .catch(function(error) {
           console.log(error.status);
