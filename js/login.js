@@ -8,18 +8,18 @@
         password: password
       };
       $.jsonAjax(API.LOGIN_API, 'POST', data)
-        .then(function(data) {
-          if (data.status == true) {
+        .then(function(res) {
+          if (res.status == true) {
             //用户彩金
-            localStorage.setItem('gold', data.data.gold);
+            localStorage.setItem('gold', res.data.gold);
             //昵称
-            localStorage.setItem('nickname', data.data.nickname);
+            localStorage.setItem('nickname', res.data.nickname);
             //用户余额
-            localStorage.setItem('money', data.data.money);
+            localStorage.setItem('money', res.data.money);
             //头像地址
-            localStorage.setItem('headerImg', data.data.url);
+            localStorage.setItem('headerImg', res.data.url);
             //电话
-            localStorage.setItem('tel', data.data.user_num);
+            localStorage.setItem('tel', res.data.user_num);
 
             window.location.href = '#/index';
           }
