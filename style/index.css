@@ -1177,7 +1177,7 @@ footer .active {
 }
 .result-records {
   padding: 2rem 2rem;
-  font-size: 2.133rem;
+  font-size: 1.866rem;
   font-weight: 500;
   background-color: #fff;
 }
@@ -1189,6 +1189,7 @@ footer .active {
   display: inline-block;
   width: 3rem;
   height: 3rem;
+  line-height: 3rem;
   border-radius: 1.5rem;
   color: #fff;
   background-color: #5c95f3;
