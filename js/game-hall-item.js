@@ -3,7 +3,6 @@
     let fresh_interval = 0; // 更新投注消息定时器Id
     let countdown_time = {};    // 倒计时展示时间
     let issue = 0;     // 开盘期数
-    //let betFlag = 1;   // 控制封盘时投注的点击事件
     $(function () {
         // 控制开盘、倒计时、封盘操作
         opening();
@@ -222,52 +221,33 @@
             alert('投注金额不可为空');
         });
 
-        // 投注按钮点击事件
-        $('.bet-footer .betting').on('click', function () {
-            $('.bet-hidden').toggle();
-            /*let now = new Date();
-            let _html_bet = '<div class="message-box">\n' +
-                '          <p>' + $.dateFtt('yyyy-MM-dd hh:mm:ss', now) + '</p>\n' +
-                '          <div class="self-message">\n' +
-                '            <div class="head-image"></div>\n' +
-                '            <div class="message-content-box">\n' +
-                '              <p class="name">' + localStorage.getItem('nickname') + '</p>\n' +
-                '              <ul class="message-content">\n' +
-                '                <li class="item01">\n' +
-                '                  <span>\n' +
-                '                    <svg class="icon" aria-hidden="true">\n' +
-                '                      <use xlink:href="#icon-zhanghu1"></use>\n' +
-                '                    </svg>\n' +
-                '                    <span>949364期</span>\n' +
-                '                  </span>\n' +
-                '                  <span>总计： <span>' + $('#bet-price').text() + '</span></span>\n' +
-                '                </li>\n' +
-                '                <li class="item02">\n' +
-                '                  <span>投注： <span>' + $('#bet-num').text() + '</span></span>\n' +
-                '                  <span>金额： <span>' + $('#bet-price').text() + '</span></span>\n' +
-                '                </li>\n' +
-                '              </ul>\n' +
-                '            </div>\n' +
-                '          </div>\n' +
-                '        </div>   \n';
-            $('#item-gamer-bet').append(_html_bet);*/
-        });
-
         // 保存投注
-        $('.betting').on('click', function () {
-            let save_bet_data = [];
-            let child_data = { "user_num": localStorage.getItem('tel'), "bet_hall_id": $('#param').attr('hall-type'),
-                "bet_small_id": $('#param').attr('item-type'), "bet_time": $.dateFtt('yyyy-MM-dd hh:mm:ss', new Date()), "bet_money": $('.bet-amount')[0].value, "bet_iss": issue, "bet_type": save_bet_data };
+        $('.bet-footer .betting').on('click', function () {
+            if (parseFloat($('#balance').text()) >= parseFloat($('#bet-price').text())) {
+                let save_bet_data = [];
+                let child_data = { "user_num": localStorage.getItem('tel'), "bet_hall_id": $('#param').attr('hall-type'),
+                    "bet_small_id": $('#param').attr('item-type'), "bet_time": $.dateFtt('yyyy-MM-dd hh:mm:ss', new Date()), "bet_money": $('.bet-amount')[0].value, "bet_iss": issue, "bet_type": save_bet_data };
 
-            $('.active').each(function () {
-                let bet_value = $(this).children(':first').text();
-                child_data.bet_type.push(bet_value);
-            });
-            $.jsonAjax(API.SAVE_BET_API, 'POST', child_data).then(function (data) {
-                console.log(data);
-            }).catch(function (error) {
+                $('.active').each(function () {
+                    let bet_value = $(this).children(':first').text();
+                    child_data.bet_type.push(bet_value);
+                });
+                $.jsonAjax(API.SAVE_BET_API, 'POST', child_data).then(function (data) {
+                    if (data.status) {
+                        let balance = parseFloat($('#balance').text()) - parseFloat($('#bet-price').text());
+                        $('#balance').text(balance.toFixed(2));
+                        $.messageBox(data.message);
+                        $('.bet-hidden').toggle();
 
-            });
+                        return;
+                    }
+                    $.messageBox(data.message);
+                }).catch(function (error) {
+                    console.log(error);
+                });
+            } else {
+                $.messageBox("余额不足！");
+            }
         });
     });
     // type-one 中奖值过滤函数
@@ -554,13 +534,15 @@
     };
     // 封盘时投注按钮点击回调函数
     let closeBetEvent = function () {
-        console.log(789456);
         $.messageBox("已封盘，不能投注!");
     };
 
     // 开盘时投注按钮点击回调函数
     let openBetEvent = function () {
-        console.log(123456);
+        if (parseFloat($('#balance').text()) == 0) {
+            $.messageBox("余额为0，不能投注!");
+            return;
+        }
         $('.bet-hidden').toggle();
     };
     // 投注按钮点击事件
