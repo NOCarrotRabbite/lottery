@@ -1267,7 +1267,7 @@ footer .active {
   height: 5rem;
   border-radius: 2.5rem;
   /*background-color: #c7e2ff;*/
-  background-image: url("../assets/images/head-image_M.png");
+  background-image: url('../assets/images/head-image_M.png');
   background-size: 100%;
 }
 .message-content-box {
@@ -1552,6 +1552,10 @@ footer .active {
 }
 .personal-center-content li:nth-child(4) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.personal-center-content li span {
+  display: flex;
+  align-items: center;
 }
 .personal-center-content .icon {
   padding-right: 2rem;

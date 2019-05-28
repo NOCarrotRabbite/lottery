@@ -24,11 +24,11 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '     \t</li>\n' +
       '        <li>\n' +
       '          <p>钱包余额</p>\n' +
-      '          <p class="pad-top"><strong>0.00</strong> 元宝</p>\n' +
+      '          <p class="pad-top"><strong class="wallet-money">0.00</strong> 元宝</p>\n' +
       '        </li>\n' +
       '        <li>\n' +
       '          <p>彩金余额</p>\n' +
-      '          <p class="pad-top"><strong>0.00</strong> 元宝</p>\n' +
+      '          <p class="pad-top"><strong class="wallet-glod">0.00</strong> 元宝</p>\n' +
       '        </li>\n' +
       '      </ul>\n' +
       '      <ul class="wallet-content">\n' +

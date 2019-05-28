@@ -30,13 +30,13 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '<span><svg class="icon" aria-hidden="true">\n' +
       '           <use xlink:href="#icon-chongzhi"></use>\n' +
       '         </svg>余额</span>\n' +
-      '<span><span class="color-red">0.00</span>元宝</span>\n' +
+      '<span><span class="color-red personal-center-money">0.00</span>元宝</span>\n' +
       '</li>\n' +
       ' <li>\n' +
       '<span><svg class="icon" aria-hidden="true">\n' +
       '           <use xlink:href="#icon-chongzhi"></use>\n' +
       '         </svg>彩金</span>\n' +
-      ' <span><span class="color-red">0.00</span>元宝</span>\n' +
+      ' <span><span class="color-red personal-center-gold">0.00</span>元宝</span>\n' +
       '</li>\n' +
       ' <li class="personal-center-wallet"><a href="#/my-wallet">\n' +
       ' <span><svg class="icon" aria-hidden="true">\n' +

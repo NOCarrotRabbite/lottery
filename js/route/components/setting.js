@@ -59,13 +59,11 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '         </svg>清除缓存</span>\n' +
       '          </li>\n' +
       '        </a>\n' +
-      '        <a href="#">\n' +
-      '          <li>\n' +
+      '          <li class="logout">\n' +
       '            <span><svg class="icon" aria-hidden="true">\n' +
       '           <use xlink:href="#icon-tuichu"></use>\n' +
       '         </svg>退出</span>\n' +
       '          </li>\n' +
-      '        </a>\n' +
       '      </ul>\n' +
       '    </div>'
   );
