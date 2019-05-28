@@ -2,9 +2,12 @@
     let interval_id = 0;    // 倒计时定时器id
     let fresh_interval = 0; // 更新投注消息定时器Id
     let countdown_time = {};    // 倒计时展示时间
-    let issue;     // 开盘期数
+    let issue = 0;     // 开盘期数
+    //let betFlag = 1;   // 控制封盘时投注的点击事件
     $(function () {
+        // 控制开盘、倒计时、封盘操作
         opening();
+        // 实时刷新投注消息
         fresh_interval = setInterval(function () {
             freshBetMes();
         }, 1000);
@@ -13,9 +16,6 @@
             $('#records-box').toggle();
         });
         // 投注蒙层的显示与隐藏
-        $('#bet-toggle').on('click', function () {
-            $('.bet-hidden').toggle();
-        });
         $('.bet-hidden').on('click', function () {
             $('.bet-hidden').toggle();
         });
@@ -348,6 +348,7 @@
         if(countdown_time.mins == 0 && countdown_time.secs == 0) {
             clearInterval(interval_id);
             $('#countdown').text('已封盘');
+            betClick(0);
             // 封盘后延时请求下一次数据
             if (flag == 0) { // 最后一期则不再请求下一期数据
                 $('#open-info').html('今日');
@@ -429,7 +430,7 @@
             let diff_secs_total = diff.mins * 60 + diff.secs;
             if (start_time < new Date()) {  // 已经开盘
                 if (diff.days > 0 || diff.hours > 0 || diff.mins >= data.new_data[0].continue_time) { // 开盘时间距离现在超过持续时间则封盘
-                    $('#bet-toggle').disable('true');
+                    betClick(0);
                     $('#countdown').text('已封盘');
                     if (data.new_data[0].period_flag == 0) { // 最后一期则不再请求下一期数据
                         $('#open-info').html('今日');
@@ -439,6 +440,7 @@
                     // 封盘后延时请求下一次数据
                     setTimeout(opening, 1000);
                 } else {
+                    betClick(1);
                     // 计算开盘持续时间的秒数
                     let five_secs = data.new_data[0].continue_time * 60;
                     // 计算开盘持续时间和diff的秒数差
@@ -457,11 +459,13 @@
                     }, 1000);
                 }
             } else {    // 还未开盘
-                if (!$('#countdown').text()) {
+                if (-1 == data.new_data[0].period_flag) {
                     $('#open-info').html('今日');
                     $('#countdown').text('未开盘');
+                    betClick(0);
                 }
                 setTimeout(function () {
+                    betClick(1);
                     $('#open-info').html('距离<span class="black" id="issue">' + issue + '</span>期截止');
                     // 计算持续时间的秒数
                     let continue_sec = data.new_data[0].continue_time * 60;
@@ -547,5 +551,26 @@
         }).catch(function (error) {
             console.log(error);
         });
+    };
+    // 封盘时投注按钮点击回调函数
+    let closeBetEvent = function () {
+        console.log(789456);
+        $.messageBox("已封盘，不能投注!");
+    };
+
+    // 开盘时投注按钮点击回调函数
+    let openBetEvent = function () {
+        console.log(123456);
+        $('.bet-hidden').toggle();
+    };
+    // 投注按钮点击事件
+    let betClick = function (betFlag) {
+        if (betFlag == 1) {
+            $('#bet-toggle').on('click', openBetEvent);
+            $('#bet-toggle').unbind('click', closeBetEvent);
+        } else {
+            $('#bet-toggle').on('click', closeBetEvent);
+            $('#bet-toggle').unbind('click', openBetEvent);
+        }
     };
 })();
