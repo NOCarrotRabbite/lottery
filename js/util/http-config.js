@@ -9,4 +9,6 @@ const API = {
   SAVE_BET_API: '/test/api/user_game.php',
   // 实时更新投注消息
   REFRESH_BET_MSG_API: '/test/api/message_push.php',
+  //获取用户彩金余额
+  GET_USER_MONER: '/test/api/get_user_money.php'
 };
