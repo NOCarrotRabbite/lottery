@@ -7,7 +7,7 @@
         opening();
         fresh_interval = setInterval(function () {
             freshBetMes();
-        }, 3000);
+        }, 1000);
         // 动态添加元素中奖记录的显示与隐藏
         $('#item-result').on('click', '#resulst-icon', function () {
             $('#records-box').toggle();
@@ -429,6 +429,7 @@
             let diff_secs_total = diff.mins * 60 + diff.secs;
             if (start_time < new Date()) {  // 已经开盘
                 if (diff.days > 0 || diff.hours > 0 || diff.mins >= data.new_data[0].continue_time) { // 开盘时间距离现在超过持续时间则封盘
+                    $('#bet-toggle').disable('true');
                     $('#countdown').text('已封盘');
                     if (data.new_data[0].period_flag == 0) { // 最后一期则不再请求下一期数据
                         $('#open-info').html('今日');
