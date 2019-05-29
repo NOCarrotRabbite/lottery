@@ -1163,6 +1163,9 @@ footer .active {
   letter-spacing: 0.1rem;
   font-size: 1.866rem;
 }
+#refresh-balance {
+  cursor: pointer;
+}
 
 /* 中奖记录样式开始 */
 .item-result {

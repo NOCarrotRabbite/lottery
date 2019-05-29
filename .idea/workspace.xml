@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b492952f-9934-49d0-803b-87aa11e996ac" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/game-hall-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/game-hall-item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/game-hall-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/game-hall-item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/util/http-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/util/http-config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/index.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -17,22 +21,22 @@
     <session id="1775091596">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="33" />
+          <entry key="project.closed" value="34" />
           <entry key="project.open.time.0" value="13" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.3" value="3" />
           <entry key="project.open.time.4" value="6" />
-          <entry key="project.open.time.5" value="6" />
+          <entry key="project.open.time.5" value="7" />
           <entry key="project.open.time.6" value="6" />
-          <entry key="project.opened" value="38" />
+          <entry key="project.opened" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="78" />
+          <entry key="css" value="79" />
           <entry key="html" value="34" />
-          <entry key="js" value="215" />
+          <entry key="js" value="217" />
           <entry key="json" value="4" />
           <entry key="map" value="1" />
           <entry key="scss" value="1" />
@@ -40,66 +44,66 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="78" />
+          <entry key="CSS" value="79" />
           <entry key="HTML" value="34" />
           <entry key="JSON" value="4" />
-          <entry key="JavaScript" value="215" />
+          <entry key="JavaScript" value="217" />
           <entry key="SCSS" value="1" />
           <entry key="SourceMap" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="4629" />
+          <entry key="css" value="4660" />
           <entry key="html" value="935" />
-          <entry key="js" value="15811" />
+          <entry key="js" value="16444" />
           <entry key="json" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="4629" />
-          <entry key="HTML" value="944" />
+          <entry key="CSS" value="4660" />
+          <entry key="HTML" value="947" />
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="15802" />
+          <entry key="JavaScript" value="16432" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/game-hall-item.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="100" column="29" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
+            <state relative-caret-position="466">
+              <caret line="259" column="68" selection-start-line="259" selection-start-column="68" selection-end-line="259" selection-end-column="68" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/util/common.js">
+        <entry file="file://$PROJECT_DIR$/js/route/components/game-hall-item.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="61" column="12" selection-start-line="61" selection-start-column="2" selection-end-line="61" selection-end-column="12" />
+            <state relative-caret-position="561">
+              <caret line="267" column="22" selection-start-line="267" selection-start-column="22" selection-end-line="267" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/style/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="1178" column="21" lean-forward="true" selection-start-line="1178" selection-start-column="21" selection-end-line="1178" selection-end-column="21" />
+            <state relative-caret-position="358">
+              <caret line="1156" column="1" lean-forward="true" selection-start-line="1156" selection-start-column="1" selection-end-line="1156" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+        <entry file="file://$PROJECT_DIR$/js/util/http-config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="783">
-              <caret line="29" column="38" lean-forward="true" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+            <state relative-caret-position="378">
+              <caret line="14" column="16" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -115,13 +119,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>bet-sum</find>
-      <find>diff</find>
-      <find>black</find>
-      <find>result-records</find>
-      <find>resulst-icon</find>
-      <find>money</find>
-      <find>getTimeDiff</find>
       <find>hall_type</find>
       <find>info-time</find>
       <find>item-result</find>
@@ -145,6 +142,13 @@
       <find>$('#balance')</find>
       <find>freshBetMes</find>
       <find>num</find>
+      <find>black</find>
+      <find>refresh-balance</find>
+      <find>opening</find>
+      <find>bet-price</find>
+      <find>bet-amount</find>
+      <find>getUserBalance</find>
+      <find>withdrawal</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -181,10 +185,10 @@
         <option value="$PROJECT_DIR$/js/util/common.js" />
         <option value="$PROJECT_DIR$/js/route/components/game-hall.js" />
         <option value="$PROJECT_DIR$/js/index.js" />
+        <option value="$PROJECT_DIR$/style/index.css" />
         <option value="$PROJECT_DIR$/js/route/components/game-hall-item.js" />
         <option value="$PROJECT_DIR$/js/util/http-config.js" />
         <option value="$PROJECT_DIR$/js/game-hall-item.js" />
-        <option value="$PROJECT_DIR$/style/index.css" />
       </list>
     </option>
   </component>
@@ -233,7 +237,8 @@
               <item name="Lottery" type="b2602c69:ProjectViewProjectNode" />
               <item name="Lottery" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="route" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Lottery" type="b2602c69:ProjectViewProjectNode" />
@@ -323,12 +328,13 @@
       <workItem from="1558923985773" duration="9268000" />
       <workItem from="1558947251779" duration="5774000" />
       <workItem from="1559009247527" duration="7249000" />
-      <workItem from="1559023684893" duration="13663000" />
+      <workItem from="1559023684893" duration="13972000" />
+      <workItem from="1559108168046" duration="6099000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="343202000" />
+    <option name="totallyTimeSpent" value="349610000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -572,20 +578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/util/http-config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/route/components/game-hall-item.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="269" column="19" selection-start-line="269" selection-start-column="6" selection-end-line="269" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="783">
@@ -600,17 +592,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/game-hall-item.js">
+    <entry file="file://$PROJECT_DIR$/style/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="100" column="29" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
+        <state relative-caret-position="358">
+          <caret line="1156" column="1" lean-forward="true" selection-start-line="1156" selection-start-column="1" selection-end-line="1156" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style/index.css">
+    <entry file="file://$PROJECT_DIR$/js/util/http-config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="1178" column="21" lean-forward="true" selection-start-line="1178" selection-start-column="21" selection-end-line="1178" selection-end-column="21" />
+        <state relative-caret-position="378">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/route/components/game-hall-item.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="267" column="22" selection-start-line="267" selection-start-column="22" selection-end-line="267" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/game-hall-item.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="259" column="68" selection-start-line="259" selection-start-column="68" selection-end-line="259" selection-end-column="68" />
         </state>
       </provider>
     </entry>
