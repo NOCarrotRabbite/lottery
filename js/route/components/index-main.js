@@ -81,38 +81,11 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '      </div>\n' +
       '      <div class="rank">\n' +
       '        <p class="rank-title size-28">-- 最新中奖榜 --</p>\n' +
-      '        <ul class="rank-content">\n' +
-      '          <li>\n' +
-      '            <span>丽丽****</span>\n' +
-      '            <span>投注瑞彩厅</span>\n' +
-      '            <span class="color-red">喜中10000.00元</span>\n' +
-      '          </li>\n' +
-      '          <li>\n' +
-      '            <span>丽丽****</span>\n' +
-      '            <span>投注瑞彩厅</span>\n' +
-      '            <span class="color-red">喜中10000.00元</span>\n' +
-      '          </li>\n' +
-      '          <li>\n' +
-      '            <span>丽丽****</span>\n' +
-      '            <span>投注瑞彩厅</span>\n' +
-      '            <span class="color-red">喜中10000.00元</span>\n' +
-      '          </li>\n' +
-      '          <li>\n' +
-      '            <span>丽丽****</span>\n' +
-      '            <span>投注瑞彩厅</span>\n' +
-      '            <span class="color-red">喜中10000.00元</span>\n' +
-      '          </li>\n' +
-      '          <li>\n' +
-      '            <span>丽丽****</span>\n' +
-      '            <span>投注瑞彩厅</span>\n' +
-      '            <span class="color-red">喜中10000.00元</span>\n' +
-      '          </li>\n' +
-      '          <li>\n' +
-      '            <span>丽丽****</span>\n' +
-      '            <span>投注瑞彩厅</span>\n' +
-      '            <span class="color-red">喜中10000.00元</span>\n' +
-      '          </li>\n' +
+      '     <div id="rank-list-box">\n' +
+      '        <ul class="rank-content"  id="rank-list1">\n' +
       '        </ul>\n' +
+      '       <ul class="rank-content" id="rank-list2"></ul>\n' +
+      '       </div>\n' +
       '      </div>\n' +
       '    </div>'
   );

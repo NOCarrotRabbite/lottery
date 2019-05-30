@@ -146,12 +146,16 @@ footer .active {
 .rank {
   flex-grow: 1;
   margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 25rem;
+  /*min-height: 25rem;*/
 }
 .rank-title {
   text-align: center;
   color: #e9594a;
   padding: 1rem 0;
-  border-bottom: 1px solid #ccc;
+  /*border-bottom: 1px solid #ccc;*/
   font-weight: 500;
 }
 .rank-content li {
@@ -167,6 +171,11 @@ footer .active {
 }
 .rank-content .color-red {
   color: #e9594a;
+}
+#rank-list-box {
+  overflow: hidden;
+  flex-grow: 1;
+  /*height: 100%;*/
 }
 /* 竞猜大厅样式结束 */
 

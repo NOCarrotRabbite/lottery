@@ -12,5 +12,7 @@ const API = {
   //获取用户彩金余额
   GET_USER_MONER: '/test/api/get_user_money.php',
   // 撤销投注
-  CANCEL_BET_API: '/test/api/cancel_bet.php'
+  CANCEL_BET_API: '/test/api/cancel_bet.php',
+  // 获取中奖排行榜
+  GET_WINNING_API: '/test/api/charts.php'
 };

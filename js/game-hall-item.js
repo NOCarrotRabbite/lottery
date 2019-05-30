@@ -374,6 +374,7 @@
             };
         } else {
             clearInterval(interval_id);
+            clearInterval(fresh_interval);
         }
         let hall_type = $('#param').attr('hall-type');
         let item_type = $('#param').attr('item-type');
