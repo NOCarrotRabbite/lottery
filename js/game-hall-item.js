@@ -21,7 +21,7 @@
             let param = { "hall_id": $('#param').attr('hall-type'), "small_id": $('#param').attr('item-type'), "user_num": localStorage.getItem('tel'), "bet_iss": issue };
             $.jsonAjax(API.CANCEL_BET_API, 'POST', param).then(function(res) {
                 if (res.status) {
-                    $.messageBox('撤单成功，请刷新余额！');
+                    $.messageBox('本期所有投注已撤销，请刷新余额！');
                 } else {
                     $.messageBox('撤单失败，' + res.message + '!');
                 }
@@ -257,10 +257,9 @@
                 $.jsonAjax(API.SAVE_BET_API, 'POST', child_data).then(function (data) {
                     if (data.status) {
                         let balance = parseFloat($('#balance').text()) - parseFloat($('#bet-price').text());
-                        $('#balance').text(balance.toFixed(2)) + '元宝';
+                        $('#balance').text(balance.toFixed(2) + '元宝');
                         $.messageBox(data.message);
                         $('.bet-hidden').toggle();
-
                         return;
                     }
                     $.messageBox(data.message);
