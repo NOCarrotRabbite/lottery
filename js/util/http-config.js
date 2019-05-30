@@ -20,5 +20,7 @@ const API = {
   //我的账户
   TODAY_GAIN_API: '/test/api/today_gain.php',
   //游戏公告+我的消息+公告/消息详情
-  NOTICE_API: '/test/api/notice.php'
+  NOTICE_API: '/test/api/notice.php',
+  // 获取中奖排行榜
+  GET_WINNING_API: '/test/api/charts.php'
 };
