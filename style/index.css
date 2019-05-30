@@ -543,16 +543,17 @@ footer .active {
   text-align: center;
   border-bottom: 1px solid #ccc;
 }
-.account-details-list .public-records-border {
-  border-left: 1px solid #fff;
+.account-details-list .border-color {
   border-right: 1px solid #fff;
 }
 .account-details-list li span {
   font-size: 1.6rem;
   display: inline-block;
   width: 33%;
-  /* font-size: 0.6rem; */
   padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .account-details-list li:nth-child(1) {
   background: #e9594a;
@@ -570,9 +571,10 @@ footer .active {
 .account-details .mask-layer {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: -2;
 }
@@ -582,9 +584,10 @@ footer .active {
   background: #fff;
   color: #888;
   /* font-size: 0.8rem; */
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
+  bottom: 0;
   padding: 1.5rem 1.5rem 0 1.5rem;
   box-sizing: border-box;
   z-index: -1;
@@ -644,7 +647,7 @@ footer .active {
 }
 .account-details .select-kind {
   width: 80%;
-  position: absolute;
+  position: fixed;
   left: 10%;
   top: 22rem;
   background: #fff;

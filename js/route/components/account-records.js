@@ -16,13 +16,13 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
   $('#main').html(
     '\n' +
       '    <div class="account-records public-records">\n' +
-      '      <ul>\n' +
+      '      <ul class="account-records-content">\n' +
       '        <li class="size-28">\n' +
       '          <span>时间</span>\n' +
       '          <span class="public-records-border">变动金额</span>\n' +
       '          <span>变动记录</span>\n' +
       '        </li>\n' +
-      '        <li>\n' +
+      /*    '        <li>\n' +
       '          <span>2019-04-24 14:01</span>\n' +
       '          <span>1000.00</span>\n' +
       '          <span>充值</span>\n' +
@@ -41,7 +41,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '          <span>2019-04-24 14:01</span>\n' +
       '          <span>1000.00</span>\n' +
       '          <span>充值</span>\n' +
-      '        </li>\n' +
+      '        </li>\n' + */
       '      </ul>\n' +
       '    </div>'
   );

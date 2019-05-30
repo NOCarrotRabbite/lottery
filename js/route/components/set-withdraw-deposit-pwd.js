@@ -1,7 +1,7 @@
 SPA_RESOLVE_INIT = function(transition, sigal) {
   $('#footer').hide();
   $('#header').html(
-    '<a href="#/setting">\n' +
+    '<a href="javascript:window.history.go(-1)">\n' +
       '         <svg class="icon" aria-hidden="true">\n' +
       '           <use xlink:href="#icon-fanhui"></use>\n' +
       '         </svg>\n' +
@@ -18,7 +18,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '<ul class="set-withdraw-deposit-pwd-form public-set-form">\n' +
       '<li>\n' +
       '  <span>旧提现密码</span>\n' +
-      ' <input type="text" class="old-pwd" placeholder="请输入旧提现密码" />\n' +
+      ' <input type="text" class="old-pwd" placeholder="首次设置可不填" />\n' +
       '  <svg class="icon detail-icon" aria-hidden="true">\n' +
       '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '              </svg>\n' +

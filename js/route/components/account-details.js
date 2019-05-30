@@ -18,11 +18,12 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '    <div class="account-details">\n' +
       '      <ul class="account-details-list">\n' +
       '        <li class="size-28">\n' +
-      '          <span>时间</span>\n' +
-      '          <span class="public-records-border">金额</span>\n' +
+      '          <span class="border-color">时间</span>\n' +
       '          <span>彩种</span>\n' +
+      '          <span class="public-records-border">金额</span>\n' +
+      '          <span>状态</span>\n' +
       '        </li>\n' +
-      '        <li>\n' +
+      /*       '        <li>\n' +
       '          <span>2019-04-24 14:01</span>\n' +
       '          <span>1000.00</span>\n' +
       '          <span>北京幸运28</span>\n' +
@@ -41,7 +42,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '          <span>2019-04-24 14:01</span>\n' +
       '          <span>1000.00</span>\n' +
       '          <span>北京幸运28</span>\n' +
-      '        </li>\n' +
+      '        </li>\n' + */
       '      </ul>\n' +
       '      <div class="screen">\n' +
       '        <div class="screen-kind">\n' +
@@ -57,7 +58,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '          <p class="kind">全部彩种</p>\n' +
       '        </div>\n' +
       '        <div class="control-btn">\n' +
-      '          <button class="close">关闭</button>\n' +
+      '          <button class="close">取消</button>\n' +
       '          <button class="submit">确定</button>\n' +
       '        </div>\n' +
       '      </div>\n' +
@@ -65,7 +66,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '        <div class="mask-layer"></div>\n' +
       '        <ul class="select-kind">\n' +
       '          <li>\n' +
-      '            全部彩种<div class="radio-bg active"></div>\n' +
+      '            全部彩种<div class="radio-bg active radio-init"></div>\n' +
       '          </li>\n' +
       '          <li>\n' +
       '            北京幸运28<div class="radio-bg"></div>\n' +
