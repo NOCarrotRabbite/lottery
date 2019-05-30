@@ -1,21 +1,47 @@
 (function() {
   $(function() {
     //请求页面数据
-    function queryData() {
+    let user_num = localStorage.getItem('tel');
+    function queryData(start_time, end_time, hall_id) {
+      //重置列表数据
+      $('.account-details-list>li')
+        .not(':first')
+        .remove();
+      //参数
       let data = {
-        beginDate: $('.begin-date').val(),
-        endDate: $('.end-date').val(),
-        kind: $('.kind').text()
+        user_num: user_num,
+        state: 'acc_record',
+        start_time: start_time ? start_time + ' 00:00:00' : '',
+        end_time: end_time ? end_time + ' 00:00:00' : '',
+        hall_id: hall_id ? hall_id : ''
       };
-      /*  $.jsonAjax(API.REG_USER_API, 'POST', data)
-      .then(function(data) {
-        if (data.status == true) {
-          window.location.href = '#/login';
-        }
-      })
-      .catch(function(error) {
-        console.log(error.status);
-      }); */
+      //请求数据
+      $.jsonAjax(API.USER_RECORD, 'POST', data)
+        .then(function(res) {
+          if (res.status == true) {
+            for (let i = 0; i < res.data.length; i++) {
+              let dom =
+                '<li>\n' +
+                '          <span>' +
+                res.data[i].bet_time +
+                '</span>\n' +
+                '          <span>' +
+                res.data[i].bet_money +
+                '</span>\n' +
+                '          <span>' +
+                res.data[i].hall_name +
+                '</span>\n' +
+                '          <span>' +
+                res.data[i].condition +
+                '</span>\n' +
+                '        </li>';
+              $('.account-details-list').append(dom);
+            }
+          }
+        })
+        .catch(function(error) {
+          console.log(error.status);
+        });
     }
     queryData();
     let mask_layer = document.querySelector('.mask-layer');
@@ -54,6 +80,9 @@
     $('.kind').on('click', () => {
       select_kind.style.zIndex = '999';
       mask_layer.style.zIndex = '998';
+      if ($('.kind').text() == '全部彩种') {
+        $('.select-kind li .radio-init').addClass('active');
+      }
     });
     //确认选中的彩种
     $('.select-kind li').on('click', function() {
@@ -73,10 +102,19 @@
       mask_layer.style.zIndex = -2;
       screen.style.zIndex = -1;
       select_kind.style.zIndex = -3;
+      $('.begin-date').val('');
+      $('.end-date').val('');
+      $('.kind').text('全部彩种');
+      $('.select-kind li .radio-bg').removeClass('active');
+      queryData();
     });
     //确定筛选
     $('.submit').on('click', () => {
-      queryData();
+      queryData(
+        $('.begin-date').val(),
+        $('.end-date').val(),
+        $('.kind').text()
+      );
       mask_layer.style.zIndex = -2;
       screen.style.zIndex = -1;
       select_kind.style.zIndex = -3;

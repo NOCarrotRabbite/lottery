@@ -6,20 +6,23 @@
     $.inputClear($('.repetition-pwd'), $('.repetition-pwd').next());
     //修改密码
     $('.form-submit').on('click', function() {
+      let user_num = localStorage.getItem('tel');
       let data = {
-        oldPwd: $('.old-pwd').val(),
-        newPwd: $('.new-pwd').val(),
-        repetitionPwd: $('.repetition-pwd').val()
+        user_num: user_num,
+        state: 'set_draw_password',
+        old_draw_password: $('.old-pwd').val(),
+        new_draw_password: $('.new-pwd').val()
       };
-      /*  $.jsonAjax(API.REG_USER_API, 'POST', data)
-      .then(function(data) {
-        if (data.status == true) {
-          window.location.href = '#/login';
-        }
-      })
-      .catch(function(error) {
-        console.log(error.status);
-      }); */
+      $.jsonAjax(API.DRAW_CORE, 'POST', data)
+        .then(function(res) {
+          if (res.status == true) {
+            $.messageBox(res.message);
+            window.location.href = 'javascript:window.history.go(-1)';
+          }
+        })
+        .catch(function(error) {
+          console.log(error.status);
+        });
     });
   });
 })();

@@ -140,6 +140,7 @@ body {
   background: #fff;
   border: 1px solid #e9594a;
   border-radius: 0.2rem;
+  padding: 0 1rem 1rem 1rem;
 }
 .ic__container table {
   width: 100%;
@@ -155,6 +156,9 @@ body {
   justify-content: space-between;
   align-items: center;
   font-size: 2.133rem;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 .ic__prev,
 .ic__next {
@@ -224,6 +228,9 @@ body {
 }
 .ic__header select option {
   font-size: 1.866rem !important;
+}
+.ic__week-head {
+  margin-top: 5rem;
 }
 .ic__week-head td {
   vertical-align: top;
