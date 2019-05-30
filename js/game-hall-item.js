@@ -3,14 +3,34 @@
     let fresh_interval = 0; // 更新投注消息定时器Id
     let countdown_time = {};    // 倒计时展示时间
     let issue = 0;     // 开盘期数
-    //let betFlag = 1;   // 控制封盘时投注的点击事件
     $(function () {
         // 控制开盘、倒计时、封盘操作
         opening();
+        // 初始化余额
+        getUserBalance();
+        // 绑定余额刷新按钮点击事件
+        $('#refresh-balance').on('click', function () {
+            getUserBalance();
+        });
         // 实时刷新投注消息
         fresh_interval = setInterval(function () {
             freshBetMes();
         }, 1000);
+        // 绑定撤单按钮事件
+        $('.withdrawal').on('click', function () {
+            let param = { "hall_id": $('#param').attr('hall-type'), "small_id": $('#param').attr('item-type'), "user_num": localStorage.getItem('tel'), "bet_iss": issue };
+            $.jsonAjax(API.CANCEL_BET_API, 'POST', param).then(function(res) {
+                if (res.status) {
+                    $.messageBox('本期所有投注已撤销，请刷新余额！');
+                } else {
+                    $.messageBox('撤单失败，' + res.message + '!');
+                }
+
+                console.log(res);
+            }).catch(function (error) {
+                console.log(error);
+            });
+        });
         // 动态添加元素中奖记录的显示与隐藏
         $('#item-result').on('click', '#resulst-icon', function () {
             $('#records-box').toggle();
@@ -186,7 +206,8 @@
             $(this).bind('input', function () {
                 let value = $(this).val();
                 let num = $('.main-value .active').length;
-                if(value) {
+                let reg = /^[1-9]\d*$/;
+                if(value && reg.test(value)) {
                     $('.bet-price').text(num * value);
                 } else {
                     $('.bet-price').text('0');
@@ -222,52 +243,32 @@
             alert('投注金额不可为空');
         });
 
-        // 投注按钮点击事件
-        $('.bet-footer .betting').on('click', function () {
-            $('.bet-hidden').toggle();
-            /*let now = new Date();
-            let _html_bet = '<div class="message-box">\n' +
-                '          <p>' + $.dateFtt('yyyy-MM-dd hh:mm:ss', now) + '</p>\n' +
-                '          <div class="self-message">\n' +
-                '            <div class="head-image"></div>\n' +
-                '            <div class="message-content-box">\n' +
-                '              <p class="name">' + localStorage.getItem('nickname') + '</p>\n' +
-                '              <ul class="message-content">\n' +
-                '                <li class="item01">\n' +
-                '                  <span>\n' +
-                '                    <svg class="icon" aria-hidden="true">\n' +
-                '                      <use xlink:href="#icon-zhanghu1"></use>\n' +
-                '                    </svg>\n' +
-                '                    <span>949364期</span>\n' +
-                '                  </span>\n' +
-                '                  <span>总计： <span>' + $('#bet-price').text() + '</span></span>\n' +
-                '                </li>\n' +
-                '                <li class="item02">\n' +
-                '                  <span>投注： <span>' + $('#bet-num').text() + '</span></span>\n' +
-                '                  <span>金额： <span>' + $('#bet-price').text() + '</span></span>\n' +
-                '                </li>\n' +
-                '              </ul>\n' +
-                '            </div>\n' +
-                '          </div>\n' +
-                '        </div>   \n';
-            $('#item-gamer-bet').append(_html_bet);*/
-        });
-
         // 保存投注
-        $('.betting').on('click', function () {
-            let save_bet_data = [];
-            let child_data = { "user_num": localStorage.getItem('tel'), "bet_hall_id": $('#param').attr('hall-type'),
-                "bet_small_id": $('#param').attr('item-type'), "bet_time": $.dateFtt('yyyy-MM-dd hh:mm:ss', new Date()), "bet_money": $('.bet-amount')[0].value, "bet_iss": issue, "bet_type": save_bet_data };
+        $('.bet-footer .betting').on('click', function () {
+            if (parseFloat($('#balance').text()) >= parseFloat($('#bet-price').text())) {
+                let save_bet_data = [];
+                let child_data = { "user_num": localStorage.getItem('tel'), "bet_hall_id": $('#param').attr('hall-type'),
+                    "bet_small_id": $('#param').attr('item-type'), "bet_time": $.dateFtt('yyyy-MM-dd hh:mm:ss', new Date()), "bet_money": $('.bet-amount')[0].value, "bet_iss": issue, "bet_type": save_bet_data };
 
-            $('.active').each(function () {
-                let bet_value = $(this).children(':first').text();
-                child_data.bet_type.push(bet_value);
-            });
-            $.jsonAjax(API.SAVE_BET_API, 'POST', child_data).then(function (data) {
-                console.log(data);
-            }).catch(function (error) {
-
-            });
+                $('.active').each(function () {
+                    let bet_value = $(this).children(':first').text();
+                    child_data.bet_type.push(bet_value);
+                });
+                $.jsonAjax(API.SAVE_BET_API, 'POST', child_data).then(function (data) {
+                    if (data.status) {
+                        let balance = parseFloat($('#balance').text()) - parseFloat($('#bet-price').text());
+                        $('#balance').text(balance.toFixed(2) + '元宝');
+                        $.messageBox(data.message);
+                        $('.bet-hidden').toggle();
+                        return;
+                    }
+                    $.messageBox(data.message);
+                }).catch(function (error) {
+                    console.log(error);
+                });
+            } else {
+                $.messageBox("余额不足！");
+            }
         });
     });
     // type-one 中奖值过滤函数
@@ -381,9 +382,6 @@
         $.jsonAjax(API.GAME_HALL_ITEM_AIP, 'POST', query_param).then(function (data) {
             // 初始化期数
             issue = data.new_data[0].iss_number;
-
-            // 初始化余额
-            $('#balance').text((Number(localStorage.getItem('money')) + Number(localStorage.getItem('gold'))).toFixed(2) + '元宝');
 
             // 初始化往期中奖记录
             $('#item-result').html(
@@ -554,13 +552,15 @@
     };
     // 封盘时投注按钮点击回调函数
     let closeBetEvent = function () {
-        console.log(789456);
         $.messageBox("已封盘，不能投注!");
     };
 
     // 开盘时投注按钮点击回调函数
     let openBetEvent = function () {
-        console.log(123456);
+        if (parseFloat($('#balance').text()) == 0) {
+            $.messageBox("余额为0，不能投注!");
+            return;
+        }
         $('.bet-hidden').toggle();
     };
     // 投注按钮点击事件
@@ -572,5 +572,14 @@
             $('#bet-toggle').on('click', closeBetEvent);
             $('#bet-toggle').unbind('click', openBetEvent);
         }
+    };
+
+    // 获取用户余额
+    let getUserBalance = function () {
+        $.jsonAjax(API.GET_USER_MONER, 'POST', {"user_num": localStorage.getItem('tel')}).then(function(res) {
+            $('#balance').text((parseFloat(res.data.gold) + parseFloat(res.data.money)).toFixed(2) + '元宝');
+        }).catch(function (error) {
+            console.log(error);
+        });
     };
 })();

@@ -14,5 +14,7 @@ const API = {
   //获取充值记录-提现记录-账变记录-账户明细
   USER_RECORD: '/test/api/user_record.php',
   //设置提现密码-提现密码查询-银行卡绑定查询-绑定银行卡
-  DRAW_CORE: '/test/api/draw_core.php'
+  DRAW_CORE: '/test/api/draw_core.php',
+  // 撤销投注
+  CANCEL_BET_API: '/test/api/cancel_bet.php'
 };

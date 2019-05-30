@@ -40,7 +40,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         '          <p id="open-info">暂无数据</p>\n' +
         '          <strong id="countdown">暂无数据</strong>\n' +
         '        </li>\n' +
-        '        <li class="info-balance">\n' +
+        '        <li class="info-balance" id="refresh-balance">\n' +
         '          <p class="black">\n' +
         '            余额\n' +
         '            <svg class="icon" aria-hidden="true">\n' +
@@ -126,7 +126,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         '            <button class="withdrawal">撤单</button>\n' +
         '            <span class="bet-amount-box">\n' +
         '              <label>投注金额：</label>\n' +
-        '              <input type="text" name="bet-money" class="bet-amount">\n' +
+        '              <input type="text" name="bet-money" class="bet-amount" placeholder="请输入非0正整数">\n' +
         '            </span>\n' +
         '            <button class="betting">投注</button>\n' +
         '          </div>\n' +
@@ -209,7 +209,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         '            <button class="withdrawal">撤单</button>\n' +
         '            <span class="bet-amount-box">\n' +
         '              <label>投注金额：</label>\n' +
-        '              <input type="text" name="bet-money" class="bet-amount">\n' +
+        '              <input type="text" name="bet-money" class="bet-amount" placeholder="只能输入非0整数">\n' +
         '            </span>\n' +
         '            <button class="betting">投注</button>\n' +
         '          </div>\n' +
@@ -257,7 +257,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         '            <button class="withdrawal">撤单</button>\n' +
         '            <span class="bet-amount-box">\n' +
         '              <label>投注金额：</label>\n' +
-        '              <input type="text" name="bet-money" class="bet-amount">\n' +
+        '              <input type="text" name="bet-money" class="bet-amount" placeholder="只能输入非0整数">\n' +
         '            </span>\n' +
         '            <button class="betting">投注</button>\n' +
         '          </div>\n' +
