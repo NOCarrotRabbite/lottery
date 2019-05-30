@@ -16,11 +16,10 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
     '\n' +
       '<div class="notice-particulars public-details">\n' +
       '<div class="header-title size-28">\n' +
-      '<strong>全网返奖率最高</strong>\n' +
-      '<p class="size-24">2019-02-22 00:31:25</p>\n' +
+      '<strong class="notice-title">全网返奖率最高</strong>\n' +
+      '<p class="size-24 notice-date">2019-02-22 00:31:25</p>\n' +
       '</div>\n' +
       '<div class="notice-particulars-content public-details-content ">\n' +
-      '<p>每日充值提现时间 00:00-01:00 点</p>\n' +
       '</div>\n' +
       ' </div>'
   );

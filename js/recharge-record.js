@@ -5,7 +5,7 @@
       user_num: user_num,
       state: 'cz_record'
     };
-    $.jsonAjax(API.USER_RECORD, 'POST', data)
+    $.jsonAjax(API.USER_RECORD_API, 'POST', data)
       .then(function(res) {
         if (res.status == true) {
           for (let i = 0; i < res.data.length; i++) {

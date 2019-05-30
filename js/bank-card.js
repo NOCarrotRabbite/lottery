@@ -1,33 +1,38 @@
 (function() {
   $(function() {
-    //获取银行卡数据
+    let user_num = localStorage.getItem('tel');
+    let data = {
+      user_num: user_num,
+      state: 'have_draw_password'
+    };
+    queryData(data, 1);
+    //获取银行卡数据-验证提现密码-是否绑卡-绑卡/修改银行卡
     function queryData(obj, state) {
-      $.jsonAjax(API.DRAW_CORE, 'POST', obj)
+      $.jsonAjax(API.DRAW_CORE_API, 'POST', obj)
         .then(function(res) {
           if (res.status == true) {
-            console.log('1111');
             if (state == 1) {
               if (res.have_draw_password == 0) {
-                console.log('请设置提现密码！');
+                $.dialogBox('请设置提现密码!', '#/set-withdraw-deposit-pwd');
               } else {
                 let obj = {
                   user_num: user_num,
                   state: 'have_bank_card'
                 };
-                console.log('222');
                 queryData(obj, 2);
               }
             } else if (state == 2) {
-              console.log('333');
               if (res.have_card_id == 1) {
-                console.log('444');
-                console.log('已绑定银行卡');
-              } else {
-                console.log('5555');
-                console.log('未绑定银行卡');
+                $('.name').val(res.data.card_user_name);
+                $('.bank').val(res.data.card_name);
+                $('.card-num').val(res.data.card_id);
               }
             } else if (state == 3) {
-              console.log('提交绑定银行卡');
+              if (res.status == true) {
+                window.location.href = 'javascript:window.history.go(-1)';
+              } else {
+                $.messageBox(res.message);
+              }
             }
           }
         })
@@ -35,47 +40,20 @@
           console.log(error.status);
         });
     }
-    let user_num = localStorage.getItem('tel');
-    let data = {
-      user_num: user_num,
-      state: 'have_draw_password'
-    };
-    queryData(data, 1);
-    /* function queryData() {
-      let user_num = localStorage.getItem('tel');
-      let data = {
-        user_num: user_num,
-        state: 'have_draw_password'
-      };
-      $.jsonAjax(API.DRAW_CORE, 'POST', data)
-        .then(function(res) {
-          if (res.have_draw_password == 0) {
-           alert('请设置提现密码！');
-            
-          } else {
-            let obj = {
-              user_num: user_num,
-              state: 'have_bank_card'
-            };
-            $.jsonAjax(API.DRAW_CORE, 'POST', obj)
-              .then(function(res) {
-                if (res.status == true) {
-                  console.log('已绑定银行卡');
-                }
-              })
-              .catch(function(error) {
-                console.log(error.status);
-              });
-          }
-        })
-        .catch(function(error) {
-          console.log(error.status);
-        });
-    }
-    queryData(); */
     //点击银行名称选择银行（弹框）
     $('.bank').on('click', function() {
       $('.dialog').show();
+      $('.select-bank li .radio-bg').removeClass('active');
+      let dom = $('.select-bank>li');
+      let text = $('.bank').val();
+      for (let i = 0; i < dom.length; i++) {
+        let regText = dom[i].innerText;
+        if (text == regText) {
+          $(dom[i])
+            .children('div')
+            .addClass('active');
+        }
+      }
     });
     //点击蒙层隐藏弹框
     $('.obscuration').on('click', function() {
@@ -99,21 +77,23 @@
     $.inputClear($('.password'), $('.password').next());
     //提交银行信息
     $('.bank-card-submit').on('click', function() {
-      let data = {
-        name: $('.name').val(),
-        bank: $('.bank').val(),
-        cardNum: $('.card-num').val(),
-        password: $('.password').val()
+      //提现密码
+      let draw_password = $('.password').val();
+      //开户行
+      let card_name = $('.bank').val();
+      //卡号
+      let card_id = $('.card-num').val();
+      //开户人姓名
+      let card_user_name = $('.name').val();
+      let obj = {
+        user_num: user_num,
+        state: 'bind_bank_card',
+        draw_password: draw_password,
+        card_name: card_name,
+        card_id: card_id,
+        card_user_name: card_user_name
       };
-      /*  $.jsonAjax(API.REG_USER_API, 'POST', data)
-      .then(function(data) {
-        if (data.status == true) {
-          window.location.href = '#/login';
-        }
-      })
-      .catch(function(error) {
-        console.log(error.status);
-      }); */
+      queryData(obj, 3);
     });
   });
 })();

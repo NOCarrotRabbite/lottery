@@ -16,18 +16,10 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
     '\n' +
       '<div class="activity-particulars public-details">\n' +
       '<header class="header-title">\n' +
-      '<strong>彩金活动</strong>\n' +
-      ' <p class="date">2019-02-22 00:31:25</p>\n' +
+      '<strong class="activity-title">彩金活动</strong>\n' +
+      ' <p class="date activity-date">2019-02-22 00:31:25</p>\n' +
       ' </header>\n' +
       '<div class="activity-particulars-content public-details-content">\n' +
-      ' <p>为感谢广大新老客户长期以来对</p>\n' +
-      ' <p>"XXX竞猜平台"的支持</p>\n' +
-      ' <p>平台特推出新年大礼包!</p>\n' +
-      '<p>充值10000元送588彩金红包</p>\n' +
-      ' <p>充值30000元送1088彩金红包</p>\n' +
-      '<p>充值50000元送1888彩金红包</p>\n' +
-      '<p>充值100000元送4888彩金红包</p>\n' +
-      ' <p>充值200000元送10888彩金红包</p>\n' +
       ' </div>\n' +
       '</div>'
   );

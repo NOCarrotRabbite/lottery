@@ -14,44 +14,8 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '          <span class="tab-nav">我的消息</span>\n' +
       '        </div>\n' +
       '        <ul class="tab-content award">\n' +
-      '            <li>\n' +
-      '              <span>\n' +
-      '                全网返奖率最高1\n' +
-      '              </span>\n' +
-      '              <span>2019-02-22 00:29:49</span>\n' +
-      '            </li>\n' +
-      '            <li>\n' +
-      '              <span>\n' +
-      '                全网返奖率最高2\n' +
-      '              </span>\n' +
-      '              <span>2019-02-22 00:29:49</span>\n' +
-      '            </li>\n' +
-      '            <li>\n' +
-      '              <span>\n' +
-      '                全网返奖率最高3\n' +
-      '              </span>\n' +
-      '              <span>2019-02-22 00:29:49</span>\n' +
-      '            </li>\n' +
       '        </ul>\n' +
       '        <ul class="tab-content message">\n' +
-      '            <li>\n' +
-      '              <span>\n' +
-      '                我的消息1\n' +
-      '              </span>\n' +
-      '              <span>2019-02-22 00:29:49</span>\n' +
-      '            </li>\n' +
-      '            <li>\n' +
-      '              <span>\n' +
-      '                我的消息2\n' +
-      '              </span>\n' +
-      '              <span>2019-02-22 00:29:49</span>\n' +
-      '            </li>\n' +
-      '            <li>\n' +
-      '              <span>\n' +
-      '                我的消息3\n' +
-      '              </span>\n' +
-      '              <span>2019-02-22 00:29:49</span>\n' +
-      '            </li>\n' +
       '        </ul>\n' +
       '      </div>\n' +
       '    </div>'

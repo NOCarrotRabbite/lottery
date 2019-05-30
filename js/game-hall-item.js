@@ -576,7 +576,7 @@
 
     // 获取用户余额
     let getUserBalance = function () {
-        $.jsonAjax(API.GET_USER_MONER, 'POST', {"user_num": localStorage.getItem('tel')}).then(function(res) {
+        $.jsonAjax(API.GET_USER_MONER_API, 'POST', {"user_num": localStorage.getItem('tel')}).then(function(res) {
             $('#balance').text((parseFloat(res.data.gold) + parseFloat(res.data.money)).toFixed(2) + '元宝');
         }).catch(function (error) {
             console.log(error);

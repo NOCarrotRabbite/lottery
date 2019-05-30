@@ -16,7 +16,7 @@
         hall_id: hall_id ? hall_id : ''
       };
       //请求数据
-      $.jsonAjax(API.USER_RECORD, 'POST', data)
+      $.jsonAjax(API.USER_RECORD_API, 'POST', data)
         .then(function(res) {
           if (res.status == true) {
             for (let i = 0; i < res.data.length; i++) {

@@ -13,7 +13,7 @@
         old_draw_password: $('.old-pwd').val(),
         new_draw_password: $('.new-pwd').val()
       };
-      $.jsonAjax(API.DRAW_CORE, 'POST', data)
+      $.jsonAjax(API.DRAW_CORE_API, 'POST', data)
         .then(function(res) {
           if (res.status == true) {
             $.messageBox(res.message);

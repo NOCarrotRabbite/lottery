@@ -310,6 +310,10 @@ footer .active {
   justify-content: space-between;
   border-bottom: 1px solid #f3f3f3;
 }
+.tab-content li .notice-id {
+  font-size: 0;
+  position: absolute;
+}
 .on {
   display: block;
 }
@@ -359,6 +363,9 @@ footer .active {
 .balance li p {
   text-align: center;
   padding-top: 0.5rem;
+}
+.balance li p span {
+  font-size: 1.866rem;
 }
 .user-menu {
   flex: 1;
@@ -477,6 +484,7 @@ footer .active {
   display: flex;
   flex-direction: column;
   color: #888;
+  overflow: scroll;
 }
 .wallet-header {
   /* height: 8rem; */
@@ -1585,10 +1593,10 @@ footer .active {
   color: #e9594a;
 }
 /* 个人中心 结束 */
-/* 全局提示框 */
+/* 全局提示框  开始*/
 .msg-box {
   width: 34rem;
-  position: absolute;
+  position: fixed;
   bottom: 10rem;
   left: 50%;
   margin-left: -15rem;
@@ -1601,4 +1609,57 @@ footer .active {
   display: none;
   z-index: 999999999;
 }
-/* 全局提示框 */
+/* 全局提示框 结束*/
+/* 全局弹框 开始 */
+.dialog-box {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+}
+.dialog-box .dialog-box-main {
+  width: 34rem;
+  height: 20rem;
+  background: #fff;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-top: -10rem;
+  margin-left: -17rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.8rem;
+}
+.dialog-box .dialog-box-main h3 {
+  height: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  font-size: 2.133rem;
+  color: #e9594a;
+  background: #f1f1f1;
+  border-radius: 0.8rem 0.8rem 0 0;
+}
+.dialog-box .dialog-box-content {
+  flex: 1;
+  font-size: 1.866rem;
+  color: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.dialog-box .dialog-box-btn {
+  height: 5rem;
+  text-align: center;
+}
+.dialog-box .dialog-box-btn button {
+  font-size: 1.866rem;
+  background: #e9594a;
+  padding: 0.5rem 4rem;
+  border-radius: 4rem;
+  color: #fff;
+}
+/* 全局弹框 结束 */

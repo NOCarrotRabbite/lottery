@@ -66,6 +66,7 @@ $.extend({
       $('.msg-box').hide(500);
     }, 1600);
   },
+  //时间格式化
   dateFtt: function(fmt, date) {
     let o = {
       'M+': date.getMonth() + 1, // 月份
@@ -93,5 +94,20 @@ $.extend({
       }
     }
     return fmt;
+  },
+  //弹框
+  dialogBox: function(msg, url, callback) {
+    console.log(msg, url, callback);
+    $('.dialog-box-content').text(msg);
+    $('.dialog-box').show();
+    $('.dialog-box-submit').on('click', function() {
+      $('.dialog-box').hide();
+      if (url) {
+        window.location.href = url;
+      }
+      if (callback) {
+        callback();
+      }
+    });
   }
 });

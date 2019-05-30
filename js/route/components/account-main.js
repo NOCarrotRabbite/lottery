@@ -7,17 +7,17 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '    <div class="account">\n' +
       '      <header class="account-msg">\n' +
       '        <div class="header-img"></div>\n' +
-      '        <div class="header-account">用户名：WX1234</div>\n' +
-      '        <div class="header-username">昵称：不吃胡萝卜兔子</div>\n' +
+      '        <div class="header-account">用户名：<span class="account-code">WX1234</span></div>\n' +
+      '        <div class="header-username">昵称：<span class="account-name">不吃胡萝卜兔子</span></div>\n' +
       '      </header>\n' +
       '      <ul class="balance">\n' +
       '        <li>\n' +
       '          <p>余额</p>\n' +
-      '          <p>0.0 元宝</p>\n' +
+      '          <p><span class="money">0.0</span> 元宝</p>\n' +
       '        </li>\n' +
       '        <li>\n' +
       '          <p>今日盈亏</p>\n' +
-      '          <p>0.0 元宝</p>\n' +
+      '          <p><span class="gain-money">0.0</span> 元宝</p>\n' +
       '        </li>\n' +
       '      </ul>\n' +
       '      <ul class="user-menu">\n' +

@@ -1,18 +1,59 @@
 (function() {
   $(function() {
     //获取页面数据
-    /*  $.jsonAjax(API.REG_USER_API, 'POST', data)
-        .then(function(data) {
-          if (data.status == true) {
-            window.location.href = '#/login';
+    function qurryData(state) {
+      $('.tab-content>li').remove();
+      let user_num = localStorage.getItem('tel');
+      let data = {
+        user_num: user_num,
+        state: state == 0 ? 'obt_game_notice' : 'obt_user_notice'
+      };
+      $.jsonAjax(API.NOTICE_API, 'POST', data)
+        .then(function(res) {
+          if (res.status == true) {
+            if (state == 0) {
+              for (let i = 0; i < res.data.length; i++) {
+                let dom =
+                  ' <li>\n' +
+                  ' <span>\n' +
+                  res.data[i].notice_title +
+                  ' </span>\n' +
+                  ' <span>' +
+                  res.data[i].notice_time +
+                  '</span>\n' +
+                  ' <span class="notice-id">' +
+                  res.data[i].notice_id +
+                  '</span>\n' +
+                  '</li>\n';
+                $('.award').append(dom);
+              }
+            } else if (state == 1) {
+              for (let i = 0; i < res.data.length; i++) {
+                let dom =
+                  ' <li>\n' +
+                  ' <span>\n' +
+                  res.data[i].notice_title +
+                  ' </span>\n' +
+                  ' <span>' +
+                  res.data[i].notice_time +
+                  '</span>\n' +
+                  ' <span class="notice-id">' +
+                  res.data[i].notice_id +
+                  '</span>\n' +
+                  '</li>\n';
+                $('.message').append(dom);
+              }
+            }
           }
         })
         .catch(function(error) {
           console.log(error.status);
-        }); */
+        });
+    }
     //tab切换
     let url = window.location.href;
     let code = url.substr(url.length - 1);
+    qurryData(code);
     let tab_nav = document.querySelectorAll('.tab-nav');
     let tab_content = document.querySelectorAll('.tab-content');
     let index = code;
@@ -25,15 +66,18 @@
         index = i;
         tab_nav[index].classList.add('active');
         tab_content[index].classList.add('on');
+        qurryData(i);
       };
     }
     //我的消息-详情
-    $('.message>li').on('click', event => {
-      window.location.href = '#/my-message';
+    $('.message').on('click', 'li', event => {
+      let id = event.currentTarget.children[2].innerText;
+      window.location.href = '#/my-message?code=' + id;
     });
     //通知公告-详情
-    $('.award>li').on('click', event => {
-      window.location.href = '#/notice-particulars';
+    $('.award').on('click', 'li', event => {
+      let id = event.currentTarget.children[2].innerText;
+      window.location.href = '#/notice-particulars?code=' + id;
     });
     //最新活动-详情
     $('.banner').on('click', function() {

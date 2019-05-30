@@ -295,8 +295,6 @@ body {
   flex: 1;
   background-color: #fff;
   padding: 0 1rem 1rem 1rem;
-}
-.public-details-content p {
   font-size: 1.6rem;
   color: #5694cc;
   padding-top: 1rem;
