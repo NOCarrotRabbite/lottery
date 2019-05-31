@@ -26,10 +26,10 @@
                 res.data[i].bet_time +
                 '</span>\n' +
                 '          <span>' +
-                res.data[i].bet_money +
+                res.data[i].hall_name +
                 '</span>\n' +
                 '          <span>' +
-                res.data[i].hall_name +
+                res.data[i].bet_money +
                 '</span>\n' +
                 '          <span>' +
                 res.data[i].condition +
