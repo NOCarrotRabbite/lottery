@@ -18,6 +18,8 @@
           if (res.status == true) {
             $.messageBox(res.message);
             window.location.href = 'javascript:window.history.go(-1)';
+          } else {
+            $.messageBox(res.message);
           }
         })
         .catch(function(error) {

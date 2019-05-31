@@ -7,6 +7,8 @@
         if (res.status == true) {
           $('.personal-center-gold').text(res.data.glod);
           $('.personal-center-money').text(res.data.money);
+        } else {
+          $.messageBox(res.message);
         }
       })
       .catch(function(error) {

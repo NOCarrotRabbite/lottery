@@ -32,14 +32,14 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '        </li>\n' +
       '      </ul>\n' +
       '      <ul class="wallet-content">\n' +
-      '        <a href="#/bank-card">\n' +
-      '          <li>\n' +
+      /*  '        <a href="#/bank-card">\n' + */
+      '          <li class="my-bank">\n' +
       '            <span>            \t\n' +
       '\t         <svg class="icon" aria-hidden="true">\n' +
       '\t           <use xlink:href="#icon-yinhangqia"></use>\n' +
       '\t         </svg>我的银行卡</span>\n' +
       '          </li>\n' +
-      '        </a>\n' +
+      /*   '        </a>\n' + */
       '        <a href="#/charge?code=1">\n' +
       '          <li>\n' +
       '            <span>      \t\n' +

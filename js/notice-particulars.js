@@ -11,11 +11,12 @@
     };
     $.jsonAjax(API.NOTICE_API, 'POST', data)
       .then(function(res) {
-        console.log('res', res);
         if (res.status == true) {
           $('.notice-title').text(res.data.notice_title);
           $('.notice-date').text(res.data.notice_time);
           $('.notice-particulars-content').text(res.data.notice_content);
+        } else {
+          $.messageBox(res.message);
         }
       })
       .catch(function(error) {

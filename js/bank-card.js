@@ -3,7 +3,7 @@
     let user_num = localStorage.getItem('tel');
     let data = {
       user_num: user_num,
-      state: 'have_draw_password'
+      state: 'have_bank_card'
     };
     queryData(data, 1);
     //获取银行卡数据-验证提现密码-是否绑卡-绑卡/修改银行卡
@@ -12,28 +12,20 @@
         .then(function(res) {
           if (res.status == true) {
             if (state == 1) {
-              if (res.have_draw_password == 0) {
-                $.dialogBox('请设置提现密码!', '#/set-withdraw-deposit-pwd');
-              } else {
-                let obj = {
-                  user_num: user_num,
-                  state: 'have_bank_card'
-                };
-                queryData(obj, 2);
-              }
-            } else if (state == 2) {
               if (res.have_card_id == 1) {
                 $('.name').val(res.data.card_user_name);
                 $('.bank').val(res.data.card_name);
                 $('.card-num').val(res.data.card_id);
               }
-            } else if (state == 3) {
+            } else if (state == 2) {
               if (res.status == true) {
                 window.location.href = 'javascript:window.history.go(-1)';
               } else {
                 $.messageBox(res.message);
               }
             }
+          } else {
+            $.messageBox(res.message);
           }
         })
         .catch(function(error) {
@@ -93,7 +85,7 @@
         card_id: card_id,
         card_user_name: card_user_name
       };
-      queryData(obj, 3);
+      queryData(obj, 2);
     });
   });
 })();

@@ -7,10 +7,14 @@
     $.jsonAjax(API.TODAY_GAIN_API, 'POST', { user_num: user_num })
       .then(function(res) {
         if (res.status == true) {
-          let money = (Number(res.data.gold) + Number(res.data.money)).toFixed(2);
+          let money = (Number(res.data.gold) + Number(res.data.money)).toFixed(
+            2
+          );
           let gain_money = res.data.gain_money.toFixed(2);
           $('.money').text(money);
           $('.gain-money').text(gain_money);
+        } else {
+          $.messageBox(res.message);
         }
       })
       .catch(function(error) {

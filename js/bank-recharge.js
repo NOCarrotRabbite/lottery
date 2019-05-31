@@ -16,7 +16,6 @@
       };
       $.jsonAjax(API.INVEST_DRAW_API, 'POST', data)
         .then(function(res) {
-          console.log(res);
           if (res.status == true) {
             $.messageBox(res.message);
             window.location.href = 'javascript:window.history.go(-1)';

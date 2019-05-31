@@ -37,6 +37,8 @@
                 '        </li>';
               $('.account-details-list').append(dom);
             }
+          } else {
+            $.messageBox(res.message);
           }
         })
         .catch(function(error) {

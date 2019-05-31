@@ -7,10 +7,29 @@
         if (res.status == true) {
           $('.wallet-gold').text(res.data.glod);
           $('.wallet-money').text(res.data.money);
+        } else {
+          $.messageBox(res.message);
         }
       })
       .catch(function(error) {
         console.log(error.status);
       });
+    $('.my-bank').on('click', function() {
+      let obj = {
+        user_num: user_num,
+        state: 'have_draw_password'
+      };
+      $.jsonAjax(API.DRAW_CORE_API, 'POST', obj)
+        .then(function(res) {
+          if (res.status == true && res.have_draw_password == 0) {
+            $.dialogBox('请设置提现密码!', '#/set-withdraw-deposit-pwd');
+          } else {
+            window.location.href = '#/bank-card';
+          }
+        })
+        .catch(function(error) {
+          console.log(error.status);
+        });
+    });
   });
 })();

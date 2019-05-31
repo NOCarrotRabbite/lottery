@@ -23,6 +23,8 @@
               '        </li>';
             $('.withdraw-deposit-record-content').append(dom);
           }
+        } else {
+          $.messageBox(res.message);
         }
       })
       .catch(function(error) {

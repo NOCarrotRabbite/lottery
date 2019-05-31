@@ -22,6 +22,8 @@
             localStorage.setItem('tel', res.data.user_num);
 
             window.location.href = '#/index';
+          } else {
+            $.messageBox(res.message);
           }
         })
         .catch(function(error) {

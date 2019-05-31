@@ -15,6 +15,8 @@
           $('.message-title').text(res.data.notice_title);
           $('.message-date').text(res.data.notice_time);
           $('.my-message-content').text(res.data.notice_content);
+        } else {
+          $.messageBox(res.message);
         }
       })
       .catch(function(error) {
