@@ -18,7 +18,7 @@
 
 // 中奖记录自动向上滚动实现
 let makeListScroll = function () {
-    let speed = 40;
+    let speed = 20;
     let listBox = document.getElementById('rank-list-box');
     let listOne = document.getElementById('rank-list1');
     let listTwo = document.getElementById('rank-list2');
@@ -48,7 +48,7 @@ let makeListScroll = function () {
                 let html = '';
                 for (let i in res.data) {
                     html += '<li>\n' +
-                        '           <span>' + res.data[i].nick_name + '</span>\n' +
+                        '           <span>' + res.data[i].nick_name.substring(0, 1) + '***</span>\n' +
                         '           <span>' + res.data[i].bet_hall_name + '</span>\n' +
                         '           <span class="color-red">喜中' + parseFloat(res.data[0].win_money).toFixed(2) + '元</span>\n' +
                         '    </li>\n'

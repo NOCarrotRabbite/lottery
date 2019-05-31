@@ -47,7 +47,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         '              <use xlink:href="#icon-shuaxin"></use>\n' +
         '            </svg>\n' +
         '          </p>\n' +
-        '          <strong id="balance"></strong>\n' +
+        '          <strong id="balance">0</strong>\n' +
         '        </li>\n' +
         '      </ul>\n' +
         '      <ul class="item-result" id="item-result">\n' +
@@ -60,10 +60,10 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
         /*'        <p class="close">\n' +
         '          【949364】 期已封盘，下注结果以系统开奖为标准，如有异议，请及时联系客服\n' +
         '        </p>\n' +*/
-        '        <div class="records-box" id="records-box">\n' +
-        '          <ul class="result-records" id="result-records">\n' +
-        '          </ul>\n' +
-        '        </div>\n' +
+    '           <div class="records-box" id="records-box">\n' +
+    '               <ul class="result-records" id="result-records">\n' +
+    '               </ul>\n' +
+    '           </div>\n' +
         '      </div>\n' +
         '      <div class="item-bet-btn">\n' +
         '        <button id="bet-toggle">投注</button>\n' +
