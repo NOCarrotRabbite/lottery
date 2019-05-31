@@ -1,36 +1,71 @@
 (function() {
   $(function() {
+    let user_num = localStorage.getItem('tel');
     //页面数据
-    /*  $.jsonAjax(API.REG_USER_API, 'POST', data)
-      .then(function(data) {
-        if (data.status == true) {
-          window.location.href = '#/login';
-        }
-      })
-      .catch(function(error) {
-        console.log(error.status);
-      }); */
+    //获取银行卡数据-验证提现密码-是否绑卡-绑卡/修改银行卡
+    queryData(1);
+    function queryData(state) {
+      let obj = {
+        user_num: user_num,
+        state: state == 1 ? 'have_draw_password' : 'have_bank_card'
+      };
+      $.jsonAjax(API.DRAW_CORE_API, 'POST', obj)
+        .then(function(res) {
+          if (res.status == true) {
+            if (state == 1) {
+              if (res.have_draw_password == 0) {
+                $.dialogBox('请设置提现密码!', '#/set-withdraw-deposit-pwd');
+              } else {
+                let obj = {
+                  user_num: user_num,
+                  state: 'have_bank_card'
+                };
+                queryData(2);
+              }
+            } else if (state == 2) {
+              if (res.have_card_id == 1) {
+                $('.name').text(res.data.card_user_name);
+                $('.bank').text(res.data.card_name);
+                $('.num').text(res.data.card_id);
+              } else {
+                window.location.href = '#/bank-card';
+              }
+            }
+          }
+        })
+        .catch(function(error) {
+          console.log(error.status);
+        });
+    }
     //输入框删除icon控制
     $.inputClear($('.money'), $('.money').next());
     $.inputClear($('.password'), $('.password').next());
     //提交提现申请
     $('.form-submit').on('click', function() {
+      let time = $.dateFtt('yyyy-MM-dd hh:mm:ss', new Date());
       let data = {
-        name: $('.name').text(),
-        bank: $('.bank').text(),
-        num: $('.num').text(),
+        state: 'user_draw',
+        user_num: user_num,
+        time: time,
+        type: '银行卡',
+        draw_card_user_name: $('.name').text(),
+        draw_card_name: $('.bank').text(),
+        draw_card_id: $('.num').text(),
         money: $('.money').val(),
-        password: $('.password').val()
+        draw_password: $('.password').val()
       };
-      /*  $.jsonAjax(API.REG_USER_API, 'POST', data)
-      .then(function(data) {
-        if (data.status == true) {
-          window.location.href = '#/login';
-        }
-      })
-      .catch(function(error) {
-        console.log(error.status);
-      }); */
+      $.jsonAjax(API.INVEST_DRAW_API, 'POST', data)
+        .then(function(res) {
+          if (res.status == true) {
+            $.messageBox(res.message);
+            window.location.href = 'javascript:window.history.go(-1)';
+          } else {
+            $.messageBox(res.message);
+          }
+        })
+        .catch(function(error) {
+          console.log(error.status);
+        });
     });
   });
 })();

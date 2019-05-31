@@ -22,5 +22,7 @@ const API = {
   //游戏公告+我的消息+公告/消息详情
   NOTICE_API: '/test/api/notice.php',
   // 获取中奖排行榜
-  GET_WINNING_API: '/test/api/charts.php'
+  GET_WINNING_API: '/test/api/charts.php',
+  //充值-提现
+  INVEST_DRAW_API: '/test/api/invest_draw.php'
 };

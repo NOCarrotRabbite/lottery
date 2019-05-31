@@ -19,15 +19,15 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       ' <ul class="withdraw-deposit-form">\n' +
       ' <li>\n' +
       '<span>真实姓名</span>\n' +
-      '<span class="color-red name">林玲</span>\n' +
+      '<span class="color-red name"></span>\n' +
       ' </li>\n' +
       '<li>\n' +
       ' <span>银行名称</span>\n' +
-      '<span class="color-red  bank">中国农业银行</span>\n' +
+      '<span class="color-red  bank"></span>\n' +
       ' </li>\n' +
       ' <li>\n' +
       '<span>卡号账号</span>\n' +
-      '<span class="color-red num">123456789123456</span>\n' +
+      '<span class="color-red num"></span>\n' +
       ' </li>\n' +
       ' <li>\n' +
       ' <span>提现金额</span>\n' +

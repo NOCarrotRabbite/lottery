@@ -5,18 +5,28 @@
     $.copy($('.service-copy'), $('.service-name'), '收款人姓名复制成功');
     //提交充值申请
     $('.bank-recharge-submit').on('click', function() {
+      let user_num = localStorage.getItem('tel');
+      let time = $.dateFtt('yyyy-MM-dd hh:mm:ss', new Date());
       let data = {
-        money: $('.money').val()
+        state: 'user_invest',
+        money: $('.money').val(),
+        user_num: user_num,
+        time: time,
+        type: '网银'
       };
-      /*  $.jsonAjax(API.REG_USER_API, 'POST', data)
-      .then(function(data) {
-        if (data.status == true) {
-          window.location.href = '#/login';
-        }
-      })
-      .catch(function(error) {
-        console.log(error.status);
-      }); */
+      $.jsonAjax(API.INVEST_DRAW_API, 'POST', data)
+        .then(function(res) {
+          console.log(res);
+          if (res.status == true) {
+            $.messageBox(res.message);
+            window.location.href = 'javascript:window.history.go(-1)';
+          } else {
+            $.messageBox(res.message);
+          }
+        })
+        .catch(function(error) {
+          console.log(error.status);
+        });
     });
   });
 })();

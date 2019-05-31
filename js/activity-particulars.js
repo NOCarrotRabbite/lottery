@@ -9,11 +9,12 @@
     };
     $.jsonAjax(API.NOTICE_API, 'POST', data)
       .then(function(res) {
-        console.log('res', res);
         if (res.status == true) {
-          $('.activity-title').text(res.data.notice_title);
-          $('.activity-date').text(res.data.notice_time);
-          $('.activity-particulars-content').text(res.data.notice_content);
+          var reg = new RegExp('\r\n', 'g');
+          notice_content = res.data[0].notice_content.replace(reg, '<br/>');
+          $('.activity-title').text(res.data[0].notice_title);
+          $('.activity-date').text(res.data[0].notice_start_time);
+          $('.activity-particulars-content').html(notice_content);
         }
       })
       .catch(function(error) {
