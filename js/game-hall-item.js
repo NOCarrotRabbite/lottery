@@ -32,8 +32,12 @@
             });
         });
         // 动态添加元素中奖记录的显示与隐藏
-        $('#item-result').on('click', '#resulst-icon', function () {
+        /*$('#item-result').on('click', '#resulst-icon', function () {
             $('#records-box').toggle();
+        });*/
+        // 已有元素的绑定事件
+        $('#item-result').on('click', function () {
+            $('.records-box').toggle();
         });
         // 投注蒙层的显示与隐藏
         $('.bet-hidden').on('click', function () {
@@ -387,15 +391,15 @@
             // 初始化往期中奖记录
             $('#item-result').html(
                 '        <li class="result-text">\n' +
-                '          <span>第' +  data.old_data[0].iss_number + '期 </span>\n' +
-                '          <span class="num">' + data.old_data[0].win_code_1 + '</span>\n' +
-                '          <span>+</span>\n' +
-                '          <span class="num">' + data.old_data[0].win_code_2 + '</span>\n' +
-                '          <span>+</span>\n' +
-                '          <span class="num">' + data.old_data[0].win_code_3 + '</span>\n' +
-                '          <span>=</span>\n' +
-                '          <span class="num res">' + data.old_data[0].win_sum + '</span>\n' +
-                '          <span class="num big-small">' + data.old_data[0].is_big + '</span>\n' +
+                '          <span>第 ' + data.old_data[0].iss_number + ' 期 &nbsp;</span>\n' +
+                '          <span class="num">' + data.old_data[0].win_code_1 + '</span>&nbsp;\n' +
+                '          <span>+</span>&nbsp;\n' +
+                '          <span class="num">' + data.old_data[0].win_code_2 + '</span>&nbsp;\n' +
+                '          <span>+</span>&nbsp;\n' +
+                '          <span class="num">' + data.old_data[0].win_code_3 + '</span>&nbsp;\n' +
+                '          <span>=</span>&nbsp;\n' +
+                '          <span class="num res">' + data.old_data[0].win_sum + '</span>&nbsp;\n' +
+                '          <span class="num big-small">' + data.old_data[0].is_big + '</span>&nbsp;\n' +
                 '          <span class="num sigle-double">' + data.old_data[0].is_double + '</span>\n' +
                 '        </li>\n' +
                 '        <li class="resulst-icon" id="resulst-icon">          \n' +
@@ -406,15 +410,15 @@
             let records_html = '';
             for (let i in data.old_data) {
                 records_html +='<li class="result-text">\n' +
-                    '              <span>第' + data.old_data[i].iss_number + ' 期 </span>\n' +
-                    '              <span class="num">' + data.old_data[i].win_code_1 + '</span>\n' +
-                    '              <span>+</span>\n' +
-                    '              <span class="num">' + data.old_data[i].win_code_2 + '</span>\n' +
-                    '              <span>+</span>\n' +
-                    '              <span class="num">' + data.old_data[i].win_code_3 + '</span>\n' +
-                    '              <span>=</span>\n' +
-                    '              <span class="num res">' + data.old_data[i].win_sum + '</span>\n' +
-                    '              <span class="num big-small">' + data.old_data[i].is_big + '</span>\n' +
+                    '              <span>第 ' + data.old_data[i].iss_number + ' 期 &nbsp;</span>\n' +
+                    '              <span class="num">' + data.old_data[i].win_code_1 + '</span>&nbsp;\n' +
+                    '              <span>+</span>&nbsp;\n' +
+                    '              <span class="num"> ' + data.old_data[i].win_code_2 + '</span>&nbsp;\n' +
+                    '              <span>+</span>&nbsp;\n' +
+                    '              <span class="num">' + data.old_data[i].win_code_3 + '</span>&nbsp;\n' +
+                    '              <span>=</span>&nbsp;\n' +
+                    '              <span class="num res">' + data.old_data[i].win_sum + '</span>&nbsp;\n' +
+                    '              <span class="num big-small">' + data.old_data[i].is_big + '</span>&nbsp;\n' +
                     '              <span class="num sigle-double">' + data.old_data[i].is_double + '</span>\n' +
                     '            </li>\n'
             };
