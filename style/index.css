@@ -166,8 +166,9 @@ footer .active {
   padding: 1rem 0;
 }
 .rank-content span {
-  padding: 0.4rem 0;
+  padding: 0.4rem 2rem;
   color: #808080;
+  width: 33.33%;
 }
 .rank-content .color-red {
   color: #e9594a;
