@@ -359,7 +359,7 @@
                 $('#open-info').html('今日');
                 return;
             }
-            $('#open-info').html('第<span class="black" id="issue">' + issue + '</span>期');
+            $('#open-info').html('第 <span class="black" id="issue">' + issue + '</span> 期');
             setTimeout(opening, 1000);
             return;
         }
@@ -439,7 +439,7 @@
                         $('#open-info').html('今日');
                         return;
                     }
-                    $('#open-info').html('第<span class="black" id="issue">' + issue + '</span>期');
+                    $('#open-info').html('第 <span class="black" id="issue">' + issue + '</span> 期');
                     // 封盘后延时请求下一次数据
                     setTimeout(opening, 1000);
                 } else {
@@ -453,7 +453,7 @@
                     // 计算除去分钟数后剩余秒数
                     countdown_time.secs = secs_diff % 60;
                     // 初始化倒计时描述
-                    $('#open-info').html('距离<span class="black" id="issue">' + issue + '</span>期截止');
+                    $('#open-info').html('距离 <span class="black" id="issue">' + issue + '</span> 期截止');
                     // 初始化倒计时剩余时间
                    $('#countdown').text(countdown_time.mins + '分钟' + countdown_time.secs + '秒');
                     // 设置定时器，实现倒计时功能
@@ -469,7 +469,7 @@
                 }
                 setTimeout(function () {
                     betClick(1);
-                    $('#open-info').html('距离<span class="black" id="issue">' + issue + '</span>期截止');
+                    $('#open-info').html('距离 <span class="black" id="issue">' + issue + '</span> 期截止');
                     // 计算持续时间的秒数
                     let continue_sec = data.new_data[0].continue_time * 60;
                     // 计算剩余分钟数
