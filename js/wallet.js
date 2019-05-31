@@ -21,10 +21,12 @@
       };
       $.jsonAjax(API.DRAW_CORE_API, 'POST', obj)
         .then(function(res) {
-          if (res.status == true && res.have_draw_password == 0) {
-            $.dialogBox('请设置提现密码!', '#/set-withdraw-deposit-pwd');
-          } else {
-            window.location.href = '#/bank-card';
+          if (res.status == true) {
+            if (res.have_draw_password == 0) {
+              $.dialogBox('请设置提现密码!', '#/set-withdraw-deposit-pwd');
+            } else {
+              window.location.href = '#/bank-card';
+            }
           }
         })
         .catch(function(error) {
