@@ -17,10 +17,10 @@
       $.jsonAjax(API.INVEST_DRAW_API, 'POST', data)
         .then(function(res) {
           if (res.status == true) {
-            $.messageBox(res.message);
+            $.messageBox(res.message, 600);
             window.location.href = 'javascript:window.history.go(-1)';
           } else {
-            $.messageBox(res.message);
+            $.messageBox(res.message, 600);
           }
         })
         .catch(function(error) {

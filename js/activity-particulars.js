@@ -16,7 +16,7 @@
           $('.activity-date').text(res.data[0].notice_start_time);
           $('.activity-particulars-content').html(notice_content);
         } else {
-          $.messageBox(res.message);
+          $.messageBox(res.message, 600);
         }
       })
       .catch(function(error) {

@@ -16,7 +16,7 @@
           $('.notice-date').text(res.data.notice_time);
           $('.notice-particulars-content').text(res.data.notice_content);
         } else {
-          $.messageBox(res.message);
+          $.messageBox(res.message, 600);
         }
       })
       .catch(function(error) {

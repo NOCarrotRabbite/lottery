@@ -18,7 +18,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '  </svg>\n' +
       '</li>\n' +
       '<li>\n' +
-      '<input type="text" class="password" placeholder="请输入用户密码" />\n' +
+      '<input type="password" class="password" placeholder="请输入用户密码" />\n' +
       '  <svg class="icon detail-icon" aria-hidden="true">\n' +
       '     <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '  </svg>\n' +

@@ -21,11 +21,11 @@
               if (res.status == true) {
                 window.location.href = 'javascript:window.history.go(-1)';
               } else {
-                $.messageBox(res.message);
+                $.messageBox(res.message, 600);
               }
             }
           } else {
-            $.messageBox(res.message);
+            $.messageBox(res.message, 600);
           }
         })
         .catch(function(error) {

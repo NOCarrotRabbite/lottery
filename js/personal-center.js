@@ -8,7 +8,7 @@
           $('.personal-center-gold').text(res.data.glod);
           $('.personal-center-money').text(res.data.money);
         } else {
-          $.messageBox(res.message);
+          $.messageBox(res.message, 600);
         }
       })
       .catch(function(error) {
