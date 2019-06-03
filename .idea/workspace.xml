@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b492952f-9934-49d0-803b-87aa11e996ac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/login.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/login.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/game-hall-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/game-hall-item.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/index-main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index-main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/route/components/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/route/components/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/common.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,9 +36,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="82" />
+          <entry key="css" value="84" />
           <entry key="html" value="35" />
-          <entry key="js" value="241" />
+          <entry key="js" value="249" />
           <entry key="json" value="4" />
           <entry key="map" value="1" />
           <entry key="scss" value="1" />
@@ -42,28 +46,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="82" />
+          <entry key="CSS" value="84" />
           <entry key="HTML" value="35" />
           <entry key="JSON" value="4" />
-          <entry key="JavaScript" value="241" />
+          <entry key="JavaScript" value="249" />
           <entry key="SCSS" value="1" />
           <entry key="SourceMap" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="5104" />
+          <entry key="css" value="5391" />
           <entry key="html" value="935" />
-          <entry key="js" value="18476" />
+          <entry key="js" value="18614" />
           <entry key="json" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="5104" />
+          <entry key="CSS" value="5391" />
           <entry key="HTML" value="952" />
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="18459" />
+          <entry key="JavaScript" value="18597" />
         </counts>
       </usages-collector>
     </session>
@@ -71,10 +75,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/route/components/login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="1" column="22" lean-forward="true" selection-start-column="48" selection-end-line="1" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/index-main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2160">
+              <caret line="80" column="51" lean-forward="true" selection-start-line="80" selection-start-column="51" selection-end-line="80" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/style/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/game-hall-item.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13662">
-              <caret line="506" column="33" lean-forward="true" selection-start-line="506" selection-start-column="33" selection-end-line="506" selection-end-column="33" />
+            <state relative-caret-position="439">
+              <caret line="395" column="19" lean-forward="true" selection-start-line="395" selection-start-column="19" selection-end-line="395" selection-end-column="19" />
               <folding>
                 <element signature="e#55#61#0" expanded="true" />
                 <element signature="e#105#111#0" expanded="true" />
@@ -99,11 +130,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/index-main.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/style/common.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+            <state relative-caret-position="277">
+              <caret line="393" column="22" lean-forward="true" selection-start-line="393" selection-start-column="22" selection-end-line="393" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/route/components/register.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -119,12 +159,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$('#balance')</find>
-      <find>freshBetMes</find>
-      <find>num</find>
-      <find>black</find>
-      <find>refresh-balance</find>
-      <find>bet-price</find>
       <find>getUserBalance</find>
       <find>betting</find>
       <find>balance</find>
@@ -149,6 +183,12 @@
       <find>withdrawal</find>
       <find>makeListScroll</find>
       <find>rank-list</find>
+      <find>.public-member-form li input</find>
+      <find>console.log</find>
+      <find>login</find>
+      <find>register</find>
+      <find>public-member</find>
+      <find>countdown</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -170,7 +210,6 @@
         <option value="$PROJECT_DIR$/js/route/components/setting.js" />
         <option value="E:/后台协议/api信息.json" />
         <option value="$PROJECT_DIR$/js/route/components/charge-main.js" />
-        <option value="$PROJECT_DIR$/js/route/components/login.js" />
         <option value="$PROJECT_DIR$/js/route/components/account-details.js" />
         <option value="$PROJECT_DIR$/js/util/http-server.js" />
         <option value="$PROJECT_DIR$/js/route/components/activity-main.js" />
@@ -179,7 +218,6 @@
         <option value="$PROJECT_DIR$/js/route/components/recharge-record.js" />
         <option value="$PROJECT_DIR$/js/route/route.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/style/common.css" />
         <option value="$PROJECT_DIR$/js/util/common.js" />
         <option value="$PROJECT_DIR$/js/route/components/game-hall.js" />
         <option value="$PROJECT_DIR$/js/index.js" />
@@ -188,8 +226,11 @@
         <option value="$PROJECT_DIR$/js/route/components/game-hall-item.js" />
         <option value="$PROJECT_DIR$/style/index.css" />
         <option value="$PROJECT_DIR$/js/route/components/account-main.js" />
-        <option value="$PROJECT_DIR$/js/game-hall-item.js" />
+        <option value="$PROJECT_DIR$/js/route/components/login.js" />
+        <option value="$PROJECT_DIR$/style/common.css" />
         <option value="$PROJECT_DIR$/js/index-main.js" />
+        <option value="$PROJECT_DIR$/js/route/components/register.js" />
+        <option value="$PROJECT_DIR$/js/game-hall-item.js" />
       </list>
     </option>
   </component>
@@ -226,7 +267,36 @@
             <path>
               <item name="Lottery" type="b2602c69:ProjectViewProjectNode" />
               <item name="Lottery" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lottery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lottery" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lottery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lottery" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lottery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lottery" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="route" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lottery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lottery" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="route" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lottery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lottery" type="462c0819:PsiDirectoryNode" />
+              <item name="style" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -315,12 +385,12 @@
       <workItem from="1559108168046" duration="8889000" />
       <workItem from="1559186540132" duration="16341000" />
       <workItem from="1559268720665" duration="11462000" />
-      <workItem from="1559530448975" duration="8914000" />
+      <workItem from="1559530448975" duration="17354000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="389117000" />
+    <option name="totallyTimeSpent" value="397557000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -371,8 +441,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spa-routers/route/test.html" />
-    <entry file="file://$PROJECT_DIR$/js/route/components/index.js" />
     <entry file="file://$PROJECT_DIR$/js/route/components/list.js" />
     <entry file="file://$PROJECT_DIR$/js/header.js" />
     <entry file="file://E:/index/index.js" />
@@ -436,13 +504,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/route/components/about-us.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/route/components/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/route/components/activity-particulars.js">
       <provider selected="true" editor-type-id="text-editor" />
@@ -551,20 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style/common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="265" column="14" lean-forward="true" selection-start-line="265" selection-start-column="1" selection-end-line="265" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1357">
-          <caret line="171" column="1" lean-forward="true" selection-start-line="171" selection-start-column="1" selection-end-line="171" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/game-hall.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1026">
@@ -586,13 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/route/components/game-hall-item.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="63" column="45" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/route/components/index-main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1695">
@@ -600,10 +640,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/register.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/route/components/game-hall-item.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-193">
+          <caret line="63" column="45" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/route/components/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="22" lean-forward="true" selection-start-column="48" selection-end-line="1" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="393" column="22" lean-forward="true" selection-start-line="393" selection-start-column="22" selection-end-line="393" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/route/components/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/index-main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2160">
+          <caret line="80" column="51" lean-forward="true" selection-start-line="80" selection-start-column="51" selection-end-line="80" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/game-hall-item.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13662">
-          <caret line="506" column="33" lean-forward="true" selection-start-line="506" selection-start-column="33" selection-end-line="506" selection-end-column="33" />
+        <state relative-caret-position="439">
+          <caret line="395" column="19" lean-forward="true" selection-start-line="395" selection-start-column="19" selection-end-line="395" selection-end-column="19" />
           <folding>
             <element signature="e#55#61#0" expanded="true" />
             <element signature="e#105#111#0" expanded="true" />
@@ -624,13 +709,6 @@
             <element signature="e#359#365#0" expanded="true" />
             <element signature="e#416#422#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/index-main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
         </state>
       </provider>
     </entry>

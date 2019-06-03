@@ -78,6 +78,7 @@ let makeListScroll = function () {
                 $('#rank-list1').html('<li>暂无数据</li>');
             }
         }).catch(function (error) {
+            $('#rank-list1').html('<li>暂无数据</li>');
             console.log(error);
         });
     }

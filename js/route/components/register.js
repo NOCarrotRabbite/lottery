@@ -1,10 +1,10 @@
 SPA_RESOLVE_INIT = function(transition, sigal) {
+  $('#header').hide();
   $('#footer').hide();
   $('#main').html(
     '\n' +
-      '<div class="register public-member">\n' +
-      '<ul class="register-form public-member-form">\n' +
-      '<li class="title">注 册</li>\n' +
+      '<div class="register"><img src="/assets/images/login.jpg" class="login-image">\n' +
+      '<div class="public-member"><ul class="register-form public-member-form">\n' +
       '<li>\n' +
       '<input type="text" class="name" placeholder="请输入用户昵称" />\n' +
       '  <svg class="icon detail-icon" aria-hidden="true">\n' +
@@ -24,7 +24,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '  </svg>\n' +
       '</li>\n' +
       '<li><button class="register-submit public-member-submit">注册</button></li>\n' +
-      '</ul>\n' +
+      '</ul></div>\n' +
       '</div>'
   );
   $.addPageScript('js/register.js', sigal);
