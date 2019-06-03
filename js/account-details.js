@@ -38,7 +38,7 @@
               $('.account-details-list').append(dom);
             }
           } else {
-            $.messageBox(res.message,600);
+            $.messageBox(res.message, 600);
           }
         })
         .catch(function(error) {
@@ -1659,9 +1659,9 @@
               }
 
               // trigger callback function
-              if (typeof settings.onClick === 'function') {
+              if (typeof settings.onClick == 'function') {
                 if (settings.format) {
-                  if (settings.format === 'moment') {
+                  if (settings.format == 'moment') {
                     settings.onClick.call(this, timeSelected);
                   } else {
                     settings.onClick.call(
@@ -1698,10 +1698,11 @@
           }
 
           // go to startDate
+          console.log('hahha', settings.startDate, firstStart);
           if (settings.startDate && firstStart) {
-            firstStart = false;
             timeNowLocal.year(parseInt(timeSelected.format('YYYY')));
             timeNowLocal.month(parseInt(timeSelected.format('M') - 1));
+            firstStart = false;
             removeHTML();
           }
         };
@@ -1792,9 +1793,11 @@
         $body.on('mousedown', function() {
           closePopups();
         });
-
+        //设置时间
         settings.onClick = function(date) {
-          $input.prop('value', date);
+          console.log('xixixixi', date);
+          console.log(' $input', $input);
+          $input.val(date);
           selectedDate = date;
           closePopups();
         };

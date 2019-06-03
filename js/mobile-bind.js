@@ -1,5 +1,7 @@
 (function() {
   $(function() {
+    //自动获取焦点
+    $('.mobile-num').focus();
     //获取验证码
     $('.get-code').on('click', function() {
       /*  $.jsonAjax(API.REG_USER_API, 'POST', data)

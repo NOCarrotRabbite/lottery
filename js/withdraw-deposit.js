@@ -23,6 +23,8 @@
           console.log(error.status);
         });
     }
+    //自动获取焦点
+    $('.money').focus();
     /*    } */
     //输入框删除icon控制
     $.inputClear($('.money'), $('.money').next());

@@ -32,6 +32,8 @@
           console.log(error.status);
         });
     }
+    //自动获取焦点
+    $('.name').focus();
     //点击银行名称选择银行（弹框）
     $('.bank').on('click', function() {
       $('.dialog').show();
