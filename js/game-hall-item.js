@@ -18,6 +18,15 @@
         }, 1000);
         // 绑定撤单按钮事件
         $('.withdrawal').on('click', function () {
+            // 判断是否封盘/开盘
+            if ('已封盘' === $('#countdown').text()) {
+                $.messageBox("已封盘，不能撤单！");
+                return;
+            }
+            if ('未开盘' === $('#countdown').text()) {
+                $.messageBox("未开盘，不能撤单！");
+                return;
+            }
             let param = { "hall_id": $('#param').attr('hall-type'), "small_id": $('#param').attr('item-type'), "user_num": localStorage.getItem('tel'), "bet_iss": issue };
             $.jsonAjax(API.CANCEL_BET_API, 'POST', param).then(function(res) {
                 if (res.status) {
@@ -40,6 +49,9 @@
             $('.records-box').toggle();
         });
         // 投注蒙层的显示与隐藏
+        $('#bet-toggle').on('click', function () {
+            $('.bet-hidden').toggle();
+        });
         $('.bet-hidden').on('click', function () {
             $('.bet-hidden').toggle();
         });
@@ -249,30 +261,51 @@
 
         // 保存投注
         $('.bet-footer .betting').on('click', function () {
-            if (parseFloat($('#balance').text()) >= parseFloat($('#bet-price').text())) {
-                let save_bet_data = [];
-                let child_data = { "user_num": localStorage.getItem('tel'), "bet_hall_id": $('#param').attr('hall-type'),
-                    "bet_small_id": $('#param').attr('item-type'), "bet_time": $.dateFtt('yyyy-MM-dd hh:mm:ss', new Date()), "bet_money": $('.bet-amount')[0].value, "bet_iss": issue, "bet_type": save_bet_data };
-
-                $('.active').each(function () {
-                    let bet_value = $(this).children(':first').text();
-                    child_data.bet_type.push(bet_value);
-                });
-                $.jsonAjax(API.SAVE_BET_API, 'POST', child_data).then(function (data) {
-                    if (data.status) {
-                        let balance = parseFloat($('#balance').text()) - parseFloat($('#bet-price').text());
-                        $('#balance').text(balance.toFixed(2) + '元宝');
-                        $.messageBox(data.message);
-                        $('.bet-hidden').toggle();
-                        return;
-                    }
-                    $.messageBox(data.message);
-                }).catch(function (error) {
-                    console.log(error);
-                });
-            } else {
-                $.messageBox("余额不足！");
+            // 判断是否封盘/开盘
+            if ('已封盘' === $('#countdown').text()) {
+                $.messageBox("已封盘，不能投注！");
+                return;
             }
+            if ('未开盘' === $('#countdown').text()) {
+                $.messageBox("未开盘，不能投注！");
+                return;
+            }
+            // 判断用户是否选择投注类型
+            if (0 == $('#bet-num').text()) {
+                $.messageBox("请选择投注内容！");
+                return;
+            }
+            // 判断用户投注金额是否符合规则
+            let reg = /^[1-9]\d*$/;
+            if (!reg.test($('.bet-amount')[0].value)) {
+                $.messageBox("投注金额不能为零或者小数！");
+                return;
+            }
+            // 判断投注金额是否超过余额
+            if (parseFloat($('#balance').text()) < parseFloat($('#bet-price').text())) {
+                $.messageBox("余额不足！");
+                return;
+            }
+            let save_bet_data = [];
+            let child_data = { "user_num": localStorage.getItem('tel'), "bet_hall_id": $('#param').attr('hall-type'),
+                "bet_small_id": $('#param').attr('item-type'), "bet_time": $.dateFtt('yyyy-MM-dd hh:mm:ss', new Date()), "bet_money": $('.bet-amount')[0].value, "bet_iss": issue, "bet_type": save_bet_data };
+
+            $('.active').each(function () {
+                let bet_value = $(this).children(':first').text();
+                child_data.bet_type.push(bet_value);
+            });
+            $.jsonAjax(API.SAVE_BET_API, 'POST', child_data).then(function (data) {
+                if (data.status) {
+                    let balance = parseFloat($('#balance').text()) - parseFloat($('#bet-price').text());
+                    $('#balance').text(balance.toFixed(2) + '元宝');
+                    $.messageBox(data.message);
+                    $('.bet-hidden').toggle();
+                    return;
+                }
+                $.messageBox(data.message);
+            }).catch(function (error) {
+                console.log(error);
+            });
         });
     });
     // type-one 中奖值过滤函数
@@ -353,7 +386,6 @@
         if(countdown_time.mins == 0 && countdown_time.secs == 0) {
             clearInterval(interval_id);
             $('#countdown').text('已封盘');
-            betClick(0);
             // 封盘后延时请求下一次数据
             if (flag == 0) { // 最后一期则不再请求下一期数据
                 $('#open-info').html('今日');
@@ -430,10 +462,9 @@
             // 计算开盘时间和当前时间的差值
             let diff = getTimeDiff(start_time, new Date());
             // 计算diff的秒数
-            let diff_secs_total = diff.mins * 60 + diff.secs;
+            let diff_secs_total = diff.hours * 60 * 60 + diff.mins * 60 + diff.secs;
             if (start_time < new Date()) {  // 已经开盘
                 if (diff.days > 0 || diff.hours > 0 || diff.mins >= data.new_data[0].continue_time) { // 开盘时间距离现在超过持续时间则封盘
-                    betClick(0);
                     $('#countdown').text('已封盘');
                     if (data.new_data[0].period_flag == 0) { // 最后一期则不再请求下一期数据
                         $('#open-info').html('今日');
@@ -443,7 +474,6 @@
                     // 封盘后延时请求下一次数据
                     setTimeout(opening, 1000);
                 } else {
-                    betClick(1);
                     // 计算开盘持续时间的秒数
                     let five_secs = data.new_data[0].continue_time * 60;
                     // 计算开盘持续时间和diff的秒数差
@@ -465,10 +495,8 @@
                 if (-1 == data.new_data[0].period_flag) {
                     $('#open-info').html('今日');
                     $('#countdown').text('未开盘');
-                    betClick(0);
                 }
                 setTimeout(function () {
-                    betClick(1);
                     $('#open-info').html('距离 <span class="black" id="issue">' + issue + '</span> 期截止');
                     // 计算持续时间的秒数
                     let continue_sec = data.new_data[0].continue_time * 60;
@@ -555,7 +583,7 @@
             console.log(error);
         });
     };
-    // 封盘时投注按钮点击回调函数
+    /*// 封盘时投注按钮点击回调函数
     let closeBetEvent = function () {
         $.messageBox("已封盘，不能投注!");
     };
@@ -577,7 +605,7 @@
             $('#bet-toggle').on('click', closeBetEvent);
             $('#bet-toggle').unbind('click', openBetEvent);
         }
-    };
+    };*/
 
     // 获取用户余额
     let getUserBalance = function () {
