@@ -1,5 +1,7 @@
 (function() {
   $(function() {
+    //自动获取焦点
+    $('.money').focus();
     //复制
     $.copy($('.btn'), $('.color-red'), '用户名复制成功，您可以扫码支付了');
     //提交充值申请

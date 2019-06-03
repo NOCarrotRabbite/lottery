@@ -31,7 +31,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       ' </li>\n' +
       ' <li>\n' +
       ' <span>提现金额</span>\n' +
-      ' <input type="text" autofocus="autofocus" class="money" placeholder="请输入提现金额" />\n' +
+      ' <input type="text" class="money" placeholder="请输入提现金额" />\n' +
       '  <svg class="icon detail-icon" aria-hidden="true">\n' +
       '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '              </svg>\n' +

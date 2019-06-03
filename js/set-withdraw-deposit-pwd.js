@@ -1,5 +1,7 @@
 (function() {
   $(function() {
+    //自动获取焦点
+    $('.old-pwd').focus();
     //input框删除icon控制
     $.inputClear($('.old-pwd'), $('.old-pwd').next());
     $.inputClear($('.new-pwd'), $('.new-pwd').next());
