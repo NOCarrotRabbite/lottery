@@ -20,7 +20,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '<li><button class="login-submit public-member-submit">登 录</button></li>\n' +
       '<li class="register-href">\n' +
       '<a href="#/register">注 册</a>\n' +
-      '<a href="#">忘记密码</a>\n' +
+      '<a href="#/mobile-bind">忘记密码</a>\n' +
       '</li>\n' +
       '</ul></div>\n' +
       '</div>'

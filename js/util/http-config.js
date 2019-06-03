@@ -24,5 +24,7 @@ const API = {
   // 获取中奖排行榜
   GET_WINNING_API: '/test/api/charts.php',
   //充值-提现
-  INVEST_DRAW_API: '/test/api/invest_draw.php'
+  INVEST_DRAW_API: '/test/api/invest_draw.php',
+  //修改登录密码
+  UP_PASSWORD_API: '/test/api/up_password.php'
 };

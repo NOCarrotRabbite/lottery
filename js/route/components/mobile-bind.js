@@ -1,7 +1,8 @@
 SPA_RESOLVE_INIT = function(transition, sigal) {
+  $('#header').show();
   $('#footer').hide();
   $('#header').html(
-    '<a href="#/setting">\n' +
+    '<a href="javascript:window.history.go(-1)">\n' +
       '         <svg class="icon" aria-hidden="true">\n' +
       '           <use xlink:href="#icon-fanhui"></use>\n' +
       '         </svg>\n' +
