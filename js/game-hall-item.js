@@ -419,7 +419,6 @@
         $.jsonAjax(API.GAME_HALL_ITEM_AIP, 'POST', query_param).then(function (data) {
             // 初始化期数
             issue = data.new_data[0].iss_number;
-
             // 初始化往期中奖记录
             $('#item-result').html(
                 '        <li class="result-text">\n' +
@@ -463,7 +462,7 @@
             let diff = getTimeDiff(start_time, new Date());
             // 计算diff的秒数
             let diff_secs_total = diff.hours * 60 * 60 + diff.mins * 60 + diff.secs;
-            if (start_time < new Date()) {  // 已经开盘
+            if (start_time < new Date()) {;  // 已经开盘
                 if (diff.days > 0 || diff.hours > 0 || diff.mins >= data.new_data[0].continue_time) { // 开盘时间距离现在超过持续时间则封盘
                     $('#countdown').text('已封盘');
                     if (data.new_data[0].period_flag == 0) { // 最后一期则不再请求下一期数据

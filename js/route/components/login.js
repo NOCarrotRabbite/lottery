@@ -3,9 +3,8 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
   $('#footer').hide();
   $('#main').html(
     '\n' +
-      '<div class="login public-member">\n' +
-      '<ul class="login-form public-member-form">\n' +
-      '<li class="title">登 录</li>\n' +
+      '<div class="login"><img src="/assets/images/login.jpg" class="login-image"/>\n' +
+      '<div class="public-member"><ul class="login-form public-member-form">\n' +
       '<li>\n' +
       '<input type="text"  class="user" placeholder="请输入用户账号" />\n' +
       '  <svg class="icon detail-icon" aria-hidden="true">\n' +
@@ -23,7 +22,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '<a href="#/register">注 册</a>\n' +
       '<a href="#">忘记密码</a>\n' +
       '</li>\n' +
-      '</ul>\n' +
+      '</ul></div>\n' +
       '</div>'
   );
   $.addPageScript('js/login.js', sigal);

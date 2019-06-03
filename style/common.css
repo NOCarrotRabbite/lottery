@@ -40,6 +40,8 @@ figcaption {
 a {
   color: #888;
 }
+/*input{-webkit-appearance: none; -moz-appearance: none; -o-appearance: none; appearance: none;}*/
+input:focus { outline: none; background-color: rgba(225,225,225,0) }
 input[type='button'],
 input[type='submit'],
 input[type='search'],
@@ -399,15 +401,14 @@ body {
 /* 绑定银行卡+修改密码+提现密码 公共样式 结束 */
 /* 登录+注册 公共样式 开始 */
 .public-member {
-  /* width: 100%;
-  height: 100%; */
-  flex: 1;
-  padding: 0 1.5rem;
+  /* width: 100%;*/
+  height: 100%;
+  /*flex: 1;*/
+  padding: 0 1.5rem 3rem 1.5rem;
   box-sizing: border-box;
-  background: #e9594a;
   color: #fff;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   font-size: 1.866rem;
 }
 .public-member-form {
@@ -437,16 +438,23 @@ body {
   flex: 1;
   padding: 1rem;
   border-radius: 0.6rem;
-  font-size: 1.6rem;
+  font-size: 1.866rem;
+  background-color: rgba(225,225,225, 0) !important;
+  border: 1px solid #fff;
+  height: 3rem;
+  line-height: 3rem;
+  color: #fff;
+  caret-color: #fff;
 }
 .public-member-form .public-member-submit {
   width: 100%;
   font-size: 2.133rem;
   padding: 1rem;
-  background: #fff;
-  border-radius: 4rem;
-  color: #e9594a;
-  margin-top: 3rem;
+    background: rgba(225,225,225,0);
+    border-radius: 4rem;
+    color: #fff;
+    margin-top: 3rem;
+    border: 1px solid #fff;
 }
 .public-member-form .register-href {
   display: flex;
@@ -454,7 +462,29 @@ body {
 }
 .public-member-form .register-href a {
   color: #fff;
-  border-bottom: 3px solid #fff;
+  /*border-bottom: 3px solid #fff;*/
   margin: 0 2rem;
+}
+.login-image {
+  position: absolute;
+  width: 100%;
+  /*z-index: -100;*/
+}
+.login, .register {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.public-member-form ::-webkit-input-placeholder { /* WebKit browsers */
+    color: #fff;
+}
+.public-member-form :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #fff;
+}
+.public-member-form ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #fff;
+}
+.public-member-form :-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #fff;
 }
 /* 登录+注册 公共样式 结束 */
