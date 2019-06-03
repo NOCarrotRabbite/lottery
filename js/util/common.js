@@ -55,15 +55,15 @@ $.extend({
       };
       document.addEventListener('copy', save);
       document.execCommand('Copy');
-      $.messageBox(msg);
+      $.messageBox(msg, 600);
     });
   },
   //提示框
-  messageBox: function(msg) {
+  messageBox: function(msg, time) {
     $('.msg-box').text(msg);
-    $('.msg-box').show(500);
+    $('.msg-box').show(time);
     setTimeout(function() {
-      $('.msg-box').hide(500);
+      $('.msg-box').hide(time);
     }, 1600);
   },
   //时间格式化
@@ -97,9 +97,11 @@ $.extend({
   },
   //弹框
   dialogBox: function(msg, url, callback) {
-    console.log(msg, url, callback);
     $('.dialog-box-content').text(msg);
     $('.dialog-box').show();
+    $('.dialog-layer').on('click', function() {
+      $('.dialog-box').hide();
+    });
     $('.dialog-box-submit').on('click', function() {
       $('.dialog-box').hide();
       if (url) {

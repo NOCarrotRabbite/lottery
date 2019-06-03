@@ -19,10 +19,10 @@
         .then(function(res) {
           console.log(res);
           if (res.status == true) {
-            $.messageBox(res.message);
+            $.messageBox(res.message, 600);
             window.location.href = 'javascript:window.history.go(-1)';
           } else {
-            $.messageBox(res.message);
+            $.messageBox(res.message, 600);
           }
         })
         .catch(function(error) {

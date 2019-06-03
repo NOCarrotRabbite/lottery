@@ -3,33 +3,19 @@
     let user_num = localStorage.getItem('tel');
     //页面数据
     //获取银行卡数据-验证提现密码-是否绑卡-绑卡/修改银行卡
-    queryData(1);
-    function queryData(state) {
+    queryData();
+    function queryData() {
       let obj = {
         user_num: user_num,
-        state: state == 1 ? 'have_draw_password' : 'have_bank_card'
+        state: 'have_bank_card'
       };
       $.jsonAjax(API.DRAW_CORE_API, 'POST', obj)
         .then(function(res) {
           if (res.status == true) {
-            if (state == 1) {
-              if (res.have_draw_password == 0) {
-                $.dialogBox('请设置提现密码!', '#/set-withdraw-deposit-pwd');
-              } else {
-                let obj = {
-                  user_num: user_num,
-                  state: 'have_bank_card'
-                };
-                queryData(2);
-              }
-            } else if (state == 2) {
-              if (res.have_card_id == 1) {
-                $('.name').text(res.data.card_user_name);
-                $('.bank').text(res.data.card_name);
-                $('.num').text(res.data.card_id);
-              } else {
-                window.location.href = '#/bank-card';
-              }
+            if (res.have_card_id == 1) {
+              $('.name').text(res.data.card_user_name);
+              $('.bank').text(res.data.card_name);
+              $('.num').text(res.data.card_id);
             }
           }
         })
@@ -37,6 +23,7 @@
           console.log(error.status);
         });
     }
+    /*    } */
     //输入框删除icon控制
     $.inputClear($('.money'), $('.money').next());
     $.inputClear($('.password'), $('.password').next());
@@ -57,10 +44,10 @@
       $.jsonAjax(API.INVEST_DRAW_API, 'POST', data)
         .then(function(res) {
           if (res.status == true) {
-            $.messageBox(res.message);
+            $.messageBox(res.message, 600);
             window.location.href = 'javascript:window.history.go(-1)';
           } else {
-            $.messageBox(res.message);
+            $.messageBox(res.message, 600);
           }
         })
         .catch(function(error) {

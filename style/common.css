@@ -51,7 +51,9 @@ input[type='reset'] {
 textarea {
   -webkit-appearance: none;
 }
-
+input {
+  caret-color: #000;
+}
 html,
 body {
   height: 100%;

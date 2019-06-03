@@ -14,7 +14,7 @@
           $('.money').text(money);
           $('.gain-money').text(gain_money);
         } else {
-          $.messageBox(res.message);
+          $.messageBox(res.message, 600);
         }
       })
       .catch(function(error) {

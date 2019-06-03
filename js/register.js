@@ -12,10 +12,10 @@
       $.jsonAjax(API.REG_USER_API, 'POST', data)
         .then(function(res) {
           if (res.status == true) {
-            $.messageBox(res.message);
+            $.messageBox(res.message, 600);
             window.location.href = '#/login';
           } else {
-            $.messageBox(res.message);
+            $.messageBox(res.message, 600);
           }
         })
         .catch(function(error) {
