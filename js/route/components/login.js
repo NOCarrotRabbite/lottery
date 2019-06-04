@@ -6,7 +6,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '<div class="login"><img src="/assets/images/login.jpg" class="login-image"/>\n' +
       '<div class="public-member"><ul class="login-form public-member-form">\n' +
       '<li>\n' +
-      '<input type="text"  class="user" placeholder="请输入用户账号" />\n' +
+      '<input type="text"  class="user" placeholder="请输入注册手机号" />\n' +
       '  <svg class="icon detail-icon" aria-hidden="true">\n' +
       '     <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '  </svg>\n' +
