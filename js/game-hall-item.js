@@ -239,7 +239,7 @@
         // 最小投注按钮点击事件
         $('.min-bet').on('click', function () {
             $('.bet-amount').each(function () {
-                $(this).val(5);
+                $(this).val($.getParamsUrl().query.antes);
             });
             let num = $('.main-value .active').length;
             $('.bet-price').text(num * $('.bet-amount')[0].value);
@@ -279,6 +279,11 @@
             let reg = /^[1-9]\d*$/;
             if (!reg.test($('.bet-amount')[0].value)) {
                 $.messageBox("投注金额不能为零或者小数！");
+                return;
+            }
+            // 判断用户投注金额是否大于等于底注
+            if (parseFloat($('#bet-price').text()) < $.getParamsUrl().query.antes) {
+                $.messageBox("投注金额小于底注！");
                 return;
             }
             // 判断投注金额是否超过余额
@@ -614,7 +619,7 @@
 
     // 获取用户余额
     let getUserBalance = function () {
-        $.jsonAjax(API.GET_USER_MONER_API, 'POST', {"user_num": localStorage.getItem('tel')}).then(function(res) {
+            $.jsonAjax(API.GET_USER_MONER_API, 'POST', {"user_num": localStorage.getItem('tel')}).then(function(res) {
             $('#balance').text((parseFloat(res.data.gold) + parseFloat(res.data.money)).toFixed(2) + '元宝');
         }).catch(function (error) {
             console.log(error);

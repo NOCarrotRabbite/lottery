@@ -44,18 +44,18 @@
 						query:currentHash.query
 					},
 					next:function(){
-						self.routers[currentHash.path].callback.call(self,currentHash)
+						self.routers[currentHash.path].callback.call(self,currentHash);
 					}
 				})
 			}else{
-				self.routers[currentHash.path].callback.call(self,currentHash)
+				self.routers[currentHash.path].callback.call(self,currentHash);
 			}
 		},
 		//路由处理
 		urlChange:function(){
 			var currentHash = util.getParamsUrl();
 			if(this.routers[currentHash.path]){
-				this.refresh(currentHash)
+				this.refresh(currentHash);
 			}else{
 				//不存在的地址重定向到首页
 				location.hash = '/index'

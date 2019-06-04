@@ -26,5 +26,7 @@ const API = {
   //充值-提现
   INVEST_DRAW_API: '/test/api/invest_draw.php',
   //修改登录密码
-  UP_PASSWORD_API: '/test/api/up_password.php'
+  UP_PASSWORD_API: '/test/api/up_password.php',
+  // 获取大厅信息
+  GET_HALL_API: '/test/api/hall.php'
 };

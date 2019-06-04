@@ -111,5 +111,20 @@ $.extend({
         callback();
       }
     });
+  },
+  //获取路由的路径和详细参数
+  getParamsUrl:function(){
+      var hashDeatail = location.hash.split("?"),
+          hashName = hashDeatail[0].split("#")[1],//路由地址
+          params = hashDeatail[1] ? hashDeatail[1].split("&") : [],//参数内容
+          query = {};
+      for(var i = 0;i < params.length ; i++){
+          var item = params[i].split("=");
+          query[item[0]] = item[1]
+      }
+      return 	{
+          path:hashName,
+          query:query
+      }
   }
 });

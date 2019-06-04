@@ -13,6 +13,7 @@
             getWinningRank();
         } else {
             clearInterval(getRankTimer);
+            getRankTimer = null;
         }
       }, 3 * 60 * 1000);
   });
