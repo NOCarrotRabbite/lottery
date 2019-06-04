@@ -140,7 +140,6 @@ spaRouters.map('/mobile-bind', function(transition) {
     },transition)
 })*/
 spaRouters.beforeEach(function(transition) {
-  // 切换之前dosomething
   setTimeout(function() {
     // 模拟切换之前延迟，比如说做个异步登录信息验证
     transition.next();

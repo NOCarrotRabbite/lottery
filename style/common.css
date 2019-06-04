@@ -40,8 +40,6 @@ figcaption {
 a {
   color: #888;
 }
-/*input{-webkit-appearance: none; -moz-appearance: none; -o-appearance: none; appearance: none;}*/
-input:focus { outline: none; background-color: rgba(225,225,225,0) }
 input[type='button'],
 input[type='submit'],
 input[type='search'],
