@@ -400,6 +400,7 @@ footer .active {
 .detail-icon {
   color: #c4c4c4;
 }
+
 /* 我的账户页面样式结束 */
 
 /* 游戏大厅页面样式开始 */
@@ -1550,11 +1551,26 @@ footer .active {
 .personal-center {
   width: 100%;
   height: 100%;
+  overflow: hidden;
+}
+.personal-center .personal-bg-color {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.personal-center .personal-center-box {
+  width: 100%;
+  height: 100%;
   padding: 3rem 8rem;
   box-sizing: border-box;
-  background: #f4f4f4;
-  color: #888;
+  color: #333;
   font-size: 1.866rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(225, 225, 225, 0.5);
 }
 .personal-center-header {
   display: flex;
@@ -1594,14 +1610,15 @@ footer .active {
   padding-top: 3rem;
 }
 .personal-center-content li:nth-child(3) {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid #333;
 }
 .personal-center-content li:nth-child(4) {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid #333;
 }
 .personal-center-content li span {
   display: flex;
   align-items: center;
+  color: #333;
 }
 .personal-center-content .icon {
   padding-right: 2rem;

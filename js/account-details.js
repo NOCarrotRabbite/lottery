@@ -1819,14 +1819,10 @@
         select_kind.style.zIndex = -3;
       } else {
         screen.style.zIndex = -1;
-        /*   mask_layer.style.zIndex = -2; */
+        mask_layer.style.zIndex = -2;
         select_kind.style.zIndex = -3;
-        screen.style.transition = 'width 0.5s';
         screen.style.width = '0';
-        if (screen.style.width == '0px') {
-          screen.style.right = '-80%';
-          mask_layer.style.zIndex = -2;
-        }
+        screen.style.right = '-80%';
       }
     });
     //选择彩种

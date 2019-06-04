@@ -18,7 +18,8 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
   $('#main').html(
     '\n' +
       '<div class="personal-center">\n' +
-      '<div class="personal-center-header">\n' +
+      '<img class="personal-bg-color" src="../assets/images/personal.jpg" alt="图片加载失败...">\n' +
+      '<div class="personal-center-box"><div class="personal-center-header">\n' +
       '<img src="" alt="" class="header-img" />\n' +
       '<p>林</p>\n' +
       '<div class="personal-center-header-btn">\n' +
@@ -52,7 +53,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '<p class="footer-icon"><a href="#/index"><svg class="icon" aria-hidden="true">\n' +
       '           <use xlink:href="#icon-zelvgongyongshouqi1"></use>\n' +
       '         </svg></a></p>\n' +
-      '</div>'
+      '</div></div>'
   );
   $.addPageScript('js/personal-center.js', sigal);
 };

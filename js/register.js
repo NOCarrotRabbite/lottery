@@ -1,6 +1,6 @@
 (function() {
   $(function() {
-    $('.register-submit').on('click', () => {
+    $('.register-submit').on('click', function() {
       let nick_name = $('.name').val();
       let user_num = $('.user').val();
       let password = $('.password').val();
@@ -21,6 +21,9 @@
         .catch(function(error) {
           console.log(error.status);
         });
+    });
+    $('.register-login').on('click', function() {
+      window.location.href = '#/login';
     });
     $.inputClear($('.name'), $('.name').next());
     $.inputClear($('.user'), $('.user').next());

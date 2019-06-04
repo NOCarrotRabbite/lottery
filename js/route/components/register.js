@@ -23,7 +23,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '     <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '  </svg>\n' +
       '</li>\n' +
-      '<li><button class="register-submit public-member-submit">注册</button></li>\n' +
+      '<li><button class="register-submit public-member-button">注册</button><button class="public-member-button  register-login">登录</button></li>\n' +
       '</ul></div>\n' +
       '</div>'
   );

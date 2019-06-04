@@ -41,7 +41,10 @@ a {
   color: #888;
 }
 /*input{-webkit-appearance: none; -moz-appearance: none; -o-appearance: none; appearance: none;}*/
-input:focus { outline: none; background-color: rgba(225,225,225,0) }
+input:focus {
+  outline: none;
+  background-color: rgba(225, 225, 225, 0);
+}
 input[type='button'],
 input[type='submit'],
 input[type='search'],
@@ -411,6 +414,9 @@ body {
   align-items: flex-end;
   font-size: 1.866rem;
 }
+.public-member ul li .detail-icon {
+  color: #fff;
+}
 .public-member-form {
   width: 100%;
   padding: 3rem;
@@ -439,7 +445,7 @@ body {
   padding: 1rem;
   border-radius: 0.6rem;
   font-size: 1.866rem;
-  background-color: rgba(225,225,225, 0) !important;
+  background-color: rgba(225, 225, 225, 0) !important;
   border: 1px solid #fff;
   height: 3rem;
   line-height: 3rem;
@@ -450,41 +456,58 @@ body {
   width: 100%;
   font-size: 2.133rem;
   padding: 1rem;
-    background: rgba(225,225,225,0);
-    border-radius: 4rem;
-    color: #fff;
-    margin-top: 3rem;
-    border: 1px solid #fff;
+  background: rgba(225, 225, 225, 0);
+  border-radius: 4rem;
+  color: #fff;
+  margin-top: 3rem;
+  border: 1px solid #fff;
+}
+.public-member-form .public-member-button {
+  width: 100%;
+  font-size: 2.133rem;
+  padding: 1rem;
+  background: rgba(225, 225, 225, 0);
+  border-radius: 4rem;
+  color: #fff;
+  margin-top: 3rem;
+  border: 1px solid #fff;
+  margin: 0 1rem;
 }
 .public-member-form .register-href {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 2rem;
 }
 .public-member-form .register-href a {
   color: #fff;
-  /*border-bottom: 3px solid #fff;*/
-  margin: 0 2rem;
+  border-bottom: 3px solid #fff;
+  margin: 0 4rem;
 }
 .login-image {
   position: absolute;
   width: 100%;
   /*z-index: -100;*/
 }
-.login, .register {
+.login,
+.register {
   width: 100%;
   position: relative;
   overflow: hidden;
 }
-.public-member-form ::-webkit-input-placeholder { /* WebKit browsers */
-    color: #fff;
+.public-member-form ::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #fff;
 }
-.public-member-form :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color: #fff;
+.public-member-form :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff;
 }
-.public-member-form ::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color: #fff;
+.public-member-form ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #fff;
 }
-.public-member-form :-ms-input-placeholder { /* Internet Explorer 10+ */
-    color: #fff;
+.public-member-form :-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #fff;
 }
 /* 登录+注册 公共样式 结束 */
