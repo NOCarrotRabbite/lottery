@@ -23,26 +23,6 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '          <span class="public-records-border">金额</span>\n' +
       '          <span>状态</span>\n' +
       '        </li>\n' +
-      /*       '        <li>\n' +
-      '          <span>2019-04-24 14:01</span>\n' +
-      '          <span>1000.00</span>\n' +
-      '          <span>北京幸运28</span>\n' +
-      '        </li>\n' +
-      '        <li>\n' +
-      '          <span>2019-04-24 14:01</span>\n' +
-      '          <span>1000.00</span>\n' +
-      '          <span>北京幸运28</span>\n' +
-      '        </li>\n' +
-      '        <li>\n' +
-      '          <span>2019-04-24 14:01</span>\n' +
-      '          <span>1000.00</span>\n' +
-      '          <span>北京幸运28</span>\n' +
-      '        </li>\n' +
-      '        <li>\n' +
-      '          <span>2019-04-24 14:01</span>\n' +
-      '          <span>1000.00</span>\n' +
-      '          <span>北京幸运28</span>\n' +
-      '        </li>\n' + */
       '      </ul>\n' +
       '      <div class="screen">\n' +
       '        <div class="screen-kind">\n' +

@@ -597,18 +597,19 @@ footer .active {
   z-index: -2;
 }
 .account-details .screen {
-  width: 80%;
+  width: 0;
   height: 100%;
   background: #fff;
   color: #888;
   /* font-size: 0.8rem; */
   position: fixed;
   top: 0;
-  right: 0;
+  right: -100%;
   bottom: 0;
   padding: 1.5rem 1.5rem 0 1.5rem;
   box-sizing: border-box;
   z-index: -1;
+  transition: width 0.5s;
 }
 .account-details .screen-kind {
   padding-bottom: 3rem;
