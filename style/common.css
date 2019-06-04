@@ -475,7 +475,7 @@ body {
 }
 .public-member-form .register-href a {
   color: #fff;
-  border-bottom: 3px solid #fff;
+  /* border-bottom: 3px solid #fff; */
   margin: 0 4rem;
 }
 .login-image {
