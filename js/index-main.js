@@ -41,7 +41,7 @@ let makeListScroll = function () {
             }
             Marquee();
         }, speed);
-        listBox.onmouseover = function () {
+        /*listBox.onmouseover = function () {
             clearInterval(myMarquee);
         };
         listBox.onmouseout = function () {
@@ -51,7 +51,7 @@ let makeListScroll = function () {
                 return;
             }
             Marquee();
-        }
+        }*/
     };
 };
 

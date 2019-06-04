@@ -417,98 +417,104 @@
         let query_param = { "hall_id": hall_type, "small_id": item_type };
         // 进入投注小厅加载相关数据
         $.jsonAjax(API.GAME_HALL_ITEM_AIP, 'POST', query_param).then(function (data) {
-            // 初始化期数
-            issue = data.new_data[0].iss_number;
-            // 初始化往期中奖记录
-            $('#item-result').html(
-                '        <li class="result-text">\n' +
-                '          <span>第 ' + data.old_data[0].iss_number + ' 期 &nbsp;</span>\n' +
-                '          <span class="num">' + data.old_data[0].win_code_1 + '</span>&nbsp;\n' +
-                '          <span>+</span>&nbsp;\n' +
-                '          <span class="num">' + data.old_data[0].win_code_2 + '</span>&nbsp;\n' +
-                '          <span>+</span>&nbsp;\n' +
-                '          <span class="num">' + data.old_data[0].win_code_3 + '</span>&nbsp;\n' +
-                '          <span>=</span>&nbsp;\n' +
-                '          <span class="num res">' + data.old_data[0].win_sum + '</span>&nbsp;\n' +
-                '          <span class="num big-small">' + data.old_data[0].is_big + '</span>&nbsp;\n' +
-                '          <span class="num sigle-double">' + data.old_data[0].is_double + '</span>\n' +
-                '        </li>\n' +
-                '        <li class="resulst-icon" id="resulst-icon">          \n' +
-                '         <svg class="icon" aria-hidden="true">\n' +
-                '           <use xlink:href="#icon-xiala"></use>\n' +
-                '         </svg>\n' +
-                '        </li>\n');
-            let records_html = '';
-            for (let i in data.old_data) {
-                records_html +='<li class="result-text">\n' +
-                    '              <span>第 ' + data.old_data[i].iss_number + ' 期 &nbsp;</span>\n' +
-                    '              <span class="num">' + data.old_data[i].win_code_1 + '</span>&nbsp;\n' +
-                    '              <span>+</span>&nbsp;\n' +
-                    '              <span class="num"> ' + data.old_data[i].win_code_2 + '</span>&nbsp;\n' +
-                    '              <span>+</span>&nbsp;\n' +
-                    '              <span class="num">' + data.old_data[i].win_code_3 + '</span>&nbsp;\n' +
-                    '              <span>=</span>&nbsp;\n' +
-                    '              <span class="num res">' + data.old_data[i].win_sum + '</span>&nbsp;\n' +
-                    '              <span class="num big-small">' + data.old_data[i].is_big + '</span>&nbsp;\n' +
-                    '              <span class="num sigle-double">' + data.old_data[i].is_double + '</span>\n' +
-                    '            </li>\n'
-            };
-            $('#result-records').html(records_html);
+            if (data.status) {
+                // 初始化期数
+                issue = data.new_data[0].iss_number;
+                if (data.old_data) {
+                    // 初始化往期中奖记录
+                    $('#item-result').html(
+                        '        <li class="result-text">\n' +
+                        '          <span>第 ' + data.old_data[0].iss_number + ' 期 &nbsp;</span>\n' +
+                        '          <span class="num">' + data.old_data[0].win_code_1 + '</span>&nbsp;\n' +
+                        '          <span>+</span>&nbsp;\n' +
+                        '          <span class="num">' + data.old_data[0].win_code_2 + '</span>&nbsp;\n' +
+                        '          <span>+</span>&nbsp;\n' +
+                        '          <span class="num">' + data.old_data[0].win_code_3 + '</span>&nbsp;\n' +
+                        '          <span>=</span>&nbsp;\n' +
+                        '          <span class="num res">' + data.old_data[0].win_sum + '</span>&nbsp;\n' +
+                        '          <span class="num big-small">' + data.old_data[0].is_big + '</span>&nbsp;\n' +
+                        '          <span class="num sigle-double">' + data.old_data[0].is_double + '</span>\n' +
+                        '        </li>\n' +
+                        '        <li class="resulst-icon" id="resulst-icon">          \n' +
+                        '         <svg class="icon" aria-hidden="true">\n' +
+                        '           <use xlink:href="#icon-xiala"></use>\n' +
+                        '         </svg>\n' +
+                        '        </li>\n');
+                    let records_html = '';
+                    for (let i in data.old_data) {
+                        records_html +='<li class="result-text">\n' +
+                            '              <span>第 ' + data.old_data[i].iss_number + ' 期 &nbsp;</span>\n' +
+                            '              <span class="num">' + data.old_data[i].win_code_1 + '</span>&nbsp;\n' +
+                            '              <span>+</span>&nbsp;\n' +
+                            '              <span class="num"> ' + data.old_data[i].win_code_2 + '</span>&nbsp;\n' +
+                            '              <span>+</span>&nbsp;\n' +
+                            '              <span class="num">' + data.old_data[i].win_code_3 + '</span>&nbsp;\n' +
+                            '              <span>=</span>&nbsp;\n' +
+                            '              <span class="num res">' + data.old_data[i].win_sum + '</span>&nbsp;\n' +
+                            '              <span class="num big-small">' + data.old_data[i].is_big + '</span>&nbsp;\n' +
+                            '              <span class="num sigle-double">' + data.old_data[i].is_double + '</span>\n' +
+                            '            </li>\n'
+                    };
+                    $('#result-records').html(records_html);
+                }
 
-            // 初始化封盘倒计时
-            let start_time = new Date(data.new_data[0].start_time);
-            /*let start_time = new Date('2019-05-21 17:34:00');*/
-            // 计算开盘时间和当前时间的差值
-            let diff = getTimeDiff(start_time, new Date());
-            // 计算diff的秒数
-            let diff_secs_total = diff.hours * 60 * 60 + diff.mins * 60 + diff.secs;
-            if (start_time < new Date()) {;  // 已经开盘
-                if (diff.days > 0 || diff.hours > 0 || diff.mins >= data.new_data[0].continue_time) { // 开盘时间距离现在超过持续时间则封盘
-                    $('#countdown').text('已封盘');
-                    if (data.new_data[0].period_flag == 0) { // 最后一期则不再请求下一期数据
-                        $('#open-info').html('今日');
-                        return;
+                // 初始化封盘倒计时
+                let start_time = new Date(data.new_data[0].start_time);
+                /*let start_time = new Date('2019-05-21 17:34:00');*/
+                // 计算开盘时间和当前时间的差值
+                let diff = getTimeDiff(start_time, new Date());
+                // 计算diff的秒数
+                let diff_secs_total = diff.hours * 60 * 60 + diff.mins * 60 + diff.secs;
+                if (start_time < new Date()) {;  // 已经开盘
+                    if (diff.days > 0 || diff.hours > 0 || diff.mins >= data.new_data[0].continue_time) { // 开盘时间距离现在超过持续时间则封盘
+                        $('#countdown').text('已封盘');
+                        if (data.new_data[0].period_flag == 0) { // 最后一期则不再请求下一期数据
+                            $('#open-info').html('今日');
+                            return;
+                        }
+                        $('#open-info').html('第 <span class="black" id="issue">' + issue + '</span> 期');
+                        // 封盘后延时请求下一次数据
+                        setTimeout(opening, 1000);
+                    } else {
+                        // 计算开盘持续时间的秒数
+                        let five_secs = data.new_data[0].continue_time * 60;
+                        // 计算开盘持续时间和diff的秒数差
+                        let secs_diff = five_secs - diff_secs_total;
+                        // 计算剩余分钟数
+                        countdown_time.mins = Math.floor(secs_diff / 60);
+                        // 计算除去分钟数后剩余秒数
+                        countdown_time.secs = secs_diff % 60;
+                        // 初始化倒计时描述
+                        $('#open-info').html('距离 <span class="black" id="issue">' + issue + '</span> 期截止');
+                        // 初始化倒计时剩余时间
+                        $('#countdown').text(countdown_time.mins + '分钟' + countdown_time.secs + '秒');
+                        // 设置定时器，实现倒计时功能
+                        interval_id = setInterval(function () {
+                            countdown(data.new_data[0].period_flag);
+                        }, 1000);
                     }
-                    $('#open-info').html('第 <span class="black" id="issue">' + issue + '</span> 期');
-                    // 封盘后延时请求下一次数据
-                    setTimeout(opening, 1000);
-                } else {
-                    // 计算开盘持续时间的秒数
-                    let five_secs = data.new_data[0].continue_time * 60;
-                    // 计算开盘持续时间和diff的秒数差
-                    let secs_diff = five_secs - diff_secs_total;
-                    // 计算剩余分钟数
-                    countdown_time.mins = Math.floor(secs_diff / 60);
-                    // 计算除去分钟数后剩余秒数
-                    countdown_time.secs = secs_diff % 60;
-                    // 初始化倒计时描述
-                    $('#open-info').html('距离 <span class="black" id="issue">' + issue + '</span> 期截止');
-                    // 初始化倒计时剩余时间
-                   $('#countdown').text(countdown_time.mins + '分钟' + countdown_time.secs + '秒');
-                    // 设置定时器，实现倒计时功能
-                    interval_id = setInterval(function () {
-                        countdown(data.new_data[0].period_flag);
-                    }, 1000);
+                } else {    // 还未开盘
+                    if (-1 == data.new_data[0].period_flag) {
+                        $('#open-info').html('今日');
+                        $('#countdown').text('未开盘');
+                    }
+                    setTimeout(function () {
+                        $('#open-info').html('距离 <span class="black" id="issue">' + issue + '</span> 期截止');
+                        // 计算持续时间的秒数
+                        let continue_sec = data.new_data[0].continue_time * 60;
+                        // 计算剩余分钟数
+                        countdown_time.mins = Math.floor(continue_sec / 60);
+                        // 计算除去分钟数后剩余秒数
+                        countdown_time.secs = continue_sec % 60;
+                        // 初始化倒计时剩余时间
+                        $('#countdown').text(countdown_time.mins + '分钟' + countdown_time.secs + '秒');
+                        interval_id = setInterval(function () {
+                            countdown(data.new_data[0].period_flag);
+                        }, 1000);
+                    }, diff_secs_total * 1000);
                 }
-            } else {    // 还未开盘
-                if (-1 == data.new_data[0].period_flag) {
-                    $('#open-info').html('今日');
-                    $('#countdown').text('未开盘');
-                }
-                setTimeout(function () {
-                    $('#open-info').html('距离 <span class="black" id="issue">' + issue + '</span> 期截止');
-                    // 计算持续时间的秒数
-                    let continue_sec = data.new_data[0].continue_time * 60;
-                    // 计算剩余分钟数
-                    countdown_time.mins = Math.floor(continue_sec / 60);
-                    // 计算除去分钟数后剩余秒数
-                    countdown_time.secs = continue_sec % 60;
-                    // 初始化倒计时剩余时间
-                    $('#countdown').text(countdown_time.mins + '分钟' + countdown_time.secs + '秒');
-                    interval_id = setInterval(function () {
-                        countdown(data.new_data[0].period_flag);
-                    }, 1000);
-                }, diff_secs_total * 1000);
+            } else {
+                $.messageBox(data.message || '服务器发生错误，请稍后再试！');
             }
         }).catch(function (error) {
             console.log(error);
