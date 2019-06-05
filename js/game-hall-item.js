@@ -13,9 +13,13 @@
             getUserBalance();
         });
         // 实时刷新投注消息
-        fresh_interval = setInterval(function () {
+        /*fresh_interval = setInterval(function () {
+            if ('已封盘' == $('#countdown').text() || '未开盘' == $('#countdown').text()) {
+                clearInterval(fresh_interval);
+                return;
+            }
             freshBetMes();
-        }, 1000);
+        }, 1000);*/
         // 绑定撤单按钮事件
         $('.withdrawal').on('click', function () {
             // 判断是否封盘/开盘
@@ -470,7 +474,7 @@
                 let diff = getTimeDiff(start_time, new Date());
                 // 计算diff的秒数
                 let diff_secs_total = diff.hours * 60 * 60 + diff.mins * 60 + diff.secs;
-                if (start_time < new Date()) {;  // 已经开盘
+                if (start_time < new Date()) {  // 已经开盘
                     if (diff.days > 0 || diff.hours > 0 || diff.mins >= data.new_data[0].continue_time) { // 开盘时间距离现在超过持续时间则封盘
                         $('#countdown').text('已封盘');
                         if (data.new_data[0].period_flag == 0) { // 最后一期则不再请求下一期数据
@@ -493,6 +497,14 @@
                         $('#open-info').html('距离 <span class="black" id="issue">' + issue + '</span> 期截止');
                         // 初始化倒计时剩余时间
                         $('#countdown').text(countdown_time.mins + '分钟' + countdown_time.secs + '秒');
+                        // 开盘后开启消息拉取定时器
+                        fresh_interval = setInterval(function () {
+                            if ('已封盘' == $('#countdown').text() || '未开盘' == $('#countdown').text()) {
+                                clearInterval(fresh_interval);
+                                return;
+                            }
+                            freshBetMes();
+                        }, 1000);
                         // 设置定时器，实现倒计时功能
                         interval_id = setInterval(function () {
                             countdown(data.new_data[0].period_flag);
@@ -513,6 +525,15 @@
                         countdown_time.secs = continue_sec % 60;
                         // 初始化倒计时剩余时间
                         $('#countdown').text(countdown_time.mins + '分钟' + countdown_time.secs + '秒');
+                        // 开盘后开启消息拉取定时器
+                        fresh_interval = setInterval(function () {
+                            if ('已封盘' == $('#countdown').text() || '未开盘' == $('#countdown').text()) {
+                                clearInterval(fresh_interval);
+                                return;
+                            }
+                            freshBetMes();
+                        }, 1000);
+                        // 设置定时器，实现倒计时功能
                         interval_id = setInterval(function () {
                             countdown(data.new_data[0].period_flag);
                         }, 1000);
