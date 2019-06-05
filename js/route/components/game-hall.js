@@ -37,7 +37,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '           <svg class="icon" aria-hidden="true">\n' +
       '             <use xlink:href="#icon-zhanghu1"></use>\n' +
       '           </svg>\n' +
-      '           <strong>9739</strong>\n' +
+      '           <strong id="room1-num">0</strong>\n' +
       '          </span>\n' +
       '        </div>\n' +
       '      </a>\n' +
@@ -50,7 +50,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '           <svg class="icon" aria-hidden="true">\n' +
       '             <use xlink:href="#icon-zhanghu1"></use>\n' +
       '           </svg>\n' +
-      '           <strong>9739</strong>\n' +
+      '           <strong id="room2-num">0</strong>\n' +
       '          </span>\n' +
       '        </div>\n' +
       '      </a>\n' +
@@ -63,7 +63,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '           <svg class="icon" aria-hidden="true">\n' +
       '             <use xlink:href="#icon-zhanghu1"></use>\n' +
       '           </svg>\n' +
-      '           <strong>9739</strong>\n' +
+      '           <strong id="room3-num">0</strong>\n' +
       '          </span>\n' +
       '        </div>\n' +
       '      </a>\n' +
