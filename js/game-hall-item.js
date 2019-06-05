@@ -12,14 +12,6 @@
         $('#refresh-balance').on('click', function () {
             getUserBalance();
         });
-        // 实时刷新投注消息
-        /*fresh_interval = setInterval(function () {
-            if ('已封盘' == $('#countdown').text() || '未开盘' == $('#countdown').text()) {
-                clearInterval(fresh_interval);
-                return;
-            }
-            freshBetMes();
-        }, 1000);*/
         // 绑定撤单按钮事件
         $('.withdrawal').on('click', function () {
             // 判断是否封盘/开盘
