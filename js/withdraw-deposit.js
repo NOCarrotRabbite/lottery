@@ -32,8 +32,7 @@
     //输入框删除icon控制
     $.inputClear($('.money'), $('.money').next());
     $.inputClear($('.password'), $('.password').next());
-    //提交提现申请
-    $('.form-submit').on('click', function() {
+    var submit = function() {
       let time = $.dateFtt('yyyy-MM-dd hh:mm:ss', new Date());
       let data = {
         state: 'user_draw',
@@ -58,6 +57,18 @@
         .catch(function(error) {
           console.log(error.status);
         });
+    };
+    //提交提现申请
+    $('.form-submit').on('click', function() {
+      let money = $('.money').val();
+      let pwd = $('.password').val();
+      if (money && pwd) {
+        $.dialogBox('您确定提现吗?', '', submit);
+      } else if (!money) {
+        $.messageBox('请输入充值金额!', 600);
+      } else if (!pwd) {
+        $.messageBox('请输入提现密码!', 600);
+      }
     });
   });
 })();
