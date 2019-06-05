@@ -505,4 +505,8 @@ body {
   /* Internet Explorer 10+ */
   color: #fff;
 }
+.register-text {
+  font-size: 1.6rem;
+  /*  color: red; */
+}
 /* 登录+注册 公共样式 结束 */

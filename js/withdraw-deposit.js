@@ -25,6 +25,9 @@
     }
     //自动获取焦点
     $('.money').focus();
+    $('.money').val('');
+    $('.password').val('');
+
     /*    } */
     //输入框删除icon控制
     $.inputClear($('.money'), $('.money').next());

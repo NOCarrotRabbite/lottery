@@ -27,7 +27,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '<li>\n' +
       '<span>验证码&emsp;</span>\n' +
       '<div class="code">\n' +
-      '<input type="password" class="mobile-code" placeholder="请输入验证码" />\n' +
+      '<input type="password" class="mobile-code" placeholder="请输入验证码" autocomplete="new-password"/>\n' +
       '  <svg class="icon  close-icon2" aria-hidden="true">\n' +
       '                <use xlink:href="#icon-iconzhuanqu23"></use>\n' +
       '              </svg>\n' +

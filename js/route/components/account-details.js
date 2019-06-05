@@ -28,9 +28,9 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '        <div class="screen-kind">\n' +
       '          筛选时间：\n' +
       '          <div class="choice-date">\n' +
-      '            <input type="text" class="date begin-date" placeholder="请选择日期" />\n' +
+      '            <input type="text" class="date begin-date" placeholder="请选择日期"  />\n' +
       '            <span>-</span>\n' +
-      '            <input type="text" class="date end-date" placeholder="请选择日期" />\n' +
+      '            <input type="text" class="date end-date" placeholder="请选择日期"  />\n' +
       '          </div>\n' +
       '        </div>\n' +
       '        <div class="screen-kind">\n' +

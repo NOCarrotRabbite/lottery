@@ -24,6 +24,7 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '  </svg>\n' +
       '</li>\n' +
       '<li><button class="register-submit public-member-button">注册</button><button class="public-member-button  register-login">登录</button></li>\n' +
+      '<li class="register-text">提示：密码由数字+字母+小数点+下划线组成</li>\n' +
       '</ul></div>\n' +
       '</div>'
   );
