@@ -113,18 +113,62 @@ $.extend({
     });
   },
   //获取路由的路径和详细参数
-  getParamsUrl:function(){
-      var hashDeatail = location.hash.split("?"),
-          hashName = hashDeatail[0].split("#")[1],//路由地址
-          params = hashDeatail[1] ? hashDeatail[1].split("&") : [],//参数内容
-          query = {};
-      for(var i = 0;i < params.length ; i++){
-          var item = params[i].split("=");
-          query[item[0]] = item[1]
+  getParamsUrl: function() {
+    var hashDeatail = location.hash.split('?'),
+      hashName = hashDeatail[0].split('#')[1], //路由地址
+      params = hashDeatail[1] ? hashDeatail[1].split('&') : [], //参数内容
+      query = {};
+    for (var i = 0; i < params.length; i++) {
+      var item = params[i].split('=');
+      query[item[0]] = item[1];
+    }
+    return {
+      path: hashName,
+      query: query
+    };
+  },
+  //获取验证码
+  getCode: function(time, btn, user_num, state) {
+    let ordertime = time;
+    let timeleft = ordertime;
+    let get_code = btn;
+
+    get_code.removeAttr('disabled');
+    //计时函数
+    function timeCount() {
+      timeleft -= 1;
+      if (timeleft > 0) {
+        get_code.text(timeleft + ' 秒后重发');
+        setTimeout(timeCount, 1000);
+      } else {
+        get_code.text('重新发送');
+        timeleft = ordertime; //重置等待时间
+        get_code.removeAttr('disabled');
       }
-      return 	{
-          path:hashName,
-          query:query
-      }
+    }
+    //事件处理函数
+    get_code.on('click', function() {
+      console.log('user_num', user_num);
+      //请求参数
+      let data = {
+        user_num: user_num.val(),
+        state: state
+      };
+      $(this).attr('disabled', true); //防止多次点击
+      //发送请求
+      $.jsonAjax(API.SEND_VC_API, 'POST', data)
+        .then(function(res) {
+          if (res.status == true) {
+            //计时
+            timeCount(this);
+          } else {
+            $.messageBox(res.message, 600);
+            get_code.removeAttr('disabled');
+          }
+        })
+        .catch(function(error) {
+          console.log(error.status);
+        });
+    });
   }
 });

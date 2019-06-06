@@ -25,14 +25,11 @@
     }
     //自动获取焦点
     $('.money').focus();
-    $('.money').val('');
-    $('.password').val('');
-
-    /*    } */
     //输入框删除icon控制
     $.inputClear($('.money'), $('.money').next());
     $.inputClear($('.password'), $('.password').next());
-    var submit = function() {
+    //提交提现
+    let submit = function() {
       let time = $.dateFtt('yyyy-MM-dd hh:mm:ss', new Date());
       let data = {
         state: 'user_draw',

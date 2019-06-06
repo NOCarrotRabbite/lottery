@@ -28,5 +28,10 @@ const API = {
   //修改登录密码
   UP_PASSWORD_API: '/test/api/up_password.php',
   // 获取大厅信息
-  GET_HALL_API: '/test/api/hall.php'
+  GET_HALL_API: '/test/api/hall.php',
+  //获取验证码
+  SEND_VC_API:'/test/api/send_vc.php',
+  //找回密码
+  FORGET_PASSWORD_API:'/test/api/forget_password.php'
+
 };

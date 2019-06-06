@@ -437,7 +437,7 @@ body {
 }
 .public-member-form li input {
   flex: 1;
-  padding: 1rem;
+  padding: 1rem 3rem 1rem 1rem;
   border-radius: 0.6rem;
   font-size: 1.866rem;
   background-color: rgba(225, 225, 225, 0) !important;
@@ -446,6 +446,25 @@ body {
   line-height: 3rem;
   color: #fff;
   caret-color: #fff;
+}
+.public-member-form .code {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.public-member-form li .user-code {
+  font-size: 1.6rem;
+  flex: 1;
+  padding: 1.2rem 0;
+  background: #999;
+  color: #fff;
+  margin-left: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.8rem;
+}
+.public-member-form .code-li .icon {
+  position: absolute;
+  right: 0.5rem;
 }
 .public-member-form .public-member-submit {
   width: 100%;

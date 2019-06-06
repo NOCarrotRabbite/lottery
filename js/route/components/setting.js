@@ -38,13 +38,13 @@ SPA_RESOLVE_INIT = function(transition, sigal) {
       '         </svg>提现密码</span>\n' +
       '          </li>\n' +
       '        </a>\n' +
-      '        <a href="#/mobile-bind">\n' +
+      /*   '        <a href="#/mobile-bind">\n' +
       '          <li>\n' +
       '            <span><svg class="icon" aria-hidden="true">\n' +
       '           <use xlink:href="#icon-icon-test"></use>\n' +
       '         </svg>手机绑定</span>\n' +
       '          </li>\n' +
-      '        </a>\n' +
+      '        </a>\n' + */
       '        <a href="#">\n' +
       '          <li>\n' +
       '            <span><svg class="icon" aria-hidden="true">\n' +
