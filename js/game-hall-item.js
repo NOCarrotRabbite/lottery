@@ -531,7 +531,7 @@
                         }, 1000);
                     }, diff_secs_total * 1000);
                 }
-            } else {
+            } else if($('#param').length) {
                 $.messageBox(data.message || '服务器发生错误，请稍后再试！');
             }
         }).catch(function (error) {
